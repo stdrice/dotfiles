@@ -45,6 +45,8 @@ $ curl -LO https://codeberg.org/pznguin-kyun/pengurice/raw/branch/main/pengurice
 ```
 
 ## Install manually
+- Install all dependencies
+```brightnessctl btop calcurse dunst foot mpc mpd ncmpcpp neofetch power-profiles-daemon rofi slurp sway swaybg swayidle swaylock ttf-roboto-mono-nerd ttf-roboto waybar zsh```
 - Clone this repo
 - Copy all files in `dotfiles` and paste to your `$HOME` folder
 
