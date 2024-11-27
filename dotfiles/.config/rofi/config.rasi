@@ -1,0 +1,5 @@
+@theme "~/.config/rofi/theme.rasi"
+configuration {
+    terminal: "foot";
+    dpi: 96;
+}

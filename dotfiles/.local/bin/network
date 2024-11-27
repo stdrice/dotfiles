@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+wifi='Wifi'
+bt='Bluetooth'
+close='Close menu'
+
+rofi_cmd() {
+	rofi -dmenu -p "Network"
+}
+
+run_rofi(){
+  echo -e "$wifi\n$bt\n$close" | rofi_cmd
+}
+
+chosen="$(run_rofi)"
+case ${chosen} in
+  "$wifi") "$HOME"/.local/bin/wifi-menu ;;
+  "$bt") "$HOME"/.local/bin/bt-menu ;;
+esac
