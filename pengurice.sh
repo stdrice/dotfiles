@@ -67,7 +67,7 @@ update(){
       *)
         pacman --noconfirm --needed -Sy artix-keyring artix-archlinux-support ;;
       esac
-      pacman -Syyuu --noconfirm ;;
+      pacman -Syyuu --noconfirm
 }
 
 setup_before_install(){
@@ -94,7 +94,7 @@ setup_before_install(){
 
 install_pkgs(){
     logo "Installing packages"
-    pacman -Sy --noconfirm "${packages[@]}"
+    pacman -Sy --noconfirm --needed "${packages[@]}"
 }
 
 setup_user(){
@@ -174,7 +174,7 @@ finalize(){
 complete_msg(){
     logo "Done!"
     echo -e "Thanks for using pengurice!\n" "${BLD}" "${CYE}" "${CNC}"
-    echo -e "Before restart, you need to remember the following things:\n\n1. If you use Display Manager, choose 'bspwm' as session/desktop environment and log in.\n2. If you use tty, you just need to log in to your account.\n"
+    echo -e "Before restart, you need to remember the following things:\n\n1. If you use Display Manager, choose 'sway' as session/desktop environment and log in.\n2. If you use tty, you need to launch sway manually 'exec sway'.\n"
     while true; do
 	    read -rp "Do you want to restart now? [Y/n]: " yn2
 	    case $yn2 in

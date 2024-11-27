@@ -12,11 +12,6 @@ setopt hist_ignore_dups
 # Prompt
 PROMPT="%F{1}%n%F{reset}@%m %F{2}%~ %F{reset}"
 
-# Auto startx
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-	startx
-fi
-
 # Vars
 export TERMINAL="alacritty"
 export BROWSER="firefox"
