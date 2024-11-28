@@ -16,7 +16,7 @@ This is pengurice, a script that automatically rice your Linux system. I made th
 <img src="https://i.imgur.com/1Raaomc.png" align="right" width="400px">
 
 - [sway ⚽](https://swaywm.org): window manager/compositor
-- [foot ❤️](https://alacritty.org/): terminal
+- [foot ❤️](https://codeberg.org/dnkl/foot): terminal
 - [firefox 🦊](https://www.mozilla.org/en-US/firefox/): browser
 - [ranger](https://ranger.github.io/) and [nemo](https://github.com/linuxmint/nemo): file manager
 - [neovim](https://neovim.io): editor
