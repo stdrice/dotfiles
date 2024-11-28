@@ -16,8 +16,8 @@
         "sway/scratchpad"
     ],
     "modules-right": [
-        "pulseaudio",
         "network",
+        "pulseaudio",
         "battery",
         "power-profiles-daemon",
         "tray"
