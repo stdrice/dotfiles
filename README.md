@@ -10,7 +10,7 @@
 
 # **About ⁉️**
 ## Hello! Thanks for dropping by 👋
-This is pengurice, a script that automatically rice your Linux system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
+This is **pengurice**, a script that automatically rice your **Linux** system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
 
 # **Starring 🌠**
 <img src="https://i.imgur.com/1Raaomc.png" align="right" width="400px">
@@ -46,13 +46,15 @@ $ curl -LO https://codeberg.org/pznguin-kyun/pengurice/raw/branch/main/pengurice
 
 ## Install manually
 - Install all dependencies
-```brightnessctl btop calcurse dunst foot mpc mpd ncmpcpp neofetch power-profiles-daemon rofi slurp sway swaybg swayidle swaylock ttf-roboto-mono-nerd ttf-roboto waybar zsh```
+```
+brightnessctl btop calcurse dunst foot mpc mpd ncmpcpp neofetch power-profiles-daemon rofi slurp sway swaybg swayidle swaylock ttf-roboto-mono-nerd ttf-roboto waybar zsh
+```
 - Clone this repo
 - Copy all files in `dotfiles` and paste to your `$HOME` folder
 
 ## Some notes
 - If your system doesn't have `bash`, install it.
-- This script MUST BE run as `root`.
+- This script **MUST BE** run as `root`.
 
 # **Keybindings ⌨️**
 These are the basic keybinds. Read through the `sway/general/keybindings.conf` file for more keybinds.
