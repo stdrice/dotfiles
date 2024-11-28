@@ -59,7 +59,7 @@
         "tooltip-format": "{app}: {title}"
     },
     "mpd": {
-        "format": "{artist} - {title}",
+        "format": "󰝚 {title}",
         "format-disconnected": "",
         "format-stopped": "",
         "unknown-tag": "N/A",
