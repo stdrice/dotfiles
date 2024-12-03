@@ -16,7 +16,7 @@ date=$(date +%Y%m%d-%H%M%S)
 git_repo="https://codeberg.org/pznguin-kyun/pengurice"
 branch="main"
 main_folder="dotfiles"
-packages=(bluez bluez-utils brightnessctl btop calcurse dunst firefox foot galculator git gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb imv libnotify lxappearance-gtk3 ly mpc mpd mpv ncmpcpp nemo neofetch neovim networkmanager noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nwg-displays pamixer papirus-icon-theme pavucontrol pipewire pipewire-pulse polkit-gnome power-profiles-daemon ranger rofi sed slurp sof-firmware sudo sway swaybg swayidle swaylock ttf-roboto-mono-nerd ttf-roboto udisks2 unzip waybar wireplumber xdg-desktop-portal-gtk xdg-desktop-portal-wlr xdg-user-dirs-gtk xorg xorg-drivers xorg-xwayland xsettingsd zathura zathura-pdf-mupdf zip zsh)
+packages=(bluez bluez-utils brightnessctl btop calcurse dunst firefox foot galculator git gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb imv libnotify lxappearance-gtk3 ly mpc mpd mpv ncmpcpp nemo neofetch neovim networkmanager noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nwg-displays pamixer papirus-icon-theme pavucontrol pipewire pipewire-pulse polkit-gnome power-profiles-daemon ranger rofi sed slurp sof-firmware sudo sway swaybg swayidle swaylock udisks2 unzip waybar wireplumber xdg-desktop-portal-gtk xdg-desktop-portal-wlr xdg-user-dirs-gtk xorg xorg-drivers xorg-xwayland xsettingsd zathura zathura-pdf-mupdf zip zsh)
 
 # functions
 logo() {
