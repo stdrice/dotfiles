@@ -16,7 +16,6 @@
         "sway/scratchpad"
     ],
     "modules-right": [
-        "network",
         "pulseaudio",
         "battery",
         "power-profiles-daemon",
@@ -39,15 +38,6 @@
     //         "default": "󰋔"
          }
      },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
     "sway/mode": {
         "format": "<span style=\"normal\">{}</span>"
     },
@@ -67,15 +57,8 @@
         "tooltip-format": "MPD (connected)",
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 16,
         "spacing": 10
     },
     "clock": {
@@ -100,8 +83,6 @@
         "format-plugged": "󰚥 {capacity}",
         "format-alt": "{icon} {time}",
         "format-alt-charging": "󰂄 {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
     },
     "power-profiles-daemon": {
@@ -131,12 +112,6 @@
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "󰋋",
-            "hands-free": "",
-            "headset": "󰋎",
-            "phone": "󰏲",
-            "portable": "",
-            "car": "󰄋",
             "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pamixer --toggle-mute",
