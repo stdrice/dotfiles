@@ -9,6 +9,9 @@ setopt auto_list
 setopt hist_find_no_dups
 setopt hist_ignore_dups
 
+# Fortune
+fortune
+
 # Prompt
 PROMPT="%F{2}%~ %F{reset}> "
 
