@@ -1,16 +1,40 @@
 # Decoration
 
+# Font
+font monospace 18
+font pango: monospace 18
+
 # Gaps
 gaps inner 6
 
 # Border
-# default_border pixel 4
-# default_floating_border pixel 4
-default_border normal 1
-default_floating_border normal 1
+set $border_width 1
+# default_border pixel $border_width
+# default_floating_border pixel $border_width
+default_border normal $border_width
+default_floating_border normal $border_width
 
 # Window Titlebar
-font pango: monospace 18
 for_window [class=".*"] title_format "<span rise='3000' font='monospace 10'> %title</span>"
+
+# Disable titlebar for certain windows
+for_window {
+    [app_id="^vpn$"] border pixel $border_width
+    [app_id="^editor$"] border pixel $border_width
+    [app_id="^org$"] border pixel $border_width
+    [app_id="firefox"] border pixel $border_width
+    [class="Chromium"] border pixel $border_width
+    [app_id="Chromium"] border pixel $border_width
+    [app_id="org.qutebrowser.qutebrowser"] border pixel $border_width
+    [title=".* is sharing your screen."] border pixel $border_width
+    [app_id="firefox" title="Firefox — Sharing Indicator"] border pixel $border_width
+    [app_id="gimp-2.99" title="GIMP Startup"] border pixel $border_width
+    [app_id="com.github.maoschanz.drawing"] border pixel $border_width
+    [class="^battle.net.exe$"] border pixel $border_width
+    [class="^steam$"] border pixel $border_width
+    [class="^leagueclient.exe$"] border pixel $border_width
+    [class="^leagueclientux.exe$"] border pixel $border_width
+    [app_id="^chrome$"] border pixel $border_width
+}
 
 # vim:set ft=conf:

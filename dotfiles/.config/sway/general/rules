@@ -30,8 +30,6 @@ for_window {
     [app_id="firefox" title="Picture-in-Picture"] floating enable
     [title=".* is sharing your screen."] floating enable
     [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable
-    [app_id="firefox"] border none
-    [app_id="^chromium$"] border none
 }
 
 # Dialogs
