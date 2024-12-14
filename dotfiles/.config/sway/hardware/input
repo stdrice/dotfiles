@@ -12,6 +12,10 @@
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+# Scroll speed
+input type:pointer scroll_factor 1.2
+
+# Touchpad
 input type:touchpad {
     dwt enabled
     tap enabled
