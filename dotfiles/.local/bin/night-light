@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+temp=3700
+
+pgrep gammastep >/dev/null && pkill gammastep || gammastep -O $temp

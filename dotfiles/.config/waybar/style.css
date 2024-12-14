@@ -4,7 +4,6 @@
     border: none;
     border-radius: 0;
     font-family: "monospace", "Symbols Nerd Font";
-    font-weight: bold;
     font-size: 13px;
     min-height: 0;
     margin-left: 5px;
@@ -26,6 +25,7 @@ tooltip {
     padding: 3px;
     margin-left: 5px;
     margin-right: 5px;
+    border-bottom: 1px solid @bg;
 }
 
 #workspaces button:nth-child(1) {color: @red;}

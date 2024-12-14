@@ -90,7 +90,8 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{icon} {percent}",
-        "format-icons": ["󰃞", "󰃟", "󰃠"]
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-click": "~/.local/bin/night-light"
     },
     "battery": {
         "states": {
