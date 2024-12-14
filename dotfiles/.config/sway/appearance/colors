@@ -5,3 +5,4 @@ client.unfocused        #202628 #202628 #DADADA #292D2E   #202628
 client.urgent           #141B1E #E52323 #DADADA #E52323   #E52323
 client.placeholder      #000000 #0C0C0C #DADADA #000000   #0C0C0C
 
+# vim:set ft=conf:

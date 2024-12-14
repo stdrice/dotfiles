@@ -12,16 +12,11 @@
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-input "2:14:SynPS/2_Synaptics_TouchPad" {
+input type:touchpad {
     dwt enabled
     tap enabled
     natural_scroll enabled
     middle_emulation enabled
 }
 
-input "1102:4618:DELL081A:00_044E:120A_Touchpad" {
-    dwt enabled
-    tap enabled
-    natural_scroll enabled
-    middle_emulation enabled
-}
+# vim:set ft=conf:

@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 38, // Waybar height (to be removed for auto height)
+    "height": 42, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 1, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -11,11 +11,12 @@
         "mpd"
     ],
     "modules-center": [
-        "sway/workspaces",
         "sway/mode",
-        "sway/scratchpad"
+        "sway/scratchpad",
+        "sway/workspaces"
     ],
     "modules-right": [
+        "backlight",
         "pulseaudio",
         "battery",
         "power-profiles-daemon",
@@ -24,15 +25,31 @@
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": false,
-         "all-outputs": false,
-         "warp-on-scroll": false,
+        "all-outputs": true,
+		    "persistent-workspaces": {
+			      "1": [],
+			      "2": [],
+			      "3": [],
+			      "4": [],
+			      "5": [],
+			      "6": [],
+			      "7": [],
+			      "8": [],
+			      "9": [],
+			      "10": []
+         },
          "format": "{icon}",
          "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "󰝚",
+             "5": "󰉋",
+             "6": "",
+             "7": "",
+             "8": "󰐍",
+             "9": "󰈙",
+             "10": "󰋾"
     //         "urgent": "󰋑",
     //         "focused": "󰋑",
     //         "default": "󰋔"
@@ -79,19 +96,20 @@
         },
         "format": "{icon} {capacity}",
         "format-full": "{icon} {capacity}",
-        "format-charging": "󰂄 {capacity}",
+        "format-charging": "󰚥 {capacity}",
         "format-plugged": "󰚥 {capacity}",
         "format-alt": "{icon} {time}",
-        "format-alt-charging": "󰂄 {time}",
-        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
+        "format-alt-charging": "󰚥 {time}",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 1
     },
     "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
-        "default": "󰉁",
-        "performance": "󰉁",
+        "default": "",
+        "performance": "",
         "balanced": "󰗑",
         "power-saver": "󰌪"
       }

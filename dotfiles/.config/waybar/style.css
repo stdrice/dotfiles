@@ -1,3 +1,5 @@
+@import "color.css";
+
 * {
     border: none;
     border-radius: 0;
@@ -6,17 +8,17 @@
     font-size: 13px;
     min-height: 0;
     margin-left: 5px;
-    margin-right: 5px; 
+    margin-right: 8px; 
 }
 
 window#waybar {
     border-radius: 0px;
-    background: #141b1e;
-    color: #dadada;
+    background: @bg;
+    color: @fg;
 }
 
 tooltip {
-    background: #141b1e;
+    background: @bg;
     border-radius: 0px;
 }
 
@@ -24,26 +26,42 @@ tooltip {
     padding: 3px;
     margin-left: 5px;
     margin-right: 5px;
-    color: #232a2d;
 }
 
+#workspaces button:nth-child(1) {color: @red;}
+#workspaces button:nth-child(2) {color: @green;}
+#workspaces button:nth-child(3) {color: @yellow;}
+#workspaces button:nth-child(4) {color: @blue;}
+#workspaces button:nth-child(5) {color: @magenta;}
+#workspaces button:nth-child(6) {color: @cyan;}
+#workspaces button:nth-child(7) {color: @red;}
+#workspaces button:nth-child(8) {color: @green;}
+#workspaces button:nth-child(9) {color: @yellow;}
+#workspaces button:nth-child(10) {color: @blue;}
+
 #workspaces button.active {
-    color: @text;
+    color: @fg;
+}
+
+#workspaces button.empty {
+    color: @bg2;
 }
 
 #workspaces button.focused {
-    color: #dadada;
-    background: #141b1e;
+    background: transparent;
+    border-bottom: 1px solid @fg;
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    background: #141b1e;
+    color: @red;
+    background: @bg;
 }
 
 #workspaces button:hover {
-    background: #141b1e;
-    color: #dadada;
+    background: @bg;
+    color: @gray;
+    box-shadow: inherit;
+    text-shadow: inherit;
 }
 
 #window,
@@ -51,12 +69,29 @@ tooltip {
 #battery,
 #pulseaudio,
 #network,
-#bluetooth,
-#temperature,
 #workspaces,
 #tray,
 #backlight
 {
-    color: #dadada;
     padding: 5px 5px;
+}
+
+#pulseaudio {
+  color: @blue;
+}
+
+#battery {
+  color: @green;
+}
+
+#mpd {
+  color: @cyan;
+}
+
+#backlight {
+  color: @magenta;
+}
+
+#power-profiles-daemon {
+  color: @cyan
 }

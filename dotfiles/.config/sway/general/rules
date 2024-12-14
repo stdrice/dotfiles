@@ -1,0 +1,75 @@
+# Rules
+
+# Fullscreen windows
+for_window {
+    [class="^wow.exe"] fullscreen enable
+    [class="^steam_app_"] fullscreen enable
+    [class="^spelunky.exe$"] fullscreen enable
+    [class="^dotnet$"] fullscreen enable
+    [class="^tModLoader.bin.x86_64$"] fullscreen enable
+    [class="^Terraria.bin.x86_64$"] fullscreen enable
+    [class="^crawl$"] fullscreen enable
+    [class="^brogue$"] fullscreen enable
+    [class="^th07.exe$"] fullscreen enable
+    [class="^pd2launcher.exe$"] fullscreen enable
+    [class="^edopro$"] fullscreen enable
+    [app_id="^edopro$"] fullscreen enable
+}
+
+# Floating windows
+for_window {
+    [window_role="pop-up"] floating enable
+    [window_role="bubble"] floating enable
+    [window_role="dialog"] floating enable
+    [window_type="dialog"] floating enable
+    [app_id="floating"] floating enable
+    [app_id="galculator"] floating enable
+    [app_id="pavucontrol"] floating enable
+    [app_id="zenity"] floating enable
+    # PiP - See: https://github.com/swaywm/sway/issues/3095
+    [app_id="firefox" title="Picture-in-Picture"] floating enable
+    [title=".* is sharing your screen."] floating enable
+    [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable
+    [app_id="firefox"] border none
+    [app_id="^chromium$"] border none
+}
+
+# Dialogs
+set $handle_dialog floating enable, move container to workspace current
+for_window {
+    [app_id="soffice" title="Document Recovery$"] $handle_dialog
+    [app_id="chromium" title="Open File"] $handle_dialog
+    [app_id="firefox" title="^Enter name of file to save to…$"] $handle_dialog
+    [app_id="firefox" title="^Open File$"] $handle_dialog
+    [app_id="firefox" title="^Save As$"] $handle_dialog
+    [app_id="firefox" title="^Save Image$"] $handle_dialog
+    [app_id="firefox" title="File Upload"] $handle_dialog
+    [app_id="firefox" title="^Firefox - Choose User Profile$"] $handle_dialog
+    [app_id="firefox" title="^Developer Tools — "] $handle_dialog
+    [app_id="firefox" title="^Opening "] $handle_dialog
+    [app_id="firefox" title="^Extension: \(MetaMask\) - MetaMask Notification — Mozilla Firefox$"] $handle_dialog
+    [app_id="Chromium" title="^DevTools - "] $handle_dialog
+    [app_id="chromium-bin-browser" title="^Save File$"] $handle_dialog
+    [app_id="telegram-desktop" title="^Choose Files$"] $handle_dialog
+    [app_id="firefox" title="^Choose Application$"] $handle_dialog
+    [title="(?:Open|Save) (?:File|Folder|As)"] $handle_dialog
+    [app_id="pop-up,task_dialog,About"] $handle_dialog;
+    [app_id="zenity"] $handle_dialog
+    [window_role="pop-up,task_dialog,About"] $handle_dialog;
+    [window_type="dialog"] $handle_dialog;
+    [window_type="utility"] $handle_dialog;
+    [window_type="toolbar"] $handle_dialog;
+    [window_type="splash"] $handle_dialog;
+    [window_type="menu"] $handle_dialog;
+    [window_type="dropdown_menu"] $handle_dialog;
+    [window_type="popup_menu"] $handle_dialog;
+    [window_type="tooltip"] $handle_dialog;
+    [window_type="notification"] $handle_dialog;
+}
+
+# Popup during fullscreen
+# This refers to a popup that is a child of the fullscreen window.
+# Other unrelated popups will not trigger this.
+popup_during_fullscreen leave_fullscreen
+
+# vim:set ft=conf:

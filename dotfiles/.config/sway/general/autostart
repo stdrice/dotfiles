@@ -1,0 +1,47 @@
+# Autostart
+
+# Run with every reload
+exec_always {
+    # Xwayland app settings
+    xrdb ~/.Xdefaults
+    
+    # xsettingsd
+    xsettingsd
+    
+    # Import Gsettings
+    ~/.local/bin/import-gsettings
+
+}
+
+# Run once on login
+exec {
+    # Start pipewire
+    # ~/.local/bin/start-pipewire
+
+    # Waybar - Statusbar
+    waybar
+    
+    # Dunst - Notification
+    dunst
+    
+    # Polkit
+    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+    
+    # NetworkManager Applet
+    nm-applet
+
+    # Bluetooth Manager Applet
+    blueman-applet
+
+    # MPD
+    mpd
+
+    # Fcitx5
+    # fcitx5
+
+    # Enable screensharing
+    /usr/libexec/xdg-desktop-portal -r
+    /usr/libexec/xdg-desktop-portal-wlr -r
+}
+
+# vim:set ft=conf:

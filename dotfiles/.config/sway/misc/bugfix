@@ -1,0 +1,9 @@
+# Fix Java apps
+exec export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Fix chromium + app mode inhibiting shortcuts:
+# Source: https://old.reddit.com/r/swaywm/comments/vkgfza/chromium_v103_application_mode_app_and_weird/
+# for_window [app_id="^chrome-.*__-.*$"] shortcuts_inhibitor disable
+for_window [app_id="^chrome-.*__.*$"] shortcuts_inhibitor disable
+
+# vim:set ft=conf:

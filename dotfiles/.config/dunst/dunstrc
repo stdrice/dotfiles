@@ -1,7 +1,7 @@
 [global]
     monitor = 0
     follow = none
-    width = 300
+    width = (0, 700)
     height = 100
     origin = top-right
     offset = 20x20
@@ -10,7 +10,7 @@
     progress_bar = true
     progress_bar_height = 2
     progress_bar_frame_width = 0
-    progress_bar_min_width = 150
+    progress_bar_min_width = 120
     progress_bar_max_width = 300
     indicate_hidden = yes
     transparency = 0

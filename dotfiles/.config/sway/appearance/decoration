@@ -12,3 +12,5 @@ default_floating_border normal 1
 # Window Titlebar
 font pango: monospace 18
 for_window [class=".*"] title_format "<span rise='3000' font='monospace 10'> %title</span>"
+
+# vim:set ft=conf:

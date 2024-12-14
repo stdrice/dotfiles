@@ -1,0 +1,20 @@
+# Variables
+
+set {
+    # Logo key. Use Mod1 for Alt
+    $mod Mod4
+
+    # Home row direction keys, like vim
+    $left h
+    $down j
+    $up k
+    $right l
+
+    # Your preferred terminal emulator
+    $term foot
+
+    # Your preferred application launcher
+    $menu rofi -show drun
+}
+
+# vim:set ft=conf:
