@@ -33,7 +33,7 @@
     ignore_newline = no
     stack_duplicates = true
     hide_duplicate_count = true
-    show_indicators = yes
+    show_indicators = false
     icon_position = left
     min_icon_size = 0
     max_icon_size = 72
