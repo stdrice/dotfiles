@@ -1,5 +1,7 @@
 # ~/.zshrc
 
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -47,6 +49,3 @@ command_not_found_handler() {
     return 127
 }
 
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
-fi
