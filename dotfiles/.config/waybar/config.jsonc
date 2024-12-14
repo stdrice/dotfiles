@@ -98,10 +98,9 @@
         "format-full": "{icon} {capacity}",
         "format-charging": "󰚥 {capacity}",
         "format-plugged": "󰚥 {capacity}",
-        "format-alt": "{icon} {time}",
-        "format-alt-charging": "󰚥 {time}",
         "format-icons": ["", "", "", "", ""],
-        "interval": 1
+        "interval": 1,
+        "on-click": "~/.local/bin/powermenu"
     },
     "power-profiles-daemon": {
       "format": "{icon}",
