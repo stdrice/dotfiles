@@ -13,7 +13,7 @@
 This is **pengurice**, a script that automatically rice your **Linux** system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
 
 # **Starring 🌠**
-<img src="https://i.imgur.com/1Raaomc.png" align="right" width="400px">
+<img src="https://i.imgur.com/C4wl4B6.png" align="right" width="400px">
 
 - [sway ⚽](https://swaywm.org): window manager/compositor
 - [foot ❤️](https://codeberg.org/dnkl/foot): terminal
