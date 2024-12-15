@@ -134,6 +134,6 @@
     "custom/weather": {
         "exec": "~/.local/bin/weather -o",
         "on-click": "foot -e ~/.local/bin/weather",
-        "interval": 600
+        "interval": 3600
     }
 }
