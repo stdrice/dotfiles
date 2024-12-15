@@ -14,7 +14,7 @@ weather_location=""
 weather_unit="?m"
 
 weather_status(){
-    weather=$(curl -sf "wttr.in/$weather_location?format=%c%C+%t&$weather_unit")
+    weather=$(curl -sf "wttr.in/$weather_location?format=%c+%t&$weather_unit")
     echo "$weather"
 }
 
