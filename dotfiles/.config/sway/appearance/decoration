@@ -16,7 +16,7 @@ default_border normal $border_width
 default_floating_border normal $border_width
 
 # Window Titlebar
-for_window [class=".*"] title_format "<span rise='3500' font='monospace 10'> %title</span>"
+for_window [class=".*"] title_format "<span rise='3500' font='monospace 10'><b> %title</b></span>"
 title_align left
 
 # Disable titlebar for certain windows
