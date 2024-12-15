@@ -42,6 +42,10 @@ exec {
     # Enable screensharing
     /usr/libexec/xdg-desktop-portal -r
     /usr/libexec/xdg-desktop-portal-wlr -r
+
+    # Clipboard history
+    wl-paste --type text --watch cliphist store # Stores only text data
+    wl-paste --type image --watch cliphist store # Stores only image data
 }
 
 # vim:set ft=conf:
