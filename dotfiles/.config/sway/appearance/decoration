@@ -36,6 +36,7 @@ for_window {
     [app_id="^editor$"] border pixel $border_width
     [app_id="^org$"] border pixel $border_width
     [app_id="firefox"] border pixel $border_width
+    [app_id="LibreWolf"] border pixel $border_width
     [class="Chromium"] border pixel $border_width
     [app_id="Chromium"] border pixel $border_width
     [app_id="org.qutebrowser.qutebrowser"] border pixel $border_width
