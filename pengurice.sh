@@ -16,7 +16,7 @@ date=$(date +%Y%m%d-%H%M%S)
 git_repo="https://codeberg.org/pznguin-kyun/pengurice"
 branch="main"
 main_folder="dotfiles"
-packages=(bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop calcurse dunst firefox foot fortune-mod galculator gammastep git grim gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb imv libnotify lxappearance-gtk3 ly mpc mpd mpv ncmpcpp nemo neofetch neovim networkmanager network-manager-applet noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nwg-displays pamixer papirus-icon-theme pavucontrol pipewire pipewire-pulse polkit-gnome power-profiles-daemon ranger rofi sed slurp sof-firmware sudo sway swaybg swayidle swaylock ttf-iosevka-nerd ttf-nerd-fonts-symbols ttf-roboto udisks2 unzip waybar wireplumber wl-clipboard xdg-desktop-portal-gtk xdg-desktop-portal-wlr xdg-user-dirs-gtk xorg xorg-drivers xorg-xwayland xsettingsd zathura zathura-pdf-mupdf zip zsh)
+packages=(bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop calcurse dunst firefox foot fortune-mod galculator gammastep git grim gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb imv libnotify lxappearance-gtk3 ly mpc mpd mpv ncmpcpp nemo neofetch neovim networkmanager network-manager-applet noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nwg-displays pamixer papirus-icon-theme pavucontrol pipewire pipewire-pulse polkit-gnome power-profiles-daemon ranger rofi sed slurp sof-firmware sudo sway swaybg swayidle swaylock ttf-cascadia-code-nerd ttf-nerd-fonts-symbols ttf-roboto udisks2 unzip waybar wireplumber wl-clipboard xdg-desktop-portal-gtk xdg-desktop-portal-wlr xdg-user-dirs-gtk xorg xorg-drivers xorg-xwayland xsettingsd zathura zathura-pdf-mupdf zip zsh)
 
 # functions
 logo() {

@@ -3,11 +3,12 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "monospace", "Symbols Nerd Font";
+    font-family: "monospace";
     font-size: 13px;
+    font-weight: bold;
     min-height: 0;
-    margin-left: 5px;
-    margin-right: 8px; 
+    margin-left: 4px;
+    margin-right: 4px; 
 }
 
 window#waybar {
