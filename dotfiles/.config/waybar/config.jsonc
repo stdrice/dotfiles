@@ -8,6 +8,7 @@
     // Choose the order of the modules
     "modules-left": [
         "clock",
+        "custom/weather",
         "mpd"
     ],
     "modules-center": [
@@ -129,5 +130,10 @@
         },
         "on-click": "pamixer --toggle-mute",
         "on-click-right": "pavucontrol"
+    },
+    "custom/weather": {
+        "exec": "~/.local/bin/weather -o",
+        "on-click": "foot -e ~/.local/bin/weather",
+        "interval": 600
     }
 }
