@@ -29,9 +29,6 @@ bindsym {
     Print exec ~/.local/bin/screenshot
     $mod+Delete exec ~/.local/bin/screenshot
 
-    # Clipboard manager
-    $mod+Shift+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
-
     # Moving around:
     # Move your focus around
     $mod+$left focus left
