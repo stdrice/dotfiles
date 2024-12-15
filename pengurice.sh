@@ -35,7 +35,7 @@ fi
 bootstraps(){
     # Allow user to run sudo without password. Since AUR programs must be installed
     # in a fakeroot environment, this is required for all builds with AUR.
-    trap 'rm -f /etc/sudoers.d/penguinrice-temp'
+    trap 'rm -f /etc/sudoers.d/pengurice-temp'
     echo "%wheel ALL=(ALL) NOPASSWD: ALL
 Defaults:%wheel runcwd=*" > /etc/sudoers.d/pengurice-temp
     
