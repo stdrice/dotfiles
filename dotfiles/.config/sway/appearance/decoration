@@ -1,7 +1,7 @@
 # Decoration
 
 # SwayFX settings
-corner_radius 4
+corner_radius 6
 shadows disable
 blur disable
 titlebar_separator disable
