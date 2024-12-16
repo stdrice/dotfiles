@@ -30,8 +30,8 @@ exec {
     # NetworkManager Applet
     nm-applet
 
-    # Bluetooth Manager Applet
-    blueman-applet
+    # Bluetooth Applet
+    blueberry-tray
 
     # MPD
     mpd
