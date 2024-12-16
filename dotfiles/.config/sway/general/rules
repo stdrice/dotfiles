@@ -26,6 +26,8 @@ for_window {
     [app_id="galculator"] floating enable
     [app_id="pavucontrol"] floating enable
     [app_id="zenity"] floating enable
+    [app_id="blueberry"] floating enable
+    [app_id="blueman"] floating enable
     # PiP - See: https://github.com/swaywm/sway/issues/3095
     [app_id="firefox" title="Picture-in-Picture"] floating enable
     [title=".* is sharing your screen."] floating enable
