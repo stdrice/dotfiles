@@ -15,6 +15,9 @@ exec_always {
 
 # Run once on login
 exec {
+    # Prevents GTK apps from hanging for 15-20 sec before launching
+    dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+
     # Start pipewire
     # ~/.local/bin/start-pipewire
 
