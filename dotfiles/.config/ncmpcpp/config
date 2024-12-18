@@ -14,6 +14,7 @@ visualizer_fps = "60"
 visualizer_type = wave
 visualizer_look = "┃┃"
 visualizer_color = blue, green, yellow, magenta, red
+
 visualizer_spectrum_smooth_look = "no"
 
 # General
@@ -41,7 +42,7 @@ startup_screen = "playlist"
 seek_time = 5
 
 # Progress bar
-progressbar_look = "─╼ "
+progressbar_look = "━━━"
 progressbar_elapsed_color = "magenta"
 
 # UI Visibility
@@ -62,4 +63,3 @@ current_item_prefix = "$b$3- "
 song_list_format = "{%a - %t}|{%f}$R {%l}"
 song_status_format = {%a - %t}|{%f}
 song_library_format = {{%a - %t} (%b)}|{%f}
-
