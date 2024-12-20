@@ -1,0 +1,88 @@
+/* Hides the native tabs */
+html:not([privatebrowsingmode="temporary"]) #sidebar-splitter {
+  border: none !important;
+  background: transparent !important;
+  width: 1px !important;
+}
+
+html:not([privatebrowsingmode="temporary"]) #TabsToolbar {
+  visibility: collapse !important;
+}
+
+html:not([privatebrowsingmode="temporary"]) #sidebar-header {
+  visibility: collapse !important;
+}
+
+#urlbar:not([breakout-extend]) #urlbar-background {
+  background: none !important;
+  background-color: transparent !important;
+}
+
+.titlebar-button {
+  width: 36px !important;
+}
+
+html:not([privatebrowsingmode="temporary"]) .titlebar-buttonbox-container {
+  position: absolute;
+  right: 0;
+  top: 9px;
+  display: flex;
+  justify-content: center;
+  width: 110px !important;
+}
+
+/* Auto-collapse sidebar */
+html:not([privatebrowsingmode="temporary"]) #sidebar-box {
+    --uc-sidebar-width: 42px;
+    --uc-sidebar-hover-width: 260px;
+    --uc-autohide-sidebar-delay: 1ms; /* Waiting time before hiding sidebar */
+    position: relative;
+    min-width: var(--uc-sidebar-width) !important;
+    width: var(--uc-sidebar-width) !important;
+    max-width: var(--uc-sidebar-width) !important;
+    z-index: 100;
+}
+
+html:not([privatebrowsingmode="temporary"]) #sidebar-box[positionend] {
+    direction: rtl;
+}
+
+html:not([privatebrowsingmode="temporary"]) #sidebar-box[positionend] > * {
+    direction: ltr;
+}
+
+html:not([privatebrowsingmode="temporary"]) #sidebar-box[positionend]:-moz-locale-dir(rtl) {
+    direction: ltr;
+}
+
+html:not([privatebrowsingmode="temporary"]) #sidebar-box[positionend]:-moz-locale-dir(rtl) > * {
+    direction: rtl;
+}
+
+html:not([privatebrowsingmode="temporary"]) #sidebar-splitter {
+    display: none;
+}
+
+html:not([privatebrowsingmode="temporary"]) #sidebar {
+    transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
+    min-width: var(--uc-sidebar-width) !important;
+    will-change: min-width;
+}
+
+html:not([privatebrowsingmode="temporary"]) #sidebar-box:hover > #sidebar {
+    min-width: var(--uc-sidebar-hover-width) !important;
+    transition-delay: 0ms !important;
+}
+
+/* Add sidebar divider and give it background */
+html:not([privatebrowsingmode="temporary"]) #sidebar, #sidebar-header {
+    background-color: inherit !important;
+    /* 	border-inline: 1px solid rgb(80, 80, 80); */
+    border-inline-width: 0px 1px;
+}
+
+/*  Removes annoying border  */
+#navigator-toolbox{border:none !important;}
+
+/*  Removes the annoying rainbow thing from the hamburger  */
+#appMenu-fxa-separator{border-image:none !important;}
