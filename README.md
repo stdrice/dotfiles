@@ -6,6 +6,7 @@
 - [Starring 🌠](#starring-)
 - [Installation 🛠️](#installation-%EF%B8%8F)
 - [Keybindings ⌨️](#keybindings-%EF%B8%8F)
+- [Firefox/Librewolf config 🦊](#firefox-librewolf-config)
 - [License](#license)
 
 # **About ⁉️**
@@ -15,14 +16,14 @@ This is **pengurice**, a script that automatically rice your **Linux** system. I
 # **Starring 🌠**
 <img src="https://i.imgur.com/mZcHRfk.png" align="right" width="400px">
 
-- [swayfx ⚽](https://github.com/WillPower3309/swayfx): window manager/compositor
-- [foot ❤️](https://codeberg.org/dnkl/foot): terminal
-- [firefox 🦊](https://librewolf.net/): browser
-- [ranger](https://ranger.github.io/) and [nemo](https://github.com/linuxmint/nemo): file manager
-- [neovim](https://neovim.io): editor
-- [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp): music player
-- [calcurse](https://www.calcurse.org/): calendar
-- [btop](https://github.com/aristocratos/btop): system monitor
+- **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
+- **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
+- **[Librewolf 🦊](https://librewolf.net/)**: Browser
+- **[Ranger](https://ranger.github.io/) and [Nemo](https://github.com/linuxmint/nemo)**: File Manager
+- **[NeoVim](https://neovim.io)**: Text Editor
+- **[ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)**: Music Player
+- **[calcurse](https://www.calcurse.org/)**: Calendar
+- **[btop](https://github.com/aristocratos/btop)**: System monitor
 
 and so on!
 
@@ -75,6 +76,9 @@ These are the basic keybinds. Read through the `sway/general/keybindings.conf` f
 | `Mod + Shift + Space`                             | Toggle Floating                   |
 | `Mod + H/J/K/L or Left/Down/Up/Right`             | Change Focus                      |
 | `Mod + Shift + H/J/K/L or Left/Down/Up/Right`     | Move window                       |
+
+# **Firefox/Librewolf config 🦊**
+See [firefox.md](firefox.md)
 
 # **License**
 This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
