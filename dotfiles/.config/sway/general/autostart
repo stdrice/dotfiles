@@ -34,7 +34,7 @@ exec {
     nm-applet
 
     # Bluetooth Applet
-    blueberry-tray
+    blueman-applet
 
     # MPD
     mpd
