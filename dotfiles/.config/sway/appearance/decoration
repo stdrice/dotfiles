@@ -14,7 +14,7 @@ font pango: monospace 18
 gaps outer 0
 gaps inner 6
 
-# >> Titlebar and border configuration
+# Titlebar and border configuration
 # SwayFX BUG: https://github.com/WillPower3309/swayfx/issues/201
 # Looks off if > 0
 titlebar_border_thickness 0
@@ -27,7 +27,7 @@ default_border normal $border_width
 default_floating_border normal $border_width
 
 # Window Titlebar
-for_window [class=".*"] title_format "<span rise='3500' font='sans 10'><b>%title</b></span>"
+for_window [class=".*"] title_format "<span rise='3500' font='sans 10'><b> %title </b></span>"
 title_align center
 
 # Disable titlebar for certain windows
