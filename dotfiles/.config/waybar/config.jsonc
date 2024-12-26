@@ -132,9 +132,6 @@
         "on-click-right": "pavucontrol"
     },
     "custom/weather": {
-        "exec": "~/.local/bin/weather -o",
-        "exec-if": "ping wttr.in -c 1",
-        "on-click": "foot -e ~/.local/bin/weather",
-        "interval": 3600
+        "exec": "~/.local/bin/weather"
     }
 }
