@@ -26,7 +26,7 @@ bindsym {
     $mod+Shift+c reload
 
     # Clipboard manager
-    $mod+Shift+v exec clipman pick -t rofi
+    $mod+Shift+v exec rofi -modi clipboard:~/.local/bin/cliphist-rofi-img -show clipboard -show-icons
 
     # Screenshot
     Print exec ~/.local/bin/screenshot

@@ -47,7 +47,7 @@ exec {
     /usr/libexec/xdg-desktop-portal-wlr -r
 
     # Clipboard manager
-    wl-paste -t text --watch clipman store --no-persist
+    wl-paste --watch cliphist store
 
 }
 
