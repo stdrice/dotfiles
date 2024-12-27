@@ -40,11 +40,15 @@ exec {
     mpd
 
     # Fcitx5
-    # fcitx5
+    fcitx5
 
     # Enable screensharing
     /usr/libexec/xdg-desktop-portal -r
     /usr/libexec/xdg-desktop-portal-wlr -r
+
+    # Clipboard manager
+    wl-paste -t text --watch clipman store --no-persist
+
 }
 
 # vim:set ft=conf:

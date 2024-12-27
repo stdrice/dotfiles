@@ -7,6 +7,5 @@ user_pref("browser.compactmode.show", true);
 /*privacy*/
 user_pref("browser.send_pings", false); 
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
-user_pref("dom.event.clipboardevents.enabled", false); /* clipboard telemetry */
 user_pref("dom.battery.enabled", false); /* battery telemetry.. why???*/
 user_pref("datareporting.healthreport.uploadEnabled", false);

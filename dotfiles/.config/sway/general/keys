@@ -25,6 +25,9 @@ bindsym {
     # Reload the configuration file
     $mod+Shift+c reload
 
+    # Clipboard manager
+    $mod+Shift+v exec clipman pick -t rofi
+
     # Screenshot
     Print exec ~/.local/bin/screenshot
     $mod+Delete exec ~/.local/bin/screenshot
