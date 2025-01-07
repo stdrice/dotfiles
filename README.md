@@ -36,19 +36,19 @@ Now this script only supports **Arch Linux** and **Arch-based** distros (Endeavo
 ```
 $ git clone --depth 1 https://codeberg.org/pznguin-kyun/pengurice
 $ cd pengurice
-# ./pengurice.sh
+# ./install
 ```
 
 ## Install with curl
 ```
-$ curl -LO https://codeberg.org/pznguin-kyun/pengurice/raw/branch/main/pengurice.sh
-# bash pengurice.sh
+$ curl -LO https://codeberg.org/pznguin-kyun/pengurice/raw/branch/main/install
+# bash install
 ```
 
 ## Install manually
 - Install all dependencies
 ```
-brightnessctl btop calcurse dunst foot gammastep mpc mpd ncmpcpp neofetch power-profiles-daemon rofi slurp swaybg swayfx swayidle swaylock-effects ttf-nerd-fonts-symbols ttf-roboto ttf-roboto-mono-nerd waybar zsh
+brightnessctl btop calcurse dunst foot gammastep mpc mpd ncmpcpp neofetch power-profiles-daemon rofi slurp swaybg swayfx swayidle swaylock-effects ttf-iosevka-nerd ttf-nerd-fonts-symbols waybar zsh
 ```
 - Clone this repo
 - Copy all files in `dotfiles` and paste to your `$HOME` folder
