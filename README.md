@@ -14,7 +14,7 @@
 This is **pengurice**, a script that automatically rice your **Linux** system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
 
 # **Starring 🌠**
-<img src="https://i.imgur.com/mZcHRfk.png" align="right" width="400px">
+<img src="https://i.imgur.com/fps66em.png" align="right" width="400px">
 
 - **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
@@ -48,7 +48,7 @@ $ curl -LO https://codeberg.org/pznguin-kyun/pengurice/raw/branch/main/install
 ## Install manually
 - Install all dependencies
 ```
-brightnessctl btop calcurse dunst foot gammastep mpc mpd ncmpcpp neofetch power-profiles-daemon rofi slurp swaybg swayfx swayidle swaylock-effects ttf-cascadia-code-nerd ttf-nerd-fonts-symbols waybar zsh
+brightnessctl btop calcurse dunst foot gammastep mpc mpd ncmpcpp neofetch power-profiles-daemon rofi slurp swaybg swayfx swayidle swaylock-effects ttf-iosevka-nerd ttf-nerd-fonts-symbols waybar zsh
 ```
 - Clone this repo
 - Copy all files in `dotfiles` and paste to your `$HOME` folder
