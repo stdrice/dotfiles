@@ -16,7 +16,7 @@ date=$(date +%Y%m%d-%H%M%S)
 git_repo="https://codeberg.org/pznguin-kyun/pengurice"
 branch="main"
 main_folder="dotfiles"
-packages=(bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop calcurse cliphist dunst foot galculator gammastep git grim gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb imv libnotify librewolf-bin lxappearance-gtk3 ly mpc mpd mpv ncmpcpp nemo neofetch neovim networkmanager network-manager-applet noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nwg-displays pamixer papirus-icon-theme pavucontrol pipewire pipewire-pulse polkit-gnome power-profiles-daemon ranger rofi sed slurp sof-firmware sudo swaybg swayfx swayidle swaylock-effects ttf-iosevka-nerd ttf-nerd-fonts-symbols udisks2 unzip waybar wireplumber wl-clipboard xdg-desktop-portal-gtk xdg-desktop-portal-wlr xdg-user-dirs-gtk xorg-drivers xorg-xwayland xsettingsd zathura zathura-pdf-mupdf zip zsh)
+packages=(bash bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop calcurse cliphist dunst foot galculator gammastep git grim gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb imv libnotify librewolf-bin lxappearance-gtk3 ly mpc mpd mpv ncmpcpp nemo neofetch neovim networkmanager network-manager-applet noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nwg-displays pamixer papirus-icon-theme pavucontrol pipewire pipewire-pulse polkit-gnome power-profiles-daemon ranger rofi sed slurp sof-firmware sudo swaybg swayfx swayidle swaylock-effects ttf-iosevka-nerd ttf-nerd-fonts-symbols udisks2 unzip waybar wireplumber wl-clipboard xdg-desktop-portal-gtk xdg-desktop-portal-wlr xdg-user-dirs-gtk xorg-drivers xorg-xwayland xsettingsd zathura zathura-pdf-mupdf zip zsh)
 
 # functions
 logo() {
@@ -45,17 +45,17 @@ Defaults:%wheel runcwd=*" > /etc/sudoers.d/pengurice-temp
 
 intro(){
     logo "Welcome!"
-printf '%s%sWelcome to pengurice!\nThis script will automatically install fully-featured tiling window manager-based system on any Linux system.\nMy dotfiles DO NOT modify any of your system configuration.\nYou will be prompted for your root password to install missing dependencies.\nThis script doesnt have potential power to break your system, it only copies files from my repo to your HOME directory. %s\n\n' "${BLD}" "${CRE}" "${CNC}"
+    printf '%s%sWelcome to pengurice!\nThis script will automatically install fully-featured tiling window manager-based system on Linux system.\nMy dotfiles DO NOT modify any of your system configuration.\nYou will be prompted for your root password to install missing dependencies.\nThis script doesnt have potential power to break your system, it only copies files from my repo to your HOME directory. %s\n\n' "${BLD}" "${CRE}" "${CNC}"
 
-while true; do
-	read -rp "Do you want to continue? [Y/n]: " yn
-	case $yn in
-	[Nn]*) exit ;;
-	*) break ;;
-	esac
-done
+    while true; do
+	      read -rp "Do you want to continue? [Y/n]: " yn
+	      case $yn in
+	          [Nn]*) exit ;;
+	          *) break ;;
+	      esac
+    done
 
-read -rp "First, type your username here: " username
+    read -rp "First, type your username here: " username
 }
 
 update(){
@@ -167,7 +167,7 @@ enable_services(){
 finalize(){
     # Allow wheel users to sudo with password and allow several system commands
     echo "%wheel ALL=(ALL:ALL) ALL" >/etc/sudoers.d/00-pengurice-wheel-can-sudo
-    echo "%wheel ALL=(ALL:ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/poweroff,/usr/bin/reboot,/usr/bin/systemctl,/usr/bin/loginctl,/usr/bin/wifi-menu,/usr/bin/mount,/usr/bin/umount,/usr/bin/loadkeys" >/etc/sudoers.d/01-pengurice-cmds-without-password
+    echo "%wheel ALL=(ALL:ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/poweroff,/usr/bin/reboot,/usr/bin/systemctl,/usr/bin/loginctl,/usr/bin/mount,/usr/bin/umount,/usr/bin/loadkeys" >/etc/sudoers.d/01-pengurice-cmds-without-password
     rm -rf /etc/sudoers.d/pengurice-temp
 }
 
