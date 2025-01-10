@@ -5,7 +5,7 @@
 - [About ⁉️](#about-%EF%B8%8F)
 - [Starring 🌠](#starring-)
 - [Installation 🛠️](#installation-%EF%B8%8F)
-- [Gallery](#gallery-)
+- [Gallery 📸](#gallery)
 - [Keybindings ⌨️](#keybindings-%EF%B8%8F)
 - [Firefox/Librewolf config 🦊](#firefox-librewolf-config)
 - [License](#license)
