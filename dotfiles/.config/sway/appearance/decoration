@@ -12,7 +12,7 @@ font pango: monospace 18
 
 # Gaps
 gaps outer 0
-gaps inner 6
+gaps inner 4
 
 # Titlebar and border configuration
 # SwayFX BUG: https://github.com/WillPower3309/swayfx/issues/201
