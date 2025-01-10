@@ -59,7 +59,7 @@ brightnessctl btop calcurse dunst foot gammastep mpc mpd ncmpcpp neofetch power-
 - This script **MUST BE** run as `root`.
 
 # **Gallery 📸**
-| Busy screenshot                          | Tiling                                     |
+| Floating                                 | Tiling                                     |
 | :--------------------------------------- | :----------------------------------------- |
 | ![busy](https://i.imgur.com/wEtP8uS.png) | ![tiling](https://i.imgur.com/7WXasqX.png) |
 | Launcher                                 | Lockscreen                                 |
