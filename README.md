@@ -5,6 +5,7 @@
 - [About ⁉️](#about-%EF%B8%8F)
 - [Starring 🌠](#starring-)
 - [Installation 🛠️](#installation-%EF%B8%8F)
+- [Gallery](#gallery-)
 - [Keybindings ⌨️](#keybindings-%EF%B8%8F)
 - [Firefox/Librewolf config 🦊](#firefox-librewolf-config)
 - [License](#license)
@@ -14,7 +15,7 @@
 This is **pengurice**, a script that automatically rice your **Linux** system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
 
 # **Starring 🌠**
-<img src="https://i.imgur.com/fps66em.png" align="right" width="400px">
+<img src="https://i.imgur.com/wEtP8uS.png" align="right" width="400px">
 
 - **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
@@ -56,6 +57,13 @@ brightnessctl btop calcurse dunst foot gammastep mpc mpd ncmpcpp neofetch power-
 ## Some notes
 - If your system doesn't have `bash`, install it.
 - This script **MUST BE** run as `root`.
+
+# **Gallery 📸**
+| Busy screenshot                          | Tiling                                     |
+| :--------------------------------------- | :----------------------------------------- |
+| ![busy](https://i.imgur.com/wEtP8uS.png) | ![tiling](https://i.imgur.com/7WXasqX.png) |
+| Launcher                                 | Lockscreen                                 |
+| ![rofi](https://i.imgur.com/vULQ9o4.png) | ![lock](https://i.imgur.com/2meHf4D.png)   |
 
 # **Keybindings ⌨️**
 These are the basic keybinds. Read through the `sway/general/keybindings.conf` file for more keybinds.
