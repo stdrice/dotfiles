@@ -1,7 +1,9 @@
 # Wallpaper
-output * bg ~/.config/sway/walls/fill.png fill
-# output * bg ~/.config/sway/walls/tile.png tile
-#
+
+# output * bg ~/.config/sway/walls/fill.png fill
+output * bg ~/.config/sway/walls/tile.png tile
+
+
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
