@@ -1,5 +1,10 @@
 # Rules
 
+# Sticky windows
+for_window {
+    [app_id="^dragon$"] sticky enable
+}
+
 # Fullscreen windows
 for_window {
     [class="^wow.exe"] fullscreen enable
@@ -72,5 +77,8 @@ for_window {
 # This refers to a popup that is a child of the fullscreen window.
 # Other unrelated popups will not trigger this.
 popup_during_fullscreen leave_fullscreen
+
+# Mouse rules
+focus_follows_mouse no
 
 # vim:set ft=conf:
