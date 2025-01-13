@@ -43,7 +43,7 @@ seek_time = 5
 
 # Progress bar
 progressbar_look = "━|━"
-progressbar_elapsed_color = "magenta"
+progressbar_elapsed_color = "yellow"
 
 # UI Visibility
 header_visibility = "yes"

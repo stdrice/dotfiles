@@ -66,13 +66,14 @@
         "tooltip-format": "{app}: {title}"
     },
     "mpd": {
-        "format": "󰝚 {title}",
+        "format": "{artist} - {title}",
         "format-disconnected": "",
         "format-stopped": "",
+        "title-len": 30,
         "unknown-tag": "N/A",
         "interval": 5,
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+        "tooltip-format": "{artist} - {title}\nAlbum: {album}\nVolume: {volume}",
+        "tooltip-format-disconnected": ""
     },
     "tray": {
         "icon-size": 16,
