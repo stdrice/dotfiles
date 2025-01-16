@@ -9,7 +9,7 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #010101;
+  bg: #000000;
   fg: #f8f8f6;
   al: #404749;
   border-radius: 4px;
