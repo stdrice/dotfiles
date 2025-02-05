@@ -15,7 +15,7 @@ setopt hist_ignore_dups
 PROMPT="%F{2}%~ %F{reset}$ "
 
 # Vars
-export TERMINAL="alacritty"
+export TERMINAL="foot"
 export BROWSER="librewolf"
 export EDITOR="nvim"
 export VISUAL="${EDITOR}"
