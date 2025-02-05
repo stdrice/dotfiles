@@ -12,7 +12,7 @@
         "sway/mode"
     ],
     "modules-center": [
-	"mpd"
+	"custom/media"
     ],
     "modules-right": [
         "backlight",
@@ -128,5 +128,12 @@
         },
         "on-click": "pamixer --toggle-mute",
         "on-click-right": "pavucontrol"
+    },
+    "custom/media": {
+	"format": "{}",
+	"return-type": "json",
+        "max-length": 70,
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click": "playerctl play-pause"
     }
 }

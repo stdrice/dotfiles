@@ -38,6 +38,7 @@ exec {
 
     # MPD
     mpd
+    mpd-mpris
 
     # Fcitx5
     fcitx5

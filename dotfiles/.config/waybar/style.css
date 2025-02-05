@@ -84,7 +84,7 @@ tooltip {
   color: @green;
 }
 
-#mpd {
+#mpd, #custom-media {
   color: @cyan;
 }
 
