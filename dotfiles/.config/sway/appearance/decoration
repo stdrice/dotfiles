@@ -10,8 +10,8 @@ shadow_blur_radius 50
 shadow_color #0000007F
 
 # Font
-font monospace 17
-font pango: monospace 17
+font monospace 16
+font pango: monospace 16
 
 # Gaps
 gaps outer 0
