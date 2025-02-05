@@ -22,9 +22,9 @@ tooltip {
 }
 
 #workspaces button {
-    padding: 3px;
-    margin-left: 5px;
-    margin-right: 5px;
+    padding: 2px;
+    margin-left: 2px;
+    margin-right: 4px;
     border-bottom: 1px solid @bg;
 }
 
@@ -73,7 +73,7 @@ tooltip {
 #tray,
 #backlight
 {
-    padding: 5px 5px;
+    padding: 4px 4px;
 }
 
 #pulseaudio {
