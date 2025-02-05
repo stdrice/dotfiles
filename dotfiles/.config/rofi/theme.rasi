@@ -12,7 +12,7 @@ configuration {
   bg: #000000;
   fg: #f8f8f6;
   al: #404749;
-  border-radius: 4px;
+  border-radius: 0px;
   background-color: @bg;
   text-color: @fg;
 }
