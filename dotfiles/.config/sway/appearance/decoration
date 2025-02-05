@@ -49,7 +49,8 @@ for_window {
     [app_id="org.qutebrowser.qutebrowser"] border pixel $border_width
     [title=".* is sharing your screen."] border pixel $border_width
     [app_id="firefox" title="Firefox — Sharing Indicator"] border pixel $border_width
-    [app_id="gimp-2.99" title="GIMP Startup"] border pixel $border_width
+    [app_id="gimp-2.99" title="GIMP Startup"] border pixel $border_width 
+    [title="GNU Image Manipulation Program"] border pixel $border_width
     [app_id="com.github.maoschanz.drawing"] border pixel $border_width
     [class="^battle.net.exe$"] border pixel $border_width
     [class="^steam$"] border pixel $border_width
