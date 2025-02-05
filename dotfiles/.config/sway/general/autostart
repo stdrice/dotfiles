@@ -37,8 +37,7 @@ exec {
     blueman-applet
 
     # MPD
-    mpd
-    mpd-mpris
+    mpd && mpd-mpris
 
     # Fcitx5
     fcitx5
