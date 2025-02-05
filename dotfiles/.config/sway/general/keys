@@ -148,9 +148,9 @@ bindsym --locked {
     XF86AudioRaiseVolume exec ~/.local/bin/volume --up
     XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
 
-    $mod+Ctrl+0 exec ~/.local/bin/volume --toggle
-    $mod+Control+minus exec ~/.local/bin/volume --down
-    $mod+Control+equal exec ~/.local/bin/volume --up
+    $mod+F1 exec ~/.local/bin/volume --toggle
+    $mod+F2 exec ~/.local/bin/volume --down
+    $mod+F3 exec ~/.local/bin/volume --up
 }
 
 # Adjust brightness
@@ -158,8 +158,8 @@ bindsym --locked {
     XF86MonBrightnessDown exec ~/.local/bin/brightness --down
     XF86MonBrightnessUp exec ~/.local/bin/brightness --up
 
-    $mod+Control+bracketleft exec ~/.local/bin/brightness --down
-    $mod+Control+bracketright exec ~/.local/bin/brightness --up
+    $mod+F4 exec ~/.local/bin/brightness --down
+    $mod+F5 exec ~/.local/bin/brightness --up
 }
 
 # vim:set ft=conf:
