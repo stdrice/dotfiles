@@ -23,4 +23,11 @@ input type:touchpad {
     middle_emulation enabled
 }
 
+input * {
+    xkb_layout "us"
+    # xkb_model ""
+    # xkb_variant ""
+    # xkb_options ""
+}
+
 # vim:set ft=conf:
