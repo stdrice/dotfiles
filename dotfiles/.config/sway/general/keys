@@ -20,7 +20,10 @@ bindsym {
     $mod+d exec $menu
 
     # Start powermenu
-    $mod+BackSpace exec ~/.local/bin/powermenu
+    $mod+BackSpace exec $powermenu
+
+    # Window switcher
+    $mod+Tab exec $window-switcher
 
     # Reload the configuration file
     $mod+Shift+c reload

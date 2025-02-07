@@ -15,6 +15,12 @@ set {
 
     # Your preferred application launcher
     $menu rofi -show drun
+
+    # Powermenu
+    $powermenu ~/.local/bin/powermenu
+
+    # Window switcher
+    $window-switcher rofi -show window
 }
 
 # vim:set ft=conf:
