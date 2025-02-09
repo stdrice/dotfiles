@@ -12,7 +12,7 @@ shadow_color #0000007F
 # Font
 font monospace 11
 # adjust this to change titlebar size
-font pango: monospace 16
+font pango: monospace 14
 
 # Gaps
 gaps outer 0
@@ -24,7 +24,7 @@ gaps inner 4
 titlebar_border_thickness 0
 
 # Border
-set $border_width 1
+set $border_width 0
 # default_border pixel $border_width
 # default_floating_border pixel $border_width
 default_border normal $border_width
@@ -34,7 +34,7 @@ default_floating_border normal $border_width
 titlebar_padding 12 4
 title_align left
 # w/ title
-for_window [class=".*"] title_format "<span rise='3500' font='sans 10'><b>%title</b></span>"
+for_window [class=".*"] title_format "<span rise='3000' font='sans 10'><b>%title</b></span>"
 
 # w/o title
 # for_window [class=".*"] title_format "<span></span>"
