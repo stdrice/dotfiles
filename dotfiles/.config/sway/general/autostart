@@ -5,9 +5,6 @@ exec_always {
     # Xwayland app settings
     xrdb ~/.Xdefaults
     
-    # xsettingsd
-    xsettingsd
-    
     # Import Gsettings
     ~/.local/bin/import-gsettings
 
