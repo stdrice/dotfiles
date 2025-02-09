@@ -49,7 +49,7 @@ $ curl -LO https://codeberg.org/pznguin-kyun/pengurice/raw/branch/main/install
 ## Install manually
 - Install all dependencies
 ```
-brightnessctl btop calcurse dunst foot gammastep inter-font mpc mpd ncmpcpp neofetch power-profiles-daemon rofi slurp swaybg swayfx swayidle swaylock-effects ttf-ibmplex-mono-nerd ttf-nerd-fonts-symbols waybar zsh
+brightnessctl btop calcurse dunst foot gammastep mpc mpd mpd-mpris ncmpcpp neofetch playerctl power-profiles-daemon rofi slurp swaybg swayfx swayidle swaylock-effects ttf-ibmplex-mono-nerd ttf-nerd-fonts-symbols ttf-roboto waybar zsh
 ```
 - Clone this repo
 - Copy all files in `dotfiles` and paste to your `$HOME` folder

@@ -19,13 +19,13 @@ main_folder="dotfiles"
 packages=(bash blueman bluez bluez-utils brightnessctl btop \
           calcurse cliphist dunst foot galculator gammastep git \
           grim gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb \
-          imv inter-font libnotify librewolf-bin lxappearance-gtk3 \
-          ly mpc mpd mpd-mpris mpv ncmpcpp nemo neofetch neovim networkmanager \
+          imv libnotify librewolf-bin lxappearance-gtk3 ly mpc mpd \
+          mpd-mpris mpv ncmpcpp nemo neofetch neovim networkmanager \
           network-manager-applet noto-fonts noto-fonts-cjk noto-fonts-emoji \
           noto-fonts-extra nwg-displays pamixer papirus-icon-theme pavucontrol \
           pipewire pipewire-pulse playerctl polkit-gnome power-profiles-daemon ranger \
           rofi-wayland sed slurp sof-firmware sudo swaybg swayfx swayidle swaylock-effects\
-          ttf-ibmplex-mono-nerd ttf-nerd-fonts-symbols udisks2 unzip waybar \
+          ttf-ibmplex-mono-nerd ttf-nerd-fonts-symbols ttf-roboto udisks2 unzip waybar \
           wireplumber wl-clipboard xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
           xdg-user-dirs-gtk xorg-drivers xorg-xwayland xsettingsd zathura zathura-pdf-mupdf zip zsh)
 
