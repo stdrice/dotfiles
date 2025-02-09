@@ -1,6 +1,6 @@
 configuration {
   modi: "drun";
-  display-drun: "";
+  display-drun: "";
   show-icons: true;
   drun-display-format: "{icon}  {name}";
   font: "sans 10";
@@ -20,6 +20,7 @@ configuration {
 window {
   location: center;
   width: 25%;
+  height: 68%;
   spacing: 0;
   children: [ box ];
 }
