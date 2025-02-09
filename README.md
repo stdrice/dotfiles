@@ -33,6 +33,11 @@ and so on!
 ## Distros
 Now this script only supports **Arch Linux** and **Arch-based** distros (EndeavourOS, Artix Linux, Arco Linux, ArchCraft, ...) because I'm too lazy to maintain it for other distros (but you can install manually).
 
+## Notes (read this first)
+- This install script will replace all duplicate files, so backup your files first.
+- This script **MUST BE** run as `root`.
+- If your system doesn't have `bash`, install it.
+
 ## Install with git
 ```
 $ git clone --depth 1 https://codeberg.org/pznguin-kyun/pengurice
@@ -53,10 +58,6 @@ brightnessctl btop calcurse dunst foot gammastep mpc mpd mpd-mpris ncmpcpp neofe
 ```
 - Clone this repo
 - Copy all files in `dotfiles` and paste to your `$HOME` folder
-
-## Some notes
-- If your system doesn't have `bash`, install it.
-- This script **MUST BE** run as `root`.
 
 # **Gallery 📸**
 | Floating                                 | Tiling                                     |
