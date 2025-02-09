@@ -28,17 +28,6 @@ tooltip {
     border-bottom: 1px solid @bg;
 }
 
-#workspaces button:nth-child(1) {color: @red;}
-#workspaces button:nth-child(2) {color: @green;}
-#workspaces button:nth-child(3) {color: @yellow;}
-#workspaces button:nth-child(4) {color: @blue;}
-#workspaces button:nth-child(5) {color: @magenta;}
-#workspaces button:nth-child(6) {color: @cyan;}
-#workspaces button:nth-child(7) {color: @red;}
-#workspaces button:nth-child(8) {color: @green;}
-#workspaces button:nth-child(9) {color: @yellow;}
-#workspaces button:nth-child(10) {color: @blue;}
-
 #workspaces button.active {
     color: @fg;
 }
