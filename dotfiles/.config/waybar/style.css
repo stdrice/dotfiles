@@ -6,8 +6,8 @@
     font-family: "sans", "sans-serif", "Symbols Nerd Font";
     font-size: 13px;
     min-height: 0;
-    margin-left: 4px;
-    margin-right: 4px; 
+    margin-left: 2px;
+    margin-right: 2px; 
 }
 
 window#waybar {
@@ -74,24 +74,4 @@ tooltip {
 #backlight
 {
     padding: 4px 4px;
-}
-
-#pulseaudio {
-  color: @blue;
-}
-
-#battery {
-  color: @green;
-}
-
-#mpd, #custom-media {
-  color: @cyan;
-}
-
-#backlight {
-  color: @magenta;
-}
-
-#power-profiles-daemon {
-  color: @cyan
 }
