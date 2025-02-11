@@ -27,30 +27,8 @@
     "sway/workspaces": {
         "disable-scroll": false,
         "all-outputs": true,
-		    "persistent-workspaces": {
-			      "1": [],
-			      "2": [],
-			      "3": [],
-			      "4": [],
-			      "5": [],
-			      "6": [],
-			      "7": [],
-			      "8": [],
-			      "9": [],
-			      "10": []
-         },
          "format": "{icon}",
          "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
-             "4": "󰝚",
-             "5": "󰉋",
-             "6": "",
-             "7": "",
-             "8": "󰐍",
-             "9": "󰈙",
-             "10": "󰋾"
     //         "urgent": "󰋑",
     //         "focused": "󰋑",
     //         "default": "󰋔"
@@ -67,7 +45,8 @@
         "tooltip-format": "{app}: {title}"
     },
     "sway/window": {
-        "max-length": 40
+        "max-length": 40,
+        "all-outputs": true
     },
     "mpd": {
         "format": "{artist} - {title}",

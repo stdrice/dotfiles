@@ -25,29 +25,21 @@ tooltip {
     padding: 2px;
     margin-left: 2px;
     margin-right: 4px;
-    border-bottom: 1px solid @bg;
-}
-
-#workspaces button.active {
-    color: @fg;
-}
-
-#workspaces button.empty {
     color: @bg2;
 }
 
 #workspaces button.focused {
     background: transparent;
-    border-bottom: 1px solid @fg;
+    color: @fg;
 }
 
 #workspaces button.urgent {
     color: @red;
-    background: @bg;
+    background: transparent;
 }
 
 #workspaces button:hover {
-    background: @bg;
+    background: transparent;
     color: @gray;
     box-shadow: inherit;
     text-shadow: inherit;
