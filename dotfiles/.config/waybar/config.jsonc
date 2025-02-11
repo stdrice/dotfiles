@@ -59,8 +59,8 @@
         "tooltip-format-disconnected": ""
     },
     "tray": {
-        "icon-size": 16,
-        "spacing": 10
+        "icon-size": 14,
+        "spacing": 4
     },
     "clock": {
         // "timezone": "America/New_York",
