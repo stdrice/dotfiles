@@ -22,7 +22,7 @@ tooltip {
 }
 
 #workspaces button {
-    padding: 2px;
+    padding: 1px;
     margin-left: 2px;
     margin-right: 4px;
     color: @bg2;
