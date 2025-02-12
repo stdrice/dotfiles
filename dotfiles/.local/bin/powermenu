@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # options
-shutdown='󰐥 Power Off'
-reboot='󰜉 Reboot'
-lock='󰌾 Lock'
-suspend='󰤄 Suspend'
-logout='󰍃 Log Out'
+shutdown='Power Off'
+reboot='Reboot'
+lock='Lock'
+suspend='Suspend'
+logout='Log Out'
 close='Close'
 
 # consts
