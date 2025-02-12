@@ -24,11 +24,11 @@ gaps inner 2
 titlebar_border_thickness 0
 
 # Border
-set $border_width 0
-# default_border pixel $border_width
-# default_floating_border pixel $border_width
-default_border normal $border_width
-default_floating_border normal $border_width
+set $border_width 3
+default_border pixel $border_width
+default_floating_border none
+# default_border normal $border_width
+# default_floating_border normal $border_width
 
 # Window Titlebar
 titlebar_padding 12 4
