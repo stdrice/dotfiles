@@ -30,6 +30,7 @@ default_border pixel $border_width
 default_floating_border none
 # default_border normal $border_width
 # default_floating_border normal $border_width
+smart_borders on
 
 # Window Titlebar
 titlebar_padding 12 4
