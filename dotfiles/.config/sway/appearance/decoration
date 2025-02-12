@@ -8,6 +8,7 @@ shadows enable
 shadows_on_csd enable
 shadow_blur_radius 50
 shadow_color #0000007F
+shadow_inactive_color #00000000
 
 # Font
 font monospace 11
@@ -24,7 +25,7 @@ gaps inner 2
 titlebar_border_thickness 0
 
 # Border
-set $border_width 3
+set $border_width 2
 default_border pixel $border_width
 default_floating_border none
 # default_border normal $border_width
