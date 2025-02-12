@@ -1,19 +1,19 @@
 # Decoration
 
 # SwayFX settings
-corner_radius 0
-blur disable
-titlebar_separator disable
-shadows enable
-shadows_on_csd enable
-shadow_blur_radius 50
-shadow_color #0000007F
-shadow_inactive_color #00000000
+# corner_radius 0
+# blur disable
+# titlebar_separator disable
+# shadows enable
+# shadows_on_csd enable
+# shadow_blur_radius 50
+# shadow_color #0000007F
+# shadow_inactive_color #00000000
 
 # Font
 font monospace 11
 # adjust this to change titlebar size
-font pango: monospace 14
+font pango: monospace 8
 
 # Gaps
 gaps outer 0
@@ -25,8 +25,8 @@ gaps inner 2
 titlebar_border_thickness 0
 
 # Border
-set $border_width 2
-default_border pixel $border_width
+set $border_width 0
+default_border normal $border_width
 default_floating_border none
 # default_border normal $border_width
 # default_floating_border normal $border_width
@@ -35,11 +35,11 @@ smart_borders on
 # Window Titlebar
 titlebar_padding 12 4
 title_align left
-# w/ title
-for_window [class=".*"] title_format "<span rise='3000' font='sans 10'><b>%title</b></span>"
+# w/ title (set font pango to 14 to make it better)
+# for_window [class=".*"] title_format "<span rise='3000' font='sans 10'><b>%title</b></span>"
 
 # w/o title
-# for_window [class=".*"] title_format "<span></span>"
+for_window [class=".*"] title_format "<span></span>"
 
 # Disable titlebar for certain windows
 for_window {

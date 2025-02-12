@@ -17,7 +17,7 @@ This is **pengurice**, a script that automatically rice your **Linux** system. I
 # **Starring 🌠**
 <img src="https://i.imgur.com/wEtP8uS.png" align="right" width="400px">
 
-- **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
+- **[Sway ⚽](https://swaywm.org)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
 - **[Librewolf 🦊](https://librewolf.net/)**: Browser
 - **[Ranger](https://ranger.github.io/) and [Nemo](https://github.com/linuxmint/nemo)**: File Manager
@@ -54,7 +54,7 @@ $ curl -LO https://codeberg.org/pznguin-kyun/pengurice/raw/branch/main/install
 ## Install manually
 - Install all dependencies
 ```
-brightnessctl btop calcurse dunst foot gammastep mpc mpd mpd-mpris ncmpcpp neofetch playerctl power-profiles-daemon rofi slurp swaybg swayfx swayidle swaylock-effects ttf-ibmplex-mono-nerd ttf-nerd-fonts-symbols ttf-roboto waybar zsh
+brightnessctl btop calcurse dunst foot gammastep mpc mpd mpd-mpris ncmpcpp neofetch playerctl power-profiles-daemon rofi slurp sway swaybg swayidle swaylock-effects ttf-ibmplex-mono-nerd ttf-nerd-fonts-symbols ttf-roboto waybar zsh
 ```
 - Clone this repo
 - Copy all files in `dotfiles` and paste to your `$HOME` folder
