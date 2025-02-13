@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# pengurice: pznguin-kyun's auto rice script
-# by pznguin-kyun <pznguinkyun@disroot.org>
+# pengurice: stdrice's auto rice script
+# by stdrice <pznguinkyun@disroot.org>
 # See LICENSE file for copyright and license details.
 # To understand everything else, start reading main().
 
@@ -13,7 +13,7 @@ CNC=$(tput sgr0)
 
 # vars
 date=$(date +%Y%m%d-%H%M%S)
-git_repo="https://codeberg.org/pznguin-kyun/pengurice"
+git_repo="https://codeberg.org/stdrice/pengurice"
 branch="main"
 main_folder="dotfiles"
 packages=(bash blueman bluez bluez-utils brightnessctl btop \

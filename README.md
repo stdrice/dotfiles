@@ -40,14 +40,14 @@ Now this script only supports **Arch Linux** and **Arch-based** distros (Endeavo
 
 ## Install with git
 ```
-$ git clone --depth 1 https://codeberg.org/pznguin-kyun/pengurice
+$ git clone --depth 1 https://codeberg.org/stdrice/pengurice
 $ cd pengurice
 # ./install
 ```
 
 ## Install with curl
 ```
-$ curl -LO https://codeberg.org/pznguin-kyun/pengurice/raw/branch/main/install
+$ curl -LO https://codeberg.org/stdrice/pengurice/raw/branch/main/install
 # bash install
 ```
 
