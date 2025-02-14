@@ -46,6 +46,7 @@
         "tooltip-format": "{app}: {title}"
     },
     "sway/window": {
+        "format": "{title}",
         "max-length": 40,
         "all-outputs": true
     },

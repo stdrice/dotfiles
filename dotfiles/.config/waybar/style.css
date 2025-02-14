@@ -45,7 +45,10 @@ tooltip {
     text-shadow: inherit;
 }
 
-#window,
+#window {
+    padding: 0px;
+}
+
 #clock,
 #battery,
 #pulseaudio,
