@@ -1,7 +1,7 @@
 configuration {
   modi: "drun";
   display-drun: "";
-  show-icons: true;
+  show-icons: false;
   drun-display-format: "{icon}  {name}";
   font: "sans 10";
 }
