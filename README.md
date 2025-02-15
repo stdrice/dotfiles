@@ -54,7 +54,7 @@ $ curl -LO https://codeberg.org/stdrice/pengurice/raw/branch/main/install
 ## Install manually
 - Install all dependencies
 ```
-brightnessctl btop calcurse dunst foot gammastep mpc mpd mpd-mpris ncmpcpp neofetch playerctl power-profiles-daemon rofi slurp sway swaybg swayidle swaylock-effects ttf-meslo-nerd ttf-nerd-fonts-symbols ttf-roboto waybar zsh
+brightnessctl btop calcurse dunst foot gammastep mpc mpd mpd-mpris ncmpcpp neofetch noto-sans playerctl power-profiles-daemon rofi slurp sway swaybg swayidle swaylock-effects ttf-meslo-nerd ttf-nerd-fonts-symbols waybar zsh
 ```
 - Clone this repo
 - Copy all files in `dotfiles` and paste to your `$HOME` folder
