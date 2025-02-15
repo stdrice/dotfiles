@@ -17,10 +17,13 @@ bindsym {
     $mod+q kill
 
     # Start your launcher
-    $mod+d exec $menu
+    $mod+d exec $launcher
 
     # Start powermenu
     $mod+BackSpace exec $powermenu
+
+    # Menu
+    $mod+x exec $menu
 
     # Window switcher
     $mod+Tab exec $window-switcher

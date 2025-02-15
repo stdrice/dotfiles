@@ -14,10 +14,12 @@ set {
     $term foot
 
     # Your preferred application launcher
-    $menu rofi -show drun
+    $launcher rofi -show drun
 
     # Powermenu
     $powermenu ~/.local/bin/powermenu
+
+    $menu ~/.local/bin/menu
 
     # Window switcher
     $window-switcher rofi -show window

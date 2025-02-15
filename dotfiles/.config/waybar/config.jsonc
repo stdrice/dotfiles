@@ -17,10 +17,8 @@
     ],
     "modules-right": [
 	      "custom/media",
-        "backlight",
         "pulseaudio",
         "battery",
-        "power-profiles-daemon",
         "tray",
 	      "clock"
     ],

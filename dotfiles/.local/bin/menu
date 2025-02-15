@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# options
+apps="Apps"
+powermenu="Power"
+nightlight="Night Light"
+powerprofile="Power Profile: $(powerprofilesctl get)"
+
+rofi_cmd() {
+    rofi -dmenu
+}
+
+run_rofi() {
+    echo -e "$apps\n$powermenu\n$nightlight\n$powerprofile" | rofi_cmd
+}
+
+chosen="$(run_rofi)"
+case "$chosen" in
+    "$apps") rofi -show drun & ;;
+    "$powermenu") ~/.local/bin/powermenu & ;;
+    "$nightlight") ~/.local/bin/night-light & ;;
+    "$powerprofile") ~/.local/bin/power-profile-switch & ;;
+esac
