@@ -5,11 +5,11 @@ get_volume(){
 }
 
 volume_up(){
-    pamixer --allow-boost --set-limit 150 -i 5
+    pamixer --allow-boost --set-limit 150 -i 2
 }
 
 volume_down(){
-    pamixer --allow-boost --set-limit 150 -d 5
+    pamixer --allow-boost --set-limit 150 -d 2
 }
 
 toggle_mute(){

@@ -9,11 +9,11 @@ get_brightness(){
 }
 
 brightness_up(){
-    brightnessctl set 5%+
+    brightnessctl set 2%+
 }
 
 brightness_down(){
-    brightnessctl set 5%-
+    brightnessctl set 2%-
 }
 
 if command -v brightnessctl &>/dev/null; then
