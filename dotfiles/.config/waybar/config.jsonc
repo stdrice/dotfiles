@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
+    "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 18, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 3, // Gaps between modules (4px)
@@ -85,7 +85,7 @@
         "format-full": "{icon} {capacity}",
         "format-charging": "󰚥 {capacity}",
         "format-plugged": "󰚥 {capacity}",
-        "format-icons": ["", "", "", "", ""],
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "interval": 1,
         "on-click": "~/.local/bin/powermenu"
     },
