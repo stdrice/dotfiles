@@ -6,8 +6,8 @@
     font-family: "sans", "sans-serif", "monospace", "Symbols Nerd Font";
     font-size: 12px;
     min-height: 0;
-    margin-left: 2px;
-    margin-right: 2px; 
+    margin-left: 1px;
+    margin-right: 1px; 
 }
 
 window#waybar {
@@ -24,7 +24,7 @@ tooltip {
 #workspaces button {
     padding: 0px;
     margin-left: 2px;
-    margin-right: 4px;
+    margin-right: 2px;
     color: @bg2;
 }
 
@@ -57,5 +57,5 @@ tooltip {
 #tray,
 #backlight
 {
-    padding: 4px 4px;
+    padding: 0px 4px;
 }
