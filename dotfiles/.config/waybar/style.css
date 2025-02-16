@@ -54,8 +54,7 @@ tooltip {
 #pulseaudio,
 #network,
 #workspaces,
-#tray,
 #backlight
 {
-    padding: 0px 4px;
+    padding: 0px 3px;
 }
