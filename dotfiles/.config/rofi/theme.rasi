@@ -3,7 +3,7 @@ configuration {
   display-drun: "";
   show-icons: false;
   drun-display-format: "{icon}  {name}";
-  font: "sans 10";
+  font: "monospace 10";
 }
 
 @theme "/dev/null"
