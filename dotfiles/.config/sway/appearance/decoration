@@ -34,7 +34,7 @@ smart_borders on
 
 # Window Titlebar
 titlebar_padding 12 4
-title_align center
+title_align left
 # w/ title (set font pango to 13-14 to make it better)
 for_window [class=".*"] title_format "<span rise='3000' font='sans 10'>%title</span>"
 
