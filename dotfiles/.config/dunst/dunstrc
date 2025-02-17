@@ -23,7 +23,7 @@
     separator_color = auto
     sort = yes
     idle_threshold = 0
-    font = monospace 10
+    font = sans 10
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"

@@ -3,11 +3,11 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "monospace", "sans", "sans-serif";
+    font-family: "sans", "sans-serif", "monospace", "Symbols Nerd Font";
     font-size: 13px;
     min-height: 0;
-    margin-left: 1px;
-    margin-right: 1px; 
+    margin-left: 2px;
+    margin-right: 4px; 
 }
 
 window#waybar {
@@ -26,6 +26,7 @@ tooltip {
     margin-left: 2px;
     margin-right: 2px;
     color: @bg2;
+    background: transparent;
 }
 
 #workspaces button.focused {
@@ -56,5 +57,5 @@ tooltip {
 #workspaces,
 #backlight
 {
-    padding: 0px 3px;
+    padding: 1px 4px;
 }

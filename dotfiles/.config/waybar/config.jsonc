@@ -1,8 +1,8 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 32, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 3, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -11,15 +11,16 @@
         "sway/scratchpad",
         "sway/mode",
         "sway/window"
+
     ],
     "modules-center": [
-	      "clock"
     ],
     "modules-right": [
 	      "custom/media",
         "pulseaudio",
         "battery",
-        "tray"
+        "tray",
+	      "clock"
     ],
     // Modules configuration
     "sway/workspaces": {
@@ -38,7 +39,7 @@
     "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
-        "format-icons": ["", ""],
+        "format-icons": ["", "󰋑"],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
@@ -82,20 +83,20 @@
         },
         "format": "{icon} {capacity}",
         "format-full": "{icon} {capacity}",
-        "format-charging": " {capacity}",
-        "format-plugged": " {capacity}",
-        "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+        "format-charging": "󰚥 {capacity}",
+        "format-plugged": "󰚥 {capacity}",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "interval": 1,
         "on-click": "~/.local/bin/powermenu"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}",
-        "format-muted": "婢Muted",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-muted": "󰖁 shhh!",
+        "format-source": "{volume}% 󰍬",
+        "format-source-muted": "󰍭",
         "format-icons": {
-            "default": ["奄", "奔", "墳"]
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pamixer --toggle-mute",
         "on-click-right": "pavucontrol"

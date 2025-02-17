@@ -25,7 +25,7 @@ packages=(bash blueman bluez bluez-utils brightnessctl btop \
           noto-fonts-extra nwg-displays pamixer papirus-icon-theme pavucontrol \
           pipewire pipewire-pulse playerctl polkit-gnome power-profiles-daemon ranger \
           rofi-wayland sed slurp sof-firmware sudo sway swaybg swayidle swaylock-effects\
-          ttf-roboto udisks2 unzip waybar wireplumber wl-clipboard \
+          ttf-meslo-nerd ttf-roboto udisks2 unzip waybar wireplumber wl-clipboard \
           xdg-desktop-portal-gtk xdg-desktop-portal-wlr xdg-user-dirs-gtk \
           xorg-drivers xorg-xwayland zathura zathura-pdf-mupdf zip zsh)
 
