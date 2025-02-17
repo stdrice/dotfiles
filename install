@@ -141,7 +141,6 @@ install_dotfiles(){
 config_smth(){
     logo "Configuring pacman (for what???)"
     sed -i "s/^#Color$/Color/" /etc/pacman.conf
-    sed -i "s/#NoProgressBar/ILoveCandy/" /etc/pacman.conf
     sed -i "s/#VerbosePkgLists/VerbosePkgLists/" /etc/pacman.conf
     sed -i "s/#ParallelDownloads\ =\ 5/ParallelDownloads\ =\ 5/" /etc/pacman.conf
 }
