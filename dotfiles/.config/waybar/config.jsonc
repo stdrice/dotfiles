@@ -11,7 +11,6 @@
         "sway/scratchpad",
         "sway/mode",
         "sway/window"
-
     ],
     "modules-center": [
     ],
@@ -82,7 +81,6 @@
             "critical": 15
         },
         "format": "{icon} {capacity}",
-        "format-full": "{icon} {capacity}",
         "format-charging": "󰚥 {capacity}",
         "format-plugged": "󰚥 {capacity}",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
@@ -92,7 +90,7 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}",
-        "format-muted": "󰖁 shhh!",
+        "format-muted": "󰖁",
         "format-source": "{volume}% 󰍬",
         "format-source-muted": "󰍭",
         "format-icons": {
