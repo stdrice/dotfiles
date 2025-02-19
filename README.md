@@ -34,9 +34,9 @@ and so on!
 Now this script only supports **Arch Linux** and **Arch-based** distros (EndeavourOS, Artix Linux, Arco Linux, ArchCraft, ...) because I'm too lazy to maintain it for other distros (but you can install manually).
 
 ## Notes (read this first)
-- This install script will replace all duplicate files, so backup your files first.
+- This install script will **replace all duplicate files**, so **backup your files first**.
 - This script **MUST BE** run as `root`.
-- If your system doesn't have `bash`, install it.
+- If your system doesn't have `bash`, **install it**.
 
 ## Install with git
 ```
