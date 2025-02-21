@@ -87,7 +87,7 @@ setup_before_install(){
     if ! command -v yay &>/dev/null; then
         rm -rf /tmp/aur 
         git clone https://aur.archlinux.org/yay-bin.git /tmp/aur
-        chmod 777 /tmp/aur
+        chmod 755 /tmp/aur
         cd /tmp/aur
         sudo -u "$username" makepkg -si --noconfirm
         cd

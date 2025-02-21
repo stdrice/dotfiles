@@ -15,7 +15,7 @@
 This is **pengurice**, a script that automatically rice your **Linux** system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
 
 # **Starring 🌠**
-<img src="https://i.imgur.com/WaoE6q6.png" align="right" width="400px">
+<img src="https://i.imgur.com/Wu47DJr.png" align="right" width="400px">
 
 - **[Sway ⚽](https://swaywm.org)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
@@ -62,9 +62,9 @@ brightnessctl btop calcurse dunst foot gammastep mpc mpd mpd-mpris ncmpcpp neofe
 # **Gallery 📸**
 | Floating                                 | Tiling                                     |
 | :--------------------------------------- | :----------------------------------------- |
-| ![busy](https://i.imgur.com/6ki9xW2.png) | ![tiling](https://i.imgur.com/Mg9SBEo.png) |
-| Launcher                                 | Lockscreen                                 |
-| ![rofi](https://i.imgur.com/8uJFpiL.png) | ![lock](https://i.imgur.com/qG2UcOa.png)   |
+| ![busy](https://i.imgur.com/TzziwMu.png) | ![tiling](https://i.imgur.com/Ny3TU3q.png) |
+| Browser                                  | Lockscreen                                 |
+| ![lmao](https://i.imgur.com/My8rlh3.png) | ![lock](https://i.imgur.com/a34F8KP.png)   |
 
 # **Keybindings ⌨️**
 These are the basic keybinds. Read through the `sway/general/keybindings.conf` file for more keybinds.
