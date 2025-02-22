@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 notify_cmd(){ 
-    dunstify --replace=11111 -a 'no' --hints=int:value:"$(get_brightness)" "☀️  $(get_brightness)%"
+    dunstify -r 11111 -a 'no' --hints=int:value:"$(get_brightness)" "☀️  $(get_brightness)%"
 }
 
 get_brightness(){
