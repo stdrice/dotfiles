@@ -71,3 +71,8 @@
     foreground = "#f8f8f6"
     frame_color = "#e57474"
     timeout = 120
+
+[no]
+    appname = no
+    history_ignore = yes
+    set_stack_tag = "no"

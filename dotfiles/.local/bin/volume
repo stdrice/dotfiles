@@ -17,7 +17,7 @@ toggle_mute(){
 }
 
 notify_cmd(){ 
-    dunstify -r 11111 -a 'no' --hints=int:value:"$(get_volume)" "🔊 $(get_volume)"
+    dunstify -a 'no' --hints=int:value:"$(get_volume)" "🔊 $(get_volume)"
 }
 
 case "$1" in
