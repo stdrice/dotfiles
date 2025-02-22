@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+PROFILES=("power-saver" "balanced" "performance")
+CURRENT_PROFILE=$(powerprofilesctl get)
+
+for ((i = 0; i < ${#PROFILES[@]}; i++)); do
+    if [[ "${PROFILES[$i]}" == "$CURRENT_PROFILE" ]]; then
+        NEXT_INDEX=$(( (i + 1) % ${#PROFILES[@]} ))
+        break
+    fi
+done
+
+NEXT_PROFILE="${PROFILES[$NEXT_INDEX]}"
+powerprofilesctl set "$NEXT_PROFILE"
