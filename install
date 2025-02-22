@@ -143,7 +143,7 @@ config_smth(){
         [Nn]*) return ;;
         *) 
             logo "Install Dan Pollock (someonewhocares)'s hosts file"
-            curl -o /etc/hosts https://someonewhocares.org/hosts 
+            curl -Lo /etc/hosts https://someonewhocares.org/hosts 
         ;;
     esac
     logo "Configuring pacman (for what???)"
