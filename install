@@ -65,7 +65,7 @@ intro(){
 	          *) break ;;
 	      esac
     done
-
+    read -rp "Do you want to use Dan Pollock (someonewhocares)'s hosts file?: [Y/n]" $hostsfile
     read -rp "First, type your username here: " username
 }
 
@@ -139,6 +139,13 @@ install_dotfiles(){
 }
 
 config_smth(){
+    case $hostsfile in
+        [Nn]*) return ;;
+        *) 
+            logo "Install Dan Pollock (someonewhocares)'s hosts file"
+            curl -o /etc/hosts https://someonewhocares.org/hosts 
+        ;;
+    esac
     logo "Configuring pacman (for what???)"
     sed -i "s/^#Color$/Color/" /etc/pacman.conf
     sed -i "s/#VerbosePkgLists/VerbosePkgLists/" /etc/pacman.conf
