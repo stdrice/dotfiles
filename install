@@ -65,7 +65,7 @@ intro(){
 	          *) break ;;
 	      esac
     done
-    read -rp "Do you want to use Dan Pollock (someonewhocares)'s hosts file?: [Y/n]" $hostsfile
+    read -rp "Do you want to use Dan Pollock (someonewhocares)'s hosts file?: [Y/n] " $hostsfile
     read -rp "First, type your username here: " username
 }
 
