@@ -13,7 +13,7 @@
 # Font
 font monospace 11
 # adjust this to change titlebar size
-font pango: monospace 14
+font pango: monospace 13
 
 # Gaps
 gaps outer 0

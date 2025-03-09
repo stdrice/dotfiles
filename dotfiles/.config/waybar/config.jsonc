@@ -1,8 +1,8 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 32, // Waybar height (to be removed for auto height)
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 18, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 3, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -64,8 +64,9 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%a %b %d %H:%M}", // 24-hour
-        // "format": "{:%a %b %d %I:%M%p}", // 12-hour
+        "format": "{:%I:%M %p}", // 12-hour
+	// "format": "{:%H:%M}", // 24-hour
+	"format-alt": "{:%a, %b %d %Y}"
     },
     "backlight": {
         // "device": "acpi_video1",

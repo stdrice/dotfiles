@@ -7,12 +7,12 @@
     font-size: 12px;
     min-height: 0;
     margin-left: 2px;
-    margin-right: 2px; 
+    margin-right: 3px; 
 }
 
 window#waybar {
     border-radius: 0px;
-    background: rgba(0, 0, 0, 0.5);
+    background: @bg;
     color: @fg;
 }
 
@@ -24,7 +24,7 @@ tooltip {
 #workspaces button {
     padding: 0px;
     margin-left: 2px;
-    margin-right: 2px;
+    margin-right: 1px;
     color: @bg2;
     background: transparent;
 }
@@ -57,5 +57,5 @@ tooltip {
 #workspaces,
 #backlight
 {
-    padding: 1px 4px;
+    padding: 1px 2px;
 }
