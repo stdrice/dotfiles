@@ -13,7 +13,7 @@
 # Font
 font monospace 11
 # adjust this to change titlebar size
-font pango: monospace 13
+font pango: monospace 14
 
 # Gaps
 gaps outer 0
@@ -33,10 +33,10 @@ default_floating_border none
 smart_borders on
 
 # Window Titlebar
-titlebar_padding 12 4
+titlebar_padding 10 4
 title_align left
 # w/ title (set font pango to 13-14 to make it better)
-for_window [class=".*"] title_format "<span rise='3000' font='sans 10'>%title</span>"
+for_window [class=".*"] title_format "<span rise='2500' font='sans 10'>%title</span>"
 
 # w/o title
 # for_window [class=".*"] title_format "<span></span>"
