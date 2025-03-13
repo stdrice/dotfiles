@@ -36,10 +36,10 @@ smart_borders on
 titlebar_padding 10 4
 title_align left
 # w/ title (set font pango to 13-14 to make it better)
-for_window [class=".*"] title_format "<span rise='2500' font='sans 10'>%title</span>"
+# for_window [class=".*"] title_format "<span rise='2500' font='sans 10'>%title</span>"
 
 # w/o title
-# for_window [class=".*"] title_format "<span></span>"
+for_window [class=".*"] title_format "<span></span>"
 
 # Disable titlebar for certain windows
 for_window {
