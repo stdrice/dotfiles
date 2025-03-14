@@ -15,11 +15,11 @@
     "modules-center": [
     ],
     "modules-right": [
-	      "custom/media",
+	"custom/media",
         "pulseaudio",
         "battery",
         "tray",
-	      "clock"
+	"clock"
     ],
     // Modules configuration
     "sway/workspaces": {
