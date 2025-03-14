@@ -70,8 +70,10 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon} {percent}",
+	"format": "{icon}", // without percentage
+        // "format": "{icon} {percent}", // with percentage
         "format-icons": ["󰃞", "󰃟", "󰃠"],
+	"tooltip-format": "Brightness: {percent}%\nClick to toggle Night Light",
         "on-click": "~/.local/bin/night-light"
     },
     "battery": {
@@ -80,22 +82,26 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}",
-        "format-charging": "󰚥 {capacity}",
-        "format-plugged": "󰚥 {capacity}",
+	"format": "{icon}", // without percentage
+        // "format": "{icon} {capacity}", // with percentage
+        "format-charging": "󰚥",
+        "format-plugged": "󰚥",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+	"tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
         "interval": 1,
         "on-click": "~/.local/bin/powermenu"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}",
+	"format": "{icon}", // without percentage
+        // "format": "{icon} {volume}", // with percentage
         "format-muted": "󰖁",
         "format-source": "{volume}% 󰍬",
         "format-source-muted": "󰍭",
         "format-icons": {
             "default": ["󰕿", "󰖀", "󰕾"]
         },
+	"tooltip-format": "Volume: {volume}%\n{desc}",
         "on-click": "pamixer --toggle-mute",
         "on-click-right": "pavucontrol"
     },
