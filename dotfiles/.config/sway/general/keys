@@ -31,6 +31,10 @@ bindsym {
     # Reload the configuration file
     $mod+Shift+c reload
 
+
+    # Toggle bar
+    $mod+Shift+b exec killall -SIGUSR1 waybar
+
     # Clipboard manager
     $mod+Shift+v exec rofi -modi clipboard:~/.local/bin/cliphist-rofi-img -show clipboard -show-icons
 
