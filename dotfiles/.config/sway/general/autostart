@@ -12,6 +12,9 @@ exec_always {
 
 # Run once on login
 exec {
+    # XDG autostart
+    dex --autostart
+
     # Prevents GTK apps from hanging for 15-20 sec before launching
     dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
@@ -46,7 +49,6 @@ exec {
     # Clipboard manager
     wl-paste --type text --watch cliphist store
     wl-paste --type image --watch cliphist store
-
 }
 
 # vim:set ft=conf:

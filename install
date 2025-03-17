@@ -17,7 +17,7 @@ git_repo="https://codeberg.org/stdrice/pengurice"
 branch="main"
 main_folder="dotfiles"
 packages=(bash blueman bluez bluez-utils brightnessctl btop \
-          calcurse cliphist dunst foot galculator gammastep git \
+          calcurse cliphist dex dunst foot galculator gammastep git \
           grim gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb \
           imagemagick imv libnotify librewolf-bin lxappearance-gtk3 ly mpc mpd \
           mpd-mpris mpv ncmpcpp nemo neofetch neovim networkmanager \
