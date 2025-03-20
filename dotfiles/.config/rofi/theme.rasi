@@ -20,7 +20,7 @@ configuration {
 window {
   location: center;
   width: 25%;
-  height: 68%;
+  height: 65%;
   spacing: 0;
   children: [ box ];
 }
