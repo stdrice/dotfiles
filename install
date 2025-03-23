@@ -88,9 +88,9 @@ setup_before_install(){
         rm -rf /tmp/aur 
         git clone https://aur.archlinux.org/yay.git /tmp/aur
         chmod 777 /tmp/aur
-        cd /tmp/aur
+        pushd /tmp/aur
         sudo -u "$username" makepkg -si --noconfirm
-        cd
+        popd
     fi
     case "$(readlink -f /sbin/init)" in
 	      *systemd*) return ;;
