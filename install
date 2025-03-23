@@ -117,7 +117,7 @@ setup_user(){
         echo "$username" "does not exist"
         echo "Creating new user"
         useradd -m -g wheel "$username" >/dev/null 2>&1 ||
-		usermod -aG wheel,video,audio,input,power,storage,optical,lp,scanner,dbus,uucp -s /usr/bin/zsh "$username" && mkdir -p /home/"$username" && chown "$name":wheel /home/"$name"
+		usermod -aG wheel,video,audio,input,power,storage,optical,lp,scanner,dbus,uucp -s /usr/bin/zsh "$username" && mkdir -p /home/"$username" && chown "$username":wheel /home/"$username"
         passwd "$username"
     fi
     sudo -u "$username" xdg-user-dirs-update
@@ -133,7 +133,7 @@ clone_dotfiles(){
 install_dotfiles(){
     logo "Installing dotfiles.."
     printf "Copying files to respective directories..\n"
-    cp -rfT /tmp/dotfiles/"$main_folder"/ /home/"$username"/
+    cp -rfT /tmp/dotfiles/"$main_folder" /home/"$username"
     chown -R "$username":"$username" /home/"$username"
     fc-cache -fv
 }
@@ -146,10 +146,12 @@ config_smth(){
             curl -Lo /etc/hosts https://someonewhocares.org/hosts/hosts
         ;;
     esac
-    logo "Configuring pacman (for what???)"
-    sed -i "s/^#Color$/Color/" /etc/pacman.conf
-    sed -i "s/#VerbosePkgLists/VerbosePkgLists/" /etc/pacman.conf
-    sed -i "s/#ParallelDownloads\ =\ 5/ParallelDownloads\ =\ 5/" /etc/pacman.conf
+    if command -v pacman &>/dev/null; then
+        logo "Configuring pacman (for what???)"
+        sed -i "s/^#Color$/Color/" /etc/pacman.conf
+        sed -i "s/#VerbosePkgLists/VerbosePkgLists/" /etc/pacman.conf
+        sed -i "s/#ParallelDownloads\ =\ 5/ParallelDownloads\ =\ 5/" /etc/pacman.conf
+    fi
 }
 
 enable_services(){
