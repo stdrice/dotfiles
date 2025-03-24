@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+dark="Dark"
+light="Light"
+
+gtk_path="$HOME/.config/gtk-3.0/settings.ini"
+foot_path="$HOME/.config/foot/colors.ini"
+rofi_path="$HOME/.config/rofi/theme.rasi"
+
+rofi_cmd(){
+    rofi -dmenu -p "Choose theme"
+}
+
+run_rofi() {
+    echo -e "$dark\n$light" | rofi_cmd
+}
+
+chosen="$(run_rofi)"
+
+term(){
+    case "$chosen" in
+        "$dark")
+            sed -i -e "s/background=.*/background=000000/g" \
+                   -e "s/foreground=.*/foreground=f8f8f6/g" $foot_path
+        ;;
+        "$light")
+            sed -i -e "s/background=.*/background=f8f8f6/g" \
+                   -e "s/foreground=.*/foreground=000000/g" $foot_path
+        ;;
+        esac
+}
+
+gtk(){
+    case "$chosen" in
+        "$dark")
+            sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=x-dark/g" \
+                   -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=Papirus-Dark/g" $gtk_path
+        ;;
+        "$light")
+            sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=x-light/g" \
+                   -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=Papirus-Light/g" $gtk_path
+        ;;
+    esac
+}
+
+rofi(){
+    case "$chosen" in
+        "$dark")
+            sed -i -e "s/bg: .*/bg: #000000;/g" \
+                   -e "s/fg: .*/fg: #f8f8f6;/g" $rofi_path
+        ;;
+        "$light")
+            sed -i -e "s/bg: .*/bg: #f8f8f6;/g" \
+                   -e "s/fg: .*/fg: #000000;/g" $rofi_path
+        ;;
+    esac
+}
+
+lol(){
+    touch ~/.cache/current-theme
+    echo -e "$chosen" > ~/.cache/current-theme
+    notify-send "Theme changed" "Re-login to make changes"
+}
+
+term
+gtk
+rofi
+lol

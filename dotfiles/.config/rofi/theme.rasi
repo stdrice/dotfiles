@@ -11,7 +11,7 @@ configuration {
 * {
   bg: #000000;
   fg: #f8f8f6;
-  al: #404749;
+  al: #505050;
   border-radius: 0px;
   background-color: @bg;
   text-color: @fg;
