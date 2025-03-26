@@ -107,7 +107,7 @@
         "on-click-right": "pavucontrol"
     },
     "custom/media": {
-	      "format": "{}",
+	      "format": "󰎇 {}",
 	      "return-type": "json",
         "max-length": 40,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
