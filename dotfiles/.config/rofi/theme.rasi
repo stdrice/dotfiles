@@ -20,13 +20,13 @@ configuration {
 window {
   location: center;
   width: 25%;
-  height: 65%;
+  height: 70%;
   spacing: 0;
   children: [ box ];
 }
 
 box {
-  padding: 0.75em;
+  padding: 0.5em;
   spacing: 0.5em;
   children: [ entry, listview ];
 }
