@@ -18,21 +18,21 @@ configuration {
 }
 
 window {
-  location: center;
+  location: west;
   width: 25%;
-  height: 70%;
+  height: 100%;
   spacing: 0;
   children: [ box ];
 }
 
 box {
-  padding: 0.5em;
+  padding: 0.6em;
   spacing: 0.5em;
   children: [ entry, listview ];
 }
 
 entry {
-  placeholder: "Search...";
+  placeholder: "Search";
   placeholder-color: @al;
   padding: 0.5em;
   expand: false;
@@ -42,9 +42,11 @@ element {
   text-color: @al;
   padding: 0.5em;
 }
+
 element selected {
   text-color: @fg;
 }
+
 element-text, element-icon {
   background-color: inherit;
   text-color: inherit;
