@@ -45,8 +45,18 @@
     },
     "sway/window": {
         "format": "{title}",
+        "icon": false,
+        "icon-size": 14,
         "max-length": 40,
         "all-outputs": true
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "all-outputs": false
     },
     "mpd": {
         "format": "{artist} - {title}",

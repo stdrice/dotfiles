@@ -52,6 +52,15 @@ tooltip {
     padding: 0px;
 }
 
+#taskbar button {
+    padding: 4px;
+}
+
+#taskbar button.active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#custom-menu,
 #clock,
 #battery,
 #pulseaudio,
