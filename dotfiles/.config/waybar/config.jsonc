@@ -9,8 +9,8 @@
     "modules-left": [
         "sway/workspaces",
         "sway/scratchpad",
-        "sway/mode",
-        "sway/window"
+        "sway/mode"
+        // "sway/window"
     ],
     "modules-center": [
         "clock"
