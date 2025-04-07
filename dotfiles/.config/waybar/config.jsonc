@@ -13,14 +13,14 @@
         // "sway/window"
     ],
     "modules-center": [
-        "clock"
+        "custom/media"
     ],
     "modules-right": [
-        "custom/media",
         "pulseaudio",
 	      // "backlight",
         "battery",
-        "tray"
+        "tray",
+        "clock"
     ],
     // Modules configuration
     "sway/workspaces": {
