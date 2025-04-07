@@ -76,7 +76,7 @@
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 	      "format": "{:%a %H:%M}", // 24-hour
-	      // "format": "{:%a %I:%M %p}", // 12-hour
+	      // "format": "{:%a %I:%M%p}", // 12-hour
 	      "format-alt": "{:%A, %B %d %Y}"
     },
     "backlight": {
