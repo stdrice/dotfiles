@@ -1,5 +1,5 @@
-@define-color bg #000000;
-@define-color bg2 #555555;
+@define-color bg rgba(0, 0, 0, 0.5);
+@define-color bg2 #666666;
 @define-color fg #f8f8f6;
 @define-color red #e57474;
 @define-color green #8ccf7e;
