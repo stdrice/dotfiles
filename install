@@ -19,8 +19,8 @@ main_folder="dotfiles"
 packages=(bash blueman bluez bluez-utils brightnessctl btop \
           calcurse cliphist dex dunst foot galculator gammastep git \
           grim gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb \
-          imagemagick imv libnotify librewolf-bin lxappearance-gtk3 ly mpc \
-          mpd mpd-mpris mpv ncmpcpp nemo neofetch neovim networkmanager \
+          imagemagick imv inter-font libnotify librewolf-bin lxappearance-gtk3 ly \
+          mpc mpd mpd-mpris mpv ncmpcpp nemo neofetch neovim networkmanager \
           network-manager-applet noto-fonts noto-fonts-cjk noto-fonts-emoji \
           noto-fonts-extra nwg-displays pamixer papirus-icon-theme pavucontrol \
           pipewire pipewire-pulse playerctl polkit-gnome power-profiles-daemon ranger \
