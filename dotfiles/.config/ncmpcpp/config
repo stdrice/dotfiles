@@ -46,11 +46,11 @@ progressbar_look = "─| "
 progressbar_elapsed_color = "yellow"
 
 # UI Visibility
-header_visibility = "yes"
+header_visibility = "no"
 statusbar_visibility = "yes"
 titles_visibility = "yes"
-enable_window_title = "yes"
-clock_display_seconds = no
+enable_window_title = "no"
+clock_display_seconds = "no"
 
 # Colors
 color1 = "white"
