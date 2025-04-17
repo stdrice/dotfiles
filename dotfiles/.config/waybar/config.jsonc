@@ -7,12 +7,13 @@
     "spacing": 3, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
-        "sway/mode",
-        "sway/window"
+        "sway/mode"
     ],
     "modules-center": [
+        "sway/window"
     ],
     "modules-right": [
         "custom/media",
@@ -75,8 +76,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	      "format": "{:%a %H:%M}", // 24-hour
-	      // "format": "{:%a %I:%M%p}", // 12-hour
+	      "format": "{:%H:%M}", // 24-hour
+	      // "format": "{:%I:%M%p}", // 12-hour
 	      "format-alt": "{:%A, %B %d %Y}"
     },
     "backlight": {
@@ -122,5 +123,10 @@
         "max-length": 40,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause"
+    },
+    "custom/menu": {
+        "format": "󰀻",
+        "on-click": "rofi -show drun",
+        "on-click-right": "~/.local/bin/menu"
     }
 }
