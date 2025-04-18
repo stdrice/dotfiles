@@ -125,7 +125,7 @@
         "on-click": "playerctl play-pause"
     },
     "custom/menu": {
-        "format": "󰀻",
+        "format": "󰘳",
         "on-click": "rofi -show drun",
         "on-click-right": "~/.local/bin/menu"
     }
