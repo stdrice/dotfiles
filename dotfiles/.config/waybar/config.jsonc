@@ -46,7 +46,7 @@
     },
     "sway/window": {
         "format": "{title}",
-        "icon": false,
+        "icon": true,
         "icon-size": 14,
         "max-length": 40,
         "all-outputs": true
