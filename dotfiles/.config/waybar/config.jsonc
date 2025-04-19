@@ -10,10 +10,10 @@
         "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
-        "sway/mode"
+        "sway/mode",
+        "sway/window"
     ],
     "modules-center": [
-        "sway/window"
     ],
     "modules-right": [
         "custom/media",
