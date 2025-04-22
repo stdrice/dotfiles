@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# colors
+bg="#000000"
+fg="#f8f8f6"
+bl="#232a2d"
+r="#e57474"
+g="#8ccf7e"
+y="#e5c76b"
+b="#67b0e8"
+m="#c47fd5"
+c="#6cbfbf"
+wh="#b3b9b8"
+
+# other
+theme="dark"
+gtk_theme="x-dark"

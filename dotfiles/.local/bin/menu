@@ -5,13 +5,14 @@ apps="Apps"
 powermenu="Power"
 nightlight="Night Light"
 powerprofile="Power Profile: $(powerprofilesctl get)"
+theme="Theme: $(cat $HOME/.cache/current-theme)"
 
 rofi_cmd() {
     rofi -dmenu
 }
 
 run_rofi() {
-    echo -e "$apps\n$powermenu\n$nightlight\n$powerprofile" | rofi_cmd
+    echo -e "$apps\n$powermenu\n$nightlight\n$powerprofile\n$theme" | rofi_cmd
 }
 
 chosen="$(run_rofi)"
@@ -20,4 +21,5 @@ case "$chosen" in
     "$powermenu") ~/.local/bin/powermenu & ;;
     "$nightlight") ~/.local/bin/night-light & ;;
     "$powerprofile") ~/.local/bin/power-profile-switch & ;;
+    "$theme") ~/.local/bin/theme-changer & ;;
 esac

@@ -21,6 +21,10 @@ tooltip {
     border-radius: 0px;
 }
 
+tooltip label {
+  color: @fg;
+}
+
 #workspaces button {
     padding: 0px;
     margin-left: 2px;
