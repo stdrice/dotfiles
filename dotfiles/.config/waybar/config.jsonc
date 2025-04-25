@@ -1,23 +1,21 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 38, // Waybar height (to be removed for auto height)
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 3, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
         "sway/mode"
     ],
     "modules-center": [
-        "sway/window"
+        "custom/media"
     ],
     "modules-right": [
-        "custom/media",
-	"pulseaudio",
+      	"pulseaudio",
 	      // "backlight",
         "battery",
         "tray",
@@ -76,9 +74,9 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"format": "{:%H:%M}", // 24-hour
-	// "format": "{:%I:%M%p}", // 12-hour
-	"format-alt": "{:%A, %B %d %Y}"
+      	"format": "{:%a %H:%M}", // 24-hour
+	      // "format": "{:%a %I:%M%p}", // 12-hour
+	      "format-alt": "{:%A, %B %d %Y}"
     },
     "backlight": {
         // "device": "acpi_video1",
