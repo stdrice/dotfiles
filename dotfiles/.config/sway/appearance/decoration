@@ -51,6 +51,7 @@ for_window {
     [app_id="LibreWolf"] border pixel $border_width
     [class="Chromium"] border pixel $border_width
     [app_id="Chromium"] border pixel $border_width
+    [app_id="chromium"] border pixel $border_width
     [class="Brave-browser"] border pixel $border_width
     [app_id="thunderbird"] border pixel $border_width
     [app_id="lollypop"] border pixel $border_width
