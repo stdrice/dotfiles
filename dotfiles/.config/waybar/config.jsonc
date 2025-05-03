@@ -10,7 +10,7 @@
         // "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
-        "sway/mode",
+        "sway/mode"
     ],
     "modules-center": [
 	"sway/window"
