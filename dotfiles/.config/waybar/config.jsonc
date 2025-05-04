@@ -7,21 +7,21 @@
     "spacing": 3, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "clock"
         // "custom/menu",
+        "sway/workspaces",
+        "sway/scratchpad",
+        "sway/mode"
     ],
     "modules-center": [
-        "sway/scratchpad",
-        "sway/workspaces",
-        "sway/mode"
-	      // "sway/window"
+	      "sway/window"
     ],
     "modules-right": [
         // "custom/media",
       	"pulseaudio",
 	      // "backlight",
         "battery",
-        "tray"
+        "tray",
+        "clock"
     ],
     // Modules configuration
     "sway/workspaces": {
