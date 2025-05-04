@@ -7,21 +7,21 @@
     "spacing": 3, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "clock"
         // "custom/menu",
-        "sway/workspaces",
-        "sway/scratchpad",
-        "sway/mode"
     ],
     "modules-center": [
-	"sway/window"
+        "sway/scratchpad",
+        "sway/workspaces",
+        "sway/mode"
+	      // "sway/window"
     ],
     "modules-right": [
         // "custom/media",
       	"pulseaudio",
 	      // "backlight",
         "battery",
-        "tray",
-        "clock"
+        "tray"
     ],
     // Modules configuration
     "sway/workspaces": {
@@ -76,8 +76,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-      	"format": "{:%a %H:%M}", // 24-hour
-	      // "format": "{:%a %I:%M%p}", // 12-hour
+      	"format": "{:%H:%M}", // 24-hour
+	      // "format": "{:%I:%M%p}", // 12-hour
 	      "format-alt": "{:%A, %B %d %Y}"
     },
     "backlight": {
