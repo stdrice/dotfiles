@@ -2,25 +2,26 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 28, // Waybar height (to be removed for auto height)
+    "height": 34, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 3, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        // "custom/menu",
+        "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
         "sway/mode"
     ],
     "modules-center": [
-	      "clock"
+        "sway/window"
     ],
     "modules-right": [
         // "custom/media",
       	"pulseaudio",
 	      // "backlight",
         "battery",
-        "tray"
+        "tray",
+	      "clock"
     ],
     // Modules configuration
     "sway/workspaces": {
@@ -75,8 +76,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%A %d}</big>\n<tt><small>{calendar}</small></tt>",
-      	"format": "{:%a %b %d %H:%M}", // 24-hour
-	      // "format": "{:%a %b %d %I:%M%p}", // 12-hour
+      	"format": "{:%H:%M}", // 24-hour
+	      // "format": "{:%I:%M%p}", // 12-hour
 	      "format-alt": "{:%A, %B %d %Y}"
     },
     "backlight": {

@@ -18,7 +18,7 @@
     padding = 24
     horizontal_padding = 16
     text_icon_padding = 0
-    corner_radius = 0
+    corner_radius = 6
     frame_width = 0
     separator_color = auto
     sort = yes
