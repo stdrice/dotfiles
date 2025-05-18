@@ -7,7 +7,6 @@ exec_always {
     
     # Import Gsettings
     ~/.local/bin/import-gsettings
-
 }
 
 # Run once on login
@@ -15,11 +14,25 @@ exec {
     # XDG autostart
     dex --autostart
 
-    # Prevents GTK apps from hanging for 15-20 sec before launching
-    dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
-
     # Start pipewire
     # ~/.local/bin/start-pipewire
+
+    # Sway does not set DISPLAY/WAYLAND_DISPLAY in the systemd user environment
+    # See FS#63021
+    # Adapted from xorg's 50-systemd-user.sh, which achieves a similar goal.
+    # - systemd
+    # systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+    # - non-systemd
+    hash dbus-update-activation-environment 2>/dev/null && \
+         dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+    # Prevents GTK apps from hanging for 15-20 sec before launching
+    dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+    dbus-update-activation-environment XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE
+
+    # Desktop portal
+    /usr/libexec/xdg-desktop-portal -r
+    /usr/libexec/xdg-desktop-portal-wlr -r
 
     # Waybar - Statusbar
     waybar
@@ -41,10 +54,6 @@ exec {
 
     # Fcitx5
     fcitx5
-
-    # Enable screensharing
-    /usr/libexec/xdg-desktop-portal -r
-    /usr/libexec/xdg-desktop-portal-wlr -r
 
     # Clipboard manager
     wl-paste --type text --watch cliphist store
