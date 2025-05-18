@@ -54,7 +54,7 @@ $ curl -LO https://codeberg.org/stdrice/pengurice/raw/branch/main/install
 ## Install manually
 - Install all dependencies
 ```
-bash brightnessctl btop calcurse dunst foot gammastep inter-font mpc mpd mpd-mpris ncmpcpp neofetch noto-fonts playerctl power-profiles-daemon python-pywal16 rofi slurp swaybg swayfx swayidle swaylock-effects themix-theme-oomox-git ttf-firacode-nerd waybar zenity zsh
+bash brightnessctl btop calcurse dunst foot gammastep inter-font imagemagick mpc mpd mpd-mpris ncmpcpp neofetch noto-fonts playerctl power-profiles-daemon python-pywal16 rofi slurp swaybg swayfx swayidle swaylock-effects themix-theme-oomox-git ttf-firacode-nerd waybar zenity zsh
 ```
 - Clone this repo
 - Copy all files in `dotfiles` and paste to your `$HOME` folder

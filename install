@@ -152,6 +152,7 @@ config_smth(){
             -i "s/#VerbosePkgLists/VerbosePkgLists/" /etc/pacman.conf \
             -i "s/#ParallelDownloads\ =\ 5/ParallelDownloads\ =\ 5/" /etc/pacman.conf
     fi
+    sed -i 's/\(<policy domain="path" rights="\)none\(" pattern="-"\/>\)/\1write\2/' /etc/ImageMagick-7/policy.xml
 }
 
 enable_services(){
