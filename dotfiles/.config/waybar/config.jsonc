@@ -5,6 +5,7 @@
     "height": 34, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 3, // Gaps between modules (4px)
+    "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": [
         "custom/menu",
@@ -82,8 +83,8 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-	      "format": "{icon}", // without percentage
-        // "format": "{icon} {percent}", // with percentage
+	      // "format": "{icon}", // without percentage
+        "format": "{icon} {percent}", // with percentage
         "format-icons": ["󰃞", "󰃟", "󰃠"],
 	      "tooltip-format": "Brightness: {percent}%\nClick to toggle Night Light",
         "on-click": "~/.local/bin/night-light"
@@ -94,10 +95,10 @@
             "warning": 30,
             "critical": 15
         },
-	      "format": "{icon}", // without percentage
-        // "format": "{icon} {capacity}", // with percentage
-        "format-charging": "󰚥",
-        "format-plugged": "󰚥",
+	      // "format": "{icon}", // without percentage
+        "format": "{icon} {capacity}", // with percentage
+        "format-charging": "󰚥 {capacity}",
+        "format-plugged": "󰚥 {capacity}",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 	      "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
         "interval": 1,
@@ -105,8 +106,8 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-	      "format": "{icon}", // without percentage
-        // "format": "{icon} {volume}", // with percentage
+	      // "format": "{icon}", // without percentage
+        "format": "{icon} {volume}", // with percentage
         "format-muted": "󰖁",
         "format-source": "{volume}% 󰍬",
         "format-source-muted": "󰍭",

@@ -24,8 +24,8 @@ exec {
     # Waybar - Statusbar
     waybar
     
-    # Dunst - Notification
-    dunst
+    # Notification
+    mako
     
     # Polkit
     /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

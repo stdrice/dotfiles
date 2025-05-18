@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+oomox-cli -o wal ~/.cache/wal/colors-oomox
+exit 0

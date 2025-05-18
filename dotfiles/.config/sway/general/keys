@@ -31,7 +31,6 @@ bindsym {
     # Reload the configuration file
     $mod+Shift+c reload
 
-
     # Toggle bar
     $mod+Shift+b exec killall -SIGUSR1 waybar
 

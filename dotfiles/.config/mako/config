@@ -1,0 +1,23 @@
+include=~/.cache/wal/colors-mako
+sort=-time
+layer=overlay
+width=300
+height=120
+border-size=0
+border-radius=6
+padding=20,20
+icons=0
+max-icon-size=64
+default-timeout=5000
+ignore-timeout=1
+font=Sans 10
+
+[app-name=lol]
+layer=overlay
+history=0
+
+[mode=do-not-disturb]
+invisible=1
+
+[mode=do-not-disturb app-name=lol]
+invisible=0

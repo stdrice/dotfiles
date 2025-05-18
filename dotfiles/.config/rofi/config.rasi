@@ -1,4 +1,10 @@
-@theme "~/.config/rofi/theme.rasi"
+@import "~/.cache/wal/colors-rofi-dark"
+
 configuration {
     terminal: "foot";
+    modi: "drun";
+    display-drun: "";
+    show-icons: true;
+    drun-display-format: "{icon}  {name}";
+    font: "sans 10";
 }

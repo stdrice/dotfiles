@@ -80,6 +80,6 @@ for_window {
 popup_during_fullscreen leave_fullscreen
 
 # Mouse rules
-focus_follows_mouse no
+focus_follows_mouse yes
 
 # vim:set ft=conf:

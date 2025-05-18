@@ -1,0 +1,55 @@
+@theme "/dev/null"
+
+* {{
+  al: {color1};
+  background-color: @background;
+  text-color: @foreground;
+  background: {background};
+  foreground: {foreground};
+}}
+
+window {{
+  location: center;
+  width: 25%;
+  height: 65%;
+  spacing: 0;
+  children: [ box ];
+  background-color: @background;
+  text-color: @foreground;
+  border-radius: 6px;
+}}
+
+box {{
+  padding: 0.5em;
+  spacing: 0.2em;
+  children: [ entry, listview ];
+}}
+
+entry {{
+  placeholder: "Search";
+  placeholder-color: @al;
+  padding: 0.5em;
+  expand: false;
+}}
+
+element {{
+  text-color: @al;
+  padding: 0.5em;
+}}
+
+element selected {{
+  text-color: @foreground;
+}}
+
+element-text, element-icon {{
+  background-color: inherit;
+  text-color: inherit;
+}}
+
+listview {{
+  lines: 12;    
+}}
+
+listview, element, element selected, element-text, element-icon {{
+  cursor: pointer;
+}}

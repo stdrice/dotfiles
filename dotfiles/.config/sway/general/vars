@@ -19,6 +19,7 @@ set {
     # Powermenu
     $powermenu ~/.local/bin/powermenu
 
+    # Menu
     $menu ~/.local/bin/menu
 
     # Window switcher

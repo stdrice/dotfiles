@@ -1,5 +1,9 @@
+# Generate theme on first boot
+exec "~/.local/bin/firstboot-bootstrap"
+
 # Load config files
 include ~/.config/sway/general/vars
+include ~/.cache/wal/colors-sway
 include ~/.config/sway/general/*
 include ~/.config/sway/appearance/*
 include ~/.config/sway/hardware/*

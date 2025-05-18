@@ -16,7 +16,7 @@ font monospace 11
 font pango: monospace 7
 
 # Gaps
-smart_gaps on # on|off|toggle|inverse_outer
+smart_gaps off # on|off|toggle|inverse_outer
 gaps outer 0
 gaps inner 2
 
@@ -31,7 +31,7 @@ default_border pixel $border_width
 default_floating_border none
 # default_border normal $border_width
 # default_floating_border normal $border_width
-smart_borders on
+smart_borders off
 
 # Window Titlebar
 titlebar_padding 10 4

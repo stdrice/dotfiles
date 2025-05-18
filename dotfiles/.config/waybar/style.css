@@ -1,4 +1,4 @@
-@import "color.css";
+@import url("/home/normie/.cache/wal/colors-waybar.css");
 
 * {
     border: none;
@@ -12,34 +12,34 @@
 
 window#waybar {
     border-radius: 0px;
-    background: @bg;
-    color: @fg;
+    background: transparent;
+    color: @foreground;
 }
 
 tooltip {
-    background: @bg;
+    background: @background;
     border-radius: 0px;
 }
 
 tooltip label {
-  color: @fg;
+  color: @foreground;
 }
 
 #workspaces button {
     padding: 0px;
     margin-left: 0px;
     margin-right: 1px;
-    color: @bg2;
+    color: #505050;
     background: transparent;
 }
 
 #workspaces button.focused {
     background: transparent;
-    color: @fg;
+    color: @foreground;
 }
 
 #workspaces button.urgent {
-    color: @red;
+    color: @color1;
     background: transparent;
 }
 
@@ -70,7 +70,24 @@ tooltip label {
 #pulseaudio,
 #network,
 #workspaces,
-#backlight
+#backlight,
+#tray,
+#window,
+#mode,
+#scratchpad,
+#custom-media
 {
-    padding: 0px 2px;
+    background: @background;
+    padding: 0px 10px;
+    border-radius: 15px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#custom-menu {
+    padding: 0px 12px 0px 9.5px;
+}
+
+window#waybar.empty #window {
+    background: transparent;
 }
