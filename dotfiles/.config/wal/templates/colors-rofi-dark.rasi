@@ -28,13 +28,13 @@ box {{
 entry {{
   placeholder: "Search";
   placeholder-color: @al;
-  padding: 0.5em;
+  padding: 0.4em;
   expand: false;
 }}
 
 element {{
   text-color: @al;
-  padding: 0.5em;
+  padding: 0.4em;
 }}
 
 element selected {{
