@@ -28,7 +28,7 @@ box {{
 entry {{
   placeholder: "Search";
   placeholder-color: @al;
-  padding: 0.4em;
+  padding: 0.2em;
   expand: false;
 }}
 
