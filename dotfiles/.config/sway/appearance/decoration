@@ -18,7 +18,7 @@ font pango: monospace 7
 # Gaps
 smart_gaps off # on|off|toggle|inverse_outer
 gaps outer 0
-gaps inner 2
+gaps inner 3
 
 # Titlebar and border configuration
 # SwayFX BUG: https://github.com/WillPower3309/swayfx/issues/201
