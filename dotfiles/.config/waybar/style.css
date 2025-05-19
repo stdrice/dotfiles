@@ -79,7 +79,7 @@ tooltip label {
 {
     background: @background;
     padding: 0px 10px;
-    border-radius: 16px;
+    border-radius: 6px;
     margin-top: 4px;
     margin-bottom: 4px;
 }
