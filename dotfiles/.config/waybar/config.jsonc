@@ -8,14 +8,14 @@
     "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": [
-        "custom/menu",
+        // "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
-        "sway/mode"
+        "sway/mode",
+        "custom/media"
         // "sway/window"
     ],
     "modules-center": [
-        "custom/media"
     ],
     "modules-right": [
       	"pulseaudio",
@@ -121,7 +121,7 @@
     "custom/media": {
 	      "format": "󰎇 {}",
 	      "return-type": "json",
-        "max-length": 60,
+        "max-length": 50,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause"
     },
