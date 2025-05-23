@@ -2,7 +2,7 @@
 
 # SwayFX settings
 corner_radius 0
-# blur disable
+blur disable
 titlebar_separator disable
 shadows enable
 shadows_on_csd enable
@@ -18,7 +18,7 @@ font pango: monospace 7
 # Gaps
 smart_gaps off # on|off|toggle|inverse_outer
 gaps outer 0
-gaps inner 6
+gaps inner 3
 
 # Titlebar and border configuration
 # SwayFX BUG: https://github.com/WillPower3309/swayfx/issues/201
@@ -26,7 +26,7 @@ gaps inner 6
 titlebar_border_thickness 0
 
 # Border
-set $border_width 3
+set $border_width 2
 default_border pixel $border_width
 default_floating_border none
 # default_border normal $border_width

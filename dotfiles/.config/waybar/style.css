@@ -6,8 +6,8 @@
     font-family: "sans", "sans-serif", "monospace", "Symbols Nerd Font";
     font-size: 13px;
     min-height: 0;
-    margin-left: 2px;
-    margin-right: 2px; 
+    margin-left: 1px;
+    margin-right: 1px; 
 }
 
 window#waybar {
@@ -80,8 +80,8 @@ tooltip label {
     background: @background;
     padding: 0px 10px;
     border-radius: 0px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 #custom-menu {
