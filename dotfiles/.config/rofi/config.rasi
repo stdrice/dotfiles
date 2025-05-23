@@ -6,5 +6,5 @@ configuration {
     display-drun: "";
     show-icons: true;
     drun-display-format: "{icon}  {name}";
-    font: "sans 10";
+    font: "sans 10.5";
 }

@@ -25,7 +25,7 @@ packages=(bash blueman bluez bluez-utils brightnessctl btop \
           pamixer papirus-icon-theme pavucontrol pipewire pipewire-pulse playerctl \
           polkit-gnome power-profiles-daemon python-pywal16 ranger rofi-wayland\
           sed slurp sof-firmware sudo swaybg swayfx swayidle swaylock-effects \
-          themix-theme-oomox-git ttf-firacode-nerd udisks2 ungoogled-chromium-bin unzip \
+          themix-theme-oomox-git ttf-firacode-nerd ttf-roboto udisks2 ungoogled-chromium-bin unzip \
           waybar wireplumber wl-clipboard xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
           xdg-user-dirs-gtk xorg-drivers xorg-xwayland zathura zathura-pdf-mupdf zenity zip zsh)
 
