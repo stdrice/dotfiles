@@ -2,14 +2,13 @@
 
 WAL_MODE=""
 
-# Parse arguments
 while getopts ":li:" opt; do
     case $opt in
         l)
-            WAL_MODE="-l"  # Enable light mode
+            WAL_MODE="-l"
             ;;
         i)
-            IMAGE="$OPTARG"  # Set the image path
+            IMAGE="$OPTARG"
             ;;
         \?)
             echo "Invalid option: -$OPTARG" >&2
