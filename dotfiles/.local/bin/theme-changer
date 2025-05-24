@@ -1,83 +1,34 @@
 #!/usr/bin/env bash
 
-# vars
-theme_dir="$HOME/.config/sway/colors"
-foot_path="$HOME/.config/foot/foot.ini"
-rofi_path="$HOME/.config/rofi/theme.rasi"
-waybar_path="$HOME/.config/waybar/color.css"
+wall=""
 gtk_path="$HOME/.config/gtk-3.0/settings.ini"
-dunst_path="$HOME/.config/dunst/dunstrc"
 
-rofi_cmd(){
-    rofi -dmenu -p "Theme"
+dark="Dark"
+light="Light"
+
+rofi_cmd() {
+    rofi -p "Select theme" -dmenu
 }
 
-list_themes(){
-   find "$theme_dir" -maxdepth 1 -type f -printf "%f\n"
+select_walls(){
+    wall=$(zenity --file-selection --title="Choose wallpaper" --filename="$HOME/" --file-filter="Images (*.png *.jpg *.jpeg *.gif)|*.png *.jpg *.jpeg *.gif")
 }
 
-run_rofi(){
-    list_themes | rofi_cmd
+select_theme(){
+    echo -e "$dark\n$light" | rofi_cmd
 }
 
-chosen="$(run_rofi)"
-[ -z "$chosen" ] && exit 0
-source "$theme_dir"/"$chosen"
-
-if [ -f "$theme_dir/$chosen" ]; then
-    source "$theme_dir"/"$chosen"
-else
-    notify-send "Error" "Theme file not found: $chosen"
-    exit 1
-fi
-
-term(){
-    sed -i -e "s|include=~/.config/foot/colors/.*|include=~/.config/foot/colors/$chosen.ini|g" $foot_path
-}
-
-gtk(){
-    sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$gtk_theme/g" $gtk_path
-        if [[ "$theme" == "dark" ]]; then
-            icon_theme="Papirus-Dark"
-        else
-            icon_theme="Papirus-Light"
-        fi
-        sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$icon_theme/g" "$gtk_path"
-}
-
-
-rofi(){
-    sed -i -e "s/\(bg: \).*;/\1$bg;/g" \
-           -e "s/\(fg: \).*;/\1$fg;/g" "$rofi_path"
-}
-
-waybar() {
-    sed -i -e "s/@define-color bg .*/@define-color bg $bg;/g" \
-           -e "s/@define-color fg .*/@define-color fg $fg;/g" \
-           -e "s/@define-color red .*/@define-color red $r;/g" \
-           -e "s/@define-color green .*/@define-color green $g;/g" \
-           -e "s/@define-color yellow .*/@define-color yellow $y;/g" \
-           -e "s/@define-color blue .*/@define-color blue $b;/g" \
-           -e "s/@define-color magenta .*/@define-color magenta $m;/g" \
-           -e "s/@define-color cyan .*/@define-color cyan $c;/g" \
-           -e "s/@define-color gray .*/@define-color gray $wh;/g" "$waybar_path"
-}
-
-dunst(){
-    sed -i -e "s/background = .*/background = \"$bg\"/g" \
-           -e "s/foreground = .*/foreground = \"$fg\"/g" \
-	   -e "s/highlight = .*/highlight = \"$fg\"/g" $dunst_path
-}
-
-save_theme(){
-    touch ~/.cache/current-theme
-    echo -e "$chosen" > ~/.cache/current-theme
-    notify-send "Theme changed" "Applied theme: $chosen\nRe-login to make all changes take effect"
-}
-
-term
-gtk
-rofi
-waybar
-dunst
-save_theme
+select_walls
+[ -z "$wall" ] && exit 1
+chosen=$(select_theme)
+case "$chosen" in
+    "$dark")
+        sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=Papirus-Dark/g" "$gtk_path"
+        ~/.local/bin/gentheme "$wall"
+        ;;
+    "$light") 
+        sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=Papirus-Light/g" "$gtk_path"
+        ~/.local/bin/gentheme -l "$wall"
+        ;;
+esac
+exit 0

@@ -1,4 +1,32 @@
 #!/usr/bin/env bash
 
-oomox-cli -o wal ~/.cache/wal/colors-oomox
+WAL_MODE=""
+
+# Parse arguments
+while getopts ":li:" opt; do
+    case $opt in
+        l)
+            WAL_MODE="-l"  # Enable light mode
+            ;;
+        i)
+            IMAGE="$OPTARG"  # Set the image path
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            exit 1
+            ;;
+        :)
+            echo "Option -$OPTARG requires an argument." >&2
+            exit 1
+            ;;
+    esac
+done
+
+shift $((OPTIND - 1))
+if [ -z "$IMAGE" ] && [ -n "$1" ]; then
+    IMAGE="$1"
+fi
+
+wal -q $WAL_MODE -i "$IMAGE" || exit 1
+oomox-cli -o wal ~/.cache/wal/colors-oomox >/dev/null || exit 1
 exit 0

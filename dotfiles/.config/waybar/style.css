@@ -29,7 +29,7 @@ tooltip label {
     padding: 0px;
     margin-left: 0px;
     margin-right: 1px;
-    color: rgba(255, 255, 255, 0.3);
+    color: alpha(@foreground, 0.3);
     background: transparent;
 }
 
@@ -45,7 +45,7 @@ tooltip label {
 
 #workspaces button:hover {
     background: transparent;
-    color: @gray;
+    color: alpha(@foreground, 0.7);
     box-shadow: inherit;
     text-shadow: inherit;
 }
