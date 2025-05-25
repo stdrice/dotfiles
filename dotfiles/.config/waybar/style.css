@@ -28,7 +28,7 @@ tooltip label {
 #workspaces button {
     padding: 0px;
     margin-left: 0px;
-    margin-right: 1px;
+    margin-right: 0px;
     color: alpha(@foreground, 0.3);
     background: transparent;
 }
@@ -78,10 +78,10 @@ tooltip label {
 #custom-media
 {
     background: @background;
-    padding: 0px 10px;
+    padding: 0px 8px;
     border-radius: 0px;
     margin-top: 3px;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 
 #custom-menu {
