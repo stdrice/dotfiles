@@ -12,7 +12,6 @@ BLD=$(tput bold)
 CNC=$(tput sgr0)
 
 # vars
-date=$(date +%Y%m%d-%H%M%S)
 git_repo="https://codeberg.org/stdrice/pengurice"
 branch="main"
 main_folder="dotfiles"
@@ -65,7 +64,7 @@ intro(){
 	          *) break ;;
 	      esac
     done
-    read -rp "Do you want to use Dan Pollock (someonewhocares)'s hosts file?: [Y/n] " $hostsfile
+    read -rp "Do you want to use Dan Pollock (someonewhocares)'s hosts file?: [Y/n] " hostsfile
     read -rp "First, type your username here: " username
 }
 
@@ -88,9 +87,9 @@ setup_before_install(){
         rm -rf /tmp/aur 
         git clone https://aur.archlinux.org/yay.git /tmp/aur
         chmod 777 /tmp/aur
-        pushd /tmp/aur
+        pushd /tmp/aur || exit
         sudo -u "$username" makepkg -si --noconfirm
-        popd
+        popd || exit
     fi
     case "$(readlink -f /sbin/init)" in
 	      *systemd*) return ;;
