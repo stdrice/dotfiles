@@ -85,7 +85,7 @@ setup_before_install(){
     pacman -Sy --noconfirm --needed curl git base-devel
     if ! command -v yay &>/dev/null; then
         rm -rf /tmp/aur 
-        git clone https://aur.archlinux.org/yay.git /tmp/aur
+        git clone https://aur.archlinux.org/yay-bin.git /tmp/aur
         chmod 777 /tmp/aur
         pushd /tmp/aur || exit
         sudo -u "$username" makepkg -si --noconfirm
