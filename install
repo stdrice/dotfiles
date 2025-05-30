@@ -166,9 +166,9 @@ enable_services(){
             sudo -u "$username" systemctl --user enable wireplumber.service
         ;;
         *runit*)
-            case "$distro" in
-                nyarch) pacman -Sy --needed --noconfirm networkmanager-runit backlight-runit
-            esac
+            if command -v pacman &>/dev/null; then
+                pacman -Sy --needed --noconfirm networkmanager-runit backlight-runit
+            fi
             if [ -d /etc/sv ]; then
                 ln -s /etc/sv/NetworkManager /var/service/
                 ln -s /etc/sv/elogind /var/service/
