@@ -147,9 +147,9 @@ config_smth(){
     esac
     if command -v pacman &>/dev/null; then
         logo "Configuring pacman (for what???)"
-        sed -i "s/^#Color$/Color/" /etc/pacman.conf \
-            -i "s/#VerbosePkgLists/VerbosePkgLists/" /etc/pacman.conf \
-            -i "s/#ParallelDownloads\ =\ 5/ParallelDownloads\ =\ 5/" /etc/pacman.conf
+        sed -i -e "s/^#Color$/Color/" /etc/pacman.conf \
+               -e "s/#VerbosePkgLists/VerbosePkgLists/" /etc/pacman.conf \
+               -e "s/#ParallelDownloads\ =\ 5/ParallelDownloads\ =\ 5/" /etc/pacman.conf
     fi
     sed -i 's/\(<policy domain="path" rights="\)none\(" pattern="-"\/>\)/\1write\2/' /etc/ImageMagick-7/policy.xml
 }
