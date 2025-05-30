@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 notify_cmd(){ 
-    dunstify -a 'lol' -h string:x-canonical-private-synchronous:sys-notify "☀️ Brightness: $(get_brightness)%"
+    notify-send -a 'lol' -h string:x-canonical-private-synchronous:sys-notify "☀️ Brightness: $(get_brightness)%"
 }
 
 get_brightness(){

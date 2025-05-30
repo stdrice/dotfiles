@@ -1,4 +1,4 @@
-@import url("/home/normie/.cache/wal/colors-waybar.css");
+@import url("colors.css");
 
 * {
     border: none;
@@ -12,7 +12,7 @@
 
 window#waybar {
     border-radius: 0px;
-    background: transparent;
+    background: @background;
     color: @foreground;
 }
 
@@ -50,7 +50,7 @@ tooltip label {
     text-shadow: inherit;
 }
 
-#window
+#window,
 #custom-media
 {
     padding: 0px;
@@ -69,19 +69,13 @@ tooltip label {
 #battery,
 #pulseaudio,
 #network,
-#workspaces,
 #backlight,
-#tray,
 #window,
 #mode,
 #scratchpad,
 #custom-media
 {
-    background: @background;
-    padding: 0px 8px;
-    border-radius: 0px;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    padding: 0px 6px;
 }
 
 #custom-menu {

@@ -2,6 +2,7 @@
 
 if [ ! -d ~/.cache/wal ] then
     ~/.local/bin/gentheme ~/.config/sway/walls/1.png
+    ln -sf ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors.css
     mako &
     notify-send -t 100000 "Bootstrapped" "Re-login to apply changes"
     exit 0
