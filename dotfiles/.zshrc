@@ -16,7 +16,7 @@ PROMPT="%F{1}%n%F{reset}@%m %F{2}%~ %F{reset}$ "
 
 # Vars
 export TERMINAL="foot"
-export BROWSER="brave"
+export BROWSER="firefox"
 export EDITOR="nvim"
 export VISUAL="${EDITOR}"
 
