@@ -6,8 +6,8 @@
     font-family: "sans", "sans-serif", "monospace", "Symbols Nerd Font";
     font-size: 13px;
     min-height: 0;
-    margin-left: 1px;
-    margin-right: 1px; 
+    margin-left: 2px;
+    margin-right: 2px; 
 }
 
 window#waybar {
