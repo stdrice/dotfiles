@@ -47,7 +47,7 @@ $ cd pengurice
 
 ## Install with curl
 ```
-$ curl -LO https://github.com/stdrice/pengurice/raw/branch/main/install
+$ curl -LO https://raw.githubusercontent.com/stdrice/pengurice/main/install
 # bash install
 ```
 
