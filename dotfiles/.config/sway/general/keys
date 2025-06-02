@@ -18,6 +18,7 @@ bindsym {
 
     # Start your launcher
     $mod+d exec $launcher
+    XF86Search exec $launcher
 
     # Start powermenu
     $mod+BackSpace exec $powermenu
