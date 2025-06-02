@@ -12,7 +12,7 @@ BLD=$(tput bold)
 CNC=$(tput sgr0)
 
 # vars
-git_repo="https://codeberg.org/stdrice/pengurice"
+git_repo="https://github.com/stdrice/pengurice"
 branch="main"
 main_folder="dotfiles"
 packages=(bash blueman bluez bluez-utils brightnessctl btop \
