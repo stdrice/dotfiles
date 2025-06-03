@@ -1,8 +1,8 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 28, // Waybar height (to be removed for auto height)
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 36, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 3, // Gaps between modules (4px)
     "reload_style_on_change": true,
@@ -11,11 +11,11 @@
         // "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
-        "sway/mode",
-        "custom/media"
+        "sway/mode"
         // "sway/window"
     ],
     "modules-center": [
+        "custom/media"
     ],
     "modules-right": [
         "pulseaudio",
@@ -41,7 +41,7 @@
     "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
-        "format-icons": ["", "󰋑"],
+        "format-icons": ["", "󰖯"],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
@@ -95,8 +95,10 @@
             "warning": 30,
             "critical": 15
         },
+        
 	      // "format": "{icon}", // without percentage
-        "format": "{icon} {capacity}", // with percentage
+        // "format": "{icon} {capacity}", // with percentage
+        "format": "󰋑  {capacity}", // heart with percentage
         "format-charging": "󰚥 {capacity}",
         "format-plugged": "󰚥 {capacity}",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
