@@ -16,7 +16,7 @@ font monospace 11
 font pango: monospace 7
 
 # Gaps
-smart_gaps on # on|off|toggle|inverse_outer
+smart_gaps off # on|off|toggle|inverse_outer
 gaps outer 0
 gaps inner 2
 
