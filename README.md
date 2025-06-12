@@ -17,7 +17,7 @@ This is **pengurice**, a script that automatically rice your **Linux** system. I
 # **Starring 🌠**
 <img src="https://i.imgur.com/Wu47DJr.png" align="right" width="400px">
 
-- **[Sway ⚽](https://swaywm.org/)**: Window Manager/Compositor
+- **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
 - **[Firefox 🦊](https://mozilla.org/en-US/firefox)**: Browser
 - **[Ranger](https://ranger.github.io/) and [Nemo](https://github.com/linuxmint/nemo)**: File Manager

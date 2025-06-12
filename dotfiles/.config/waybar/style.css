@@ -6,13 +6,13 @@
     font-family: "sans", "sans-serif", "monospace", "Symbols Nerd Font";
     font-size: 13px;
     min-height: 0;
-    margin-left: 2px;
-    margin-right: 2px; 
+    margin-left: 1px;
+    margin-right: 1px; 
 }
 
 window#waybar {
     border-radius: 0px;
-    background: @background;
+    background: transparent;
     color: @foreground;
 }
 
@@ -69,17 +69,19 @@ tooltip label {
 #battery,
 #pulseaudio,
 #network,
+#workspaces,
 #backlight,
+#tray,
 #window,
 #mode,
 #scratchpad,
 #custom-media
 {
-    padding: 0px 6px;
-}
-
-#custom-menu {
-    padding: 0px 12px 0px 9.5px;
+    background: @background;
+    padding: 0px 10px;
+    border-radius: 4px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 window#waybar.empty #window {

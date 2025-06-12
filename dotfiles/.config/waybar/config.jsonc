@@ -1,28 +1,28 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 36, // Waybar height (to be removed for auto height)
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 32, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 3, // Gaps between modules (4px)
     "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": [
         // "custom/menu",
+	"clock",
+        "custom/media"
+    ],
+    "modules-center": [
         "sway/workspaces",
         "sway/scratchpad",
         "sway/mode"
         // "sway/window"
     ],
-    "modules-center": [
-        "custom/media"
-    ],
     "modules-right": [
         "pulseaudio",
-	      // "backlight",
+	// "backlight",
         "battery",
-        "tray",
-	      "clock"
+        "tray"
     ],
     // Modules configuration
     "sway/workspaces": {
@@ -77,16 +77,16 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%A %d}</big>\n<tt><small>{calendar}</small></tt>",
-      	"format": "{:%H:%M}", // 24-hour
-	      // "format": "{:%I:%M%p}", // 12-hour
-	      "format-alt": "{:%A, %B %d %Y}"
+      	"format": "{:%a, %b %d %H:%M}", // 24-hour
+	// "format": "{:%a, %b %d %I:%M%p}", // 12-hour
+	"format-alt": "{:%A, %B %d %Y}"
     },
     "backlight": {
         // "device": "acpi_video1",
-	      // "format": "{icon}", // without percentage
+	// "format": "{icon}", // without percentage
         "format": "{icon} {percent}", // with percentage
         "format-icons": ["󰃞", "󰃟", "󰃠"],
-	      "tooltip-format": "Brightness: {percent}%\nClick to toggle Night Light",
+	"tooltip-format": "Brightness: {percent}%\nClick to toggle Night Light",
         "on-click": "~/.local/bin/night-light"
     },
     "battery": {
@@ -95,14 +95,13 @@
             "warning": 30,
             "critical": 15
         },
-        
-	      // "format": "{icon}", // without percentage
+	// "format": "{icon}", // without percentage
         // "format": "{icon} {capacity}", // with percentage
         "format": "󰋑  {capacity}", // heart with percentage
         "format-charging": "󰚥 {capacity}",
         "format-plugged": "󰚥 {capacity}",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-	      "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
+	"tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
         "interval": 1,
         "on-click": "~/.local/bin/powermenu"
     },
@@ -121,9 +120,9 @@
         "on-click-right": "pavucontrol"
     },
     "custom/media": {
-	      "format": "󰎇 {}",
-	      "return-type": "json",
-        "max-length": 50,
+	"format": "󰎇 {}",
+	"return-type": "json",
+        "max-length": 40,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause"
     },

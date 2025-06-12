@@ -16,7 +16,7 @@ window {{
   children: [ box ];
   background-color: @background;
   text-color: @foreground;
-  border-radius: 0px;
+  border-radius: 4px;
 }}
 
 box {{

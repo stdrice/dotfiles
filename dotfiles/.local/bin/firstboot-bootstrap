@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ ! -d ~/.cache/wal ] then
+if [ ! -d ~/.cache/wal ]; then
     ~/.local/bin/gentheme ~/.config/sway/walls/1.png
     ln -sf ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors.css
     mako &
