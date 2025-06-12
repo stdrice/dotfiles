@@ -1,34 +1,126 @@
 #!/usr/bin/env bash
 
-wall=""
 gtk_path="$HOME/.config/gtk-3.0/settings.ini"
+term_path="$HOME/.config/foot/colors.ini"
+bar_path="$HOME/.config/waybar/colors.css"
+launcher_path="$HOME/.config/rofi/theme.rasi"
+xresources_path="$HOME/.Xresources"
+sway_path="$HOME/.config/sway/appearance/colors"
+notif_path="$HOME/.config/mako/colors"
 
-dark="Dark"
-light="Light"
+dark="dark"
+light="light"
 
 rofi_cmd() {
     rofi -p "Select theme" -dmenu
-}
-
-select_walls(){
-    wall=$(zenity --file-selection --title="Choose wallpaper" --filename="$HOME/" --file-filter="Images (*.png *.jpg *.jpeg *.gif)|*.png *.jpg *.jpeg *.gif")
 }
 
 select_theme(){
     echo -e "$dark\n$light" | rofi_cmd
 }
 
-select_walls
-[ -z "$wall" ] && exit 1
-chosen=$(select_theme)
-case "$chosen" in
+term(){
+    [[ -f "$term_path" ]] && sed -i -e "s/background=.*/background=$BG/g" \
+           -e "s/foreground=.*/foreground=$FG/g" \
+           -e "s/regular0=.*/regular0=$BL/g" \
+           -e "s/regular1=.*/regular1=$R/g" \
+           -e "s/regular2=.*/regular2=$G/g" \
+           -e "s/regular3=.*/regular3=$Y/g" \
+           -e "s/regular4=.*/regular4=$B/g" \
+           -e "s/regular5=.*/regular5=$M/g" \
+           -e "s/regular6=.*/regular6=$C/g" \
+           -e "s/regular7=.*/regular7=$WH/g" \
+           -e "s/bright0=.*/bright0=$BL/g" \
+           -e "s/bright1=.*/bright1=$R/g" \
+           -e "s/bright2=.*/bright2=$G/g" \
+           -e "s/bright3=.*/bright3=$Y/g" \
+           -e "s/bright4=.*/bright4=$B/g" \
+           -e "s/bright5=.*/bright5=$M/g" \
+           -e "s/bright6=.*/bright6=$C/g" \
+           -e "s/bright7=.*/bright7=$WH/g" "$term_path"
+    [[ -f "$term_path" ]] && sed -i -e "s/#//g" "$term_path"
+}
+
+bar(){
+    sed -i -e "s/@define-color foreground .*/@define-color foreground $FG;/g" \
+           -e "s/@define-color background .*/@define-color background $BG;/g" \
+           -e "s/@define-color cursor .*/@define-color cursor $FG;/g" \
+           -e "s/@define-color color0 .*/@define-color color0 $BL;/g" \
+           -e "s/@define-color color1 .*/@define-color color1 $R;/g" \
+           -e "s/@define-color color2 .*/@define-color color2 $G;/g" \
+           -e "s/@define-color color3 .*/@define-color color3 $Y;/g" \
+           -e "s/@define-color color4 .*/@define-color color4 $B;/g" \
+           -e "s/@define-color color5 .*/@define-color color5 $M;/g" \
+           -e "s/@define-color color6 .*/@define-color color6 $C;/g" \
+           -e "s/@define-color color7 .*/@define-color color7 $WH;/g" "$bar_path"
+}
+
+launcher(){
+    [[ -f "$launcher_path" ]] && sed -i -e "s/background: .*/background: $BG;/g" \
+           -e "s/foreground: .*/foreground: $FG;/g" \
+           -e "s/scheme: .*/scheme: $SC;/g" "$launcher_path"
+}
+
+gtk(){
+    case "$chosen" in
     "$dark")
         sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=Papirus-Dark/g" "$gtk_path"
-        ~/.local/bin/gentheme "$wall"
         ;;
     "$light") 
         sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=Papirus-Light/g" "$gtk_path"
-        ~/.local/bin/gentheme -l "$wall"
         ;;
-esac
+    esac
+}
+
+xresources(){
+     [[ -f "$xresources_path" ]] && sed -i -e "s/#define FG .*/#define FG $FG/g" \
+          -e "s/#define BG .*/#define BG $BG/g" \
+          -e "s/#define BL .*/#define BL $BL/g" \
+          -e "s/#define WH .*/#define WH $WH/g" \
+          -e "s/#define R .*/#define R $R/g" \
+          -e "s/#define G .*/#define G $G/g" \
+          -e "s/#define Y .*/#define Y $Y/g" \
+          -e "s/#define B .*/#define B $B/g" \
+          -e "s/#define M .*/#define M $M/g" \
+          -e "s/#define C .*/#define C $C/g" "$xresources_path"
+}
+
+notif(){
+    [[ -f "$notif_path" ]] && sed -i -e "s/background-color=.*/background-color=$BG" \
+           -e "s/text-color=.*/text-color=$FG" \
+           -e "s/border-color=.*/border-color=$BG" "$notif_path"
+}
+
+sway(){
+    [[ -f "$sway_path" ]] && sed -i \
+        -e "s/^client\\.focused .*/client.focused $SC $BG $FG $WH $SC/" \
+        -e "s/^client\\.focused_inactive .*/client.focused_inactive $BG $BG $FG $WH $BG/" \
+        -e "s/^client\\.unfocused .*/client.unfocused $BG $BG $FG $WH $BG/" \
+        -e "s/^client\\.urgent .*/client.urgent $R $BG $FG $WH $R/" "$sway_path"
+}
+
+finalize(){
+    pkill -x waybar
+    sleep 0.5
+    waybar >/dev/null 2>&1 &
+    makoctl reload
+    swaymsg reload
+    notify-send "Theme changed" "Re-login to apply changes"
+}
+
+chosen=$(select_theme) || exit 1
+echo "$chosen"
+theme_file="$HOME/.config/sway/colors/$chosen"
+[[ -f "$theme_file" ]] && source "$theme_file" || {
+    exit 1
+}
+
+xresources
+term
+bar
+launcher
+gtk
+sway
+finalize
+
 exit 0

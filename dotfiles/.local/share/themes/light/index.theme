@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=light
+Comment=gtk
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+Name=light
+GtkTheme=light
+IconTheme=light
+MetacityTheme=light

@@ -1,4 +1,4 @@
-@import "~/.cache/wal/colors-rofi-dark"
+@import "~/.config/rofi/theme.rasi"
 
 configuration {
     terminal: "foot";

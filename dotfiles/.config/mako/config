@@ -1,4 +1,4 @@
-include=~/.cache/wal/colors-mako
+include=~/.config/mako/colors
 sort=-time
 layer=overlay
 width=300
