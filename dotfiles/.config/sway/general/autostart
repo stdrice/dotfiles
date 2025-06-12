@@ -31,8 +31,8 @@ exec {
     dbus-update-activation-environment XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE
 
     # Desktop portal
-    /usr/libexec/xdg-desktop-portal -r
-    /usr/libexec/xdg-desktop-portal-wlr -r
+    /usr/lib/xdg-desktop-portal -r
+    /usr/lib/xdg-desktop-portal-wlr -r
 
     # Waybar - Statusbar
     waybar
