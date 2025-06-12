@@ -21,10 +21,12 @@ exec {
     # See FS#63021
     # Adapted from xorg's 50-systemd-user.sh, which achieves a similar goal.
     # - systemd
-    # systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+    # systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_DESKTOP=sway
     # - non-systemd
     hash dbus-update-activation-environment 2>/dev/null && \
-         dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+         dbus-update-activation-environment --systemd --all \
+         dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_DESKTOP=sway
+
 
     # Prevents GTK apps from hanging for 15-20 sec before launching
     dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
