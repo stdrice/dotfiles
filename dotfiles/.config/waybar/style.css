@@ -83,6 +83,7 @@ tooltip label {
     border-radius: 4px;
     margin-top: 3px;
     margin-bottom: 3px;
+    box-shadow: 0px 0px 2px 1px rgba(50, 50, 50, 0.2);
 }
 
 window#waybar.empty #window {
