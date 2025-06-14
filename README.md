@@ -13,10 +13,9 @@
 # **About ⁉️**
 ## Hello! Thanks for dropping by 👋
 This is **pengurice**, a script that automatically rice your **Linux** system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
-
-# **Starring 🌠**
 <img src="https://files.catbox.moe/vtj9pm.png" align="right" width="400px">
 
+# **Starring 🌠**
 - **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
 - **[Firefox 🦊](https://mozilla.org/en-US/firefox)**: Browser
