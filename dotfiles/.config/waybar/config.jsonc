@@ -78,15 +78,15 @@
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%A %d}</big>\n<tt><small>{calendar}</small></tt>",
       	"format": "{:%a %d/%m %H:%M}", // 24-hour
-	// "format": "{:%a %d/%m %I:%M%p}", // 12-hour
-	"format-alt": "{:%A, %B %d %Y}"
+	      // "format": "{:%a %d/%m %I:%M%p}", // 12-hour
+	      "format-alt": "{:%A, %d %B %Y}"
     },
     "backlight": {
         // "device": "acpi_video1",
-	// "format": "{icon}", // without percentage
+      	// "format": "{icon}", // without percentage
         "format": "{icon} {percent}", // with percentage
         "format-icons": ["󰃞", "󰃟", "󰃠"],
-	"tooltip-format": "Brightness: {percent}%\nClick to toggle Night Light",
+      	"tooltip-format": "Brightness: {percent}%\nClick to toggle Night Light",
         "on-click": "~/.local/bin/night-light"
     },
     "battery": {
@@ -95,13 +95,13 @@
             "warning": 30,
             "critical": 15
         },
-	// "format": "{icon}", // without percentage
+	      // "format": "{icon}", // without percentage
         // "format": "{icon} {capacity}", // with percentage
         "format": "󰋑  {capacity}", // heart with percentage
         "format-charging": "󰚥 {capacity}",
         "format-plugged": "󰚥 {capacity}",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-	"tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
+	      "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
         "interval": 1,
         "on-click": "~/.local/bin/powermenu"
     },
@@ -115,7 +115,7 @@
         "format-icons": {
             "default": ["󰕿", "󰖀", "󰕾"]
         },
-	"tooltip-format": "Volume: {volume}%\n{desc}",
+      	"tooltip-format": "Volume: {volume}%\n{desc}",
         "on-click": "pamixer --toggle-mute",
         "on-click-right": "pavucontrol"
     },
