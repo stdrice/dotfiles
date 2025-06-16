@@ -97,7 +97,7 @@
         },
 	      // "format": "{icon}", // without percentage
         // "format": "{icon} {capacity}", // with percentage
-        "format": "󰋑  {capacity}", // heart with percentage
+        "format": "󰋑 {capacity}", // heart with percentage
         "format-charging": "󰚥 {capacity}",
         "format-plugged": "󰚥 {capacity}",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
