@@ -9,20 +9,20 @@
     // Choose the order of the modules
     "modules-left": [
         // "custom/menu",
-	      "clock",
+        "sway/workspaces",
+        "sway/scratchpad",
+        "sway/mode",
+        // "sway/window"
         "custom/media"
     ],
     "modules-center": [
-        "sway/workspaces",
-        "sway/scratchpad",
-        "sway/mode"
-        // "sway/window"
     ],
     "modules-right": [
         "pulseaudio",
 	      // "backlight",
         "battery",
-        "tray"
+        "tray",
+	      "clock"
     ],
     // Modules configuration
     "sway/workspaces": {
@@ -123,7 +123,7 @@
 	"format": "󰎇 {}",
 	"return-type": "json",
         "max-length": 40,
-        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} · {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause"
     },
     "custom/menu": {
