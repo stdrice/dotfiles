@@ -18,10 +18,10 @@
     "modules-center": [
     ],
     "modules-right": [
+        "tray",
         "pulseaudio",
 	      // "backlight",
         "battery",
-        "tray",
 	      "clock"
     ],
     // Modules configuration
