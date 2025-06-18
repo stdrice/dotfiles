@@ -1,5 +1,4 @@
-<h1 align="center"><b>✨ pengurice ✨ </b></h1>
-<p align="center">📜 A script that rice your Linux/*nix system.</p>
+<h1 align="center"><b>✨ stdrice's Linux dotfiles ✨ </b></h1>
 
 # **Table of Contents**
 - [About ⁉️](#about-%EF%B8%8F)
@@ -12,14 +11,14 @@
 
 # **About ⁉️**
 ## Hello! Thanks for dropping by 👋
-This is **pengurice**, a script that automatically rice your **Linux** system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
+This is my Linux setup. I made this especially for me and people who wants a simple, productive and eyecandy Linux desktop.
 
 # **Starring 🌠**
 <img src="https://files.catbox.moe/vtj9pm.png" align="right" width="300px">
 
 - **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
-- **[Firefox 🦊](https://mozilla.org/en-US/firefox)**: Browser
+- **[Zen Browser 🦊](https://zen-browser.app/)**: Browser
 - **[Ranger](https://ranger.github.io/) and [Nemo](https://github.com/linuxmint/nemo)**: File Manager
 - **[NeoVim](https://neovim.io)**: Text Editor
 - **[ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)**: Music Player
@@ -40,14 +39,14 @@ Now this script only supports **Arch Linux** and **Arch-based** distros (Endeavo
 
 ## Install with git
 ```
-$ git clone --depth 1 https://github.com/stdrice/pengurice
-$ cd pengurice
+$ git clone --depth 1 https://github.com/stdrice/dotfiles
+$ cd dotfiles
 # ./install
 ```
 
 ## Install with curl
 ```
-$ curl -LO https://raw.githubusercontent.com/stdrice/pengurice/main/install
+$ curl -LO https://raw.githubusercontent.com/stdrice/dotfiles/main/install
 # bash install
 ```
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# pengurice: stdrice's auto rice script
+# stdrice's linux setup: installation script
 # by stdrice <stdrice@disroot.org>
 # See LICENSE file for copyright and license details.
 # To understand everything else, start reading main().
@@ -12,11 +12,11 @@ BLD=$(tput bold)
 CNC=$(tput sgr0)
 
 # vars
-git_repo="https://github.com/stdrice/pengurice"
+git_repo="https://github.com/stdrice/dotfiles"
 branch="main"
 main_folder="dotfiles"
 packages=(bash blueman bluez bluez-utils brightnessctl btop \
-          calcurse cliphist dex firefox foot galculator gammastep git grim \
+          calcurse cliphist dexfoot galculator gammastep git grim \
           gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb imagemagick \
           imv inter-font libnotify lxappearance-gtk3 ly mako mpc mpd mpd-mpris \
           mpv ncmpcpp nemo neofetch neovim networkmanager network-manager-applet \
@@ -26,7 +26,7 @@ packages=(bash blueman bluez bluez-utils brightnessctl btop \
           sof-firmware sudo swaybg swayfx swayidle swaylock-effects ttf-nerd-fonts-symbols \
           udisks2 unzip waybar wireplumber wl-clipboard xdg-desktop-portal-gtk \
           xdg-desktop-portal-wlr xdg-user-dirs-gtk xorg-drivers xorg-xwayland \
-          zathura zathura-pdf-mupdf zip zsh)
+          zathura zathura-pdf-mupdf zen-browser-bin zip zsh)
 
 # functions
 logo() {
@@ -45,9 +45,9 @@ fi
 bootstraps(){
     # Allow user to run sudo without password. Since AUR programs must be installed
     # in a fakeroot environment, this is required for all builds with AUR.
-    trap 'rm -f /etc/sudoers.d/pengurice-temp'
+    trap 'rm -f /etc/sudoers.d/dotfiles-temp'
     echo "%wheel ALL=(ALL) NOPASSWD: ALL
-Defaults:%wheel runcwd=*" > /etc/sudoers.d/pengurice-temp
+Defaults:%wheel runcwd=*" > /etc/sudoers.d/dotfiles-temp
     
     # dbus UUID must be generated for Artix runit.
     dbus-uuidgen >/var/lib/dbus/machine-id
@@ -55,7 +55,7 @@ Defaults:%wheel runcwd=*" > /etc/sudoers.d/pengurice-temp
 
 intro(){
     logo "Welcome!"
-    printf '%s%sWelcome to pengurice!\nThis script will automatically install fully-featured tiling window manager-based system on Linux system.\nYou will be prompted for your root password to install missing dependencies.\nThis script will replace duplicate files, so backup your files first. %s\n\n' "${BLD}" "${CRE}" "${CNC}"
+    printf "%s%sWelcome to stdrice's Linux setup installation script!\nThis script will automatically install fully-featured tiling window manager-based system on Linux system.\nYou will be prompted for your root password to install missing dependencies.\nThis script will replace duplicate files, so backup your files first. %s\n\n" "${BLD}" "${CRE}" "${CNC}"
 
     while true; do
 	      read -rp "Do you want to continue? [Y/n]: " yn
@@ -185,14 +185,14 @@ enable_services(){
 
 finalize(){
     # Allow wheel users to sudo with password and allow several system commands
-    echo "%wheel ALL=(ALL:ALL) ALL" >/etc/sudoers.d/00-pengurice-wheel-can-sudo
-    echo "%wheel ALL=(ALL:ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/poweroff,/usr/bin/reboot,/usr/bin/systemctl,/usr/bin/loginctl,/usr/bin/mount,/usr/bin/umount,/usr/bin/loadkeys" >/etc/sudoers.d/01-pengurice-cmds-without-password
-    rm -rf /etc/sudoers.d/pengurice-temp
+    echo "%wheel ALL=(ALL:ALL) ALL" >/etc/sudoers.d/00-lol-wheel-can-sudo
+    echo "%wheel ALL=(ALL:ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/poweroff,/usr/bin/reboot,/usr/bin/systemctl,/usr/bin/loginctl,/usr/bin/mount,/usr/bin/umount,/usr/bin/loadkeys" >/etc/sudoers.d/01-lol-cmds-without-password
+    rm -rf /etc/sudoers.d/dotfiles-temp
 }
 
 complete_msg(){
     logo "Done!"
-    echo -e "Thanks for using pengurice!\n" "${BLD}" "${CYE}" "${CNC}"
+    echo -e "Thanks for using my dotfiles!\n" "${BLD}" "${CYE}" "${CNC}"
     echo -e "Before restart, you need to remember the following things:\n\n1. If you use Display Manager, choose 'sway' as session/desktop environment and log in.\n2. If you use tty, you need to launch sway manually 'exec sway'.\n"
     while true; do
 	    read -rp "Do you want to restart now? [Y/n]: " yn2
