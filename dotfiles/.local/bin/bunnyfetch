@@ -22,9 +22,6 @@ wmname="$(xprop -id $(xprop -root -notype | awk '$1=="_NET_SUPPORTING_WM_CHECK:"
 k=kr
 kernel="$(uname -r | cut -d '-' -f1)"
 
-r=rs
-resolution="$(xwininfo -root | grep geometry | awk '{print $2}' | cut -d + -f1)"
-
 sh=sh
 shell=$(basename $SHELL)
 
@@ -39,10 +36,9 @@ shell=$(basename $SHELL)
 tput clear
 cat << EOF
 
-             $d$f1$h  $t$wmname
-   (\ /)     $f3$k  $t$kernel
-   ( $d. .$t)    $f2$sh  $t$shell
-   c($f1"$t)($f1"$t)   $f5$r  $t$resolution
+   (\ /)     $d$f1$h  $t$wmname
+   ( $d. .$t)    $f3$k  $t$kernel
+   c($f1"$t)($f1"$t)   $f2$sh  $t$shell
 
 
 EOF
