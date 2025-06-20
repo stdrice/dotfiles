@@ -6,4 +6,9 @@ exec export _JAVA_AWT_WM_NONREPARENTING=1
 # for_window [app_id="^chrome-.*__-.*$"] shortcuts_inhibitor disable
 for_window [app_id="^chrome-.*__.*$"] shortcuts_inhibitor disable
 
+# Reduce latency
+output * allow_tearing yes
+output * max_render_time off
+output * adaptive_sync off
+
 # vim:set ft=conf:
