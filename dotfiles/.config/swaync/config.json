@@ -1,0 +1,153 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "control-center-height": 700,
+  "control-center-layer": "top",
+  "control-center-margin-bottom": 10,
+  "control-center-margin-left": 10,
+  "control-center-margin-right": 10,
+  "control-center-margin-top": 10,
+  "control-center-width": 350,
+  "cssPriority": "application",
+  "fit-to-screen": true,
+  "hide-on-action": true,
+  "hide-on-clear": false,
+  "image-visibility": "when-available",
+  "keyboard-shortcuts": true,
+  "layer": "overlay",
+  "layer-shell": true,
+  "layer-shell-cover-screen": true,
+  "notification-2fa-action": true,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "notification-icon-size": 64,
+  "notification-inline-replies": false,
+  "notification-window-width": 300,
+  "positionX": "right",
+  "positionY": "top",
+  "relative-timestamps": true,
+  "script-fail-notify": true,
+  "text-empty": "No Notifications",
+  "timeout": 10,
+  "timeout-critical": 0,
+  "timeout-low": 5,
+  "transition-time": 200,
+
+  "widgets": [
+    "menubar#label",
+    "buttons-grid",
+    "volume",
+    "backlight",
+    "mpris",
+    "notifications",
+    "title"
+  ],
+
+  "notification-visibility": {
+    "lol": {
+      "app-name": "lol",
+      "ignore-dnd": true,
+      "urgency": "critical"
+    }
+  },
+
+  "widget-config": {
+    "backlight": {
+      "label": "󰃠 ",
+      "min": 1
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "󰖩",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
+          "update-command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+        },
+        {
+          "label": "󰂯",
+          "type": "toggle",
+          "command": "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || bluetoothctl power on",
+          "update-command": "bluetoothctl show | grep -q 'Powered: yes' && echo true || echo false"
+        },
+        {
+          "label": "󰂛",
+          "type": "toggle",
+          "command": "sh -c 'swaync-client -d'",
+          "update-command": "swaync-client -D | grep -q true && echo true || echo false"
+        },
+        {
+          "label": "󰃝",
+          "type": "toggle",
+          "active": false,
+          "command": "~/.local/bin/night-light"
+        },
+        {
+          "label": "󱠓",
+          "command": "~/.local/bin/theme-changer"
+        }
+      ]
+    },
+
+    "menubar#label": {
+      "menu#power-buttons": {
+        "label": "󰐥",
+        "position": "right",
+        "actions": [
+          {
+            "label": "󰌾 Lock",
+            "command": "~/.local/bin/lockscreen"
+          },
+          {
+            "label": "󰒲 Suspend",
+            "command": "~/.local/bin/power --suspend"
+          },
+          {
+            "label": "󰍃 Log Out",
+            "command": "~/.local/bin/power --logout"
+          },
+          {
+            "label": "󰜉 Reboot",
+            "command": "~/.local/bin/power --reboot"
+          },
+          {
+            "label": "󰐥 Shut Down",
+            "command": "~/.local/bin/power --shutdown"
+          }
+        ]
+      },
+      "menu#powermode-buttons": {
+        "label": "󰌪",
+        "position": "right",
+        "actions": [
+          {
+            "label": "󰉁 Performance",
+            "command": "powerprofilesctl set performance"
+          },
+          {
+            "label": "󰗑 Balanced",
+            "command": "powerprofilesctl set balanced"
+          },
+          {
+            "label": "󰌪 Power Saver",
+            "command": "powerprofilesctl set power-saver"
+          }
+        ]
+      }
+    },
+    "mpris": {
+      "image-size": 64,
+      "image-radius": 4,
+      "blacklist": []
+    },
+    "title": {
+      "text": "",
+      "clear-all-button": true,
+      "button-text": "󰎟 Clear"
+    },
+    "volume": {
+      "label": "󰕾  "
+    }
+  }
+}
+

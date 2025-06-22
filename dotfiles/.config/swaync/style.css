@@ -1,0 +1,336 @@
+@import "colors.css";
+
+/***** Notification Row *****/
+.notification-row {
+  outline: none;
+}
+.notification-row:focus,
+.notification-row:hover {
+  background: @button-hover;
+}
+
+/***** Notification Container *****/
+.notification-background {
+  padding: 6px;
+}
+
+/***** Close Button *****/
+.close-button {
+  background: transparent;
+  color: @foreground;
+  padding: 0;
+  margin: 4px;
+  border: none;
+  border-radius: 4px;
+  min-width: 12px;
+  min-height: 12px;
+}
+.close-button:hover {
+  background: @button-hover;
+  transition: none;
+}
+
+/***** Notification Box *****/
+.notification {
+  background: @background;
+  border: 1px solid @border-color;
+  border-radius: 4px;
+  padding: 6px;
+  transition: none;
+}
+
+/***** Notification Actions *****/
+.notification-action,
+.notification-default-action {
+  background: transparent;
+  border: none;
+  color: @foreground;
+  padding: 4px;
+  margin: 0;
+  transition: none;
+}
+.notification-action:hover,
+.notification-default-action:hover {
+  background: @button-hover;
+}
+.notification-default-action {
+  border-radius: 4px;
+}
+.notification-default-action:not(:only-child) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/***** Notification Content *****/
+.notification-content {
+  background: transparent;
+  border-radius: 4px;
+  padding: 4px;
+}
+.image,
+.app-icon {
+  -gtk-icon-effect: none;
+  border-radius: 4px;
+  margin: 4px;
+}
+.app-icon {
+  -gtk-icon-shadow: 0 1px 4px black;
+  margin: 6px;
+}
+.summary,
+.time,
+.body {
+  background: transparent;
+  color: @foreground;
+  text-shadow: none;
+}
+.summary,
+.time {
+  font-size: 15px;
+  font-weight: bold;
+}
+.body {
+  font-size: 15px;
+  font-weight: normal;
+}
+.body-image {
+  margin-top: 4px;
+  background-color: white;
+  border-radius: 4px;
+  -gtk-icon-effect: none;
+}
+
+/***** Inline Reply *****/
+.inline-reply {
+  margin-top: 4px;
+}
+.inline-reply-entry {
+  background: @color0;
+  color: @foreground;
+  caret-color: @foreground;
+  border: 1px solid @border-color;
+  border-radius: 4px;
+}
+.inline-reply-button {
+  margin-left: 4px;
+  background: @background;
+  color: @foreground;
+  border: 1px solid @border-color;
+  border-radius: 4px;
+}
+.inline-reply-button:disabled {
+  background: initial;
+  color: @foreground-disabled;
+  border-color: transparent;
+}
+.inline-reply-button:hover {
+  background: @button-hover;
+}
+
+/***** Grouped Notification Actions *****/
+.notification-action {
+  border-top: 1px solid @border-color;
+  border-right: 1px solid @border-color;
+  border-radius: 0;
+}
+.notification-action:first-child {
+  border-bottom-left-radius: 12px;
+}
+.notification-action:last-child {
+  border-bottom-right-radius: 12px;
+  border-right: none;
+}
+
+/***** Control Center *****/
+.control-center {
+  background: @background;
+  color: @foreground;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(50, 50, 50, 0.4);
+}
+.control-center .control-center-list-placeholder {
+  opacity: 0.5;
+}
+.control-center .control-center-list {
+  background: transparent;
+}
+.control-center .notification {
+  box-shadow: 0 0 3px rgba(50, 50, 50, 0.4);
+}
+.control-center .notification-default-action:hover,
+.control-center .notification-action:hover {
+  background-color: @button-hover;
+}
+
+/***** Background and Floating *****/
+.blank-window,
+.floating-notifications {
+  background: transparent;
+}
+.floating-notifications .notification {
+  box-shadow: none;
+}
+
+/***** Widgets *****/
+.widget-title,
+.widget-dnd,
+.widget-label > label,
+.widget-inhibitors {
+  color: @foreground;
+}
+.widget-title {
+  margin: 4px;
+  font-size: 1.5rem;
+}
+.widget-title > button,
+.widget-inhibitors > button {
+  padding: 2px;
+  background: transparent;
+  border: 0px;
+  text-shadow: none;
+  color: @foreground;
+}
+.widget-title > button:hover,
+.widget-inhibitors > button:hover {
+  background: @button-hover;
+  border-radius: 4px;
+}
+.widget-dnd {
+  margin: 4px;
+  font-size: 0.85rem;
+  padding: 2px;
+}
+.widget-dnd > switch {
+  background: @background;
+  margin: 2px 6px;
+  min-width: 24px;
+  min-height: 14px;
+  border-radius: 4px;
+  border: 1px solid @border-color;
+}
+.widget-dnd > switch slider {
+  background: #888;
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 4px;
+}
+.widget-dnd > switch:checked {
+  background: @color4;
+  border-color: @color4;
+}
+.widget-dnd > switch:checked slider {
+  background: white;
+  border-color: transparent;
+}
+.widget-label {
+  margin: 6px;
+}
+
+/***** MPRIS Arrows & Player *****/
+.widget-mpris > box > button,
+.topbar-buttons > button {
+  background: transparent;
+  border: none;
+  padding: 2px;
+  margin: 0 2px;
+  min-width: 16px;
+  min-height: 16px;
+  font-size: 12px;
+}
+.widget-mpris > box > button:hover,
+.topbar-buttons > button:hover {
+  background: transparent;
+  opacity: 0.7;
+}
+.widget-mpris .widget-mpris-player {
+  background-color: @background;
+  border-radius: 0px;
+  margin: 4px;
+  padding: 8px;
+  box-shadow: 0 0 0px rgba(50, 50, 50, 0);
+}
+.widget-mpris .widget-mpris-album-art {
+  border-radius: 4px;
+  box-shadow: 0 0 2px rgba(50, 50, 50, 0.4);
+}
+.widget-mpris .widget-mpris-title {
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+.widget-mpris .widget-mpris-subtitle {
+  font-size: 1rem;
+}
+
+/***** Buttons Grid (Wi-Fi/Bluetooth) *****/
+
+.widget-buttons-grid {
+  background-color: @background;
+  border-radius: 4px;
+  padding: 0px 8px 8px;
+  margin: 0px 8px 8px;
+  font-size: 18px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild {
+  padding: 2px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: @background;
+  color: @foreground;
+  box-shadow: 0 0 1px rgba(50, 50, 50, 0.4);
+  border-radius: 4px;
+  padding: 6px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: @button-hover;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:checked {
+  background: @color4;
+  color: white;
+  border-color: transparent;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:checked:hover {
+  background: @color4;
+}
+
+
+/***** Volume and Backlight *****/
+.widget-volume,
+.widget-backlight {
+  color: @foreground;
+  background-color: transparent;
+  padding: 0px 8px;
+  margin: 6px;
+  border-radius: 4px;
+}
+.widget-volume > box > button {
+  background: transparent;
+  border: none;
+}
+.widget-volume scale slider,
+.widget-backlight scale slider {
+  background: @color4;
+  border-radius: 999px;
+  min-height: 12px;
+  min-width: 12px;
+  border: none;
+}
+
+.widget-volume scale trough,
+.widget-backlight scale trough {
+  background: @color0;
+  border-radius: 999px;
+  min-height: 6px;
+}
+
+.widget-volume scale highlight,
+.widget-backlight scale highlight {
+  background: @color4;
+  border-radius: 999px;
+}

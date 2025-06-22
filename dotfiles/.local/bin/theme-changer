@@ -6,17 +6,18 @@ bar_path="$HOME/.config/waybar/colors.css"
 launcher_path="$HOME/.config/rofi/theme.rasi"
 xresources_path="$HOME/.Xresources"
 sway_path="$HOME/.config/sway/appearance/colors"
-notif_path="$HOME/.config/mako/colors"
+notif_path="$HOME/.config/swaync/colors.css"
 
 dark="dark"
 light="light"
+close="Close"
 
 rofi_cmd() {
     rofi -p "Select theme" -dmenu
 }
 
 select_theme(){
-    echo -e "$dark\n$light" | rofi_cmd
+    echo -e "$dark\n$light\n$close" | rofi_cmd
 }
 
 term(){
@@ -62,6 +63,7 @@ launcher(){
 }
 
 gtk(){
+    [[ -f "$gtk_path" ]] && sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$chosen/g" "$gtk_path"
     case "$chosen" in
     "$dark")
         sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=Papirus-Dark/g" "$gtk_path"
@@ -86,9 +88,17 @@ xresources(){
 }
 
 notif(){
-    [[ -f "$notif_path" ]] && sed -i -e "s/background-color=.*/background-color=$BG" \
-           -e "s/text-color=.*/text-color=$FG" \
-           -e "s/border-color=.*/border-color=$BG" "$notif_path"
+    sed -i -e "s/@define-color foreground .*/@define-color foreground $FG;/g" \
+           -e "s/@define-color background .*/@define-color background $BG;/g" \
+           -e "s/@define-color cursor .*/@define-color cursor $FG;/g" \
+           -e "s/@define-color color0 .*/@define-color color0 $BL;/g" \
+           -e "s/@define-color color1 .*/@define-color color1 $R;/g" \
+           -e "s/@define-color color2 .*/@define-color color2 $G;/g" \
+           -e "s/@define-color color3 .*/@define-color color3 $Y;/g" \
+           -e "s/@define-color color4 .*/@define-color color4 $B;/g" \
+           -e "s/@define-color color5 .*/@define-color color5 $M;/g" \
+           -e "s/@define-color color6 .*/@define-color color6 $C;/g" \
+           -e "s/@define-color color7 .*/@define-color color7 $WH;/g" "$notif_path"
 }
 
 sway(){
@@ -103,7 +113,7 @@ finalize(){
     pkill -x waybar
     sleep 0.5
     waybar >/dev/null 2>&1 &
-    makoctl reload
+    swaync-client -rs
     swaymsg reload
     notify-send "Theme changed" "Re-login to apply changes"
 }
@@ -119,6 +129,7 @@ xresources
 term
 bar
 launcher
+notif
 gtk
 sway
 finalize

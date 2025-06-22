@@ -23,9 +23,6 @@ bindsym {
     # Start powermenu
     $mod+BackSpace exec $powermenu
 
-    # Menu
-    $mod+x exec $menu
-
     # Window switcher
     $mod+Tab exec $window-switcher
 
@@ -37,6 +34,9 @@ bindsym {
 
     # Clipboard manager
     $mod+Shift+v exec rofi -modi clipboard:~/.local/bin/cliphist-rofi-img -show clipboard -show-icons
+
+    # Notification
+    $mod+x exec swaync-client -t -sw
 
     # Screenshot
     Print exec ~/.local/bin/screenshot

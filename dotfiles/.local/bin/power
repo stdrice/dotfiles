@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+option_poweroff() {
+  if command -v systemctl &>/dev/null; then
+    systemctl poweroff
+  elif command -v loginctl &>/dev/null; then
+    loginctl poweroff
+  elif command -v shutdown &>/dev/null; then
+    shutdown now
+  else
+    poweroff
+  fi
+}
+
+option_reboot() {
+  if command -v systemctl &>/dev/null; then
+	systemctl reboot
+  elif command -v loginctl &>/dev/null; then
+    loginctl reboot
+  elif command -v shutdown &>/dev/null; then
+    shutdown -r now
+  else
+    reboot
+  fi
+}
+
+option_suspend() {
+  if command -v systemctl &>/dev/null; then
+		systemctl suspend
+  elif command -v loginctl &>/dev/null; then
+    loginctl suspend
+  fi
+}
+
+case "$1" in
+    "--shutdown") option_poweroff ;;
+    "--reboot") option_reboot ;;
+    "--lock") "$HOME"/.local/bin/lockscreen ;;
+    "--suspend") option_suspend ;;
+    "--logout") pkill -SIGKILL -u $(whoami) ;;
+esac
