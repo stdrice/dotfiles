@@ -1,18 +1,16 @@
-@define-color foreground #262626;
-@define-color background #f0fafa;
-@define-color cursor #262626;
+@define-color foreground #9999a8;
+@define-color background #19191e;
+@define-color cursor #9999a8;
 
-@define-color color0 #404040;
-@define-color color1 #e68383;
-@define-color color2 #a0e6af;
-@define-color color3 #ffcd96;
-@define-color color4 #83b4e6;
-@define-color color5 #e1aae1;
-@define-color color6 #8cd7d2;
-@define-color color7 #dce6e6;
+@define-color color0 #2b2b33;
+@define-color color1 #825a5a;
+@define-color color2 #5a825a;
+@define-color color3 #968264;
+@define-color color4 #505a82;
+@define-color color5 #735a87;
+@define-color color6 #5a7387;
+@define-color color7 #606060;
 
 @define-color border-color rgba(255, 255, 255, 0.05);
 @define-color foreground-disabled rgba(153, 153, 168, 0.5);
 @define-color button-hover alpha(@foreground, 0.1);
-@define-color button-hover-opaque #2a2a2a;
-@define-color bg-selected #8caaee;

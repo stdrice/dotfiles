@@ -69,8 +69,10 @@ shotarea () {
 
 # run
 case $1 in
-  --area) shotarea ;;
-  --delay) shot5 ;;
+  --now) sleep 0.1s && shotnow && exit 0 ;;
+  --area) sleep 0.1s && shotarea && exit 0 ;;
+  --delay5) shot5 && exit 0 ;;
+  --delay10) shot10 && exit 0 ;;
 esac
 
 chosen="$(run_rofi)"

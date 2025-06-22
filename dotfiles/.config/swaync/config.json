@@ -116,9 +116,31 @@
           }
         ]
       },
+      "menu#screenshot": {
+        "label": "󰄀",
+        "position": "left",
+        "actions": [
+          {
+            "label": "Capture Desktop",
+            "command": "swaync-client -cp && ~/.local/bin/screenshot --now"
+          },
+          {
+            "label": "Capture Area",
+            "command": "swaync-client -cp && ~/.local/bin/screenshot --area"
+          },
+          {
+            "label": "Capture in 5s",
+            "command": "swaync-client -cp && ~/.local/bin/screenshot --delay5"
+          },
+          {
+            "label": "Capture in 10s",
+            "command": "swaync-client -cp && ~/.local/bin/screenshot --delay10"
+          }
+        ]
+      },
       "menu#powermode-buttons": {
         "label": "󰌪",
-        "position": "right",
+        "position": "left",
         "actions": [
           {
             "label": "󰉁 Performance",
