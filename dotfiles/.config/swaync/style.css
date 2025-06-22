@@ -1,12 +1,16 @@
 @import "colors.css";
 
+* {
+  color: @foreground;
+}
+
 /***** Notification Row *****/
 .notification-row {
   outline: none;
 }
 .notification-row:focus,
 .notification-row:hover {
-  background: @button-hover;
+  background: @background;
 }
 
 /***** Notification Container *****/
@@ -51,7 +55,7 @@
 }
 .notification-action:hover,
 .notification-default-action:hover {
-  background: @button-hover;
+  background: @background;
 }
 .notification-default-action {
   border-radius: 4px;
@@ -124,7 +128,7 @@
   border-color: transparent;
 }
 .inline-reply-button:hover {
-  background: @button-hover;
+  background: @background;
 }
 
 /***** Grouped Notification Actions *****/
