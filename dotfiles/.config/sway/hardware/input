@@ -13,7 +13,7 @@
 # Read `man 5 sway-input` for more information about this section.
 
 # Scroll speed
-input type:pointer scroll_factor 1.2
+input type:pointer scroll_factor 1
 
 # Touchpad
 input type:touchpad {
@@ -23,11 +23,12 @@ input type:touchpad {
     natural_scroll enabled
     middle_emulation enabled
     accel_profile "flat"
-    pointer_accel 0.8
+    pointer_accel 0.7
+    scroll_factor 0.05
 }
 
 input type:keyboard {
-    xkb_layout "us"
+    xkb_layout "jp"
     # xkb_model ""
     # xkb_variant ""
     # xkb_options ""
