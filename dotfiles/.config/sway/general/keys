@@ -172,6 +172,10 @@ bindsym --locked {
     $mod+F5 exec swayosd-client --brightness raise
 }
 
+# CapsLock, NumLock, ...
 bindsym --release Caps_Lock exec swayosd-client --caps-lock
+bindsym --release Num_Lock exec swayosd-client --num-lock
+bindsym --release Scroll_Lock exec swayosd-client --scroll-lock
+
 
 # vim:set ft=conf:
