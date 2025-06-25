@@ -6,7 +6,7 @@ blur disable
 titlebar_separator disable
 shadows enable
 shadows_on_csd enable
-shadow_blur_radius 8
+shadow_blur_radius 5
 shadow_color #0000007F
 shadow_inactive_color #0000007F
 
