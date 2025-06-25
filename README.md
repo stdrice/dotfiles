@@ -53,7 +53,7 @@ $ curl -LO https://raw.githubusercontent.com/stdrice/dotfiles/main/install
 ## Install manually
 - Install all dependencies
 ```
-bash brightnessctl btop calcurse dunst foot gammastep imagemagick inter-font mpc mpd mpd-mpris ncmpcpp neofetch noto-fonts playerctl power-profiles-daemon rofi slurp swaybg swayfx swayidle swaylock-effects ttf-nerd-fonts-symbols waybar zsh
+bash brightnessctl btop calcurse dunst foot gammastep imagemagick mpc mpd mpd-mpris ncmpcpp neofetch pamixer papirus-icon-theme playerctl power-profiles-daemon rofi slurp swaybg swayfx swayidle swaylock-effects swaync ttf-nerd-fonts-symbols ttf-roboto waybar zsh
 ```
 - Clone this repo
 - Copy all files in `dotfiles` and paste to your `$HOME` folder
