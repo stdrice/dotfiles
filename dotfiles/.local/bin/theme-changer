@@ -7,7 +7,6 @@ launcher_path="$HOME/.config/rofi/theme.rasi"
 xresources_path="$HOME/.Xresources"
 sway_path="$HOME/.config/sway/appearance/colors"
 notif_path="$HOME/.config/swaync/colors.css"
-osd_path="$HOME/.config/swayosd/colors.css"
 
 dark="dark"
 light="light"
@@ -44,7 +43,7 @@ term(){
 }
 
 css(){
-paths=("$bar_path" "$notif_path" "$osd_path")
+paths=("$bar_path" "$notif_path")
 
 for path in "${paths[@]}"; do
   sed -i -e "s/@define-color foreground .*/@define-color foreground $FG;/g" \
