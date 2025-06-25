@@ -27,7 +27,6 @@ exec {
          dbus-update-activation-environment --systemd --all \
          dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_DESKTOP=sway
 
-
     # Prevents GTK apps from hanging for 15-20 sec before launching
     dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
     dbus-update-activation-environment XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE
@@ -42,9 +41,6 @@ exec {
     # Notification
     swaync
     
-    # OSD
-    swayosd-server
-
     # Polkit
     /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
     
@@ -58,7 +54,7 @@ exec {
     mpd && mpd-mpris
 
     # Fcitx5
-    fcitx5
+    # fcitx5
 
     # Clipboard manager
     wl-paste --type text --watch cliphist store
