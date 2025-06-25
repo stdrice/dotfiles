@@ -46,8 +46,7 @@ countdown () {
 
 # take shots
 shotnow () {
-	sleep 0.5 && grim "$dir"/"$file" | wl-copy
-	notify_view
+	sleep 0.1 && grim "$dir"/"$file" | wl-copy
 }
 
 shot5 () {
@@ -64,7 +63,6 @@ shot10 () {
 
 shotarea () {
 	grim -g "$(slurp)" "$dir"/"$file"| wl-copy
-	notify_view
 }
 
 # run
