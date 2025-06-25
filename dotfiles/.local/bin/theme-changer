@@ -59,7 +59,8 @@ for path in "${paths[@]}"; do
          -e "s/@define-color color6 .*/@define-color color6 $C;/g" \
          -e "s/@define-color color7 .*/@define-color color7 $WH;/g" \
          "$path"
-done}
+done
+}
 
 launcher(){
     [[ -f "$launcher_path" ]] && sed -i -e "s/background: .*/background: $BG;/g" \
