@@ -7,6 +7,7 @@ launcher_path="$HOME/.config/rofi/theme.rasi"
 xresources_path="$HOME/.Xresources"
 sway_path="$HOME/.config/sway/appearance/colors"
 notif_path="$HOME/.config/swaync/colors.css"
+osd_path="$HOME/.config/swayosd/colors.css"
 
 dark="dark"
 light="light"
@@ -42,19 +43,23 @@ term(){
     [[ -f "$term_path" ]] && sed -i -e "s/#//g" "$term_path"
 }
 
-bar(){
-    sed -i -e "s/@define-color foreground .*/@define-color foreground $FG;/g" \
-           -e "s/@define-color background .*/@define-color background $BG;/g" \
-           -e "s/@define-color cursor .*/@define-color cursor $FG;/g" \
-           -e "s/@define-color color0 .*/@define-color color0 $BL;/g" \
-           -e "s/@define-color color1 .*/@define-color color1 $R;/g" \
-           -e "s/@define-color color2 .*/@define-color color2 $G;/g" \
-           -e "s/@define-color color3 .*/@define-color color3 $Y;/g" \
-           -e "s/@define-color color4 .*/@define-color color4 $B;/g" \
-           -e "s/@define-color color5 .*/@define-color color5 $M;/g" \
-           -e "s/@define-color color6 .*/@define-color color6 $C;/g" \
-           -e "s/@define-color color7 .*/@define-color color7 $WH;/g" "$bar_path"
-}
+css(){
+paths=("$bar_path" "$notif_path" "$osd_path")
+
+for path in "${paths[@]}"; do
+  sed -i -e "s/@define-color foreground .*/@define-color foreground $FG;/g" \
+         -e "s/@define-color background .*/@define-color background $BG;/g" \
+         -e "s/@define-color cursor .*/@define-color cursor $FG;/g" \
+         -e "s/@define-color color0 .*/@define-color color0 $BL;/g" \
+         -e "s/@define-color color1 .*/@define-color color1 $R;/g" \
+         -e "s/@define-color color2 .*/@define-color color2 $G;/g" \
+         -e "s/@define-color color3 .*/@define-color color3 $Y;/g" \
+         -e "s/@define-color color4 .*/@define-color color4 $B;/g" \
+         -e "s/@define-color color5 .*/@define-color color5 $M;/g" \
+         -e "s/@define-color color6 .*/@define-color color6 $C;/g" \
+         -e "s/@define-color color7 .*/@define-color color7 $WH;/g" \
+         "$path"
+done}
 
 launcher(){
     [[ -f "$launcher_path" ]] && sed -i -e "s/background: .*/background: $BG;/g" \
@@ -87,20 +92,6 @@ xresources(){
           -e "s/#define C .*/#define C $C/g" "$xresources_path"
 }
 
-notif(){
-    sed -i -e "s/@define-color foreground .*/@define-color foreground $FG;/g" \
-           -e "s/@define-color background .*/@define-color background $BG;/g" \
-           -e "s/@define-color cursor .*/@define-color cursor $FG;/g" \
-           -e "s/@define-color color0 .*/@define-color color0 $BL;/g" \
-           -e "s/@define-color color1 .*/@define-color color1 $R;/g" \
-           -e "s/@define-color color2 .*/@define-color color2 $G;/g" \
-           -e "s/@define-color color3 .*/@define-color color3 $Y;/g" \
-           -e "s/@define-color color4 .*/@define-color color4 $B;/g" \
-           -e "s/@define-color color5 .*/@define-color color5 $M;/g" \
-           -e "s/@define-color color6 .*/@define-color color6 $C;/g" \
-           -e "s/@define-color color7 .*/@define-color color7 $WH;/g" "$notif_path"
-}
-
 sway(){
     [[ -f "$sway_path" ]] && sed -i \
         -e "s/^client\\.focused .*/client.focused $SC $BG $FG $WH $SC/" \
@@ -127,7 +118,7 @@ theme_file="$HOME/.config/sway/colors/$chosen"
 
 xresources
 term
-bar
+css
 launcher
 notif
 gtk
