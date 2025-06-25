@@ -16,7 +16,7 @@ PROMPT="%F{1}%n%F{reset}@%m %F{2}%~ %F{reset}$ "
 
 # Vars
 export TERMINAL="foot"
-export BROWSER="zen-browser"
+export BROWSER="xdg-open"
 export EDITOR="nvim"
 export VISUAL="${EDITOR}"
 
