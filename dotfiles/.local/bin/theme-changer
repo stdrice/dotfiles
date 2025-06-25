@@ -105,8 +105,6 @@ finalize(){
     sleep 0.5
     waybar >/dev/null 2>&1 &
     swaync-client -rs
-    pkill -x swayosd-server
-    swayosd-server >/dev/null 2>&1 &
     swaymsg reload
     notify-send "Theme changed" "Re-login to apply changes"
 }
