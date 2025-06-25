@@ -153,23 +153,25 @@ bindsym $mod+r mode "resize"
 # Utilities:
 # Aujust volume
 bindsym --locked {
-    XF86AudioMute exec ~/.local/bin/volume --toggle
-    XF86AudioLowerVolume exec ~/.local/bin/volume --down
-    XF86AudioRaiseVolume exec ~/.local/bin/volume --up
-    XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+    XF86AudioMute exec swayosd-client --output-volume mute-toggle
+    XF86AudioLowerVolume exec swayosd-client --output-volume lower
+    XF86AudioRaiseVolume exec swayosd-client --output-volume raise
+    XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
 
-    $mod+F1 exec ~/.local/bin/volume --toggle
-    $mod+F2 exec ~/.local/bin/volume --down
-    $mod+F3 exec ~/.local/bin/volume --up
+    $mod+F1 exec swayosd-client --output-volume mute-toggle
+    $mod+F2 exec swayosd-client --output-volume lower
+    $mod+F3 exec swayosd-client --output-volume raise
 }
 
 # Adjust brightness
 bindsym --locked {
-    XF86MonBrightnessDown exec ~/.local/bin/brightness --down
-    XF86MonBrightnessUp exec ~/.local/bin/brightness --up
+    XF86MonBrightnessDown exec swayosd-client --brightness lower
+    XF86MonBrightnessUp exec swayosd-client --brightness raise
 
-    $mod+F4 exec ~/.local/bin/brightness --down
-    $mod+F5 exec ~/.local/bin/brightness --up
+    $mod+F4 exec swayosd-client --brightness lower
+    $mod+F5 exec swayosd-client --brightness raise
 }
+
+bindsym --release Caps_Lock exec swayosd-client --caps-lock
 
 # vim:set ft=conf:

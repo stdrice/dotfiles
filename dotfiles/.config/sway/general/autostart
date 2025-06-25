@@ -42,6 +42,9 @@ exec {
     # Notification
     swaync
     
+    # OSD
+    swayosd-server
+
     # Polkit
     /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
     
