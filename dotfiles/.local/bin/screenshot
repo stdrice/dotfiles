@@ -28,41 +28,46 @@ fi
 
 # notify and view screenshot
 notify_view() {
-	notify_cmd_shot='notify-send -u low -h string:x-dunst-stack-tag:screenshot'
 	if [[ -e "$dir/$file" ]]; then
-    ${notify_cmd_shot} "📷 Screenshot taken"
+		notify-send -h int:transient:1 \
+		            -h string:x-dunst-stack-tag:screenshot \
+		            "Screenshot taken"
 	else
-		${notify_cmd_shot} "📷 Screenshot deleted"
+		notify-send -h int:transient:1 \
+		            -h string:x-dunst-stack-tag:screenshot \
+		            "Screenshot deleted"
 	fi
 }
 
 # countdown
 countdown () {
   for sec in $(seq "$1" -1 1); do
-		notify-send -t 1000 -h string:x-dunst-stack-tag:screenshottimer "Taking shot in: $sec"
+		notify-send -t 1000 -h int:transient:1 -h string:x-dunst-stack-tag:screenshottimer "Taking shot in: $sec"
 		sleep 1
 	done
 }
 
 # take shots
 shotnow () {
-	sleep 0.1 && grim "$dir"/"$file" | wl-copy
+	sleep 0.1 && grim - | tee "$dir"/"$file" | wl-copy
+  notify_view
 }
 
 shot5 () {
 	countdown '5'
-	sleep 0.5 && grim "$dir"/"$file" | wl-copy
+	sleep 0.5 && grim - | tee "$dir"/"$file" | wl-copy
 	notify_view
 }
 
 shot10 () {
 	countdown '10'
-	sleep 0.5 && grim "$dir"/"$file" | wl-copy
+	sleep 0.5 && grim - | tee "$dir"/"$file" | wl-copy
 	notify_view
 }
 
 shotarea () {
-	grim -g "$(slurp)" "$dir"/"$file"| wl-copy
+	grim -g "$(slurp)" - | tee "$dir"/"$file"| wl-copy
+  notify_view
 }
 
 # run
@@ -80,5 +85,3 @@ case "$chosen" in
     "$option_3") shot5 ;;
     "$option_4") shot10 ;;
 esac
-
-
