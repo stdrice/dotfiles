@@ -3,12 +3,13 @@
 # SwayFX settings
 corner_radius 4
 blur disable
+blur_radius 0
 titlebar_separator disable
 shadows enable
 shadows_on_csd enable
 shadow_blur_radius 5
-shadow_color #0000007F
-shadow_inactive_color #0000007F
+shadow_color #00000020
+shadow_inactive_color #00000020
 
 # Font
 font monospace 11
