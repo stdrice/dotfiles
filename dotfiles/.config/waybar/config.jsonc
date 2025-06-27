@@ -61,7 +61,7 @@
         "all-outputs": false
     },
     "mpd": {
-        "format": "{artist} - {title}",
+        "format": "{artist} · {title}",
         "format-disconnected": "",
         "format-stopped": "",
         "title-len": 30,
