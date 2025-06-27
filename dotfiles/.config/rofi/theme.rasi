@@ -17,7 +17,7 @@ window {
   children: [ box ];
   background-color: @background;
   text-color: @foreground;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 box {
