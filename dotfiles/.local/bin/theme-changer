@@ -95,8 +95,8 @@ xresources(){
 sway(){
     [[ -f "$sway_path" ]] && sed -i \
         -e "s/^client\\.focused .*/client.focused $SC $BG $FG $WH $SC/" \
-        -e "s/^client\\.focused_inactive .*/client.focused_inactive $BG $BG $FG $WH $BG/" \
-        -e "s/^client\\.unfocused .*/client.unfocused $BG $BG $FG $WH $BG/" \
+        -e "s/^client\\.focused_inactive .*/client.focused_inactive $BG $BG $FG $WH #FFFFFF00/" \
+        -e "s/^client\\.unfocused .*/client.unfocused $BG $BG $FG $WH #FFFFFF00/" \
         -e "s/^client\\.urgent .*/client.urgent $R $BG $FG $WH $R/" "$sway_path"
 }
 
