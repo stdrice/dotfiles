@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# screenshot script
+# for wayland
+# dependencies: grim, slurp, wl-clipboard, rofi (optional)
+# usage: screenshot [flag]
+
 # options
 option_1="Capture Desktop"
 option_2="Capture Area"
@@ -71,7 +76,7 @@ shotarea () {
 }
 
 # run
-case $1 in
+case "${1:-}" in
   --now) sleep 0.1s && shotnow && exit 0 ;;
   --area) sleep 0.1s && shotarea && exit 0 ;;
   --delay5) shot5 && exit 0 ;;

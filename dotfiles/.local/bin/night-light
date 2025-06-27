@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# night-light
+# dependencies: gammastep
+# usage: night-light
+
 temp=3700
 
 pgrep gammastep >/dev/null && pkill gammastep || gammastep -O $temp

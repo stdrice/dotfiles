@@ -17,7 +17,7 @@ set {
     $launcher rofi -show drun
 
     # Powermenu
-    $powermenu ~/.local/bin/powermenu
+    $powermenu ~/.local/bin/power
 
     # Menu
     $menu ~/.local/bin/menu

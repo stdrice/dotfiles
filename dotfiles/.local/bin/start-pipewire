@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# start-pipewire
+# dependencies: pipewire, pipewire-pulse, wireplumber
+# usage: start-pipewire
+
 run() {
 	if ! pgrep -f "$1" ; then
 		"$@"&
