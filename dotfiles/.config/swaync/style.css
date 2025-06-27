@@ -25,7 +25,7 @@
   padding: 0;
   margin: 4px;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   min-width: 12px;
   min-height: 12px;
 }
@@ -38,7 +38,7 @@
 .notification {
   background: @background;
   border: 1px solid @border-color;
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 6px;
   transition: none;
 }
@@ -68,13 +68,13 @@
 /***** Notification Content *****/
 .notification-content {
   background: transparent;
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 4px;
 }
 .image,
 .app-icon {
   -gtk-icon-effect: none;
-  border-radius: 6px;
+  border-radius: 4px;
   margin: 4px;
 }
 .app-icon {
@@ -100,7 +100,7 @@
 .body-image {
   margin-top: 4px;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 4px;
   -gtk-icon-effect: none;
 }
 
@@ -120,7 +120,7 @@
   background: @background;
   color: @foreground;
   border: 1px solid @border-color;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .inline-reply-button:disabled {
   background: initial;
@@ -149,7 +149,7 @@
 .control-center {
   background: @background;
   color: @foreground;
-  border-radius: 6px;
+  border-radius: 4px;
   box-shadow: 0 0 3px rgba(50, 50, 50, 0.4);
 }
 .control-center .control-center-list-placeholder {
@@ -197,7 +197,7 @@
 .widget-title > button:hover,
 .widget-inhibitors > button:hover {
   background: @button-hover;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .widget-dnd {
   margin: 6px;
@@ -209,14 +209,14 @@
   margin: 2px 6px;
   min-width: 24px;
   min-height: 14px;
-  border-radius: 6px;
+  border-radius: 4px;
   border: 1px solid @border-color;
 }
 .widget-dnd > switch slider {
   background: #888;
   min-width: 10px;
   min-height: 10px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .widget-dnd > switch:checked {
   background: @color4;
@@ -254,7 +254,7 @@
   box-shadow: 0 0 0px rgba(50, 50, 50, 0);
 }
 .widget-mpris .widget-mpris-album-art {
-  border-radius: 6px;
+  border-radius: 4px;
   box-shadow: 0 0 2px rgba(50, 50, 50, 0.4);
 }
 .widget-mpris .widget-mpris-title {
@@ -269,7 +269,7 @@
 
 .widget-buttons-grid {
   background-color: @background;
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 0px 8px 8px;
   margin: 0px 8px 8px;
   font-size: 18px;
@@ -283,7 +283,7 @@
   background: @background;
   color: @foreground;
   box-shadow: 0 0 1px rgba(50, 50, 50, 0.4);
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 6px;
   min-width: 44px;
   min-height: 44px;
@@ -311,7 +311,7 @@
   background-color: transparent;
   padding: 0px 8px;
   margin: 6px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .widget-volume > box > button {
   background: transparent;
