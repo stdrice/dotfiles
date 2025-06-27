@@ -8,17 +8,20 @@ xresources_path="$HOME/.Xresources"
 sway_path="$HOME/.config/sway/appearance/colors"
 notif_path="$HOME/.config/swaync/colors.css"
 
-dark="dark"
-light="light"
+DIR="$HOME/.config/sway/colors"
+
 close="Close"
 
 rofi_cmd() {
     rofi -p "Select theme" -dmenu
 }
 
-select_theme(){
-    echo -e "$dark\n$light\n$close" | rofi_cmd
+select_theme() {
+  mapfile -t options < <(find "$DIR" -maxdepth 1 -type f -printf "%f\n" | sort)
+  options+=("$close")
+  printf "%s\n" "${options[@]}" | rofi_cmd
 }
+
 
 term(){
     [[ -f "$term_path" ]] && sed -i -e "s/background=.*/background=$BG/g" \
@@ -63,8 +66,7 @@ done
 
 launcher(){
     [[ -f "$launcher_path" ]] && sed -i -e "s/background: .*/background: $BG;/g" \
-           -e "s/foreground: .*/foreground: $FG;/g" \
-           -e "s/scheme: .*/scheme: $SC;/g" "$launcher_path"
+           -e "s/foreground: .*/foreground: $FG;/g" "$launcher_path"
 }
 
 gtk(){

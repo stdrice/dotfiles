@@ -1,12 +1,10 @@
 @theme "/dev/null"
 
 * {
-  al: @scheme;
   background-color: @background;
   text-color: @foreground;
   background: #19191e;
   foreground: #9999a8;
-  scheme: #505050;
 }
 
 window {
@@ -28,13 +26,13 @@ box {
 
 entry {
   placeholder: "Search";
-  placeholder-color: @al;
+  placeholder-color: #60606050;
   padding: 0.2em;
   expand: false;
 }
 
 element {
-  text-color: @al;
+  text-color: #60606050;
   padding: 0.4em;
 }
 
