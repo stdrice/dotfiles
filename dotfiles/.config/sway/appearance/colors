@@ -1,8 +1,8 @@
 # class                 border  bground text    indicator child_border
-client.focused #735a87 #19191e #9999a8 #606060 #735a87
-client.focused_inactive #19191e #19191e #9999a8 #606060 #FFFFFF00
-client.unfocused #19191e #19191e #9999a8 #606060 #FFFFFF00
-client.urgent #825a5a #19191e #9999a8 #606060 #825a5a
+client.focused #FF9940 #0F1419 #F8F8F6 #B3B1AD #FF9940
+client.focused_inactive #0F1419 #0F1419 #F8F8F6 #B3B1AD #FFFFFF00
+client.unfocused #0F1419 #0F1419 #F8F8F6 #B3B1AD #FFFFFF00
+client.urgent #F07178 #0F1419 #F8F8F6 #B3B1AD #F07178
 client.placeholder      #000000 #0C0C0C $foreground #000000   #0C0C0C
 
 # vim:set ft=conf:

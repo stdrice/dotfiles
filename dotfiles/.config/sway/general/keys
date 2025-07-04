@@ -39,8 +39,10 @@ bindsym {
     $mod+x exec swaync-client -t -sw
 
     # Screenshot
-    Print exec ~/.local/bin/screenshot
-    $mod+Delete exec ~/.local/bin/screenshot
+    Print exec ~/.local/bin/screenshot --now
+    $mod+Delete exec ~/.local/bin/screenshot --now
+    Shift+Print exec ~/.local/bin/screenshot --area
+    $mod+Shift+Delete exec ~/.local/bin/screenshot --area
 
     # Moving around:
     # Move your focus around

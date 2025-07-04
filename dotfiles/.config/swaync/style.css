@@ -294,13 +294,13 @@
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:checked {
-  background: @color4;
-  color: white;
+  background: @accent;
+  color: @foreground;
   border-color: transparent;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:checked:hover {
-  background: @color4;
+  background: @accent;
 }
 
 
@@ -319,7 +319,7 @@
 }
 .widget-volume scale slider,
 .widget-backlight scale slider {
-  background: @color4;
+  background: @accent;
   border-radius: 999px;
   min-height: 12px;
   min-width: 12px;
@@ -335,6 +335,6 @@
 
 .widget-volume scale highlight,
 .widget-backlight scale highlight {
-  background: @color4;
+  background: @accent;
   border-radius: 999px;
 }
