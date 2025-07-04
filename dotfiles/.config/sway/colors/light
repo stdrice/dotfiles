@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BG="#FAFAFA"
+BG="#F8F9FA"
 FG="#5C6773"
 BL="#5C6773"
 WH="#FAFAFA"
