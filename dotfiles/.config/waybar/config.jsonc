@@ -117,7 +117,7 @@
             "default": ["󰕿", "󰖀", "󰕾"]
         },
       	"tooltip-format": "Volume: {volume}%\n{desc}",
-        "on-click": "pamixer --toggle-mute",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click-right": "pavucontrol"
     },
     "custom/media": {
