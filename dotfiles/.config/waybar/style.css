@@ -76,7 +76,8 @@ tooltip label {
 #window,
 #mode,
 #scratchpad,
-#custom-media
+#custom-media,
+#custom-notification
 {
     background: @background;
     padding: 0px 10px;

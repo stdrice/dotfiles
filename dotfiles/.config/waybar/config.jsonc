@@ -20,8 +20,9 @@
     "modules-right": [
         "tray",
         "pulseaudio",
-	      "backlight",
+	      // "backlight",
         "battery",
+        "custom/notification",
 	      "clock"
     ],
     // Modules configuration
@@ -77,9 +78,9 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%A %d}</big>\n<tt><small>{calendar}</small></tt>",
-      	"format": "{:%a %d/%m %H:%M}", // 24-hour
-	      // "format": "{:%a %d/%m %I:%M%p}", // 12-hour
-	"on-click": "swaync-client -t -sw"
+      	"format": "{:%H:%M}", // 24-hour
+	      // "format": "{:%I:%M%p}", // 12-hour
+        "format-alt": "{:%a, %b %d %Y}"
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -120,8 +121,8 @@
         "on-click-right": "pavucontrol"
     },
     "custom/media": {
-	"format": "󰎇 {}",
-	"return-type": "json",
+	    "format": "󰎇 {}",
+	    "return-type": "json",
         "max-length": 40,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} · {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause"
@@ -130,5 +131,15 @@
         "format": "󰘳",
         "on-click": "rofi -show drun",
         "on-click-right": "~/.local/bin/menu"
-    }
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "󰂚 {}",
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+  }
 }
