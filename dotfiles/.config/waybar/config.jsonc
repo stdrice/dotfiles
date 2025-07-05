@@ -8,14 +8,14 @@
     "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": [
-        // "custom/menu",
+        "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
         "sway/mode",
-        // "sway/window"
-        "custom/media"
+        "sway/window"
     ],
     "modules-center": [
+        "custom/media"
     ],
     "modules-right": [
         "tray",
@@ -50,7 +50,7 @@
         "format": "{title}",
         "icon": false,
         "icon-size": 14,
-        "max-length": 50,
+        "max-length": 40,
         "all-outputs": true
     },
     "wlr/taskbar": {
@@ -65,7 +65,7 @@
         "format": "{artist} · {title}",
         "format-disconnected": "",
         "format-stopped": "",
-        "title-len": 30,
+        "title-len": 40,
         "unknown-tag": "N/A",
         "interval": 5,
         "tooltip-format": "{artist} - {title}\nAlbum: {album}\nVolume: {volume}",
@@ -121,16 +121,15 @@
         "on-click-right": "pavucontrol"
     },
     "custom/media": {
-	    "format": "󰎇 {}",
-	    "return-type": "json",
+	      "format": "󰎇 {}",
+	      "return-type": "json",
         "max-length": 40,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} · {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause"
     },
     "custom/menu": {
         "format": "󰘳",
-        "on-click": "rofi -show drun",
-        "on-click-right": "~/.local/bin/menu"
+        "on-click": "rofi -show drun"
     },
     "custom/notification": {
         "tooltip": false,
