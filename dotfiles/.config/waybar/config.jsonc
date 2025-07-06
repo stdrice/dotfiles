@@ -12,10 +12,10 @@
         "sway/workspaces",
         "sway/scratchpad",
         "sway/mode",
-        "sway/window"
+        // "sway/window"
+        "custom/media"
     ],
     "modules-center": [
-        "custom/media"
     ],
     "modules-right": [
         "tray",
