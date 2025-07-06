@@ -5,6 +5,11 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Autostart Sway
+if [ -z "$WAYLAND_DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ] ; then
+    exec sway
+fi
+
 # Options
 setopt prompt_subst
 setopt auto_list

@@ -18,7 +18,7 @@ main_folder="dotfiles"
 packages=(bash blueman bluez bluez-utils brightnessctl btop \
           calcurse cliphist dex floorp-bin foot galculator gammastep git grim \
           gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb imagemagick \
-          imv libnotify lxappearance-gtk3 ly mpc mpd mpd-mpris mpv ncmpcpp \
+          imv libnotify lxappearance-gtk3 mpc mpd mpd-mpris mpv ncmpcpp \
           nemo neofetch neovim networkmanager network-manager-applet \
           noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nwg-displays\
           papirus-icon-theme pavucontrol pipewire pipewire-pulse playerctl \
@@ -158,8 +158,7 @@ enable_services(){
     logo "Enabling services"
     case "$(readlink -f /sbin/init)" in
         *systemd*)
-            systemctl disable display-manager.service
-            systemctl enable NetworkManager ly
+            systemctl enable NetworkManager
             systemctl disable NetworkManager-wait-online.service
             sudo -u "$username" systemctl --user enable pipewire.service
             sudo -u "$username" systemctl --user enable pipewire-pulse.service
