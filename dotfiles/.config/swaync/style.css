@@ -15,7 +15,8 @@
 
 /***** Notification Container *****/
 .notification-background {
-  padding: 6px;
+  padding: 24px 0px 0px 0px;
+  border: none;
 }
 
 /***** Close Button *****/
