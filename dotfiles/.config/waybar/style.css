@@ -89,4 +89,5 @@ tooltip label {
 
 window#waybar.empty #window {
     background: transparent;
+    box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0);
 }
