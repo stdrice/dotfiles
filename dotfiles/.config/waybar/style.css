@@ -19,7 +19,7 @@ window#waybar {
 
 tooltip {
     background: @background;
-    border-radius: 6px;
+    border-radius: 0px;
 }
 
 tooltip label {
