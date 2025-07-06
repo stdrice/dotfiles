@@ -17,7 +17,7 @@ setopt hist_find_no_dups
 setopt hist_ignore_dups
 
 # Prompt
-PROMPT="%F{1}%n%F{reset}@%m %F{2}%~ %F{reset}$ "
+PROMPT="%F{2}%~ %F{reset}$ "
 
 # Vars
 export TERMINAL="foot"
