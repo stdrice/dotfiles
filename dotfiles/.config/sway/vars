@@ -1,4 +1,6 @@
-# Variables
+# - --------- -
+# - Variables -
+# - --------- -
 
 set {
     # Logo key. Use Mod1 for Alt
@@ -24,6 +26,16 @@ set {
 
     # Window switcher
     $window-switcher rofi -show window
+
+    # Volume
+    $cmd_volume_up wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+
+    $cmd_volume_down wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-
+    $cmd_volume_mute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+    $cmd_mic_mute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+
+    # Brightness
+    $cmd_brightness_up brightnessctl set 2%+
+    $cmd_brightness_down brightnessctl set 2%-
 }
 
 # vim:set ft=conf:

@@ -1,5 +1,7 @@
-### Input configuration
-#
+# - ----- -
+# - Input -
+# - ----- -
+
 # Example configuration:
 #
 #   input "2:14:SynPS/2_Synaptics_TouchPad" {

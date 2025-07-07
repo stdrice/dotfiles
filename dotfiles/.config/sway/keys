@@ -1,4 +1,6 @@
-# Keybindings
+# - ----------- -
+# - Keybindings -
+# - ----------- -
 
 # Floating modifier
 # - Drag floating windows by holding down $mod and left mouse button.
@@ -155,23 +157,23 @@ bindsym $mod+r mode "resize"
 # Utilities:
 # Aujust volume
 bindsym --locked {
-    XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-    XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-
-    XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+
-    XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+    XF86AudioMute exec $cmd_volume_mute
+    XF86AudioLowerVolume exec $cmd_volume_down
+    XF86AudioRaiseVolume exec $cmd_volume_up
+    XF86AudioMicMute exec $cmd_mic_mute
 
-    $mod+F1 exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-    $mod+F2 exec exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-
-    $mod+F3 exec exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+
+    $mod+F1 exec $cmd_volume_mute
+    $mod+F2 exec $cmd_volume_down
+    $mod+F3 exec $cmd_volume_up
 }
 
 # Adjust brightness
 bindsym --locked {
-    XF86MonBrightnessDown exec brightnessctl set 2%-
-    XF86MonBrightnessUp exec brightnessctl set 2%+
+    XF86MonBrightnessDown exec $cmd_brightness_down
+    XF86MonBrightnessUp exec $cmd_brightness_up
 
-    $mod+F4 exec brightnessctl set 2%-
-    $mod+F5 exec brightnessctl set 2%+
+    $mod+F4 exec $cmd_brightness_down
+    $mod+F5 exec $cmd_brightness_up
 }
 
 # vim:set ft=conf:

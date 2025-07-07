@@ -1,0 +1,31 @@
+# - ---- -
+# - Misc -
+# - ---- -
+
+# Fix Java apps
+exec export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Fix chromium + app mode inhibiting shortcuts:
+# Source: https://old.reddit.com/r/swaywm/comments/vkgfza/chromium_v103_application_mode_app_and_weird/
+# for_window [app_id="^chrome-.*__-.*$"] shortcuts_inhibitor disable
+for_window [app_id="^chrome-.*__.*$"] shortcuts_inhibitor disable
+
+# Reduce latency
+output * {
+    allow_tearing yes
+    max_render_time off
+    adaptive_sync off
+}
+
+### Idle configuration
+# Example configuration:
+#
+exec swayidle -w \
+           before-sleep '~/.local/bin/lockscreen'
+#           timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+# vim:set ft=conf:

@@ -1,4 +1,17 @@
-# Decoration
+# - --------- -
+# - Wallpaper -
+# - --------- -
+
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+output * bg ~/.config/sway/walls/1.png fill
+
+# - ---------- -
+# - Decoration -
+# - ---------- -
 
 # SwayFX settings
 corner_radius 0
@@ -11,15 +24,23 @@ shadow_blur_radius 5
 shadow_color #00000020
 shadow_inactive_color #00000020
 
+# Colors
+# class                 border  bground text    indicator child_border
+client.focused #FF9940 #0B0E14 #F8F8F6 #B3B1AD #FF9940
+client.focused_inactive #0B0E14 #0B0E14 #F8F8F6 #B3B1AD #FFFFFF00
+client.unfocused #0B0E14 #0B0E14 #F8F8F6 #B3B1AD #FFFFFF00
+client.urgent #F07178 #0B0E14 #F8F8F6 #B3B1AD #F07178
+client.placeholder      #000000 #0C0C0C $foreground #000000   #0C0C0C
+
 # Font
 font monospace 11
 # adjust this to change titlebar size
-font pango: monospace 7
+font pango: monospace 12
 
 # Gaps
 smart_gaps off # on|off|toggle|inverse_outer
 gaps outer 0
-gaps inner 1
+gaps inner 2
 
 # Titlebar and border configuration
 # SwayFX BUG: https://github.com/WillPower3309/swayfx/issues/201
@@ -30,16 +51,13 @@ titlebar_border_thickness 0
 set $border_width 2
 default_border pixel $border_width
 default_floating_border none
-# default_border normal $border_width
-# default_floating_border normal $border_width
 smart_borders off
 
 # Window Titlebar
 titlebar_padding 10 4
 title_align left
 # w/ title
-# for_window [class=".*"] title_format "<span rise='2000' font='sans 10'>%title</span>"
-
+# for_window [class=".*"] title_format "<span rise='2000' font='sans 9'>%title</span>"
 # w/o title
 for_window [class=".*"] title_format "<span></span>"
 
@@ -50,6 +68,7 @@ for_window {
     [app_id="^org$"] border pixel $border_width
     [app_id="firefox"] border pixel $border_width
     [app_id="LibreWolf"] border pixel $border_width
+    [app_id="floorp"] border pixel $border_width
     [class="Chromium"] border pixel $border_width
     [app_id="Chromium"] border pixel $border_width
     [app_id="chromium"] border pixel $border_width
@@ -70,5 +89,8 @@ for_window {
     [app_id="^chrome$"] border pixel $border_width
     [app_id="imv"] border pixel $border_width
 }
+
+# Misc
+show_marks no
 
 # vim:set ft=conf:
