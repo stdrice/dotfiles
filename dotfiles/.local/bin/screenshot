@@ -5,23 +5,6 @@
 # dependencies: grim, slurp, wl-clipboard, rofi (optional)
 # usage: screenshot [flag]
 
-# options
-option_1="Capture Desktop"
-option_2="Capture Area"
-option_3="Capture in 5s"
-option_4="Capture in 10s"
-close='Close'
-
-# rofi cmd
-rofi_cmd() {
-	rofi -dmenu -p "Screenshot" 
-}
-
-# pass variables to rofi dmenu
-run_rofi() {
-	echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$close" | rofi_cmd
-}
-
 # screenshot
 dir="$(xdg-user-dir PICTURES)/Screenshots"
 file="$(date +%Y%m%d_%Hh%Mm%Ss_grim.png)"
@@ -81,12 +64,4 @@ case "${1:-}" in
   --area) sleep 0.1s && shotarea && exit 0 ;;
   --delay5) shot5 && exit 0 ;;
   --delay10) shot10 && exit 0 ;;
-esac
-
-chosen="$(run_rofi)"
-case "$chosen" in
-    "$option_1") shotnow ;;
-    "$option_2") shotarea ;;
-    "$option_3") shot5 ;;
-    "$option_4") shot10 ;;
 esac

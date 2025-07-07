@@ -9,8 +9,8 @@
 
 window {
   location: center;
-  width: 25%;
-  height: 65%;
+  width: 300;
+  height: 400;
   spacing: 0;
   children: [ box ];
   background-color: @background;

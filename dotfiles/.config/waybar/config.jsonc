@@ -104,7 +104,7 @@
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 	      "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
         "interval": 1,
-        "on-click": "~/.local/bin/powermenu"
+        "on-click": "~/.local/bin/power"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
