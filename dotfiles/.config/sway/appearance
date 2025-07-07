@@ -51,7 +51,7 @@ titlebar_border_thickness 0
 set $border_width 2
 default_border pixel $border_width
 default_floating_border none
-smart_borders off
+smart_borders on
 
 # Window Titlebar
 titlebar_padding 10 4
