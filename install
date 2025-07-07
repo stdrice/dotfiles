@@ -168,9 +168,11 @@ enable_services(){
         *systemd*)
             systemctl enable NetworkManager
             systemctl disable NetworkManager-wait-online.service
-            sudo -u "$username" systemctl --user enable pipewire.service
-            sudo -u "$username" systemctl --user enable pipewire-pulse.service
-            sudo -u "$username" systemctl --user enable wireplumber.service
+            user_uid=$(id -u "$username")
+            export XDG_RUNTIME_DIR="/run/user/$user_uid"
+            sudo -u "$username" XDG_RUNTIME_DIR="$XDG_RUNTIME_DIR" systemctl --user enable pipewire.service
+            sudo -u "$username" XDG_RUNTIME_DIR="$XDG_RUNTIME_DIR" systemctl --user enable pipewire-pulse.service
+            sudo -u "$username" XDG_RUNTIME_DIR="$XDG_RUNTIME_DIR" systemctl --user enable wireplumber.service
         ;;
         *runit*)
             if command -v pacman &>/dev/null; then

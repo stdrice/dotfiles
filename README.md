@@ -34,20 +34,11 @@ Now this script only supports **Arch Linux** and **Arch-based** distros (Endeavo
 
 ## Notes (read this first)
 - This install script will **replace all duplicate files**, so **backup your files first**.
-- This script **MUST BE** run as `root`.
-- If your system doesn't have `bash`, **install it**.
+- If your system doesn't have `bash` and `curl`, **install it**.
 
-## Install with git
+## Install
 ```
-$ git clone --depth 1 https://github.com/stdrice/dotfiles
-$ cd dotfiles
-# ./install
-```
-
-## Install with curl
-```
-$ curl -LO https://raw.githubusercontent.com/stdrice/dotfiles/main/install
-# bash install
+$ curl -L https://raw.githubusercontent.com/stdrice/dotfiles/main/install | bash
 ```
 
 ## Install manually
