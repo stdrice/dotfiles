@@ -38,13 +38,13 @@ Now this script only supports **Arch Linux** and **Arch-based** distros (Endeavo
 
 ## Install
 ```
-$ curl -L https://stdrice.github.io/dotfiles/install | bash
+$ bash <(curl -L https://stdrice.github.io/dotfiles/install)
 ```
 
 ## Install manually
 - Install all dependencies
 ```
-bash brightnessctl btop calcurse dunst foot gammastep imagemagick mpc mpd mpd-mpris ncmpcpp neofetch papirus-icon-theme playerctl power-profiles-daemon rofi slurp swaybg swayfx swayidle swaylock-effects swaync wireplumber ttf-nerd-fonts-symbols ttf-roboto waybar zsh
+bash brightnessctl btop calcurse dunst foot gammastep imagemagick mpc mpd mpd-mpris ncmpcpp neofetch papirus-icon-theme playerctl power-profiles-daemon rofi slurp swaybg swayfx swayidle swaylock-effects swaync wireplumber ttf-fira-sans ttf-firacode-nerd ttf-nerd-fonts-symbols waybar zsh
 ```
 - Clone this repo
 - Copy all files in `dotfiles` and paste to your `$HOME` folder
