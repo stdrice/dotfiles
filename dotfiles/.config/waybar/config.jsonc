@@ -22,7 +22,6 @@
         "pulseaudio",
 	      // "backlight",
         "battery",
-        "custom/notification",
 	      "clock"
     ],
     // Modules configuration
@@ -141,16 +140,7 @@
     },
     "custom/menu": {
         "format": "󰘳",
-        "on-click": "rofi -show drun"
-    },
-    "custom/notification": {
-        "tooltip": false,
-        "format": "󰂚 {}",
-        "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
-        "escape": true
-  }
+        "on-click": "rofi -show drun",
+        "on-click-right": "~/.local/bin/menu"
+    }
 }

@@ -26,7 +26,7 @@ input type:touchpad {
     middle_emulation enabled
     accel_profile "flat"
     pointer_accel 0.5
-    scroll_factor 0.1
+    scroll_factor 0.2
 }
 
 input type:keyboard {

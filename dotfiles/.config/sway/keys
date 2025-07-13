@@ -37,8 +37,8 @@ bindsym {
     # Clipboard manager
     $mod+Shift+v exec rofi -modi clipboard:~/.local/bin/cliphist-rofi-img -show clipboard -show-icons
 
-    # Notification
-    $mod+x exec swaync-client -t -sw
+    # Menu
+    $mod+x exec $menu
 
     # Screenshot
     Print exec ~/.local/bin/screenshot --now

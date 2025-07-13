@@ -6,7 +6,7 @@ bar_path="$HOME/.config/waybar/colors.css"
 launcher_path="$HOME/.config/rofi/theme.rasi"
 xresources_path="$HOME/.Xresources"
 sway_path="$HOME/.config/sway/appearance/colors"
-notif_path="$HOME/.config/swaync/colors.css"
+notif_path="$HOME/.config/mako/colors"
 
 DIR="$HOME/.config/sway/colors"
 
@@ -46,7 +46,7 @@ term(){
 }
 
 css(){
-paths=("$bar_path" "$notif_path")
+paths=("$bar_path")
 
 for path in "${paths[@]}"; do
   sed -i -e "s/@define-color foreground .*/@define-color foreground $FG;/g" \
@@ -102,11 +102,18 @@ sway(){
         -e "s/^client\\.urgent .*/client.urgent $R $BG $FG $WH $R/" "$sway_path"
 }
 
+notif(){
+    [[ -f "$notif_path" ]] && sed -i \
+        -e "s/background-color=.*/background-color=$BG/g" \
+        -e "s/text-color=.*/text-color=$FG/g" \
+        -e "s/border-color=.*/border-color=$BG/g" "$notif_path"
+}
+
 finalize(){
     pkill -x waybar
     sleep 0.5
     waybar >/dev/null 2>&1 &
-    swaync-client -rs
+    makoctl reload
     swaymsg reload
     notify-send "Theme changed" "Re-login to apply changes"
 }
@@ -122,6 +129,7 @@ xresources
 term
 css
 launcher
+notif
 gtk
 sway
 finalize
