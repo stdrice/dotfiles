@@ -18,7 +18,7 @@ run_rofi() {
 chosen="$(run_rofi)"
 case "$chosen" in
     "$apps") rofi -show drun & ;;
-    "$powermenu") ~/.local/bin/powe & ;;
+    "$powermenu") ~/.local/bin/power & ;;
     "$nightlight") ~/.local/bin/night-light & ;;
     "$powerprofile") ~/.local/bin/power-profile-switch & ;;
     "$theme") ~/.local/bin/theme-changer ;;
