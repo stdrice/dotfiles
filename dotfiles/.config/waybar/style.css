@@ -8,12 +8,13 @@
     font-weight: 500;
     min-height: 0;
     margin-left: 1px;
-    margin-right: 1px; 
+    margin-right: 1px;
+    margin: 0px 4px;
 }
 
 window#waybar {
     border-radius: 0px;
-    background: transparent;
+    background: @background;
     color: @foreground;
 }
 
@@ -63,29 +64,6 @@ tooltip label {
 
 #taskbar button.active {
     background: rgba(255, 255, 255, 0.1);
-}
-
-#custom-menu,
-#clock,
-#battery,
-#pulseaudio,
-#network,
-#workspaces,
-#backlight,
-#tray,
-#window,
-#mode,
-#scratchpad,
-#custom-media,
-#custom-notification,
-#custom-indicator
-{
-    background: @background;
-    padding: 0px 10px;
-    border-radius: 0px;
-    margin-top: 2px;
-    margin-bottom: 1px;
-    box-shadow: 0px 0px 2px 1px rgba(50, 50, 50, 0.2);
 }
 
 window#waybar.empty #window {
