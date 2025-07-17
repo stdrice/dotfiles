@@ -18,10 +18,10 @@
     ],
     "modules-right": [
         "group/stuffs",
-        "custom/media",
         "pulseaudio",
 	      "backlight",
         "battery",
+        "custom/media",
 	      "clock"
     ],
     // Modules configuration
