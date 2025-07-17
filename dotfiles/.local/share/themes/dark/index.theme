@@ -1,11 +1,9 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
 Name=dark
-Comment=gtk
+Comment=darktheme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 Name=dark
 GtkTheme=dark
-IconTheme=dark
-MetacityTheme=dark

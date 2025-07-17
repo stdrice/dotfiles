@@ -3,8 +3,8 @@
 * {
   background-color: @background;
   text-color: @foreground;
-  background: #0B0E14;
-  foreground: #F8F8F6;
+  background: #1C1C1E;
+  foreground: #FFFFFF;
 }
 
 window {

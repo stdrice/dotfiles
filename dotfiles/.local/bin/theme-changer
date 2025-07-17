@@ -5,7 +5,7 @@ term_path="$HOME/.config/foot/colors.ini"
 bar_path="$HOME/.config/waybar/colors.css"
 launcher_path="$HOME/.config/rofi/theme.rasi"
 xresources_path="$HOME/.Xresources"
-sway_path="$HOME/.config/sway/appearance/colors"
+sway_path="$HOME/.config/sway/appearance"
 notif_path="$HOME/.config/mako/colors"
 
 DIR="$HOME/.config/sway/colors"

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-	<name>dark</name>
+	<name>oomox-xresources-reverse</name>
 	<author>Satyajit Sahoo</author>
 	<copyright>GPL-3.0+</copyright>
 	<date>11 December 2013</date>
@@ -9,16 +9,16 @@
 </info>
 
 <!-- ::: CONSTANTS ::: -->
-<constant name="C_titlebar_focused" value="#2b2b33" />
-<constant name="C_titlebar_unfocused" value="#19191e" />
-<constant name="C_border_focused" value="#968264" />
-<constant name="C_border_unfocused" value="#2b2b33" />
-<constant name="C_title_focused" value="#9999a8" />
-<constant name="C_title_unfocused" value="blend/#9999a8/#19191e/0.4" />
-<constant name="C_icons_focused" value="#9999a8" />
+<constant name="C_titlebar_focused" value="#2C2C2E" />
+<constant name="C_titlebar_unfocused" value="#1C1C1E" />
+<constant name="C_border_focused" value="#FFD60A" />
+<constant name="C_border_unfocused" value="#2C2C2E" />
+<constant name="C_title_focused" value="#EBEBF5" />
+<constant name="C_title_unfocused" value="blend/#ffffff/#1C1C1E/0.4" />
+<constant name="C_icons_focused" value="#EBEBF5" />
 <constant name="C_icons_focused_prelight" value="gtk:bg[SELECTED])" />
 <constant name="C_icons_focused_pressed" value="shade/gtk:bg[SELECTED]/0.8" />
-<constant name="C_icons_unfocused" value="blend/#9999a8/#19191e/0.4" />
+<constant name="C_icons_unfocused" value="blend/#ffffff/#1C1C1E/0.4" />
 <constant name="C_icons_unfocused_prelight" value="gtk:bg[SELECTED])" />
 <constant name="C_icons_unfocused_pressed" value="shade/gtk:bg[SELECTED]/0.8" />
 
