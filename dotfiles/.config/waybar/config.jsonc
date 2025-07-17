@@ -12,13 +12,13 @@
         "sway/workspaces",
         "sway/scratchpad",
         "sway/mode",
-        "custom/media"
+        "sway/window"
     ],
     "modules-center": [
-        "sway/window"
     ],
     "modules-right": [
         "group/stuffs",
+        "custom/media",
         "pulseaudio",
 	      "backlight",
         "battery",
