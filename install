@@ -45,7 +45,7 @@ root_checking() {
         exec sudo bash "$0" "$@"
       else
         tmpfile=$(mktemp)
-        cat > "$tmpfile"
+        cat > "$tmpfile" < /dev/stdin
         chmod 777 "$tmpfile"
         sudo bash "$tmpfile" "$@"
         rm -f "$tmpfile"
