@@ -38,24 +38,16 @@ logo() {
 }
 
 root_checking(){
-  if [ "$(id -u)" -ne 0 ]; then
-    if command -v sudo &>/dev/null; then
-      if [ -f "$0" ]; then
-        exec sudo bash "$0" "$@"
-      else
-        exec sudo bash /proc/$$/fd/0 "$@"
-      fi
-    elif command -v doas &>/dev/null; then
-      if [ -f "$0" ]; then
-        exec doas bash "$0" "$@"
-      else
-        exec doas bash /proc/$$/fd/0 "$@"
-      fi
-    else
-      echo "This script MUST be run as root."
-      exit 1
-    fi
+if [ ! "$(id -u)" = 0 ]; then
+  if command -v sudo &>/dev/null; then
+    exec sudo bash "$0" "$@"
+  elif command -v doas &>/dev/null; then
+    exec doas bash "$0" "$@"
+  else
+	  echo "This script MUST BE run as root."
+	  exit 1
   fi
+fi
 }
 
 bootstraps(){
