@@ -40,9 +40,9 @@ logo() {
 root_checking(){
 if [ ! "$(id -u)" = 0 ]; then
   if command -v sudo &>/dev/null; then
-    exec sudo bash "$0" "$@"
+    exec sudo bash /proc/$$/fd/0 "$@"
   elif command -v doas &>/dev/null; then
-    exec doas bash "$0" "$@"
+    exec doas bash /proc/$$/fd/0 "$@"
   else
 	  echo "This script MUST BE run as root."
 	  exit 1
