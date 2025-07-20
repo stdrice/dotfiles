@@ -40,31 +40,15 @@ logo() {
 root_checking() {
   if [ "$EUID" -ne 0 ]; then
     if command -v sudo &>/dev/null; then
-    echo "Please enter your password to continue..."
-      if [ -t 0 ]; then
-        exec sudo bash "$0" "$@"
-      else
-        tmpfile=$(mktemp)
-        cat > "$tmpfile" < /dev/stdin
-        chmod 777 "$tmpfile"
-        sudo bash "$tmpfile" "$@"
-        rm -f "$tmpfile"
-        exit
-      fi
+      echo "Please enter your password to continue..."
+      sudo bash "$0" "$@" || exit 1
+      exit
     elif command -v doas &>/dev/null; then
-    echo "Please enter your password to continue..."
-      if [ -t 0 ]; then
-        exec doas bash "$0" "$@"
-      else
-        tmpfile=$(mktemp)
-        cat > "$tmpfile" < /dev/stdin
-        chmod 777 "$tmpfile"
-        doas bash "$tmpfile" "$@"
-        rm -f "$tmpfile"
-        exit
-      fi
+      echo "Please enter your password to continue..."
+      doas bash "$0" "$@" || exit 1
+      exit
     else
-      echo "This script MUST be run as root."
+      echo "This script MUST BE run as root."
       exit 1
     fi
   fi
