@@ -7,3 +7,4 @@ Encoding=UTF-8
 [X-GNOME-Metatheme]
 Name=light
 GtkTheme=light
+IconTheme=light
