@@ -41,11 +41,11 @@ root_checking() {
   if [ "$EUID" -ne 0 ]; then
     if command -v sudo &>/dev/null; then
       echo "Please enter your password to continue..."
-      exec sudo bash "$0" "$@"
+      sudo bash "$0"
       exit
     elif command -v doas &>/dev/null; then
       echo "Please enter your password to continue..."
-      exec doas bash "$0" "$@"
+      doas bash "$0"
       exit
     else
       echo "This script MUST BE run as root."
