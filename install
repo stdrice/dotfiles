@@ -41,10 +41,25 @@ root_checking() {
   if [ "$EUID" -ne 0 ]; then
     if command -v sudo &>/dev/null; then
       echo "Please enter your password to continue..."
-      sudo bash "$0" "$@" || exit 1
+      if [ -t 0 ]; then
+        sudo bash "$0" "$@" || exit 1
+      else
+        tmpfile=$(mktemp)
+        cat > "$tmpfile"
+        sudo bash "$tmpfile" "$@" || exit 1
+        rm -f "$tmpfile"
+      fi
       exit
     elif command -v doas &>/dev/null; then
-      doas bash "$0" "$@" || exit 1
+      echo "Please enter your password to continue..."
+      if [ -t 0 ]; then
+        doas bash "$0" "$@" || exit 1
+      else
+        tmpfile=$(mktemp)
+        cat > "$tmpfile"
+        doas bash "$tmpfile" "$@" || exit 1
+        rm -f "$tmpfile"
+      fi
       exit
     else
       echo "This script MUST BE run as root."
