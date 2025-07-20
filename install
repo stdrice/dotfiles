@@ -57,7 +57,7 @@ root_checking() {
         exec doas bash "$0" "$@"
       else
         tmpfile=$(mktemp)
-        cat > "$tmpfile"
+        cat > "$tmpfile" < /dev/stdin
         chmod 777 "$tmpfile"
         doas bash "$tmpfile" "$@"
         rm -f "$tmpfile"
