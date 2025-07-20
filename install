@@ -37,18 +37,22 @@ logo() {
 	printf '%s [%s%s %s%s %s]%s\n\n' "${CRE}" "${CNC}" "${CYE}" "${text}"
 }
 
-root_checking(){
-if [ ! "$(id -u)" = 0 ]; then
-  if command -v sudo &>/dev/null; then
-    exec sudo bash "$0" "$@"
-  elif command -v doas &>/dev/null; then
-    exec doas bash "$0" "$@"
-  else
-	  echo "This script MUST BE run as root."
-	  exit 1
+root_checking() {
+  if [ "$EUID" -ne 0 ]; then
+    if command -v sudo &>/dev/null; then
+      echo "Please enter your password to continue..."
+      sudo bash "$0" "$@" || exit 1
+      exit
+    elif command -v doas &>/dev/null; then
+      doas bash "$0" "$@" || exit 1
+      exit
+    else
+      echo "This script MUST BE run as root."
+      exit 1
+    fi
   fi
-fi
 }
+
 
 bootstraps(){
     # Allow user to run sudo without password. Since AUR programs must be installed
