@@ -46,7 +46,7 @@ root_checking() {
       else
         tmpfile=$(mktemp)
         cat > "$tmpfile"
-        chmod +x "$tmpfile"
+        chmod 777 "$tmpfile"
         sudo bash "$tmpfile" "$@"
         rm -f "$tmpfile"
         exit
@@ -58,7 +58,7 @@ root_checking() {
       else
         tmpfile=$(mktemp)
         cat > "$tmpfile"
-        chmod +x "$tmpfile"
+        chmod 777 "$tmpfile"
         doas bash "$tmpfile" "$@"
         rm -f "$tmpfile"
         exit
