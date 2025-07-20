@@ -38,8 +38,7 @@ Now this script only supports **Arch Linux** and **Arch-based** distros (Endeavo
 
 ## Install
 ```
-$ curl -L https://stdrice.github.io/dotfiles/install -o install
-$ bash install
+$ curl -sL https://stdrice.github.io/dotfiles/install | sudo bash
 ```
 
 ## Install manually

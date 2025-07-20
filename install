@@ -53,7 +53,6 @@ root_checking() {
   fi
 }
 
-
 bootstraps(){
     # Allow user to run sudo without password. Since AUR programs must be installed
     # in a fakeroot environment, this is required for all builds with AUR.
@@ -70,14 +69,14 @@ intro(){
     printf "%s%sWelcome to stdrice's Linux setup installation script!\nThis script will automatically install fully-featured tiling window manager-based system on Linux system.\nYou will be prompted for your root password to install missing dependencies.\nThis script will replace duplicate files, so backup your files first. %s\n\n" "${BLD}" "${CRE}" "${CNC}"
 
     while true; do
-	      read -rp "Do you want to continue? [Y/n]: " yn
+	      read -rp "Do you want to continue? [Y/n]: " yn < /dev/tty
 	      case $yn in
 	          [Nn]*) exit ;;
 	          *) break ;;
 	      esac
     done
-    read -rp "Do you want to use Dan Pollock (someonewhocares)'s hosts file?: [Y/n] " hostsfile
-    read -rp "First, type your username here: " username
+    read -rp "Do you want to use Dan Pollock (someonewhocares)'s hosts file?: [Y/n] " hostsfile < /dev/tty
+    read -rp "First, type your username here: " username < /dev/tty
 }
 
 update(){
