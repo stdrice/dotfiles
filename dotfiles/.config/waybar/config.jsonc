@@ -76,7 +76,7 @@
         "format": "{artist} · {title}",
         "format-disconnected": "",
         "format-stopped": "",
-        "title-len": 48,
+        "title-len": 42,
         "unknown-tag": "N/A",
         "interval": 5,
         "tooltip-format": "{artist} - {title}\nAlbum: {album}\nVolume: {volume}",
@@ -134,7 +134,7 @@
     "custom/media": {
 	      "format": "󰎇 {}",
 	      "return-type": "json",
-        "max-length": 48,
+        "max-length": 42,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause"
     },
