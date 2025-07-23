@@ -26,7 +26,7 @@ shadow_inactive_color #00000020
 
 # Colors
 # class                 border  bground text    indicator child_border
-client.focused #0A84FF #1C1C1E #FFFFFF #EBEBF5 #0A84FF
+client.focused #0A84FF #3C3C3E #FFFFFF #EBEBF5 #3C3C3E
 client.focused_inactive #1C1C1E #1C1C1E #FFFFFF #EBEBF5 #FFFFFF00
 client.unfocused #1C1C1E #1C1C1E #FFFFFF #EBEBF5 #FFFFFF00
 client.urgent #FF453A #1C1C1E #FFFFFF #EBEBF5 #FF453A
