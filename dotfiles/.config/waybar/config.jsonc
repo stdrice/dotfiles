@@ -19,10 +19,10 @@
     ],
     "modules-right": [
         "group/stuffs",
+        "custom/media",
         "pulseaudio",
 	      "backlight",
-        "battery",
-        "custom/media"
+        "battery"
     ],
     // Modules configuration
     "custom/indicator": {
@@ -61,7 +61,7 @@
         "format": "{title}",
         "icon": false,
         "icon-size": 14,
-        "max-length": 48,
+        "max-length": 38,
         "all-outputs": true
     },
     "wlr/taskbar": {
@@ -76,7 +76,7 @@
         "format": "{artist} · {title}",
         "format-disconnected": "",
         "format-stopped": "",
-        "title-len": 48,
+        "title-len": 38,
         "unknown-tag": "N/A",
         "interval": 5,
         "tooltip-format": "{artist} - {title}\nAlbum: {album}\nVolume: {volume}",
@@ -134,7 +134,7 @@
     "custom/media": {
 	      "format": "󰎇 {}",
 	      "return-type": "json",
-        "max-length": 48,
+        "max-length": 38,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause"
     },
