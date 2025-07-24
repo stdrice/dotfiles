@@ -15,10 +15,10 @@
         "sway/window"
     ],
     "modules-center": [
+        "custom/media"
     ],
     "modules-right": [
         "group/stuffs",
-        "custom/media",
         "pulseaudio",
 	      "backlight",
         "battery",
@@ -89,9 +89,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%A %d}</big>\n<tt><small>{calendar}</small></tt>",
-      	"format": "{:%H:%M}", // 24-hour
-	      // "format": "{:%I:%M%p}", // 12-hour
-        "format-alt": "{:%A, %d %B %Y}"
+      	"format": "{:%a %d %b %H:%M}" // 24-hour
+	      // "format": "{:%a %b %d %I:%M%p}" // 12-hour
     },
     "backlight": {
         // "device": "acpi_video1",
