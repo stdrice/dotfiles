@@ -1,6 +1,6 @@
 # ~/.zshrc
 
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.config/emacs/bin:$PATH
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -17,12 +17,11 @@ setopt hist_find_no_dups
 setopt hist_ignore_dups
 
 # Prompt
-PROMPT="%F{2}%~ %F{reset}$ "
+PROMPT="%F{1}%n%F{reset}@%m %F{2}%~ %F{reset}$ "
 
 # Vars
 export TERMINAL="foot"
 export BROWSER="xdg-open"
-export EDITOR="nvim"
 export VISUAL="${EDITOR}"
 
 # Aliases
