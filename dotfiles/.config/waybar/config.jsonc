@@ -15,14 +15,14 @@
         "sway/window"
     ],
     "modules-center": [
-	      "clock"
     ],
     "modules-right": [
         "group/stuffs",
         "custom/media",
         "pulseaudio",
 	      "backlight",
-        "battery"
+        "battery",
+	      "clock"
     ],
     // Modules configuration
     "custom/indicator": {
@@ -61,7 +61,7 @@
         "format": "{title}",
         "icon": false,
         "icon-size": 14,
-        "max-length": 38,
+        "max-length": 30,
         "all-outputs": true
     },
     "wlr/taskbar": {
