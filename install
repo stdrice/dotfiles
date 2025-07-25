@@ -25,7 +25,7 @@ packages=(auto-cpufreq bash blueman bluez bluez-utils brightnessctl btop \
           noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nwg-displays\
           papirus-icon-theme pavucontrol pipewire pipewire-pulse playerctl \
           polkit-gnome ranger rofi-wayland sed slurp sof-firmware sudo swaybg \
-          swayfx swayidle swaylock-effects ttf-fira-sans ttf-fira-code-nerd \
+          swayfx swayidle swaylock-effects ttf-meslo-nerd ttf-roboto \
           ttf-nerd-fonts-symbols udisks2 unzip waybar wireplumber wl-clipboard \
           xdg-desktop-portal-gtk xdg-desktop-portal-wlr xdg-user-dirs-gtk\
           xorg-drivers xorg-xwayland zathura zathura-pdf-mupdf zip zsh)
