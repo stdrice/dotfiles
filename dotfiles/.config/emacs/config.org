@@ -787,17 +787,6 @@ Org-bullets gives us attractive bullets rather than asterisks.
  ;; '(org-level-7 ((t (:inherit outline-5 :height 1.05)))))
 #+end_src
 
-*** Org Roam
-#+begin_src emacs-lisp
-(use-package org-roam
-  :ensure t
-  :defer t
-  :init
-  (org-roam-db-autosync-mode)
-  :config
-  (org-roam-setup))
-#+end_src
-
 *** Table of Contents
 #+begin_src emacs-lisp
 (use-package toc-org
