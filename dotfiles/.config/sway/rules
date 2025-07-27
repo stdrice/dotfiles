@@ -79,7 +79,7 @@ for_window {
 # Popup during fullscreen
 # This refers to a popup that is a child of the fullscreen window.
 # Other unrelated popups will not trigger this.
-popup_during_fullscreen leave_fullscreen
+# popup_during_fullscreen leave_fullscreen
 
 # Mouse rules
 focus_follows_mouse yes
