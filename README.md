@@ -19,9 +19,8 @@ This is my Linux setup. I made this especially for me and people who wants a sim
 - **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
 - **[Floorp 🦊](https://floorp.app/)**: Browser
-- **[Emacs 📓](https://www.gnu.org/software/emacs/)**: Text editor
+- **[Emacs 📓](https://www.gnu.org/software/emacs/)**: Text Editor
 - **[Ranger](https://ranger.github.io/) and [Nemo](https://github.com/linuxmint/nemo)**: File Manager
-- **[NeoVim](https://neovim.io)**: Text Editor
 - **[ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)**: Music Player
 - **[calcurse](https://www.calcurse.org/)**: Calendar
 - **[btop](https://github.com/aristocratos/btop)**: System monitor
