@@ -8,10 +8,15 @@
 (when (and (>= emacs-major-version 28)
            (fboundp 'native-comp-available-p)
            (native-comp-available-p))
-  (if (boundp 'native-comp-jit-compilation)
-      (setq native-comp-jit-compilation t)
-    (setq native-comp-deferred-compilation t))
-  (setq native-comp-async-report-warnings-errors 'silent))
+  (setq native-comp-deferred-compilation t
+        native-comp-jit-compilation t
+        native-comp-async-report-warnings-errors 'silent)
+  (when (boundp 'comp-async-report-warnings-errors)
+    (setq comp-async-report-warnings-errors nil))
+  (when (boundp 'native-comp-speed)
+    (setq native-comp-speed 2))
+  (add-to-list 'native-comp-eln-load-path
+               (expand-file-name "eln-cache/" user-emacs-directory)))
 
 ;; Speed up startup by disabling handlers
 (defvar default-file-name-handler-alist file-name-handler-alist)
@@ -43,7 +48,7 @@
 (add-hook 'emacs-startup-hook
           (lambda ()
             (setq file-name-handler-alist default-file-name-handler-alist
-                  gc-cons-threshold (* 16 1024 1024)
+                  gc-cons-threshold (* 50 1024 1024)
                   gc-cons-percentage 0.1)))
 
 (provide 'early-init)
