@@ -1,0 +1,13 @@
+.cache
+.lsp-session-v1
+auto-save-list
+config.el
+eln-cache
+elpa
+elpaca
+eshell
+org-roam.db
+transient
+url
+recentf
+sessions
