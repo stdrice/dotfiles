@@ -765,7 +765,6 @@ idk why i use this but magit requires it.
 Honestly it's the best Emacs feature that existed.
 *** Org Config
 #+begin_src emacs-lisp
-(setq org-directory "~/Notes")
 #+end_src
 
 *** Org Bullets
@@ -794,7 +793,6 @@ Org-bullets gives us attractive bullets rather than asterisks.
   :ensure t
   :defer t
   :init
-  (setq org-roam-directory "~/Notes")
   (org-roam-db-autosync-mode)
   :config
   (org-roam-setup))

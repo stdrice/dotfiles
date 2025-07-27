@@ -42,7 +42,6 @@
 (push '(tool-bar-lines . 0) default-frame-alist)
 (push '(vertical-scroll-bars) default-frame-alist)
 (tooltip-mode -1)
-(set-fringe-mode 0)
 
 ;; Restore file name and GC later
 (add-hook 'emacs-startup-hook
