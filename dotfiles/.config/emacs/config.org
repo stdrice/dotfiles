@@ -11,6 +11,7 @@
   - [[#ui-fix][UI Fix]]
   - [[#scrolling-fix][Scrolling fix]]
   - [[#transparency][Transparency]]
+  - [[#init-time][Init Time]]
   - [[#backup][Backup]]
 - [[#packages][Packages]]
   - [[#ui--ux][UI & UX]]
@@ -154,6 +155,16 @@ With Emacs version 29, true transparency has been added.  I have turned transpar
 (add-to-list 'default-frame-alist '(alpha-background . 100)) ; For all new frames henceforth
 #+end_src
 
+** Init Time
+Emacs boot time message, nothing special
+#+begin_src emacs-lisp
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (message "Emacs loaded in %.2f seconds."
+                     (float-time
+                      (time-subtract after-init-time before-init-time)))))
+#+end_src
+
 ** Backup
 By default, Emacs creates automatic backups of files in their original directories, such “file.el” and the backup “file.el~”.  This leads to a lot of clutter, so let’s tell Emacs not to create any backup files.
 #+begin_src emacs-lisp
@@ -197,10 +208,7 @@ Emacs Dashboard is an extensible startup screen showing you recent files, bookma
   ;; (setq dashboard-startup-banner "~/.config/emacs/images/lol.png")  ;; use custom image as banner
   (setq dashboard-center-content t) ;; set to 't' for centered content
   (setq dashboard-vertically-center-content t) ;; vertically center content
-  (setq dashboard-startupify-list '(dashboard-insert-navigator
-                                    dashboard-insert-newline
-                                    dashboard-insert-init-info
-                                    dashboard-insert-items))
+  (setq dashboard-startupify-list '(dashboard-insert-items))
   (setq dashboard-items '((recents . 5)
                           (agenda . 5 )
                           (bookmarks . 3)
