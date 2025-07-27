@@ -4,8 +4,6 @@
 #+TOC: headlines 2
 
 * :TOC:
-- [[#important-programs-to-load-first][Important programs to load first]]
-  - [[#elpaca-package-manager][Elpaca: Package Manager]]
 - [[#emacs-config][Emacs config]]
   - [[#fonts][Fonts]]
   - [[#ui-fix][UI Fix]]
@@ -19,59 +17,6 @@
   - [[#git][Git]]
   - [[#org-mode][Org Mode]]
   - [[#other][Other]]
-
-* Important programs to load first
-** Elpaca: Package Manager
-#+begin_src emacs-lisp
-(defvar elpaca-installer-version 0.11)
-(defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
-(defvar elpaca-builds-directory (expand-file-name "builds/" elpaca-directory))
-(defvar elpaca-repos-directory (expand-file-name "repos/" elpaca-directory))
-(defvar elpaca-order '(elpaca :repo "https://github.com/progfolio/elpaca.git"
-                              :ref nil :depth 1 :inherit ignore
-                              :files (:defaults "elpaca-test.el" (:exclude "extensions"))
-                              :build (:not elpaca--activate-package)))
-(let* ((repo  (expand-file-name "elpaca/" elpaca-repos-directory))
-       (build (expand-file-name "elpaca/" elpaca-builds-directory))
-       (order (cdr elpaca-order))
-       (default-directory repo))
-  (add-to-list 'load-path (if (file-exists-p build) build repo))
-  (unless (file-exists-p repo)
-    (make-directory repo t)
-    (when (<= emacs-major-version 28) (require 'subr-x))
-    (condition-case-unless-debug err
-        (if-let* ((buffer (pop-to-buffer-same-window "*elpaca-bootstrap*"))
-                  ((zerop (apply #'call-process `("git" nil ,buffer t "clone"
-                                                  ,@(when-let* ((depth (plist-get order :depth)))
-                                                      (list (format "--depth=%d" depth) "--no-single-branch"))
-                                                  ,(plist-get order :repo) ,repo))))
-                  ((zerop (call-process "git" nil buffer t "checkout"
-                                        (or (plist-get order :ref) "--"))))
-                  (emacs (concat invocation-directory invocation-name))
-                  ((zerop (call-process emacs nil buffer nil "-Q" "-L" "." "--batch"
-                                        "--eval" "(byte-recompile-directory \".\" 0 'force)")))
-                  ((require 'elpaca))
-                  ((elpaca-generate-autoloads "elpaca" repo)))
-            (progn (message "%s" (buffer-string)) (kill-buffer buffer))
-          (error "%s" (with-current-buffer buffer (buffer-string))))
-      ((error) (warn "%s" err) (delete-directory repo 'recursive))))
-  (unless (require 'elpaca-autoloads nil t)
-    (require 'elpaca)
-    (elpaca-generate-autoloads "elpaca" repo)
-    (let ((load-source-file-function nil)) (load "./elpaca-autoloads"))))
-(add-hook 'after-init-hook #'elpaca-process-queues)
-(elpaca `(,@elpaca-order))
-
-;; Install use-package support
-(elpaca elpaca-use-package
-  ;; Enable use-package :ensure support for Elpaca.
-  (elpaca-use-package-mode)
-  ;; Assume :elpaca t unless otherwise specified.
-  (setq elpaca-use-package-by-default t))
-
-;; Block until current queue processed.
-(elpaca-wait)
-#+end_src
 
 * Emacs config
 Default Emacs has many quirkiness so I de-dumbed it.
@@ -499,7 +444,7 @@ Sorry I can't use Emacs keybindings :(
         neo-show-hidden-files t
         neo-window-width 28
         neo-window-fixed-size nil
-	neo-theme (if (display-graphic-p) 'icons 'arrow)
+	neo-theme (if (display-graphic-p) 'icons 'ascii)
         inhibit-compacting-font-caches t
         projectile-switch-project-action 'neotree-projectile-action) 
         ;; truncate long file names in neotree
@@ -765,6 +710,16 @@ idk why i use this but magit requires it.
 Honestly it's the best Emacs feature that existed.
 *** Org Config
 #+begin_src emacs-lisp
+(setq org-directory "~/Notes")
+#+end_src
+
+*** Org Roam
+#+begin_src emacs-lisp
+(use-package org-roam
+  :ensure t
+  :init
+  (setq org-roam-directory "~/Notes")
+  (org-roam-db-autosync-mode))
 #+end_src
 
 *** Org Bullets
