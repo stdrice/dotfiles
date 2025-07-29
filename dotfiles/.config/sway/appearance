@@ -14,15 +14,15 @@ output * bg ~/.config/sway/walls/1.png fill
 # - ---------- -
 
 # SwayFX settings
-corner_radius 0
-blur disable
-blur_radius 0
-titlebar_separator disable
-shadows enable
-shadows_on_csd enable
-shadow_blur_radius 5
-shadow_color #00000020
-shadow_inactive_color #00000020
+# corner_radius 0
+# blur disable
+# blur_radius 0
+# titlebar_separator disable
+# shadows enable
+# shadows_on_csd enable
+# shadow_blur_radius 5
+# shadow_color #00000020
+# shadow_inactive_color #00000020
 
 # Colors
 # class                 border  bground text    indicator child_border
