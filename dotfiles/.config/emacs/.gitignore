@@ -2,6 +2,7 @@
 .lsp-session-v1
 auto-save-list
 config.el
+flycheck_config.el
 eln-cache
 elpa
 elpaca
