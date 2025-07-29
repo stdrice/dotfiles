@@ -11,7 +11,7 @@ icons=0
 max-icon-size=64
 default-timeout=5000
 ignore-timeout=1
-font=Sans 10
+font=sans 9
 
 [app-name=lol]
 layer=overlay
