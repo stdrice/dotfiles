@@ -35,21 +35,17 @@ Default Emacs has many quirkiness so I de-dumbed it.
   :font "monospace"
   :height 100
   :weight 'medium)
-
 ;; Make line numbers italics.
 (custom-set-faces
  '(line-number ((t (:slant italic))))
  '(line-number-current-line ((t (:slant italic :weight bold)))))
-
 ;; This sets the default font on all graphical frames created after restarting Emacs.
 ;; Does the same thing as 'set-face-attribute default' above, but emacsclient fonts
 ;; are not right unless I also add this method of setting the default font.
 (add-to-list 'default-frame-alist '(font . "monospace-9.5"))
-
 ;; Uncomment the following line if line spacing needs adjusting.
 (setq-default line-spacing 0.12)
 #+end_src
-
 *** Zooming In/Out
 You can use the bindings Ctrl + +/- for zooming in/out.  You can also use Ctrl + the mouse wheel for zooming in/out.
 #+begin_src emacs-lisp
@@ -58,7 +54,6 @@ You can use the bindings Ctrl + +/- for zooming in/out.  You can also use Ctrl +
 (global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
 (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
 #+end_src
-
 ** UI Fix
 #+begin_src emacs-lisp
 (delete-selection-mode 1)    ;; You can select text and delete it by typing.
@@ -81,7 +76,6 @@ You can use the bindings Ctrl + +/- for zooming in/out.  You can also use Ctrl +
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-hl-line-mode 1) ;; Highlight cursor line
 #+end_src
-
 ** Scrolling fix
 #+begin_src emacs-lisp
 (setq scroll-step 1
@@ -93,13 +87,11 @@ You can use the bindings Ctrl + +/- for zooming in/out.  You can also use Ctrl +
       mouse-wheel-progressive-speed nil
       mouse-wheel-follow-mouse 't)
 #+end_src
-
 ** Transparency
 With Emacs version 29, true transparency has been added.  I have turned transparency off by setting the alpha to ‘100’.  If you want some slight transparency, try setting alpha to ‘90’.  Of course, if you set alpha to ‘0’, the background of Emacs would completely transparent.
 #+begin_src emacs-lisp
 (add-to-list 'default-frame-alist '(alpha-background . 100)) ; For all new frames henceforth
 #+end_src
-
 ** Init Time
 Emacs boot time message, nothing special
 #+begin_src emacs-lisp
@@ -109,7 +101,6 @@ Emacs boot time message, nothing special
                      (float-time
                       (time-subtract after-init-time before-init-time)))))
 #+end_src
-
 ** Backup
 By default, Emacs creates automatic backups of files in their original directories, such “file.el” and the backup “file.el~”.  This leads to a lot of clutter, so let’s tell Emacs not to create any backup files.
 #+begin_src emacs-lisp
@@ -120,7 +111,6 @@ By default, Emacs creates automatic backups of files in their original directori
       delete-auto-save-files t
       backup-directory-alist '(("." . "~/.emacs.d/backup")))
 #+end_src
-
 * Packages
 ** UI & UX
 UI and UX things for better experience.
@@ -130,11 +120,9 @@ This is an icon set that can be used with dashboard, dired, ibuffer and other Em
 (use-package all-the-icons
   :ensure t
   :if (display-graphic-p))
-
 (use-package all-the-icons-dired
   :hook (dired-mode . (lambda () (all-the-icons-dired-mode t))))
 #+end_src
-
 *** Dashboard
 Emacs Dashboard is an extensible startup screen showing you recent files, bookmarks, agenda items and an Emacs banner.
 #+begin_src emacs-lisp
@@ -168,13 +156,11 @@ Emacs Dashboard is an extensible startup screen showing you recent files, bookma
   :config
   (dashboard-setup-startup-hook))
 #+end_src
-
 *** Diminish
 #+begin_src emacs-lisp
 (use-package diminish
   :defer t)
 #+end_src
-
 *** Doom Modeline: Status bar
 cmon, default Emacs status bar is really bad.
 #+begin_src emacs-lisp
@@ -188,7 +174,6 @@ cmon, default Emacs status bar is really bad.
         doom-modeline-persp-name t   ;; adds perspective name to modeline
         doom-modeline-persp-icon t)) ;; adds folder icon next to persp name
 #+end_src
-
 *** Doom Theme
 #+begin_src emacs-lisp
 (use-package doom-themes
@@ -196,7 +181,6 @@ cmon, default Emacs status bar is really bad.
     (load-theme 'doom-tomorrow-night t)) ;; dark theme
     ;; (load-theme 'doom-tomorrow-day t)) ;; light theme
 #+end_src
-
 *** Evil: Vim-like keybindings
 Sorry I can't use Emacs keybindings :(
 #+begin_src emacs-lisp
@@ -208,7 +192,6 @@ Sorry I can't use Emacs keybindings :(
           evil-split-window-below t
           evil-undo-system 'undo-redo)  ;; Adds vim-like C-r redo functionality
     (evil-mode))
-
 (use-package evil-collection
   :after evil
   :config
@@ -218,9 +201,7 @@ Sorry I can't use Emacs keybindings :(
   ;; (setq evil-collection-mode-list '(calendar dashboard dired ediff info magit ibuffer))
   (add-to-list 'evil-collection-mode-list 'help) ;; evilify help mode
   (evil-collection-init))
-
 (use-package evil-tutor)
-
 ;; Using RETURN to follow links in Org/Evil 
 ;; Unmap keys in 'evil-maps if not done, (setq org-return-follows-link t) will not work
 (with-eval-after-load 'evil-maps
@@ -230,20 +211,17 @@ Sorry I can't use Emacs keybindings :(
 ;; Setting RETURN key in org-mode to follow links
   (setq org-return-follows-link  t)
 #+end_src
-
 *** General: Keybindings
 #+begin_src emacs-lisp
 (use-package general
   :config
   (general-evil-setup)
-  
   ;; set up 'SPC' as the global leader key
   (general-create-definer leader-keys
     :states '(normal insert visual emacs)
     :keymaps 'override
     :prefix "SPC" ;; set leader
     :global-prefix "M-SPC") ;; access leader in insert mode
-
   (leader-keys
     ":" '(counsel-M-x :wk "M-x")
     "." '(find-file :wk "Find file")
@@ -251,7 +229,6 @@ Sorry I can't use Emacs keybindings :(
     "=" '(perspective-map :wk "Perspective") ;; Lists all the perspective keybindings
     "TAB TAB" '(comment-line :wk "Comment lines")
     "u" '(universal-argument :wk "Universal argument"))
-
   (leader-keys
     "b" '(:ignore t :wk "Bookmarks/Buffers")
     "b b" '(switch-to-buffer :wk "Switch to buffer")
@@ -270,14 +247,12 @@ Sorry I can't use Emacs keybindings :(
     "b s" '(basic-save-buffer :wk "Save buffer")
     "b S" '(save-some-buffers :wk "Save multiple buffers")
     "b w" '(bookmark-save :wk "Save current bookmarks to bookmark file"))
-
   (leader-keys
     "d" '(:ignore t :wk "Dired")
     "d d" '(dired :wk "Open dired")
     "d j" '(dired-jump :wk "Dired jump to current")
     "d n" '(neotree-dir :wk "Open directory in neotree")
     "d p" '(peep-dired :wk "Peep-dired"))
-
   (leader-keys
     "e" '(:ignore t :wk "Eshell/Evaluate")    
     "e b" '(eval-buffer :wk "Evaluate elisp in buffer")
@@ -289,7 +264,6 @@ Sorry I can't use Emacs keybindings :(
     "e R" '(eww-reload :which-key "Reload current page in EWW")
     "e s" '(eshell :which-key "Eshell")
     "e w" '(eww :which-key "EWW emacs web wowser"))
-
   (leader-keys
     "f" '(:ignore t :wk "Files")    
     "f c" '((lambda () (interactive)
@@ -308,7 +282,6 @@ Sorry I can't use Emacs keybindings :(
     "f r" '(counsel-recentf :wk "Find recent files")
     "f u" '(sudo-edit-find-file :wk "Sudo find file")
     "f U" '(sudo-edit :wk "Sudo edit file"))
-
   (leader-keys
     "g" '(:ignore t :wk "Git")    
     "g /" '(magit-displatch :wk "Magit dispatch")
@@ -331,7 +304,6 @@ Sorry I can't use Emacs keybindings :(
     "g s" '(magit-stage-file :wk "Git stage file")
     "g t" '(git-timemachine :wk "Git time machine")
     "g u" '(magit-stage-file :wk "Git unstage file"))
-
  (leader-keys
     "h" '(:ignore t :wk "Help")
     "h a" '(counsel-apropos :wk "Apropos")
@@ -366,7 +338,6 @@ Sorry I can't use Emacs keybindings :(
     "h v" '(describe-variable :wk "Describe variable")
     "h w" '(where-is :wk "Prints keybinding for command if set")
     "h x" '(describe-command :wk "Display full documentation for command"))
-
   (leader-keys
     "m" '(:ignore t :wk "Org")
     "m a" '(org-agenda :wk "Org agenda")
@@ -375,34 +346,28 @@ Sorry I can't use Emacs keybindings :(
     "m t" '(org-todo :wk "Org todo")
     "m B" '(org-babel-tangle :wk "Org babel tangle")
     "m T" '(org-todo-list :wk "Org todo list"))
-
   (leader-keys
     "m b" '(:ignore t :wk "Tables")
     "m b -" '(org-table-insert-hline :wk "Insert hline in table"))
-
   (leader-keys
     "m d" '(:ignore t :wk "Date/deadline")
     "m d t" '(org-time-stamp :wk "Org time stamp"))
-
   (leader-keys
     "o" '(:ignore t :wk "Open")
     "o d" '(dashboard-open :wk "Dashboard")
     "o e" '(elfeed :wk "Elfeed RSS")
     "o f" '(make-frame :wk "Open buffer in new frame")
     "o F" '(select-frame-by-name :wk "Select frame by name"))
-
   ;; projectile-command-map already has a ton of bindings 
   ;; set for us, so no need to specify each individually.
   (leader-keys
     "p" '(projectile-command-map :wk "Projectile"))
-
   (leader-keys
     "s" '(:ignore t :wk "Search")
     "s d" '(dictionary-search :wk "Search dictionary")
     "s m" '(man :wk "Man pages")
     "s t" '(tldr :wk "Lookup TLDR docs for a command")
     "s w" '(woman :wk "Similar to man but doesn't require man"))
-
   (leader-keys
     "t" '(:ignore t :wk "Toggle")
     "t e" '(eshell-toggle :wk "Toggle eshell")
@@ -414,7 +379,6 @@ Sorry I can't use Emacs keybindings :(
     "t t" '(visual-line-mode :wk "Toggle truncated lines")
     "t v" '(vterm-toggle :wk "Toggle vterm")
     "t z" '(writeroom-mode :wk "Toggle Zen Mode"))
-
   (leader-keys
     "w" '(:ignore t :wk "Windows")
     ;; Window splits
@@ -435,7 +399,6 @@ Sorry I can't use Emacs keybindings :(
     "w L" '(buf-move-right :wk "Buffer move right"))
 )
 #+end_src
-
 *** Neotree: File tree
 #+begin_src emacs-lisp
 (use-package neotree
@@ -456,7 +419,6 @@ Sorry I can't use Emacs keybindings :(
                  (make-local-variable 'auto-hscroll-mode)
                  (setq auto-hscroll-mode nil)))))
 #+end_src
-
 *** Perspective
 Perspective provides multiple named workspaces (or “perspectives”) in Emacs, similar to multiple desktops in window managers.  Each perspective has its own buffer list and its own window layout, along with some other isolated niceties, like the xref ring.
 #+begin_src emacs-lisp
@@ -471,25 +433,21 @@ Perspective provides multiple named workspaces (or “perspectives”) in Emacs,
   :config
   ;; Sets a file to write to when we save states
   (setq persp-state-default-file "~/.config/emacs/sessions"))
-
 ;; This will group buffers by persp-name in ibuffer.
 (add-hook 'ibuffer-hook
           (lambda ()
             (persp-ibuffer-set-filter-groups)
             (unless (eq ibuffer-sorting-mode 'alphabetic)
               (ibuffer-do-sort-by-alphabetic))))
-
 ;; Automatically save perspective states to file when Emacs exits.
 (add-hook 'kill-emacs-hook #'persp-state-save)
 #+end_src
-
 *** Projectile
 #+begin_src emacs-lisp
 (use-package projectile
   :config
   (projectile-mode 1))
 #+end_src
-
 *** Rainbow delimiter
 Lisp user will find it useful.
 #+begin_src emacs-lisp
@@ -497,7 +455,6 @@ Lisp user will find it useful.
   :hook ((emacs-lisp-mode . rainbow-delimiters-mode)
          (clojure-mode . rainbow-delimiters-mode)))
 #+end_src
-
 *** Rainbow Mode
 Display the actual color as a background for any hex color value (ex. #ffffff).  The code block below enables rainbow-mode in all programming modes (prog-mode) as well as org-mode, which is why rainbow works in this document.
 #+begin_src emacs-lisp
@@ -505,7 +462,6 @@ Display the actual color as a background for any hex color value (ex. #ffffff). 
   :diminish
   :hook org-mode prog-mode)
 #+end_src
-
 *** Vterm: Terminal
 **** vterm
 Vterm is a terminal emulator within Emacs. You need =Cmake= to compile it.
@@ -540,7 +496,6 @@ vterm-toggle toggles between the vterm buffer and whatever buffer you are editin
                   (reusable-frames . visible)
                   (window-height . 0.3))))
 #+end_src
-
 *** which-key
 #+begin_src emacs-lisp
 (use-package which-key
@@ -563,7 +518,6 @@ vterm-toggle toggles between the vterm buffer and whatever buffer you are editin
 	which-key-allow-imprecise-window-fit nil
 	which-key-separator " - " ))
 #+end_src
-
 *** Writeroom Mode
 Writeroom Mode (aka Zen Mode) is a simple Emacs package for distraction free editing.
 #+begin_src emacs-lisp
@@ -575,7 +529,6 @@ Writeroom Mode (aka Zen Mode) is a simple Emacs package for distraction free edi
         writeroom-global-effects nil           ; don't mess with toolbars globally
         writeroom-fullscreen-effect 'fullscreen)) ; or 'maximized or nil
 #+end_src
-
 ** Coding
 Stuffs for better coding experience.
 *** Company: Code completion
@@ -592,13 +545,11 @@ Who can code without completion?
   (company-show-numbers t)
   (company-tooltip-align-annotations t)
   (company-selection-wrap-around t))
-
 (use-package company-box
   :after company
   :diminish
   :hook (company-mode . company-box-mode))
 #+end_src
-
 *** Flycheck: Code check
 Install =luacheck= from your Linux distro's repositories for flycheck to work correctly with lua files.  Install =python-pylint= for flycheck to work with python files.  Haskell works with flycheck as long as =haskell-ghc= or =haskell-stack-ghc= is installed.  For more information on language support for flycheck, [[https://www.flycheck.org/en/latest/languages.html][read this]].
 #+begin_src emacs-lisp
@@ -609,7 +560,6 @@ Install =luacheck= from your Linux distro's repositories for flycheck to work co
   :init (global-flycheck-mode)
   :hook (prog-mode . flycheck-mode))
 #+end_src
-
 *** Ivy/Counsel
 #+begin_src emacs-lisp
 (use-package counsel
@@ -618,7 +568,6 @@ Install =luacheck= from your Linux distro's repositories for flycheck to work co
   :config 
     (counsel-mode)
     (setq ivy-initial-inputs-alist nil)) ;; removes starting ^ regex in M-x
-
 (use-package ivy
   :bind
   ;; ivy-resume resumes the last Ivy-based completion.
@@ -631,13 +580,10 @@ Install =luacheck= from your Linux distro's repositories for flycheck to work co
   (setq enable-recursive-minibuffers t)
   :config
   (ivy-mode))
-
 (use-package all-the-icons-ivy-rich
   :ensure t
   :init (all-the-icons-ivy-rich-mode 1))
-
 (use-package find-file-in-project)
-
 (use-package ivy-rich
   :after ivy
   :ensure t
@@ -650,7 +596,6 @@ Install =luacheck= from your Linux distro's repositories for flycheck to work co
   (ivy-set-display-transformer 'ivy-switch-buffer
                                'ivy-rich-switch-buffer-transformer))
 #+end_src
-
 *** Language support
 Emacs has built-in programming language modes for Lisp, Scheme, DSSSL, Ada, ASM, AWK, C, C++, Fortran, Icon, IDL (CORBA), IDLWAVE, Java, Javascript, M4, Makefiles, Metafont, Modula2, Object Pascal, Objective-C, Octave, Pascal, Perl, Pike, PostScript, Prolog, Python, Ruby, Simula, SQL, Tcl, Verilog, and VHDL.  Other languages will require you to install additional modes.
 #+begin_src emacs-lisp
@@ -678,7 +623,6 @@ Emacs has built-in programming language modes for Lisp, Scheme, DSSSL, Ada, ASM,
   (setq use-hard-newlines nil)
   (setq adaptive-fill-mode t))
 #+end_src
-
 ** Git
 Version control
 *** Git Time Machine
@@ -692,27 +636,23 @@ git-timemachine is a program that allows you to move backwards and forwards thro
     (evil-define-key 'normal git-timemachine-mode-map (kbd "C-k") 'git-timemachine-show-next-revision)
 )
 #+end_src
-
 *** Magit: Git for Emacs
 #+begin_src emacs-lisp
 (use-package magit
   :defer t)
 #+end_src
-
 *** Transient
 idk why i use this but magit requires it.
 #+begin_src emacs-lisp
 (use-package transient
   :defer t)
 #+end_src
-
 ** Org Mode
 Honestly it's the best Emacs feature that existed.
 *** Org Config
 #+begin_src emacs-lisp
 (setq org-directory "~/Notes")
 #+end_src
-
 *** Org Roam
 #+begin_src emacs-lisp
 (use-package org-roam
@@ -721,7 +661,6 @@ Honestly it's the best Emacs feature that existed.
   (setq org-roam-directory "~/Notes")
   (org-roam-db-autosync-mode))
 #+end_src
-
 *** Org Bullets
 Org-bullets gives us attractive bullets rather than asterisks.
 #+begin_src emacs-lisp
@@ -729,7 +668,6 @@ Org-bullets gives us attractive bullets rather than asterisks.
 (use-package org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 #+end_src
-
 *** Org Level Headers
 #+begin_src emacs-lisp
  ;; (custom-set-faces
@@ -741,20 +679,17 @@ Org-bullets gives us attractive bullets rather than asterisks.
  ;; '(org-level-6 ((t (:inherit outline-5 :height 1.1))))
  ;; '(org-level-7 ((t (:inherit outline-5 :height 1.05)))))
 #+end_src
-
 *** Table of Contents
 #+begin_src emacs-lisp
 (use-package toc-org
     :commands toc-org-enable
     :init (add-hook 'org-mode-hook 'toc-org-enable))
 #+end_src
-
 *** Diminish Org Indent Mode
 Removes “Ind” from showing in the modeline.
 #+begin_src emacs-lisp
 (eval-after-load 'org-indent '(diminish 'org-indent-mode))
 #+end_src
-
 *** Source Code Block Tag Expansion
 Org-tempo is not a separate package but a module within org that can be enabled.  Org-tempo allows for ‘<s’ followed by TAB to expand to a begin_src tag.  Other expansions available include:
 | Typing the below + TAB | Expands to ...                          |
@@ -772,7 +707,6 @@ Org-tempo is not a separate package but a module within org that can be enabled.
 #+begin_src emacs-lisp
 (require 'org-tempo)
 #+end_src
-
 ** Other
 *** sudo-edit
 sudo-edit gives us the ability to open files with sudo privileges or switch over to editing with sudo privileges if we initially opened the file without such privileges.

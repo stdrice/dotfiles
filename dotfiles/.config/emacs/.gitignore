@@ -2,11 +2,11 @@
 .lsp-session-v1
 auto-save-list
 config.el
-flycheck_config.el
 eln-cache
 elpa
 elpaca
 eshell
+flycheck_config.el
 org-roam.db
 projectile-bookmarks.eld
 transient
