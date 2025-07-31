@@ -32,7 +32,7 @@ entry {
 
 element {
   text-color: #60606050;
-  padding: 7px;
+  padding: 6px;
 }
 
 element selected {
