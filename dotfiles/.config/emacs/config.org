@@ -75,6 +75,7 @@ You can use the bindings Ctrl + +/- for zooming in/out.  You can also use Ctrl +
 (setq confirm-kill-emacs #'y-or-n-p) ; Ask in minibuffer instead
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-hl-line-mode 1) ;; Highlight cursor line
+(setq-default auto-fill-function nil) ;; Disable auto-fill-mode
 #+end_src
 ** Scrolling fix
 #+begin_src emacs-lisp
