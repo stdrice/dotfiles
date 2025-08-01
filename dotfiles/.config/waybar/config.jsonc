@@ -2,7 +2,7 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
+    "height": 26, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     "reload_style_on_change": true,
@@ -11,14 +11,14 @@
         // "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
-        "sway/mode"
-        // "sway/window"
+        "sway/mode",
+        "sway/window"
     ],
     "modules-center": [
-        "custom/media"
     ],
     "modules-right": [
         "group/stuffs",
+        "custom/media",
         "pulseaudio",
 	      "backlight",
         "battery",
@@ -61,7 +61,7 @@
         "format": "{title}",
         "icon": false,
         "icon-size": 14,
-        "max-length": 30,
+        "max-length": 36,
         "all-outputs": true
     },
     "wlr/taskbar": {
@@ -134,7 +134,7 @@
     "custom/media": {
 	      "format": "󰎇 {}",
 	      "return-type": "json",
-        "max-length": 38,
+        "max-length": 36,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause"
     },
