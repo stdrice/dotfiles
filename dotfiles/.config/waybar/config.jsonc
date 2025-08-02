@@ -1,24 +1,24 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 26, // Waybar height (to be removed for auto height)
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": [
-        // "custom/menu",
+        "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
-        "sway/mode"
-        // "sway/window"
+        "sway/mode",
+        "sway/window"
     ],
     "modules-center": [
-        "custom/media"
     ],
     "modules-right": [
         "group/stuffs",
+        "custom/media",
         "pulseaudio",
 	      "backlight",
         "battery",
@@ -139,7 +139,7 @@
         "on-click": "playerctl play-pause"
     },
     "custom/menu": {
-        "format": "󰫈",
+        "format": "󰘳",
         "on-click": "pgrep -x rofi && pkill -x rofi || rofi -show drun",
         "on-click-right": "~/.local/bin/menu"
     }
