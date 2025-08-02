@@ -14,7 +14,7 @@
 
 window#waybar {
     border-radius: 0px;
-    background: alpha(@background, 0.48);
+    background: alpha(@background, 0.7);
     color: @foreground;
 }
 
