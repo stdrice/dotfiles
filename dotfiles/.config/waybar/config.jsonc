@@ -1,8 +1,8 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 36, // Waybar height (to be removed for auto height)
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 26, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     "reload_style_on_change": true,
@@ -11,14 +11,14 @@
         // "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
-        "sway/mode",
-        "sway/window"
+        "sway/mode"
+        // "sway/window"
     ],
     "modules-center": [
+        "custom/media"
     ],
     "modules-right": [
         "group/stuffs",
-        "custom/media",
         "pulseaudio",
 	      "backlight",
         "battery",
