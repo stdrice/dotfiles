@@ -22,7 +22,6 @@ select_theme() {
   printf "%s\n" "${options[@]}" | rofi_cmd
 }
 
-
 term(){
     [[ -f "$term_path" ]] && sed -i -e "s/background=.*/background=$BG/g" \
            -e "s/foreground=.*/foreground=$FG/g" \
@@ -71,11 +70,11 @@ launcher(){
 
 gtk(){
     [[ -f "$gtk_path" ]] && sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$chosen/g" "$gtk_path"
-    case "$chosen" in
-    "$dark")
+    case "$PR" in
+    "dark")
         sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=Papirus-Dark/g" "$gtk_path"
         ;;
-    "$light") 
+    "light") 
         sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=Papirus-Light/g" "$gtk_path"
         ;;
     esac
