@@ -76,6 +76,7 @@ You can use the bindings Ctrl + +/- for zooming in/out.  You can also use Ctrl +
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-hl-line-mode 1) ;; Highlight cursor line
 (setq-default auto-fill-function nil) ;; Disable auto-fill-mode
+(setq confirm-kill-emacs nil) ;; Disable quit confirmation
 #+end_src
 ** Scrolling fix
 #+begin_src emacs-lisp
@@ -615,8 +616,7 @@ Emacs has built-in programming language modes for Lisp, Scheme, DSSSL, Ada, ASM,
   :ensure nil
   :mode "\\`\\(README\\|CHANGELOG\\|COPYING\\|LICENSE\\)\\'"
   :hook
-  ((text-mode . turn-on-auto-fill)
-   (prog-mode . (lambda () (setq-local sentence-end-double-space t))))
+  ((prog-mode . (lambda () (setq-local sentence-end-double-space t))))
   :config
   (setq sentence-end-double-space nil)
   (setq sentence-end-without-period nil)
