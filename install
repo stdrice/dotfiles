@@ -18,7 +18,7 @@ git_repo="https://github.com/stdrice/dotfiles"
 branch="main"
 main_folder="dotfiles"
 packages=(auto-cpufreq bash blueman bluez bluez-utils brightnessctl btop \
-          calcurse cava cliphist cmake dex firefox foot galculator gammastep \
+          calcurse cava cliphist dex firefox foot galculator gammastep \
 	  git grim gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb \
 	  imagemagick imv inter-font libnotify lxappearance-gtk3 mako mpc mpd \
 	  mpd-mpris mpv ncmpcpp nemo neofetch neovim networkmanager \
