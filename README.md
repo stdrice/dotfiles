@@ -16,10 +16,10 @@ This is my Linux setup. I made this especially for me and people who wants a sim
 # **Starring 🌠**
 <img src="https://files.catbox.moe/vtj9pm.png" align="right" width="300px">
 
-- **[Sway ⚽](https://swaywm.org)**: Window Manager/Compositor
+- **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
-- **[Floorp 🦊](https://floorp.app/)**: Browser
-- **[Emacs 📓](https://www.gnu.org/software/emacs)**: Text Editor
+- **[Firefox 🦊](https://firefox.com)**: Browser
+- **[Neovim 📓](https://neovim.io/)**: Text Editor
 - **[Ranger](https://ranger.github.io) and [Nemo](https://github.com/linuxmint/nemo)**: File Manager
 - **[ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)**: Music Player
 - **[calcurse](https://www.calcurse.org)**: Calendar

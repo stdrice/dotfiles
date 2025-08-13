@@ -7,40 +7,40 @@
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output * bg ~/.config/sway/walls/1.png fill
+output * bg ~/.config/sway/walls/shore.png fill
 
 # - ---------- -
 # - Decoration -
 # - ---------- -
 
 # SwayFX settings
-# corner_radius 0
-# blur disable
-# blur_radius 0
-# titlebar_separator disable
-# shadows enable
-# shadows_on_csd enable
-# shadow_blur_radius 5
-# shadow_color #00000020
-# shadow_inactive_color #00000020
+corner_radius 4
+blur disable
+blur_radius 0
+titlebar_separator disable
+shadows enable
+shadows_on_csd enable
+shadow_blur_radius 5
+shadow_color #00000020
+shadow_inactive_color #00000020
 
 # Colors
 # class                 border  bground text    indicator child_border
-client.focused #0A84FF #3C3C3E #FFFFFF #EBEBF5 #3C3C3E
-client.focused_inactive #1C1C1C #1C1C1C #FFFFFF #EBEBF5 #FFFFFF00
-client.unfocused #1C1C1C #1C1C1C #FFFFFF #EBEBF5 #FFFFFF00
-client.urgent #FF453A #1C1C1C #FFFFFF #EBEBF5 #FF453A
+client.focused #0A84FF #363636 #E2E2E2 #EBEBF5 #363636
+client.focused_inactive #242424 #2F2F2F #E2E2E2 #EBEBF5 #FFFFFF00
+client.unfocused #242424 #2F2F2F #E2E2E2 #EBEBF5 #FFFFFF00
+client.urgent #FF453A #242424 #E2E2E2 #EBEBF5 #FF453A
 client.placeholder      #000000 #0C0C0C $foreground #000000   #0C0C0C
 
 # Font
 font monospace 11
 # adjust this to change titlebar size
-font pango: monospace 12
+font pango: monospace 11
 
 # Gaps
-smart_gaps on # on|off|toggle|inverse_outer
+smart_gaps off # on|off|toggle|inverse_outer
 gaps outer 0
-gaps inner 1
+gaps inner 2
 
 # Titlebar and border configuration
 # SwayFX BUG: https://github.com/WillPower3309/swayfx/issues/201
@@ -48,16 +48,16 @@ gaps inner 1
 titlebar_border_thickness 0
 
 # Border
-set $border_width 1
-default_border pixel $border_width
+set $border_width 0
+default_border normal $border_width
 default_floating_border none
 smart_borders on
 
 # Window Titlebar
 titlebar_padding 10 4
-title_align left
+title_align center
 # w/ title
-for_window [class=".*"] title_format "<span rise='2000' font='sans 9'>%title</span>"
+for_window [class=".*"] title_format "<span rise='1000' font='sans 9.5'>%title</span>"
 # w/o title
 # for_window [class=".*"] title_format "<span></span>"
 
