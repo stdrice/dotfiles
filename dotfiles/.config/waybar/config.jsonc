@@ -18,7 +18,7 @@
     ],
     "modules-right": [
         "group/stuffs",
-        "custom/media",
+        // "custom/media",
         "pulseaudio",
 	      "backlight",
         "battery",
