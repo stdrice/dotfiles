@@ -3,8 +3,8 @@
 * {
   background-color: @background;
   text-color: @foreground;
-  background: #1C1C1C;
-  foreground: #FFFFFF;
+  background: #242424;
+  foreground: #E2E2E2;
 }
 
 window {
@@ -14,7 +14,7 @@ window {
   children: [ box ];
   background-color: @background;
   text-color: @foreground;
-  border-radius: 0px;
+  border-radius: 4px;
 }
 
 box {

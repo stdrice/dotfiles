@@ -4,17 +4,17 @@
     border: none;
     border-radius: 0;
     font-family: "sans", "sans-serif", "monospace", "Symbols Nerd Font";
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     min-height: 0;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
     margin: 0px 4px;
 }
 
 window#waybar {
     border-radius: 0px;
-    background: alpha(@background, 0.7);
+    background: alpha(@background, 1.0);
     color: @foreground;
 }
 
