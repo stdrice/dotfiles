@@ -57,7 +57,7 @@ smart_borders on
 titlebar_padding 10 4
 title_align center
 # w/ title
-for_window [class=".*"] title_format "<span rise='1000' font='sans 9.5'>%title</span>"
+for_window [class=".*"] title_format "<span rise='1000' font='sans Medium 9.5'>%title</span>"
 # w/o title
 # for_window [class=".*"] title_format "<span></span>"
 
