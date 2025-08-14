@@ -97,7 +97,7 @@
         // "device": "acpi_video1",
       	// "format": "{icon}", // without percentage
         "format": "{icon} {percent}", // with percentage
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "format-icons": [""],
       	"tooltip-format": "Brightness: {percent}%\nClick to toggle Night Light",
         "on-click": "~/.local/bin/night-light"
     },
@@ -107,12 +107,12 @@
             "warning": 30,
             "critical": 15
         },
-	      // "format": "{icon}", // without percentage
-        // "format": "{icon} {capacity}", // with percentage
-        "format": "󰋑 {capacity}", // heart with percentage
+	"format": "{icon}", // without percentage
+        "format": "{icon} {capacity}", // with percentage
+        // "format": "󰋑 {capacity}", // heart with percentage
         "format-charging": "󰚥 {capacity}",
         "format-plugged": "󰚥 {capacity}",
-        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "format-icons": ["", "", "", "", ""],
 	      "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
         "interval": 1,
         "on-click": "~/.local/bin/power"
@@ -121,11 +121,11 @@
         // "scroll-step": 1, // %, can be a float
 	      // "format": "{icon}", // without percentage
         "format": "{icon} {volume}", // with percentage
-        "format-muted": "󰖁",
+        "format-muted": "",
         "format-source": "{volume}% 󰍬",
         "format-source-muted": "󰍭",
         "format-icons": {
-            "default": ["󰕿", "󰖀", "󰕾"]
+            "default": ["", "", ""]
         },
       	"tooltip-format": "Volume: {volume}%\n{desc}",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
