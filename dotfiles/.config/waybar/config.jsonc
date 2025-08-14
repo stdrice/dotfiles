@@ -141,6 +141,7 @@
     "custom/menu": {
         "format": "󰀻",
         "on-click": "pgrep -x rofi && pkill -x rofi || rofi -show drun",
-        "on-click-right": "~/.local/bin/menu"
+        "on-click-right": "~/.local/bin/menu",
+	"tooltip": false
     }
 }
