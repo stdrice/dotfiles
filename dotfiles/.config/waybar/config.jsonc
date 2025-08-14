@@ -25,15 +25,15 @@
 	      "clock"
     ],
     // Modules configuration
-    "custom/indicator": {
-        "format": "⦁"
+    "custom/chevron_left": {
+        "format": ""
     },
     "group/stuffs":
     {
         "orientation": "horizontal",
         "drawer": {},
         "modules": [
-            "custom/indicator",
+            "custom/chevron_left",
             "tray"
         ]
     },
