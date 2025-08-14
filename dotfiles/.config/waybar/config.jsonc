@@ -53,7 +53,7 @@
     "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
-        "format-icons": ["", "󰖯"],
+        "format-icons": ["", ""],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
@@ -109,9 +109,9 @@
         },
 	"format": "{icon}", // without percentage
         "format": "{icon} {capacity}", // with percentage
-        // "format": "󰋑 {capacity}", // heart with percentage
-        "format-charging": "󰚥 {capacity}",
-        "format-plugged": "󰚥 {capacity}",
+        // "format": " {capacity}", // heart with percentage
+        "format-charging": " {capacity}",
+        "format-plugged": " {capacity}",
         "format-icons": ["", "", "", "", ""],
 	      "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
         "interval": 1,
@@ -122,8 +122,8 @@
 	      // "format": "{icon}", // without percentage
         "format": "{icon} {volume}", // with percentage
         "format-muted": "",
-        "format-source": "{volume}% 󰍬",
-        "format-source-muted": "󰍭",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
         "format-icons": {
             "default": ["", "", ""]
         },
@@ -132,14 +132,14 @@
         "on-click-right": "pavucontrol"
     },
     "custom/media": {
-	      "format": "󰎇 {}",
+	      "format": " {}",
 	      "return-type": "json",
         "max-length": 36,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause"
     },
     "custom/menu": {
-        "format": "󰀻",
+        "format": "",
         "on-click": "pgrep -x rofi && pkill -x rofi || rofi -show drun",
         "on-click-right": "~/.local/bin/menu",
 	"tooltip": false
