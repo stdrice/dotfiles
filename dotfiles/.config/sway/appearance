@@ -33,9 +33,9 @@ client.urgent #FF453A #202020 #E2E2E2 #EBEBF5 #FF453A
 client.placeholder      #000000 #0C0C0C $foreground #000000   #0C0C0C
 
 # Font
-font monospace 11
+font monospace 10
 # adjust this to change titlebar size
-font pango: monospace 10
+font pango: monospace 9
 
 # Gaps
 smart_gaps off # on|off|toggle|inverse_outer
