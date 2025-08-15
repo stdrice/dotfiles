@@ -10,6 +10,7 @@
 window {
   location: center;
   width: 300;
+  height: 400;
   spacing: 0;
   children: [ box ];
   background-color: @background;
@@ -32,7 +33,7 @@ entry {
 
 element {
   text-color: #60606050;
-  padding: 6px;
+  padding: 7px;
 }
 
 element selected {
