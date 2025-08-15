@@ -28,26 +28,24 @@ This is my Linux setup. I made this especially for me and people who wants a sim
 and so on!
 
 # **Installation 🛠️**
-## Distros
-Now this script only supports **Arch Linux** and **Arch-based** distros (EndeavourOS, Artix Linux, Arco Linux, ArchCraft, ...) because I'm too lazy to maintain it for other distros (but you can install manually).
-
-## Notes (read this first)
-- This install script will **replace all duplicate files**, so **backup your files first**.
-- If your system doesn't have `bash` and `curl`, **install it**.
-
-## Install
+1. Install all dependencies
 ```
-$ curl -L https://stdrice.github.io/dotfiles/install -o install
-$ bash install
+auto-cpufreq bash brightnessctl btop calcurse cava cliphist
+dex firefox foot gammastep grim imagemagick inter-font
+libnotify mako mpc mpd mpv ncmpcpp nemo neofetch
+papirus-icon-theme pavucontrol pipewire playerctl
+polkit-gnome ranger rofi-wayland slurp swaybg swayfx swayidle
+swaylock-effects wireplumber wl-clipboard ttf-meslo-nerd
+ttf-nerd-fonts-symbols waybar xdg-desktop-portal-wlr xdg-user-dirs-gtk zsh
 ```
-
-## Install manually
-- Install all dependencies
+2. Clone this repo
 ```
-bash brightnessctl btop calcurse dunst foot gammastep imagemagick mako mpc mpd mpd-mpris ncmpcpp neofetch papirus-icon-theme playerctl power-profiles-daemon rofi slurp swaybg swayfx swayidle swaylock-effects wireplumber ttf-fira-sans ttf-firacode-nerd ttf-nerd-fonts-symbols waybar zsh
+git clone https://github.com/stdrice/dotfiles
 ```
-- Clone this repo
-- Copy all files in `dotfiles` and paste to your `$HOME` folder
+3. Copy all files in `dotfiles` and paste to your `$HOME` folder
+```
+cp -rf dotfiles/dotfiles $HOME/
+```
 
 # **Gallery 📸**
 | Floating                                 | Tiling                                     |
