@@ -51,7 +51,7 @@ titlebar_border_thickness 0
 set $border_width 0
 default_border normal $border_width
 default_floating_border none
-smart_borders on
+smart_borders off
 
 # Window Titlebar
 titlebar_padding 10 4
@@ -89,8 +89,5 @@ for_window {
     [app_id="^chrome$"] border pixel $border_width
     [app_id="imv"] border pixel $border_width
 }
-
-# Misc
-show_marks no
 
 # vim:set ft=conf:
