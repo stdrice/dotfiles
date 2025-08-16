@@ -3,7 +3,7 @@
 * {
   background-color: @background;
   text-color: @foreground;
-  background: #202020;
+  background: #242424;
   foreground: #E2E2E2;
 }
 
