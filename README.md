@@ -1,14 +1,13 @@
 # stdrice's Linux dotfiles
 
-# **Table of Contents**
+# Table of Contents
 - [Starring](#starring)
 - [Installation](#installation)
 - [Gallery](#gallery)
 - [Keybindings](#keybindings)
 - [Firefox/Librewolf config](#firefox-librewolf-config)
-- [License](#license)
 
-# **Starring**
+# Starring
 <img src="https://files.catbox.moe/vtj9pm.png" align="right" width="300px">
 
 - **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
@@ -22,7 +21,7 @@
 
 and so on!
 
-# **Installation**
+# Installation
 1. Install all dependencies
 ```
 auto-cpufreq bash brightnessctl btop calcurse cava cliphist \
@@ -42,14 +41,14 @@ git clone https://github.com/stdrice/dotfiles
 cp -rf dotfiles/dotfiles $HOME/
 ```
 
-# **Gallery**
+# Gallery
 | Floating                                 | Tiling                                     |
 | :--------------------------------------- | :----------------------------------------- |
 | ![busy](https://i.imgur.com/TzziwMu.png) | ![tiling](https://i.imgur.com/Ny3TU3q.png) |
 | Browser                                  | Lockscreen                                 |
 | ![lmao](https://i.imgur.com/My8rlh3.png) | ![lock](https://i.imgur.com/a34F8KP.png)   |
 
-# **Keybindings**
+# Keybindings
 These are the basic keybinds. Read through the `sway/general/keybindings.conf` file for more keybinds.
 > Note: Mod = Windows key
 
@@ -69,8 +68,5 @@ These are the basic keybinds. Read through the `sway/general/keybindings.conf` f
 | `Mod + H/J/K/L or Left/Down/Up/Right`             | Change Focus                      |
 | `Mod + Shift + H/J/K/L or Left/Down/Up/Right`     | Move window                       |
 
-# **Firefox/Librewolf config**
+# Firefox/Librewolf config
 See [firefox.md](firefox.md)
-
-# **License**
-This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
