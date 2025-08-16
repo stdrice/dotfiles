@@ -17,6 +17,7 @@ bindsym {
 
     # Kill focused window
     $mod+q kill
+    Alt+F4 kill
 
     # Start your launcher
     $mod+d exec $launcher
