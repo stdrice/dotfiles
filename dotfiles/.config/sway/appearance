@@ -35,7 +35,7 @@ client.placeholder      #000000 #0C0C0C $foreground #000000   #0C0C0C
 # Font
 font monospace 10
 # adjust this to change titlebar size
-font pango: monospace 9
+font pango: monospace 8
 
 # Gaps
 smart_gaps off # on|off|toggle|inverse_outer
