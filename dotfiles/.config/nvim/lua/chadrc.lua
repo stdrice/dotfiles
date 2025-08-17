@@ -7,7 +7,7 @@ local M = {}
 
 M.base46 = {
 	theme = "onedark",
-  transparency = true,
+    transparency = true,
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
@@ -15,10 +15,13 @@ M.base46 = {
 }
 
 M.nvdash = { load_on_startup = true }
--- M.ui = {
+M.ui = {
 --       tabufline = {
 --          lazyload = false
 --      }
--- }
+    statusline = {
+        theme = "minimal",
+    }
+}
 
 return M
