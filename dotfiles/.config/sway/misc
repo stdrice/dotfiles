@@ -13,8 +13,6 @@ for_window [app_id="^chrome-.*__.*$"] shortcuts_inhibitor disable
 # Reduce latency
 output * {
     allow_tearing yes
-    max_render_time off
-    adaptive_sync off
 }
 
 ### Idle configuration

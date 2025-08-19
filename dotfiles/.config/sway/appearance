@@ -7,7 +7,8 @@
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output * bg ~/.config/sway/walls/1.png fill
+output * bg ~/.config/sway/walls/1.png fill 
+# fill|tile|centered|...
 
 # - ---------- -
 # - Decoration -
@@ -15,10 +16,10 @@ output * bg ~/.config/sway/walls/1.png fill
 
 # SwayFX settings
 corner_radius 4
-blur disable
-blur_radius 0
+blur disable # Blur
+blur_radius 0 # Blur strength
 titlebar_separator disable
-shadows enable
+shadows enable # Shadow
 shadows_on_csd enable
 shadow_blur_radius 5
 shadow_color #00000020
@@ -48,18 +49,18 @@ gaps inner 2
 titlebar_border_thickness 0
 
 # Border
-set $border_width 0
+set $border_width 0 # Border width
 default_border normal $border_width
 default_floating_border none
 smart_borders off
 
 # Window Titlebar
 titlebar_padding 10 4
-title_align center
-# w/ title
+title_align center # left|right|center
+# with title
 for_window [class=".*"] title_format "<span rise='1000' font='sans Medium 9.5'>%title</span>"
-# w/o title
-# for_window [class=".*"] title_format "<span></span>"
+# without title
+# for_window [class=".*"] title_format "<span></span>" # w/o title
 
 # Disable titlebar for certain windows
 for_window {
