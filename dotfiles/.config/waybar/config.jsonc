@@ -20,9 +20,9 @@
         "group/stuffs",
         // "custom/media",
         "pulseaudio",
-	      "backlight",
+	    "backlight",
         "battery",
-	      "clock"
+	    "clock"
     ],
     // Modules configuration
     "custom/chevron_left": {
@@ -89,8 +89,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%A %d}</big>\n<tt><small>{calendar}</small></tt>",
-      	"format": "{:%H:%M}", // 24-hour
-	      // "format": "{:%I:%M%p}", // 12-hour
+      	"format": "{:%a %H:%M}", // 24-hour
+	      // "format": "{:%a %I:%M%p}", // 12-hour
 	"format-alt": "{:%A %d %B}"
     },
     "backlight": {
