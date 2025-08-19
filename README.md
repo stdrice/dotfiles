@@ -25,12 +25,14 @@ and so on!
 1. Install all dependencies
 ```
 auto-cpufreq bash brightnessctl btop calcurse cava cliphist \
-dex firefox foot gammastep git grim imagemagick libnotify \
-mako mpc mpd mpv ncmpcpp nemo neofetch noto-fonts noto-fonts-cjk \
-noto-fonts-emoji papirus-icon-theme pavucontrol pipewire pipewire-pulse \
-playerctl polkit-gnome ranger rofi-wayland slurp swaybg swayfx \
-swayidle swaylock-effects wireplumber wl-clipboard ttf-meslo-nerd \
-ttf-nerd-fonts-symbols waybar xdg-desktop-portal-wlr xdg-user-dirs-gtk zsh
+dex firefox foot gammastep git grim imagemagick imv libnotify \
+mako mpc mpd mpv ncmpcpp nemo neofetch neovim network-manager-applet \
+noto-fonts noto-fonts-cjk noto-fonts-emoji nwg-displays \
+papirus-icon-theme pavucontrol pipewire pipewire-pulse playerctl \
+polkit-gnome ranger rofi-wayland sed slurp swaybg swayfx swayidle \
+swaylock-effects wireplumber wl-clipboard ttf-meslo-nerd \
+ttf-nerd-fonts-symbols waybar xdg-desktop-portal-wlr \
+xdg-user-dirs-gtk xorg-xwayland zsh
 ```
 2. Clone this repo
 ```
