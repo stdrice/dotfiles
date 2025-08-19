@@ -27,8 +27,8 @@ and so on!
 auto-cpufreq bash brightnessctl btop calcurse cava cliphist \
 dex firefox foot gammastep git grim imagemagick libnotify \
 mako mpc mpd mpv ncmpcpp nemo neofetch noto-fonts noto-fonts-cjk \
-noto-fonts-emoji papirus-icon-theme pavucontrol pipewire playerctl \
-polkit-gnome ranger rofi-wayland slurp swaybg swayfx swayidle \
+noto-fonts-emoji papirus-icon-theme pavucontrol pipewire pipewire-pulse \
+playerctl polkit-gnome ranger rofi-wayland slurp swaybg swayfx swayidle \
 swaylock-effects wireplumber wl-clipboard ttf-meslo-nerd \
 ttf-nerd-fonts-symbols waybar xdg-desktop-portal-wlr xdg-user-dirs-gtk zsh
 ```
@@ -38,7 +38,12 @@ git clone https://github.com/stdrice/dotfiles
 ```
 3. Copy all files in `dotfiles` and paste to your `$HOME` folder
 ```
-cp -rf dotfiles/dotfiles $HOME/
+cp -rfT dotfiles/dotfiles $HOME/
+```
+4. Other setup
+```
+chsh -s /usr/bin/zsh
+systemctl --user enable pipewire pipewire-pulse wireplumber
 ```
 
 # Gallery

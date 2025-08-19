@@ -28,7 +28,7 @@ input type:touchpad {
 }
 
 input type:keyboard {
-    xkb_layout "jp"
+    xkb_layout "us"
     # xkb_model ""
     # xkb_variant ""
     # xkb_options ""
