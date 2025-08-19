@@ -2,6 +2,14 @@
 
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.config/emacs/bin:$PATH
 
+if [ -f ~/.profile ]; then
+  . ~/.profile
+fi
+
+if [ -f ~/.zprofile ]; then
+  . ~/.zprofile
+fi
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
