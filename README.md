@@ -38,11 +38,12 @@ xdg-user-dirs-gtk xorg-xwayland zsh
 ```
 git clone https://github.com/stdrice/dotfiles
 ```
-3. Copy all files in `dotfiles` and paste to your `$HOME` folder
+3. Backup all your files
+4. Copy all files in `dotfiles` and paste to your `$HOME` folder
 ```
 cp -rfT dotfiles/dotfiles $HOME/
 ```
-4. Other setup
+5. Other setup
 ```
 chsh -s /usr/bin/zsh
 systemctl --user enable pipewire pipewire-pulse wireplumber
