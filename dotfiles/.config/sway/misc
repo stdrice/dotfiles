@@ -15,6 +15,9 @@ output * {
     allow_tearing yes
 }
 
+# Disable all CSDs of GTK apps
+exec gsettings set org.gnome.desktop.wm.preferences button-layout ""
+
 ### Idle configuration
 # Example configuration:
 #
