@@ -1,0 +1,45 @@
+# ~/.zshrc
+
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.config/emacs/bin:$PATH
+
+if [ -f ~/.profile ]; then
+  . ~/.profile
+fi
+
+if [ -f ~/.zprofile ]; then
+  . ~/.zprofile
+fi
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Options
+setopt prompt_subst
+setopt auto_list
+setopt hist_find_no_dups
+setopt hist_ignore_dups
+
+# Prompt
+PROMPT="%F{1}%n%F{reset}@%m %F{2}%~ %F{reset}$ "
+
+# Vars
+export TERMINAL="foot"
+export BROWSER="xdg-open"
+export VISUAL="${EDITOR}"
+
+# Aliases
+alias pls='sudo'
+alias ls='ls --color=auto'
+alias ll='ls -l --color=auto'
+alias la='ls -la --color=auto'
+alias grep='grep --color=auto'
+alias cls='clear'
+alias cp="cp -i"
+alias df='df -h'
+alias free='free -m'
+
+# History
+HISTFILE=~/.histfile
+HISTSIZE=2000
+SAVEHIST=2000
+bindkey -v

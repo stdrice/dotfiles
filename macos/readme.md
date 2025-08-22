@@ -1,0 +1,32 @@
+# stdrice's macOS setup
+
+# Starring
+- Window Manager: [yabai](https://github.com/koekeishiya/yabai)
+- Terminal: [kitty](https://sw.kovidgoyal.net/kitty)
+- Package Manager: [brew](https://brew.sh)
+- Text Editor: [NeoVim](https://neovim.io)
+- File manager: [Ranger](https://github.com/ranger/ranger)
+
+# Installation
+1. Install Brew
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+2. Install packages
+```
+brew install kitty neovim ranger koekeishiya/formulae/yabai koekeishiya/formulae/skhd
+```
+3. Clone this repo
+```
+git clone https://github.com/stdrice/dotfiles
+```
+4. Copy files and apply some settings
+```
+cp -rfT dotfiles/macos/dotfiles $HOME/
+bash dotfiles/macos/misc/macsettings
+```
+5. Enable Yabai and Skhd
+```
+yabai --start-service
+skhd --start-service
+```
