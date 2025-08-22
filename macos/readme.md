@@ -4,6 +4,7 @@
 - Window Manager: [yabai](https://github.com/koekeishiya/yabai)
 - Terminal: [kitty](https://sw.kovidgoyal.net/kitty)
 - Package Manager: [brew](https://brew.sh)
+- Browser: [Firefox](https://firefox.com)
 - Text Editor: [NeoVim](https://neovim.io)
 - File manager: [Ranger](https://github.com/ranger/ranger)
 
@@ -14,7 +15,7 @@
 ```
 2. Install packages
 ```
-brew install kitty neovim ranger koekeishiya/formulae/yabai koekeishiya/formulae/skhd
+brew install firefox kitty neovim ranger koekeishiya/formulae/yabai koekeishiya/formulae/skhd
 ```
 3. Clone this repo
 ```
