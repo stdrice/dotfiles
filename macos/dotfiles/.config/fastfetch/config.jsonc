@@ -1,0 +1,32 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+        "source": "~/.config/fastfetch/reimoo.png",
+        "type": "kitty-direct",
+	    "height": 15,
+        "width": 30
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "de",
+    "wm",
+    "terminal",
+    {
+        "type": "cpu",
+        "format": "{1}"
+    },
+    {
+        "type": "gpu",
+        "format": "{2}"
+    },
+    {
+        "type": "memory"
+    }
+  ]
+}

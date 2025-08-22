@@ -17,7 +17,7 @@
 ```
 2. Install packages
 ```
-brew install firefox font-meslo-lg-nerd-font kitty neovim ranger spaceid koekeishiya/formulae/yabai koekeishiya/formulae/skhd
+brew install fastfetch firefox font-meslo-lg-nerd-font kitty neovim ranger spaceid koekeishiya/formulae/yabai koekeishiya/formulae/skhd
 ```
 3. Clone this repo
 ```

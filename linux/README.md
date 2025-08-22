@@ -25,8 +25,8 @@ and so on!
 1. Install all dependencies
 ```
 auto-cpufreq bash brightnessctl btop calcurse cava cliphist \
-dex firefox foot gammastep git grim imagemagick imv libnotify \
-mako mpc mpd mpv ncmpcpp nemo neofetch neovim network-manager-applet \
+dex fastfetch firefox foot gammastep git grim imagemagick imv \
+libnotify mako mpc mpd mpv ncmpcpp nemo neovim network-manager-applet \
 noto-fonts noto-fonts-cjk noto-fonts-emoji nwg-displays \
 papirus-icon-theme pavucontrol pipewire pipewire-pulse playerctl \
 polkit-gnome ranger rofi-wayland sed slurp swaybg swayfx swayidle \
