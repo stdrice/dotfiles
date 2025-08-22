@@ -15,7 +15,7 @@
 ```
 2. Install packages
 ```
-brew install firefox kitty neovim ranger koekeishiya/formulae/yabai koekeishiya/formulae/skhd
+brew install firefox kitty neovim ranger spaceid koekeishiya/formulae/yabai koekeishiya/formulae/skhd
 ```
 3. Clone this repo
 ```
