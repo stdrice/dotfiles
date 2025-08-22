@@ -82,6 +82,9 @@ defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 # disable animations when opening a Quick Look window
 defaults write -g QLPanelAnimationDuration -float 0
 
+# disable gatekeeper
+sudo spctl --master-disable
+
 # ######## #
 # Finalize #
 # ######## #
