@@ -29,3 +29,4 @@ yabai -m rule --add app="iStat Menus" manage=off mouse_follows_focus=off
 yabai -m rule --add app="Things" grid=10:3:1:1:1:8 mouse_follows_focus=on sticky=on
 yabai -m rule --add app="choose" manage=off mouse_follows_focus=off
 yabai -m rule --add app="CleanShot X" manage=off mouse_follows_focus=off
+yabai -m rule --add app="Last.fm Scrobbler" manage=off mouse_follows_focus=off
