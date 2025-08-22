@@ -9,6 +9,8 @@ ctrl - w : yabai -m window --close
 ctrl - e : yabai -m window --toggle split
 ctrl + shift - space : yabai -m window --toggle float
 ctrl - f : yabai -m window --toggle zoom-fullscreen
+ctrl - p : yabai -m config focus_follows_mouse off # Disable Auto Focus
+ctrl + shift - p : yabai -m config focus_follows_mouse autofocus # Enable Auto Focs
 
 # Focus window
 ctrl - h : yabai -m window --focus west || yabai -m window --focus stack.prev || yabai -m window --focus stack.last
