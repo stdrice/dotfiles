@@ -1,7 +1,7 @@
 # stdrice's macOS setup
 
 # Starring
-<img src="https://files.catbox.moe/dx1ipu.png" align="right" width="450px">
+<img src="https://files.catbox.moe/yj1af0.png" align="right" width="450px">
 
 - Window Manager: [yabai](https://github.com/koekeishiya/yabai)
 - Terminal: [kitty](https://sw.kovidgoyal.net/kitty)
