@@ -1,6 +1,8 @@
 # stdrice's macOS setup
 
 # Starring
+<img src="https://files.catbox.moe/dx1ipu.png" align="right" width="300px">
+
 - Window Manager: [yabai](https://github.com/koekeishiya/yabai)
 - Terminal: [kitty](https://sw.kovidgoyal.net/kitty)
 - Package Manager: [brew](https://brew.sh)
@@ -15,7 +17,7 @@
 ```
 2. Install packages
 ```
-brew install firefox kitty neovim ranger spaceid koekeishiya/formulae/yabai koekeishiya/formulae/skhd
+brew install firefox font-meslo-lg-nerd-font kitty neovim ranger spaceid koekeishiya/formulae/yabai koekeishiya/formulae/skhd
 ```
 3. Clone this repo
 ```
