@@ -4,7 +4,7 @@
         "source": "~/.config/fastfetch/reimoo.png",
         "type": "sixel",
 	    "height": 15,
-        "width": 30
+        "width": 32
   },
   "modules": [
     "title",
