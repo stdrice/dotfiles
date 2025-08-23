@@ -89,9 +89,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%A %d}</big>\n<tt><small>{calendar}</small></tt>",
-      	"format": "{:%a %H:%M}", // 24-hour
-	      // "format": "{:%a %I:%M%p}", // 12-hour
-	"format-alt": "{:%A %d %B}"
+        "format": "{:%a %d %b %H:%M}" // 24-hour
+        // "format": "{:%a %d %b %I:%M%p}" // 12-hour
     },
     "backlight": {
         // "device": "acpi_video1",
