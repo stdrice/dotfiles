@@ -8,11 +8,11 @@
     "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": [
-        "custom/menu",
+        // "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
-        "sway/mode"
-        // "sway/window"
+        "sway/mode",
+        "sway/window"
     ],
     "modules-center": [
     ],
