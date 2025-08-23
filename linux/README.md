@@ -10,7 +10,7 @@
 # Starring
 <img src="https://files.catbox.moe/vtj9pm.png" align="right" width="300px">
 
-- **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
+- **[Sway ⚽](https://swaywm.org)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
 - **[Firefox 🦊](https://firefox.com)**: Browser
 - **[Neovim 📓](https://neovim.io/)**: Text Editor
@@ -29,7 +29,7 @@ dex fastfetch firefox foot gammastep git grim imagemagick imv \
 libnotify mako mpc mpd mpv ncmpcpp nemo neovim network-manager-applet \
 noto-fonts noto-fonts-cjk noto-fonts-emoji nwg-displays \
 papirus-icon-theme pavucontrol pipewire pipewire-pulse playerctl \
-polkit-gnome ranger rofi-wayland sed slurp swaybg swayfx swayidle \
+polkit-gnome ranger rofi-wayland sed slurp sway swaybg swayidle \
 swaylock-effects wireplumber wl-clipboard ttf-meslo-nerd \
 ttf-nerd-fonts-symbols waybar xdg-desktop-portal-wlr \
 xdg-user-dirs-gtk xorg-xwayland zsh
