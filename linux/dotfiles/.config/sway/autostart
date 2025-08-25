@@ -10,7 +10,8 @@ exec_always {
 
 # Run once on login
 exec {
-    # ~/.local/bin/start-pipewire # Start pipewire
+    # Start pipewire
+    # ~/.local/bin/start-pipewire
 
     # Sway does not set DISPLAY/WAYLAND_DISPLAY in the systemd user environment
     # See FS#63021
@@ -22,20 +23,41 @@ exec {
          dbus-update-activation-environment --systemd --all \
          dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_DESKTOP=sway
 
-    dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY # Prevents GTK apps from hanging for 15-20 sec before launching
+    # Prevents GTK apps from hanging for 15-20 sec before launching
+    dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY 
     dbus-update-activation-environment XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE
-    dex --autostart # XDG autostart
-    /usr/lib/xdg-desktop-portal -r # Desktop portal
-    /usr/lib/xdg-desktop-portal-wlr -r # Wayland Desktop portal
-    waybar # Statusbar
-    mako # Notification
-    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 # Polkit
-    nm-applet # NetworkManager Applet
-    blueman-applet # Bluetooth Applet
-    mpd # Music Player Daemon
-    # fcitx5 # Input Method
-    wl-paste --type text --watch cliphist store # Clipboard manager
-    wl-paste --type image --watch cliphist store # Clipboard manager but use for image
+
+    # XDG autostart
+    dex --autostart
+
+    # Desktop portal
+    $(whereis -b xdg-desktop-portal | awk '{print $2}') -r || /usr/lib/xdg-desktop-portal -r
+    $(whereis -b xdg-desktop-portal-wlr | awk '{print $2}') -r|| /usr/lib/xdg-desktop-portal-wlr -r
+
+    # Status bar
+    waybar
+
+    # Notification
+    mako
+
+    # Polkit
+    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+    # NetworkManager Applet
+    nm-applet
+
+    # Bluetooth Applet
+    blueman-applet
+
+    # Music player
+    mpd
+
+    # Input method
+    # fcitx5
+
+    # Clipboard manager
+    wl-paste --type text --watch cliphist store
+    wl-paste --type image --watch cliphist store
 }
 
 # vim:set ft=conf:

@@ -30,9 +30,8 @@ libnotify mako mpc mpd mpv ncmpcpp nemo neovim network-manager-applet \
 noto-fonts noto-fonts-cjk noto-fonts-emoji nwg-displays \
 papirus-icon-theme pavucontrol pipewire pipewire-pulse playerctl \
 polkit-gnome ranger rofi-wayland sed slurp sway swaybg swayidle \
-swaylock wireplumber wl-clipboard ttf-meslo-nerd \
-ttf-nerd-fonts-symbols ttf-roboto waybar xdg-desktop-portal-wlr \
-xdg-user-dirs-gtk xorg-xwayland zsh
+swaylock ttf-nerd-fonts-symbols ttf-roboto waybar wireplumber wl-clipboard \
+xdg-desktop-portal-wlr xdg-user-dirs-gtk xorg-xwayland zsh
 ```
 2. Clone this repo
 ```
