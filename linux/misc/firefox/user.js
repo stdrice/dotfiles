@@ -9,3 +9,10 @@ user_pref("browser.send_pings", false);
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 user_pref("dom.battery.enabled", false); /* battery telemetry.. why???*/
 user_pref("datareporting.healthreport.uploadEnabled", false);
+user_pref("toolkit.telemetry.enabled", false);
+user_pref("network.captive-portal-service.enabled", false);
+
+/*safe browsing*/
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false);
+user_pref("browser.safebrowsing.downloads.enabled", false);
