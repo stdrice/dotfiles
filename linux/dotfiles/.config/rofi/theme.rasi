@@ -9,24 +9,19 @@
 
 window {
   location: center;
-  width: 300;
+  width: 280;
   spacing: 0;
-  children: [ box ];
   background-color: @background;
   text-color: @foreground;
   border-radius: 0px;
-}
-
-box {
-  padding: 0.5em;
-  spacing: 0.2em;
-  children: [ entry, listview ];
+  padding: 8px;
+  spacing: 5px;
 }
 
 entry {
   placeholder: "Search";
   placeholder-color: #60606050;
-  padding: 0.2em;
+  padding: 5px;
   expand: false;
 }
 
@@ -48,6 +43,10 @@ listview {
   lines: 12;
   dynamic: true;
   fixed-height: false;
+}
+
+prompt {
+  enabled: false;
 }
 
 listview, element, element selected, element-text, element-icon {
