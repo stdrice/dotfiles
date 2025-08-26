@@ -45,7 +45,9 @@ element-text, element-icon {
 }
 
 listview {
-  lines: 12;    
+  lines: 12;
+  dynamic: true;
+  fixed-height: false;
 }
 
 listview, element, element selected, element-text, element-icon {
