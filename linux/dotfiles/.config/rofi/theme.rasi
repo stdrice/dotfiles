@@ -22,7 +22,6 @@ entry {
   placeholder: "Search";
   placeholder-color: #60606050;
   padding: 5px;
-  expand: false;
 }
 
 element {
