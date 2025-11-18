@@ -1,0 +1,46 @@
+# ----------
+# - Output -
+# ----------
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+# output <name> <options...>
+# enable|disable
+# mode <WxH>@<Hz>      # resolution + refresh rate (add 'custom' to force resolution/refresh rate)
+# position <x> <y>     # layout: (eg: 0 0 = mirror, 1920 0 = right, 0 1080 = below)
+# scale <float>        # hidpi scaling
+# transform <angle>    # rotate (0/90/180/270)
+# adaptive_sync on|off # freesync/vrr
+# max_render_time <ms> # frame render limit
+
+# Screen config
+output eDP-1 {
+
+}
+
+output HDMI-A-1 {
+
+}
+
+# Reduce latency
+output * {
+    allow_tearing yes
+}
+
+# Per app max_render_time
+# Lower max_render_time for more responsive typing
+for_window {
+    [app_id="^alacritty$"] max_render_time 2
+    [app_id="^scratchpad$"] max_render_time 2
+    [app_id="^floating$"] max_render_time 2
+    [app_id="^emacs$"] max_render_time 2
+    [app_id="^email$"] max_render_time 2
+    [app_id="^scratchpad_input$"] max_render_time 2
+    [app_id="^kitty$"] max_render_time 2
+    [app_id="^foot$"] max_render_time 2
+    [app_id="^editor$"] max_render_time 2
+    [app_id="^org$"] max_render_time 2
+    [app_id="^codium$"] max_render_time 2
+    [app_id="^Rofi$"] max_render_time 2
+}
+
+# vim:set ft=conf:

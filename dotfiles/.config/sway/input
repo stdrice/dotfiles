@@ -1,0 +1,44 @@
+# - ----- -
+# - Input -
+# - ----- -
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+# Example configuration:
+#
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+#
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+# Scroll speed
+input type:pointer scroll_factor 1
+
+# Touchpad
+input type:touchpad {
+    dwt disabled
+    tap enabled
+    natural_scroll enabled
+    accel_profile "adaptive"
+    # pointer_accel 0.5
+    # scroll_factor 0.2
+}
+
+# Keyboard
+input type:keyboard {
+    # xkb_layout ""
+    # xkb_model ""
+    # xkb_variant ""
+    # Turn Caps Lock to Ctrl, then press both Shift key to enable Caps Lock
+    xkb_options ctrl:nocaps,shift:both_capslock
+}
+
+input "HHKB*" {
+    xkb_options ""
+}
+
+# vim:set ft=conf:

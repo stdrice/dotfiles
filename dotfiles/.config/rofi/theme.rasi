@@ -1,0 +1,53 @@
+@theme "/dev/null"
+
+* {
+  background-color: @background;
+  text-color: @foreground;
+  background: #0D1115;
+  foreground: #C9D1C9;
+}
+
+window {
+  location: center;
+  width: 300;
+  spacing: 0;
+  background-color: @background;
+  text-color: @foreground;
+  border-radius: 0px;
+  padding: 8px;
+  spacing: 5px;
+}
+
+entry {
+  placeholder: "Search";
+  placeholder-color: #60606050;
+  padding: 5px;
+}
+
+element {
+  text-color: #60606050;
+  padding: 7px;
+}
+
+element selected {
+  text-color: @foreground;
+}
+
+element-text, element-icon {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+listview {
+  lines: 12;
+  dynamic: true;
+  fixed-height: false;
+}
+
+prompt {
+  enabled: false;
+}
+
+listview, element, element selected, element-text, element-icon {
+  cursor: pointer;
+}

@@ -1,0 +1,55 @@
+# - --------- -
+# - Autostart -
+# - --------- -
+
+# Run with every reload
+exec_always {
+    # xrdb ~/.Xdefaults # Xwayland app settings
+}
+
+# Run once on login
+exec {
+    # Start pipewire
+    # ~/.local/bin/start-pipewire
+
+    # Sway does not set DISPLAY/WAYLAND_DISPLAY in the systemd user environment
+    # See FS#63021
+    # Adapted from xorg's 50-systemd-user.sh, which achieves a similar goal.
+    # - systemd
+    # systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_DESKTOP=sway
+    # - non-systemd
+    hash dbus-update-activation-environment 2>/dev/null && \
+         dbus-update-activation-environment --systemd --all \
+         dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_DESKTOP=sway
+
+    # Desktop portal
+    sh -c 'p=$(whereis -b xdg-desktop-portal | awk "{print $2}") && exec "$p" -r &'
+    sh -c 'p=$(whereis -b xdg-desktop-portal-wlr | awk "{print $2}") && exec "$p" -r &'
+
+    # Status bar
+    waybar
+
+    # Notification
+    mako
+
+    # Polkit
+    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+    # NetworkManager Applet
+    nm-applet --no-agent
+
+    # Bluetooth Applet
+    blueman-applet
+
+    # Music player
+    mpd
+
+    # Clipboard manager
+    wl-paste --type text --watch cliphist store
+    wl-paste --type image --watch cliphist store
+
+    # XDG autostart
+    dex --autostart
+}
+
+# vim:set ft=conf:

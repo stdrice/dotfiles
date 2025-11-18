@@ -1,0 +1,21 @@
+# - ----------- -
+# - Sway config -
+# - ----------- -
+
+# Hardware
+include ~/.config/sway/input
+include ~/.config/sway/output
+
+# General
+include ~/.config/sway/vars
+include ~/.config/sway/autostart
+include ~/.config/sway/keys
+include ~/.config/sway/rules
+
+# Other
+include ~/.config/sway/appearance
+include ~/.config/sway/misc
+
+include @sysconfdir@/sway/config.d/*
+
+# vim:set ft=conf:

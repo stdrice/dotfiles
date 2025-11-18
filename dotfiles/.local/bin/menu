@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# options
+apps="Apps"
+powermenu="Power"
+nightlight="Night Light"
+close="Close"
+
+rofi_cmd() {
+    rofi -dmenu
+}
+
+run_rofi() {
+    echo -e "$apps\n$powermenu\n$nightlight\n$close" | rofi_cmd
+}
+
+chosen="$(run_rofi)"
+case "$chosen" in
+    "$apps") rofi -show drun & ;;
+    "$powermenu") ~/.local/bin/power & ;;
+    "$nightlight") ~/.local/bin/night-light & ;;
+esac

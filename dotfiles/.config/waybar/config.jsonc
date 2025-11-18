@@ -1,0 +1,148 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 26, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    "reload_style_on_change": true,
+    // Choose the order of the modules
+    "modules-left": [
+        // "custom/menu",
+        "sway/workspaces",
+        "sway/scratchpad",
+        "sway/mode",
+        "sway/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "group/stuffs",
+        // "custom/media",
+        "pulseaudio",
+	    "backlight",
+        "battery"
+    ],
+    // Modules configuration
+    "custom/chevron_left": {
+        "format": ""
+    },
+    "group/stuffs":
+    {
+        "orientation": "horizontal",
+        "drawer": {},
+        "modules": [
+            "custom/chevron_left",
+            "tray"
+        ]
+    },
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+         "format": "{icon}",
+         "format-icons": {
+    //         "urgent": "󰋑",
+    //         "focused": "󰋑",
+    //         "default": "󰋔"
+         }
+     },
+    "sway/mode": {
+        "format": "<span style=\"normal\">{}</span>"
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "sway/window": {
+        "format": "{title}",
+        "icon": false,
+        "icon-size": 14,
+        "max-length": 36,
+        "all-outputs": true,
+        "tooltip": false
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "all-outputs": false
+    },
+    "mpd": {
+        "format": "{artist} · {title}",
+        "format-disconnected": "",
+        "format-stopped": "",
+        "title-len": 38,
+        "unknown-tag": "N/A",
+        "interval": 5,
+        "tooltip-format": "{artist} - {title}\nAlbum: {album}\nVolume: {volume}",
+        "tooltip-format-disconnected": ""
+    },
+    "tray": {
+        "icon-size": 14,
+        "spacing": 3
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%A %d}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%a %H:%M}", // 24-hour
+        // "format": "{:%a %I:%M%p}", // 12-hour
+        "format-alt": "{:%a %d %b %Y}" // 24-hour
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+      	// "format": "{icon}", // without percentage
+        "format": "{icon} {percent}", // with percentage
+        "format-icons": [""],
+      	"tooltip-format": "Brightness: {percent}%\nClick to toggle Night Light",
+        "on-click": "~/.local/bin/night-light"
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+	"format": "{icon}", // without percentage
+        "format": "{icon} {capacity}", // with percentage
+        // "format": " {capacity}", // heart with percentage
+        "format-charging": " {capacity}",
+        "format-plugged": " {capacity}",
+        "format-icons": ["", "", "", "", ""],
+	      "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
+        "interval": 2,
+        "on-click": "~/.local/bin/power"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+	      // "format": "{icon}", // without percentage
+        "format": "{icon} {volume}", // with percentage
+        "format-muted": "",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+      	"tooltip-format": "Volume: {volume}%\n{desc}",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "pavucontrol"
+    },
+    "custom/media": {
+	      "format": " {}",
+	      "return-type": "json",
+        "max-length": 36,
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "on-click": "playerctl play-pause"
+    },
+    "custom/menu": {
+        "format": "󰘳",
+        "on-click": "pgrep -x rofi && pkill -x rofi || rofi -show drun",
+        "on-click-right": "~/.local/bin/menu",
+	"tooltip": false
+    }
+}
