@@ -35,10 +35,19 @@ input type:keyboard {
     # xkb_variant ""
     # Turn Caps Lock to Ctrl, then press both Shift key to enable Caps Lock
     xkb_options ctrl:nocaps,shift:both_capslock
+    repeat_delay 300
+    repeat_rate 50
 }
 
 input "HHKB*" {
     xkb_options ""
+}
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_layout "jp"
+    # xkb_model ""
+    # xkb_variant ""
+    # xkb_options ""
 }
 
 # vim:set ft=conf:
