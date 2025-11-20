@@ -28,8 +28,8 @@ set {
     $window-switcher rofi -show window
 
     # Volume
-    $cmd_volume_up wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+
-    $cmd_volume_down wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-
+    $cmd_volume_up wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.53
+    $cmd_volume_down wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05- -l 1.53
     $cmd_volume_mute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     $cmd_mic_mute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
