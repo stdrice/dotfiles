@@ -9,11 +9,12 @@
     margin-left: 2px;
     margin-right: 2px;
     margin: 0px 4px;
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.7);
 }
 
 window#waybar {
     border-radius: 0px;
-    background: alpha(@background, 0.9);
+    background: alpha(@background, 0.0);
     color: @foreground;
 }
 
