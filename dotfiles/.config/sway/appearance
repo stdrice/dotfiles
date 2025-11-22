@@ -86,6 +86,7 @@ for_window {
     [app_id="^vpn$"] border pixel $border_width
     [app_id="^editor$"] border pixel $border_width
     [app_id="^org$"] border pixel $border_width
+    [app_id="browser"] border pixel $border_width
     [app_id="firefox"] border pixel $border_width
     [app_id="zen"] border pixel $border_width
     [app_id="librewolf"] border pixel $border_width
