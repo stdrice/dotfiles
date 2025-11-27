@@ -10,7 +10,7 @@
 # Starring
 <img src="https://files.catbox.moe/vtj9pm.png" align="right" width="300px">
 
-- **[Sway ⚽](https://swaywm.org)**: Window Manager/Compositor
+- **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
 - **[LibreWolf 🦊](https://librewolf.net)**: Browser
 - **[Neovim 📓](https://neovim.io/)**: Text Editor
@@ -26,14 +26,14 @@ and so on!
 ```
 bash brightnessctl btop calcurse cava cliphist dex \
 fastfetch foot gammastep git grim imagemagick imv \
-lazygit librewolf-bin libnotify mako mpc mpd mpv \
-ncmpcpp nemo neovim network-manager-applet \
+inter-font lazygit librewolf-bin libnotify mako \
+mpc mpd mpv ncmpcpp nemo neovim network-manager-applet \
 noto-fonts noto-fonts-cjk noto-fonts-emoji \
 papirus-icon-theme pavucontrol pipewire pipewire-pulse \
 playerctl polkit-gnome ranger rofi-wayland sed slurp \
-sway swaybg swayidle swaylock tlp tlp-rdw tmux \
-ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-roboto \
-waybar wireplumber wl-clipboard xdg-desktop-portal-wlr \
+swaybg swayfx swayidle swaylock tlp tlp-rdw tmux \
+ttf-firacode-nerd ttf-nerd-fonts-symbols waybar \
+wireplumber wl-clipboard xdg-desktop-portal-wlr \
 xdg-user-dirs-gtk xorg-xwayland zsh
 ```
 2. Clone this repo
