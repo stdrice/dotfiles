@@ -38,7 +38,7 @@ xdg-user-dirs-gtk xorg-xwayland zsh
 ```
 2. Clone this repo
 ```
-git clone https://codeberg.org/stdrice/dotfiles
+git clone https://github.com/stdrice/dotfiles
 ```
 3. Backup all your files
 4. Copy all files in `dotfiles` and paste to your `$HOME` folder
