@@ -23,8 +23,8 @@ exec {
          dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_DESKTOP=sway
 
     # Desktop portal
-    sh -c "p=$(whereis -b xdg-desktop-portal | awk '{print $2}') && exec \"$p\" -r &"
-    sh -c "p=$(whereis -b xdg-desktop-portal-wlr | awk '{print $2}') && exec \"$p\" -r &"
+    $(whereis -b xdg-desktop-portal | awk '{print $2}') -r &
+    $(whereis -b xdg-desktop-portal-wlr | awk '{print $2}') -r &
 
     # Status bar
     waybar
