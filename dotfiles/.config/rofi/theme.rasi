@@ -3,8 +3,8 @@
 * {
   background-color: @background;
   text-color: @foreground;
-  background: #0D1115;
-  foreground: #C9D1C9;
+  background: #242424;
+  foreground: #F8F8F6;
 }
 
 window {
@@ -13,7 +13,7 @@ window {
   spacing: 0;
   background-color: @background;
   text-color: @foreground;
-  border-radius: 0px;
+  border-radius: 4px;
   padding: 8px;
   spacing: 5px;
 }
