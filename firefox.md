@@ -1,4 +1,4 @@
-# pengurice Firefox/Librewolf config
+# Firefox/Librewolf config
 
 # Image
 ![img](https://i.imgur.com/M0vvmo3.png)
