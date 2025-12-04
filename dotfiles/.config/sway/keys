@@ -24,7 +24,7 @@ bindsym --to-code {
     XF86Search exec $launcher
 
     # Start powermenu
-    $mod+BackSpace exec $powermenu
+    $mod+Shift+e exec $powermenu
 
     # Window switcher
     $mod+Tab exec $window-switcher
