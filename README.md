@@ -32,8 +32,8 @@ noto-fonts noto-fonts-cjk noto-fonts-emoji \
 papirus-icon-theme pavucontrol pipewire pipewire-pulse \
 playerctl polkit-gnome ranger rofi-wayland sed slurp \
 swaybg swayfx swayidle swaylock tlp tlp-rdw tmux \
-ttf-firacode-nerd ttf-nerd-fonts-symbols waybar \
-wireplumber wl-clipboard xdg-desktop-portal-wlr \
+ttf-firacode-nerd ttf-nerd-fonts-symbols udiskie \
+waybar wireplumber wl-clipboard xdg-desktop-portal-wlr \
 xdg-user-dirs-gtk xorg-xwayland zsh
 ```
 2. Clone this repo

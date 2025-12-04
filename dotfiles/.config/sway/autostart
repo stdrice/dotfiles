@@ -48,6 +48,9 @@ exec {
     wl-paste --type text --watch cliphist store
     wl-paste --type image --watch cliphist store
 
+    # Auto-mount
+    udiskie
+
     # XDG autostart
     dex --autostart
 }
