@@ -63,7 +63,10 @@
         "icon-size": 14,
         "max-length": 32,
         "all-outputs": true,
-        "tooltip": false
+        "tooltip": false,
+        "rewrite": {
+            "(.*) - (.*)": "$1"
+        }
     },
     "wlr/taskbar": {
         "format": "{icon}",
