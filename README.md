@@ -24,9 +24,9 @@ and so on!
 # Installation
 1. Install all dependencies
 ```
-bash brightnessctl btop calcurse cava cliphist dex \
-fastfetch foot gammastep git grim imagemagick imv \
-inter-font lazygit librewolf-bin libnotify mako \
+bash brightnessctl btop calcurse cantarell-fonts \
+cava cliphist dex fastfetch foot gammastep git \
+grim imagemagick imv lazygit librewolf-bin libnotify mako \
 mpc mpd mpv ncmpcpp nemo neovim network-manager-applet \
 noto-fonts noto-fonts-cjk noto-fonts-emoji \
 papirus-icon-theme pavucontrol pipewire pipewire-pulse \
