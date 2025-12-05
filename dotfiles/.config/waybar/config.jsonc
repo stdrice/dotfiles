@@ -15,14 +15,14 @@
         "sway/window"
     ],
     "modules-center": [
+        "clock"
     ],
     "modules-right": [
         "group/stuffs",
         // "custom/media",
         "pulseaudio",
 	    "backlight",
-        "battery",
-        "clock"
+        "battery"
     ],
     // Modules configuration
     "custom/chevron_left": {
@@ -58,10 +58,10 @@
         "tooltip-format": "{app}: {title}"
     },
     "sway/window": {
-        "format": "{title}",
+        "format": "{app_id} · {title}",
         "icon": false,
         "icon-size": 14,
-        "max-length": 36,
+        "max-length": 32,
         "all-outputs": true,
         "tooltip": false
     },
