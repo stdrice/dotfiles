@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
 # lockscreen
-# dependencies: swaylock
+# dependencies: swaylock/swaylock-effects
 # usage: lockscreen
 
-swaylock -l --indicator-radius 100 --indicator-thickness 7 --font "sans" -c 404040 --text-color ffffff --ring-color 323232 --key-hl-color f8f8f6 --line-color 00000000 --separator-color 00000000
+# Normal Swaylock
+# swaylock -l --indicator-radius 100 --indicator-thickness 7 --font "sans" -c 404040 --text-color ffffff --ring-color 323232 --key-hl-color f8f8f6 --line-color 00000000 --separator-color 00000000
+
+# Swaylock Effects
+swaylock --clock --indicator -l -S --indicator-radius 100 --indicator-thickness 7 --effect-blur 6x5 --effect-vignette 0.2:1 --font "sans" --text-color ffffff --ring-color 323232 --key-hl-color f8f8f6 --line-color 00000000 --separator-color 00000000
