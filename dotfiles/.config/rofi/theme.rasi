@@ -25,7 +25,7 @@ entry {
 }
 
 element {
-  text-color: #60606050;
+  text-color: #80808050;
   padding: 7px;
 }
 
