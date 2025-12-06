@@ -27,9 +27,9 @@ shadow_inactive_color #00000020
 
 # Colors
 # class                 border  bground text    indicator child_border
-client.focused #303030 #303030 #C9D1C9 #39C5CF #303030
-client.focused_inactive #262626 #262626 #C9D1C9 #39C5CF #FFFFFF00
-client.unfocused #262626 #262626 #C9D1C9 #39C5CF #FFFFFF00
+client.focused #292929 #292929 #C9D1C9 #39C5CF #303030
+client.focused_inactive #242424 #242424 #C9D1C9 #39C5CF #FFFFFF00
+client.unfocused #242424 #242424 #C9D1C9 #39C5CF #FFFFFF00
 client.urgent #F85149 #202020 #C9D1C9 #EBEBF5 #F85149
 client.placeholder      #000000 #0C0C0C $foreground #000000   #0C0C0C
 
