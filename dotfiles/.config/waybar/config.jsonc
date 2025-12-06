@@ -65,7 +65,8 @@
         "all-outputs": true,
         "tooltip": false,
         "rewrite": {
-            "(.*) - (.*)": "$1"
+            "(.*) - (.*)": "$1",
+            " · ": ""
         }
     },
     "wlr/taskbar": {
