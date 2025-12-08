@@ -1,4 +1,4 @@
-w stdrice's Linux dotfiles
+# stdrice's Linux dotfiles
 
 # Table of Contents
 - [Starring](#starring)
@@ -24,16 +24,16 @@ and so on!
 # Installation
 1. Install all dependencies
 ```
-bash brightnessctl btop calcurse cantarell-fonts \
-cava cliphist dex fastfetch foot gammastep git \
-grim imagemagick imv lazygit librewolf-bin libnotify mako \
-mpc mpd mpv ncmpcpp nemo neovim network-manager-applet \
-noto-fonts noto-fonts-cjk noto-fonts-emoji \
-papirus-icon-theme pavucontrol pipewire pipewire-pulse \
-playerctl polkit-gnome ranger rofi-wayland sed slurp \
-swaybg swayfx swayidle swaylock-effects tlp tlp-rdw \
-tmux ttf-firacode-nerd ttf-nerd-fonts-symbols udiskie \
-waybar wireplumber wl-clipboard xdg-desktop-portal-wlr \
+bash brightnessctl btop calcurse cava cliphist dex \
+fastfetch foot gammastep git grim imagemagick imv \
+lazygit librewolf-bin libnotify mako mpc mpd mpv \
+ncmpcpp nemo neovim network-manager-applet noto-fonts \
+noto-fonts-cjk noto-fonts-emoji papirus-icon-theme \
+pavucontrol pipewire pipewire-pulse playerctl \
+polkit-gnome ranger rofi-wayland sed slurp swaybg \
+swayfx swayidle swaylock-effects tlp tlp-rdw tmux \
+ttf-fira-sans ttf-firacode-nerd ttf-nerd-fonts-symbols \
+udiskie waybar wireplumber wl-clipboard xdg-desktop-portal-wlr \
 xdg-user-dirs-gtk xorg-xwayland zsh
 ```
 2. Clone this repo
