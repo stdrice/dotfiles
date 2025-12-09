@@ -13,7 +13,7 @@ window {
   spacing: 0;
   background-color: @background;
   text-color: @foreground;
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 8px;
   spacing: 5px;
 }

@@ -15,7 +15,7 @@ output * bg ~/.config/sway/walls/Sunset by the Pier.jpg fill
 # - ---------- -
 
 # SwayFX settings
-corner_radius 6
+corner_radius 4
 blur disable # Blur
 blur_radius 0 # Blur strength
 titlebar_separator disable
