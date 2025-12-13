@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
@@ -144,7 +144,7 @@
         "on-click": "playerctl play-pause"
     },
     "custom/menu": {
-        "format": "󰘳",
+        "format": "",
         "on-click": "pgrep -x rofi && pkill -x rofi || rofi -show drun",
         "on-click-right": "~/.local/bin/menu",
 	"tooltip": false
