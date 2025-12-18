@@ -31,9 +31,9 @@ ncmpcpp nemo neovim network-manager-applet noto-fonts \
 noto-fonts-cjk noto-fonts-emoji papirus-icon-theme \
 pavucontrol pipewire pipewire-pulse playerctl \
 polkit-gnome ranger rofi-wayland sed slurp sway \
-swaybg swayidle swaylock-effects tlp tlp-rdw tmux \
-ttf-fira-sans ttf-firacode-nerd ttf-nerd-fonts-symbols \
-udiskie waybar wireplumber wl-clipboard \
+swaybg swayidle swaylock-effects tmux ttf-fira-sans \
+ttf-firacode-nerd ttf-nerd-fonts-symbols udiskie \
+waybar wireplumber wl-clipboard \
 xdg-desktop-portal-wlr xorg-xwayland zsh
 ```
 2. Clone this repo
@@ -49,8 +49,6 @@ cp -rfT dotfiles/dotfiles $HOME/
 ```
 chsh -s /usr/bin/zsh
 systemctl --user enable pipewire pipewire-pulse wireplumber
-sudo systemctl enable tlp
-sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 ```
 
 # Gallery
