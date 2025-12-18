@@ -10,7 +10,7 @@
 # Starring
 <img src="https://files.catbox.moe/vtj9pm.png" align="right" width="300px">
 
-- **[Sway ⚽](https://swaywm.org)**: Window Manager/Compositor
+- **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
 - **[LibreWolf 🦊](https://librewolf.net)**: Browser
 - **[Neovim 📓](https://neovim.io/)**: Text Editor
@@ -30,8 +30,8 @@ lazygit librewolf-bin libnotify mako mpc mpd mpv \
 ncmpcpp nemo neovim network-manager-applet noto-fonts \
 noto-fonts-cjk noto-fonts-emoji papirus-icon-theme \
 pavucontrol pipewire pipewire-pulse playerctl \
-polkit-gnome ranger rofi-wayland sed slurp sway \
-swaybg swayidle swaylock-effects tmux ttf-fira-sans \
+polkit-gnome ranger rofi-wayland sed slurp swaybg \
+swayfx swayidle swaylock-effects tmux ttf-fira-sans \
 ttf-firacode-nerd ttf-nerd-fonts-symbols udiskie \
 waybar wireplumber wl-clipboard \
 xdg-desktop-portal-wlr xorg-xwayland zsh
