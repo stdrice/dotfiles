@@ -33,8 +33,8 @@ pavucontrol pipewire pipewire-pulse playerctl \
 polkit-gnome ranger rofi-wayland sed slurp sway \
 swaybg swayidle swaylock-effects tlp tlp-rdw tmux \
 ttf-fira-sans ttf-firacode-nerd ttf-nerd-fonts-symbols \
-udiskie waybar wireplumber wl-clipboard xdg-desktop-portal-wlr \
-xdg-user-dirs-gtk xorg-xwayland zsh
+udiskie waybar wireplumber wl-clipboard \
+xdg-desktop-portal-wlr xorg-xwayland zsh
 ```
 2. Clone this repo
 ```

@@ -7,7 +7,7 @@
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output * bg ~/.config/sway/walls/odin.jpg fill 
+output * bg ~/.config/sway/walls/a.jpg fill 
 # fill|tile|centered|...
 
 # - ---------- -
@@ -36,7 +36,7 @@ client.placeholder      #000000 #0C0C0C $foreground #000000   #0C0C0C
 # Font
 font monospace 10
 # adjust this to change titlebar size
-font pango: monospace 11
+font pango: monospace 12
 
 # Cursor
 # Name of the cursor theme directory in ~/.icons
@@ -77,7 +77,7 @@ smart_borders off
 titlebar_padding 10 4
 title_align center # left|right|center
 # with title
-for_window [class=".*"] title_format "<span rise='1000' font='sans Bold 10'>%title</span>"
+for_window [class=".*"] title_format "<span rise='1500' font='sans Bold 10'>%title</span>"
 # without title
 # for_window [class=".*"] title_format "<span></span>" # w/o title
 
