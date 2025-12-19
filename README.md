@@ -26,12 +26,12 @@ and so on!
 ```
 bash brightnessctl btop calcurse cava cliphist dex \
 fastfetch foot gammastep git grim imagemagick imv \
-lazygit librewolf-bin libnotify mako mpc mpd mpv \
-ncmpcpp nemo neovim network-manager-applet noto-fonts \
-noto-fonts-cjk noto-fonts-emoji papirus-icon-theme \
-pavucontrol pipewire pipewire-pulse playerctl \
-polkit-gnome ranger rofi-wayland sed slurp swaybg \
-swayfx swayidle swaylock-effects tmux ttf-fira-sans \
+inter-font lazygit librewolf-bin libnotify mako \
+mpc mpd mpv ncmpcpp nemo neovim network-manager-applet \
+noto-fonts noto-fonts-cjk noto-fonts-emoji \
+papirus-icon-theme pavucontrol pipewire pipewire-pulse \
+playerctl polkit-gnome ranger rofi-wayland sed \
+slurp swaybg swayfx swayidle swaylock-effects tmux \
 ttf-firacode-nerd ttf-nerd-fonts-symbols udiskie \
 waybar wireplumber wl-clipboard \
 xdg-desktop-portal-wlr xorg-xwayland zsh
