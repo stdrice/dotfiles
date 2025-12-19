@@ -8,7 +8,7 @@
 - [Firefox/Librewolf config](#firefox-librewolf-config)
 
 # Starring
-<img src="https://files.catbox.moe/vtj9pm.png" align="right" width="300px">
+<img src="https://files.catbox.moe/q4nlsj.png" align="right" width="300px">
 
 - **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
@@ -52,11 +52,11 @@ systemctl --user enable pipewire pipewire-pulse wireplumber
 ```
 
 # Gallery
-| Floating                                 | Tiling                                     |
-| :--------------------------------------- | :----------------------------------------- |
-| ![busy](https://i.imgur.com/TzziwMu.png) | ![tiling](https://i.imgur.com/Ny3TU3q.png) |
-| Browser                                  | Lockscreen                                 |
-| ![lmao](https://i.imgur.com/My8rlh3.png) | ![lock](https://i.imgur.com/a34F8KP.png)   |
+| Floating                                     | Tiling                                         |
+| :------------------------------------------- | :--------------------------------------------- |
+| ![busy](https://files.catbox.moe/q4nlsj.png) | ![tiling](https://files.catbox.moe/r3b17h.png) |
+| Browser                                      | Lockscreen                                     |
+| ![lmao](https://files.catbox.moe/nmjt0e.png) | ![lock](https://files.catbox.moe/0jl31k.png)   |
 
 # Keybindings
 These are the basic keybinds. Read through the `sway/general/keybindings.conf` file for more keybinds.
@@ -68,7 +68,7 @@ These are the basic keybinds. Read through the `sway/general/keybindings.conf` f
 | `Mod + Q`                                         | Close window                      |
 | `Mod + Shift + C`                                 | Reload config files               |
 | `Mod + D`                                         | Open launcher (rofi)              |
-| `Mod + BackSpace`                                 | Open powermenu                    |
+| `Mod + Shift + C`                                 | Open powermenu                    |
 | `Mod + Delete`                                    | Screenshot menu                   |
 | `Mod + S/W/E`                                     | Stacking/Tabbed/Tile              |
 | `Mod + F`                                         | Toggle Fullscreen                 |
