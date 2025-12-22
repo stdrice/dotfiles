@@ -58,18 +58,13 @@
         "tooltip-format": "{app}: {title}"
     },
     "sway/window": {
-        "format": "{app_id} · {title}",
+        "format": "{title}",
         "icon": true,
         "icon-size": 14,
         "max-length": 36,
         "all-outputs": true,
-        "tooltip": false,
-        "rewrite": {
-            "(.*) - (.*)": "$1",
-            "(.*) — (.*)": "$1",
-            " · ": ""
-        }
-    },
+        "tooltip": false
+   },
     "wlr/taskbar": {
         "format": "{icon}",
         "icon-size": 14,
