@@ -110,6 +110,7 @@ for_window {
     [class="^leagueclientux.exe$"] border pixel $border_width
     [app_id="^chrome$"] border pixel $border_width
     [app_id="imv"] border pixel $border_width
+    [class="fl64.exe"] border pixel $border_width
 }
 
 # vim:set ft=conf:
