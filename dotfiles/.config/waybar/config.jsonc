@@ -11,10 +11,10 @@
         "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
-        "sway/mode",
-        "sway/window"
+        "sway/mode"
     ],
     "modules-center": [
+        "sway/window"
     ],
     "modules-right": [
         "group/stuffs",
@@ -59,9 +59,9 @@
     },
     "sway/window": {
         "format": "{app_id} · {title}",
-        "icon": false,
+        "icon": true,
         "icon-size": 14,
-        "max-length": 32,
+        "max-length": 36,
         "all-outputs": true,
         "tooltip": false,
         "rewrite": {
