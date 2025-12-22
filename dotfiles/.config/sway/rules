@@ -31,6 +31,7 @@ for_window {
     [app_id="Bitwarden"] floating enable
     [title="^Bitwarden$"] floating enable
     [app_id = "chrome-*"] floating enable
+    [title = "^Extension: .*"] floating enable
 }
 
 # Dialogs
@@ -51,6 +52,7 @@ for_window {
     [app_id="zenity"] $handle_dialog
     [app_id="soffice" title="Document Recovery$"] $handle_dialog
     [title=".*Extension.*"] $handle_dialog
+    [title = "^Extension: .*"] $handle_dialog
 }
 
 # Inhibit screensaver
