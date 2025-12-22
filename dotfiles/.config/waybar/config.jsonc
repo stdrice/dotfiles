@@ -60,10 +60,10 @@
     "sway/window": {
         "format": "{title}",
         "icon": true,
-        "icon-size": 14,
-        "max-length": 36,
+        "icon-size": 16,
+        "max-length": 40,
         "all-outputs": true,
-        "tooltip": false
+        "tooltip": true
    },
     "wlr/taskbar": {
         "format": "{icon}",
