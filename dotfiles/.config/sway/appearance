@@ -75,7 +75,7 @@ smart_borders off
 
 # Window Titlebar
 titlebar_padding 10 4
-title_align center # left|right|center
+title_align left # left|right|center
 # with title
 for_window [class=".*"] title_format "<span rise='1500' font='sans Medium 10'>%title</span>"
 # without title
