@@ -51,6 +51,9 @@ exec {
     # Auto-mount
     udiskie
 
+    # GNOME Keyring
+    gnome-keyring-daemon --start
+
     # XDG autostart
     dex --autostart
 }
