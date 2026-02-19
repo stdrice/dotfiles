@@ -3,14 +3,10 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "sans", "sans-serif", "monospace", "Symbols Nerd Font";
-    font-size: 13px;
+    font-family: "monospace", "Symbols Nerd Font";
+    font-size: 12px;
     font-weight: 500;
     min-height: 0;
-    margin-left: 2px;
-    margin-right: 2px;
-    margin: 0px 4px;
-    text-shadow: 0px 0px 4px rgba(0,0,0,1);
 }
 
 window#waybar {
@@ -19,13 +15,29 @@ window#waybar {
     color: @foreground;
 }
 
+.module {
+    margin: 0 5px;
+}
+
+.modules-left {
+    margin-left: 5px;
+}
+
+.modules-right {
+    margin-right: 5px;
+}
+
+label#window {
+    text-shadow: 0px 0px 4px rgba(0,0,0,1);
+}
+
 tooltip {
     background: @background;
     border-radius: 0px;
 }
 
 tooltip label {
-  color: @foreground;
+    color: @foreground;
 }
 
 #workspaces button {
