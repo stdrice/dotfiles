@@ -15,7 +15,7 @@ output * bg ~/.config/sway/walls/a.jpg fill
 # - ---------- -
 
 # SwayFX settings
-corner_radius 0
+corner_radius 4
 blur disable # Blur
 blur_radius 4 # Blur strength
 titlebar_separator disable
