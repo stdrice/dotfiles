@@ -8,7 +8,7 @@
     "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": [
-        "custom/menu",
+        // "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
         "sway/mode",
@@ -18,7 +18,7 @@
         "privacy"
     ],
     "modules-right": [
-        "group/stuffs",
+        "tray",
         // "custom/media",
         "memory",
         "pulseaudio",
@@ -152,7 +152,17 @@
 		    }
 	    ],
 	    "ignore-monitor": true
-},
+    },
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "<b>WiFi</b> {essid} <span color='#aaaaaa'>{signalStrength}</span>",
+        "format-ethernet": "<b>ETH</b> {ipaddr}/<span color='#aaaaaa'>{cidr}</span>",
+        "format-disconnected": "DC'D",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected"
+    },
     "custom/menu": {
         "format": "#",
         "on-click": "pgrep -x rofi && pkill -x rofi || rofi -show drun",
