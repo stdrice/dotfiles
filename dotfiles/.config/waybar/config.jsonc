@@ -105,8 +105,8 @@
             "critical": 15
         },
         "format": "<b>{icon}</b> {capacity}",
-        "format-charging": "CHG {capacity}",
-        "format-plugged": "CHG {capacity}",
+        "format-charging": "<b>CHG</b> {capacity}",
+        "format-plugged": "<b>CHG</b> {capacity}",
         "format-full": "{icon}",
         "format-icons": ["---", "#--", "##-", "###", "PWR"],
 	    "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
