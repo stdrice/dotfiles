@@ -8,7 +8,7 @@
 - [Firefox/Librewolf config](#firefox-librewolf-config)
 
 # Starring
-<img src="https://files.catbox.moe/q4nlsj.png" align="right" width="300px">
+<img src="https://files.catbox.moe/nitxw0.png" align="right" width="400px">
 
 - **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
@@ -54,7 +54,7 @@ systemctl --user enable pipewire pipewire-pulse wireplumber
 # Gallery
 | Floating                                     | Tiling                                         |
 | :------------------------------------------- | :--------------------------------------------- |
-| ![busy](https://files.catbox.moe/q4nlsj.png) | ![tiling](https://files.catbox.moe/r3b17h.png) |
+| ![busy](https://files.catbox.moe/nitxw0.png) | ![tiling](https://files.catbox.moe/pbr68u.png) |
 | Browser                                      | Lockscreen                                     |
 | ![lmao](https://files.catbox.moe/nmjt0e.png) | ![lock](https://files.catbox.moe/0jl31k.png)   |
 
