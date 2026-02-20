@@ -8,6 +8,7 @@
     "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": [
+        "custom/menu",
         "sway/workspaces",
         "sway/scratchpad",
         "sway/mode",
@@ -136,7 +137,7 @@
     },
     "privacy": {
 	    "icon-spacing": 5,
-	    "icon-size": 14,
+	    "icon-size": 12,
 	    "transition-duration": 0,
 	    "modules": [
 		    {
