@@ -93,8 +93,8 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-      	// "format": "{icon}", // without percentage
-        "format": "<b>BRT</b> {percent}", // with percentage
+        "format": "<b>{icon}</b> {percent}",
+        "format-icons": ["/--", "//-", "///"],
       	"tooltip-format": "Brightness: {percent}%\nClick to toggle Night Light",
         "on-click": "~/.local/bin/night-light"
     },
@@ -108,7 +108,7 @@
         "format-charging": "<b>CHG</b> {capacity}",
         "format-plugged": "<b>CHG</b> {capacity}",
         "format-full": "{icon}",
-        "format-icons": ["---", "#--", "##-", "###", "PWR"],
+        "format-icons": ["#--", "##-", "###"],
 	    "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
         "interval": 2,
         "on-click": "~/.local/bin/power"
