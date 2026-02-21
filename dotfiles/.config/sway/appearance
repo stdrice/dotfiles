@@ -35,8 +35,8 @@ client.placeholder      #000000 #0C0C0C $foreground #000000   #0C0C0C
 
 # Font
 font monospace 10
-# adjust this to change titlebar size
-font pango: monospace 10
+# adjust this to change titlebar size and font size
+font pango: monospace Medium 10
 
 # Cursor
 # Name of the cursor theme directory in ~/.icons
@@ -76,10 +76,8 @@ smart_borders off
 # Window Titlebar
 titlebar_padding 8 4
 title_align left # left|right|center
-# with title
-for_window [class=".*"] title_format "<span rise='900' font='sans Medium 10'>%title</span>"
 # without title
-# for_window [class=".*"] title_format "<span></span>" # w/o title
+# for_window [class=".*"] title_format ""
 
 # Disable titlebar for certain windows
 for_window {
@@ -112,5 +110,11 @@ for_window {
     [app_id="imv"] border pixel $border_width
     [class="fl64.exe"] border pixel $border_width
 }
+
+# Xwayland rename
+for_window [shell="xwayland"] title_format "<X11> %title"
+
+# Other
+show_marks yes
 
 # vim:set ft=conf:

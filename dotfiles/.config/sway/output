@@ -27,21 +27,4 @@ output * {
     max_render_time off
 }
 
-# Per app max_render_time
-# Lower max_render_time for more responsive typing
-for_window {
-    [app_id="^alacritty$"] max_render_time 2
-    [app_id="^scratchpad$"] max_render_time 2
-    [app_id="^floating$"] max_render_time 2
-    [app_id="^emacs$"] max_render_time 2
-    [app_id="^email$"] max_render_time 2
-    [app_id="^scratchpad_input$"] max_render_time 2
-    [app_id="^kitty$"] max_render_time 2
-    [app_id="^foot$"] max_render_time 2
-    [app_id="^editor$"] max_render_time 2
-    [app_id="^org$"] max_render_time 2
-    [app_id="^codium$"] max_render_time 2
-    [app_id="^Rofi$"] max_render_time 2
-}
-
 # vim:set ft=conf:

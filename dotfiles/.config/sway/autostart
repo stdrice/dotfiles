@@ -12,15 +12,9 @@ exec {
     # Start pipewire
     # ~/.local/bin/start-pipewire
 
-    # Sway does not set DISPLAY/WAYLAND_DISPLAY in the systemd user environment
-    # See FS#63021
-    # Adapted from xorg's 50-systemd-user.sh, which achieves a similar goal.
-    # - systemd
-    # systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_DESKTOP=sway
-    # - non-systemd
-    hash dbus-update-activation-environment 2>/dev/null && \
-         dbus-update-activation-environment --systemd --all \
-         dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_DESKTOP=sway
+    # Dbus
+    dbus-update-activation-environment \
+        --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
     # Desktop portal
     $(whereis -b xdg-desktop-portal | awk '{print $2}') -r &
@@ -40,9 +34,6 @@ exec {
 
     # Bluetooth Applet
     blueman-applet
-
-    # Music player
-    mpd
 
     # Clipboard manager
     wl-paste --type text --watch cliphist store
