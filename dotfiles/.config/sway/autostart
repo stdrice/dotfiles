@@ -33,7 +33,7 @@ exec {
     gnome-keyring-daemon --start --components=secrets,ssh,gpg
 
     # NetworkManager Applet
-    nm-applet --no-agent
+    nm-applet
 
     # Bluetooth Applet
     blueman-applet
