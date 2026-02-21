@@ -10,12 +10,12 @@
 # Starring
 <img src="https://files.catbox.moe/nitxw0.png" align="right" width="400px">
 
-- **[SwayFX ⚽](https://github.com/WillPower3309/swayfx)**: Window Manager/Compositor
+- **[Sway ⚽](https://swaywm.org)**: Window Manager/Compositor
 - **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
 - **[LibreWolf 🦊](https://librewolf.net)**: Browser
 - **[Neovim 📓](https://neovim.io/)**: Text Editor
 - **[Ranger](https://ranger.github.io) and [Nemo](https://github.com/linuxmint/nemo)**: File Manager
-- **[ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)**: Music Player
+- **[cmus](https://cmus.github.io)**: Music Player
 - **[calcurse](https://www.calcurse.org)**: Calendar
 - **[btop](https://github.com/aristocratos/btop)**: System monitor
 
@@ -24,17 +24,17 @@ and so on!
 # Installation
 1. Install all dependencies
 ```
-bash brightnessctl btop calcurse cava cliphist dex \
-fastfetch foot gammastep git gnome-keyring grim \
-imagemagick imv inter-font lazygit librewolf-bin \
-libnotify mako mpc mpd mpv ncmpcpp nemo neovim \
-network-manager-applet noto-fonts noto-fonts-cjk \
-noto-fonts-emoji papirus-icon-theme pavucontrol \
-pipewire pipewire-pulse playerctl polkit-gnome \
-ranger rofi-wayland sed slurp swaybg swayfx \
-swayidle swaylock-effects tmux ttf-firacode-nerd \
-ttf-nerd-fonts-symbols udiskie waybar wireplumber \
-wl-clipboard xdg-desktop-portal-wlr xorg-xwayland zsh
+bash brightnessctl btop calcurse cava cliphist \
+cmus dex fastfetch foot gammastep git gnome-keyring \
+grim imagemagick imv inter-font lazygit librewolf-bin \
+libnotify mako mpv nemo neovim network-manager-applet \
+noto-fonts noto-fonts-cjk noto-fonts-emoji \
+papirus-icon-theme pavucontrol pipewire pipewire-pulse \
+playerctl polkit-gnome ranger rofi-wayland sed \
+slurp sway swaybg swayidle swaylock-effects tmux \
+ttf-firacode-nerd ttf-nerd-fonts-symbols udiskie \
+waybar wireplumber wl-clipboard xdg-desktop-portal-wlr \
+xorg-xwayland zsh
 ```
 2. Clone this repo
 ```
