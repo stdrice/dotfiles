@@ -36,7 +36,7 @@ client.placeholder      #000000 #0C0C0C $foreground #000000   #0C0C0C
 # Font
 font monospace 10
 # adjust this to change titlebar size and font size
-font pango: monospace Medium 10
+font pango: monospace Medium 9.5
 
 # Cursor
 # Name of the cursor theme directory in ~/.icons
@@ -74,7 +74,7 @@ default_floating_border none
 smart_borders off
 
 # Window Titlebar
-titlebar_padding 8 4
+titlebar_padding 8 5
 title_align left # left|right|center
 # without title
 # for_window [class=".*"] title_format ""
