@@ -35,6 +35,9 @@ exec {
     # Bluetooth Applet
     blueman-applet
 
+    # Music player
+    mpd
+
     # Clipboard manager
     wl-paste --type text --watch cliphist store
     wl-paste --type image --watch cliphist store
@@ -43,7 +46,7 @@ exec {
     udiskie
 
     # GNOME Keyring
-    gnome-keyring-daemon --start
+    gnome-keyring-daemon --start --components=secrets,ssh,gpg
 
     # XDG autostart
     dex --autostart
