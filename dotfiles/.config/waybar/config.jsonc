@@ -133,7 +133,7 @@
     },
     "memory": {
         "interval": 30,
-        "format": "<b>MEM</b> {used:0.1f}/{total:0.1f}"
+        "format": "<b>{used:0.1f}</b>/{total:0.1f}"
     },
     "privacy": {
 	    "icon-spacing": 5,
