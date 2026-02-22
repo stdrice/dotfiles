@@ -6,28 +6,63 @@
 for_window [app_id = "^dragon$"] sticky enable
 
 # Floating windows
-for_window [app_id = "floating"] floating enable
-for_window [app_id = "floating_update"] floating enable
-for_window [window_role = "pop-up"] floating enable
-for_window [window_role = "dialog"] floating enable
-for_window [window_type = "dialog"] floating enable
+for_window {
+    [app_id = "floating"] floating enable
+    [app_id = "floating_update"] floating enable
+    [window_role = "pop-up"] floating enable
+    [window_role = "dialog"] floating enable
+    [window_type = "dialog"] floating enable
 
-for_window [app_id = "zenity"] floating enable
-for_window [app_id = "yad"] floating enable
-for_window [app_id = "galculator"] floating enable
-for_window [app_id = "pavucontrol"] floating enable
-for_window [app_id = "blueberry"] floating enable
-for_window [app_id = "blueman-manager"] floating enable
-for_window [app_id = "virt-manager"] floating enable
+    [app_id = "zenity"] floating enable
+    [app_id = "yad"] floating enable
+    [app_id = "galculator"] floating enable
+    [app_id = "pavucontrol"] floating enable
+    [app_id = "blueberry"] floating enable
+    [app_id = "blueman-manager"] floating enable
+    [app_id = "virt-manager"] floating enable
 
-for_window [app_id = "firefox" title="Picture-in-Picture"] floating enable
-for_window [title = ".* is sharing your screen."] floating enable
-for_window [app_id = "firefox" title="Firefox — Sharing Indicator"] floating enable
-for_window [class = "steam" title="Friends List"] floating enable
-for_window [title = "^Bitwarden$"] floating enable
-for_window [app_id = "chrome-*"] floating enable
-for_window [title = "^Open File$"] floating enable
-for_window [title = "^Extension: .*"] floating enable
+    [app_id = "firefox" title="Picture-in-Picture"] floating enable
+    [title = ".* is sharing your screen."] floating enable
+    [app_id = "firefox" title="Firefox — Sharing Indicator"] floating enable
+    [class = "steam" title="Friends List"] floating enable
+    [title = "^Bitwarden$"] floating enable
+    [app_id = "chrome-*"] floating enable
+    [title = "^Open File$"] floating enable
+    [title = "^Extension: .*"] floating enable
+}
+
+# Dialogs
+set $handle_dialog floating enable, move container to workspace current
+for_window {
+    [app_id="soffice" title="Document Recovery$"] $handle_dialog
+    [title="Open File"] $handle_dialog
+    [title="^Enter name of file to save to…$"] $handle_dialog
+    [title="^Open File$"] $handle_dialog
+    [title="^Save As$"] $handle_dialog
+    [title="^Save Image$"] $handle_dialog
+    [title="File Upload"] $handle_dialog
+    [title="^Firefox - Choose User Profile$"] $handle_dialog
+    [title="^Developer Tools — "] $handle_dialog
+    [title="^Opening "] $handle_dialog
+    [title="^DevTools - "] $handle_dialog
+    [title="^Save File$"] $handle_dialog
+    [title="^Choose Files$"] $handle_dialog
+    [title="^Choose Application$"] $handle_dialog
+    [title="(?:Open|Save) (?:File|Folder|As)"] $handle_dialog
+    [app_id="pop-up,task_dialog,About"] $handle_dialog;
+    [app_id="zenity"] $handle_dialog
+    [window_role="pop-up,task_dialog,About"] $handle_dialog;
+    [window_type="dialog"] $handle_dialog;
+    [window_type="utility"] $handle_dialog;
+    [window_type="toolbar"] $handle_dialog;
+    [window_type="splash"] $handle_dialog;
+    [window_type="menu"] $handle_dialog;
+    [window_type="dropdown_menu"] $handle_dialog;
+    [window_type="popup_menu"] $handle_dialog;
+    [window_type="tooltip"] $handle_dialog;
+    [window_type="notification"] $handle_dialog;
+    [title = "^Extension: .*"] $handle_dialog;
+}
 
 # Inhibit screensaver
 for_window [class=".*"] inhibit_idle fullscreen
