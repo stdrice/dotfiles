@@ -18,6 +18,7 @@
 - **[cmus](https://cmus.github.io)**: Music Player
 - **[calcurse](https://www.calcurse.org)**: Calendar
 - **[btop](https://github.com/aristocratos/btop)**: System monitor
+- **[Newsboat](https://newsboat.org/)**: RSS reader
 
 and so on!
 
@@ -28,7 +29,7 @@ bash brightnessctl btop calcurse cava cliphist \
 cmus dex fastfetch foot gammastep git gnome-keyring \
 grim imagemagick imv inter-font lazygit librewolf-bin \
 libnotify mako mpv nemo neovim network-manager-applet \
-noto-fonts noto-fonts-cjk noto-fonts-emoji \
+newsboat noto-fonts noto-fonts-cjk noto-fonts-emoji \
 papirus-icon-theme pavucontrol pipewire pipewire-pulse \
 playerctl polkit-gnome ranger rofi-wayland sed \
 slurp sway swaybg swayidle swaylock-effects tmux \
