@@ -15,9 +15,9 @@
         "sway/window"
     ],
     "modules-center": [
-        "privacy"
     ],
     "modules-right": [
+        "privacy",
         "tray",
         // "custom/media",
         "memory",
