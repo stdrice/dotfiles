@@ -30,7 +30,7 @@ exec {
     /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
     # GNOME Keyring
-    gnome-keyring-daemon --start --components=pksc11,secrets,ssh
+    gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 
     # NetworkManager Applet
     nm-applet
