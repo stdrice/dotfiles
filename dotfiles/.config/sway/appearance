@@ -68,7 +68,7 @@ gaps inner 2
 titlebar_border_thickness 0
 
 # Border
-set $border_width 2
+set $border_width 1
 default_border normal $border_width
 default_floating_border none
 smart_borders on
