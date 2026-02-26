@@ -9,7 +9,7 @@
 
 window {
   location: center;
-  width: 300;
+  width: 380;
   spacing: 0;
   background-color: @background;
   text-color: @foreground;
@@ -18,10 +18,21 @@ window {
   spacing: 5px;
 }
 
+inputbar {
+    children: [ prompt, entry ];
+    padding: 6px;
+}
+
+prompt {
+    enabled: true;
+    vertical-align: 0.5;
+    padding: 5px;
+}
+
 entry {
-  placeholder: "Search";
-  placeholder-color: #60606050;
-  padding: 5px;
+    placeholder-color: #60606050;
+    padding: 5px;
+    vertical-align: 0.5;
 }
 
 element {
@@ -42,10 +53,6 @@ listview {
   lines: 12;
   dynamic: true;
   fixed-height: false;
-}
-
-prompt {
-  enabled: false;
 }
 
 listview, element, element selected, element-text, element-icon {
