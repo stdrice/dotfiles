@@ -27,8 +27,8 @@ and so on!
 ```
 bash brightnessctl btop calcurse cava cliphist \
 cmus dex fastfetch foot gammastep git gnome-keyring \
-grim imagemagick imv inter-font lazygit librewolf-bin \
-libnotify mako mpv nemo neovim network-manager-applet \
+grim imagemagick imv inter-font lazygit libnotify \
+mako mpv nemo neovim network-manager-applet \
 newsboat noto-fonts noto-fonts-cjk noto-fonts-emoji \
 papirus-icon-theme pavucontrol pipewire pipewire-pulse \
 playerctl polkit-gnome ranger rofi-wayland sed \

@@ -27,9 +27,9 @@ output * bg ~/.config/sway/walls/snowyforest.jpg fill
 
 # Colors
 # class                 border  bground text    indicator child_border
-client.focused #242424 #242424 #C9D1C9 #39C5CF #262626
-client.focused_inactive #191919 #191919 #C9D1C9 #39C5CF #FFFFFF00
-client.unfocused #191919 #191919 #C9D1C9 #39C5CF #FFFFFF00
+client.focused #242424 #242424 #C9D1C9 #39C5CF #242424
+client.focused_inactive #191919 #191919 #C9D1C9 #39C5CF #191919
+client.unfocused #191919 #191919 #C9D1C9 #39C5CF #191919
 client.urgent #F85149 #202020 #C9D1C9 #EBEBF5 #F85149
 client.placeholder      #000000 #0C0C0C $foreground #000000   #0C0C0C
 
@@ -68,10 +68,10 @@ gaps inner 2
 titlebar_border_thickness 0
 
 # Border
-set $border_width 0
+set $border_width 2
 default_border normal $border_width
 default_floating_border none
-smart_borders off
+smart_borders on
 
 # Window Titlebar
 titlebar_padding 8 5
