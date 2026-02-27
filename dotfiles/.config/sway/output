@@ -5,7 +5,7 @@
 
 # output <name> <options...>
 # enable|disable
-# mode <WxH>@<Hz>      # resolution + refresh rate (add 'custom' to force resolution/refresh rate)
+# mode <WxH>@<Hz>      # resolution + refresh rate (add '--custom' to force resolution/refresh rate)
 # position <x> <y>     # layout: (eg: 0 0 = mirror, 1920 0 = right, 0 1080 = below)
 # scale <float>        # hidpi scaling
 # transform <angle>    # rotate (0/90/180/270)
