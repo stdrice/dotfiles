@@ -13,9 +13,8 @@ exec {
     # ~/.local/bin/start-pipewire
 
     # Dbus
-    hash dbus-update-activation-environment 2>/dev/null && \
-         dbus-update-activation-environment --systemd --all \
-         dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_DESKTOP=sway
+    exec dbus-update-activation-environment \
+        --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
     # Desktop portal
     $(whereis -b xdg-desktop-portal | awk '{print $2}') -r &
