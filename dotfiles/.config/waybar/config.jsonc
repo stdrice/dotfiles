@@ -12,15 +12,16 @@
         "sway/workspaces",
         "sway/scratchpad",
         "sway/mode",
-        "sway/window"
+        "privacy"
     ],
     "modules-center": [
+        "sway/window"
     ],
     "modules-right": [
-        "privacy",
         "tray",
         // "custom/media",
         "memory",
+        "network",
         "pulseaudio",
 	    "backlight",
         "battery",
@@ -107,7 +108,6 @@
         "format": "<b>{icon}</b> {capacity}",
         "format-charging": "<b>CHG</b> {capacity}",
         "format-plugged": "<b>CHG</b> {capacity}",
-        "format-full": "{icon}",
         "format-icons": ["#--", "##-", "###"],
 	    "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
         "interval": 2,
@@ -161,7 +161,8 @@
         "tooltip-format": "{ifname} via {gwaddr}",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname}",
-        "tooltip-format-disconnected": "Disconnected"
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "networkmanager_dmenu"
     },
     "custom/menu": {
         "format": "#",
