@@ -12,6 +12,9 @@
         "sway/workspaces",
         "sway/scratchpad",
         "sway/mode",
+        "custom/sep",
+        "cpu",
+        "memory",
         "privacy"
     ],
     "modules-center": [
@@ -20,7 +23,6 @@
     "modules-right": [
         "tray",
         // "custom/media",
-        "memory",
         "network",
         "pulseaudio",
 	    "backlight",
@@ -30,6 +32,9 @@
     // Modules configuration
     "custom/chevron_left": {
         "format": "-"
+    },
+    "custom/sep": {
+        "format": "|"
     },
     "group/stuffs":
     {
@@ -110,7 +115,7 @@
         "format-plugged": "<b>CHG</b> {capacity}",
         "format-icons": ["#--", "##-", "###"],
 	    "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
-        "interval": 2,
+        "interval": 30,
         "on-click": "~/.local/bin/power"
     },
     "pulseaudio": {
@@ -131,9 +136,13 @@
         "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause"
     },
-    "memory": {
+    "cpu": {
         "interval": 30,
-        "format": "<b>{used:0.1f}</b>/{total:0.1f}"
+        "format": "CPU <b>{usage}</b>%"
+    },
+    "memory": {
+        "interval": 45,
+        "format": "MEM <b>{used:0.1f}</b>/{total:0.1f}"
     },
     "privacy": {
 	    "icon-spacing": 5,
