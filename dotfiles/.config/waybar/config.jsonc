@@ -21,7 +21,7 @@
         "sway/window"
     ],
     "modules-right": [
-        "tray",
+        "group/stuffs",
         // "custom/media",
         "network",
         "pulseaudio",
