@@ -115,7 +115,7 @@
         "format-plugged": "<b>CHG</b> {capacity}",
         "format-icons": ["#--", "##-", "###"],
 	    "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
-        "interval": 30,
+        "interval": 60,
         "on-click": "~/.local/bin/power"
     },
     "pulseaudio": {
