@@ -20,7 +20,7 @@ bindsym --to-code {
     Alt+F4 kill
 
     # Start your launcher
-    $mod+d exec $launcher
+    $mod+Space exec $launcher
     XF86Search exec $launcher
 
     # Start powermenu
@@ -40,6 +40,9 @@ bindsym --to-code {
 
     # Menu
     $mod+x exec $menu
+
+    # Lockscreen
+    $mod+Ctrl+q exec $lockscreen
 
     # Screenshot
     Print exec ~/.local/bin/screenshot --now
