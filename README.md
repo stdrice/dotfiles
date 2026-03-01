@@ -67,14 +67,14 @@ These are the basic keybinds. Read through the `sway/general/keybindings.conf` f
 | `Mod + Enter`                                     | Launch terminal (foot)            |
 | `Mod + Q`                                         | Close window                      |
 | `Mod + Shift + C`                                 | Reload config files               |
-| `Mod + D`                                         | Open launcher (rofi)              |
+| `Mod + Space`                                     | Open launcher (rofi)              |
 | `Mod + Shift + C`                                 | Open powermenu                    |
 | `Mod + Delete`                                    | Screenshot menu                   |
 | `Mod + S/W/E`                                     | Stacking/Tabbed/Tile              |
 | `Mod + F`                                         | Toggle Fullscreen                 |
 | `Mod + B/V`                                       | Split Horizontal/Vertical         |
 | `Mod + R`                                         | Resize mode                       |
-| `Mod + Shift + Space`                             | Toggle Floating                   |
+| `Mod + Z`                                         | Toggle Floating                   |
 | `Mod + H/J/K/L or Left/Down/Up/Right`             | Change Focus                      |
 | `Mod + Shift + H/J/K/L or Left/Down/Up/Right`     | Move window                       |
 
