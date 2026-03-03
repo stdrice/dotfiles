@@ -30,13 +30,13 @@ prompt {
 }
 
 entry {
-    placeholder-color: #60606050;
+    placeholder-color: #60606080;
     padding: 5px;
     vertical-align: 0.5;
 }
 
 element {
-  text-color: #80808050;
+  text-color: #80808080;
   padding: 7px;
 }
 

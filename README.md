@@ -34,7 +34,7 @@ papirus-icon-theme pavucontrol pipewire pipewire-pulse \
 playerctl polkit-gnome ranger rofi sed slurp sway \
 swaybg swayidle swaylock tmux ttf-fira-code \
 ttf-nerd-fonts-symbols udiskie waybar wireplumber \
-wl-clipboard xdg-desktop-portal-wlr xorg-xwayland zsh
+wl-clipboard xdg-desktop-portal-hyprland xorg-xwayland zsh
 ```
 2. Clone this repo
 ```
