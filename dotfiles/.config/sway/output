@@ -21,10 +21,4 @@ output HDMI-A-1 {
 
 }
 
-# Reduce latency
-output * {
-    allow_tearing yes
-    max_render_time off
-}
-
 # vim:set ft=conf:

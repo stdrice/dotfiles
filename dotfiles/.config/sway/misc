@@ -2,6 +2,12 @@
 # - Misc -
 # - ---- -
 
+# Reduce latency
+output * {
+    allow_tearing yes
+    max_render_time off
+}
+
 # Fix Java apps
 exec export _JAVA_AWT_WM_NONREPARENTING=1
 
