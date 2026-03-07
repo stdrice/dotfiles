@@ -15,6 +15,10 @@ window#waybar {
     color: @foreground;
 }
 
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
 .module {
     margin: 0 5px;
 }

@@ -12,7 +12,6 @@
         "sway/workspaces",
         "sway/scratchpad",
         "sway/mode",
-        "custom/sep",
         "cpu",
         "memory",
         "privacy"
@@ -51,7 +50,8 @@
         "format": "{icon}"
      },
     "sway/mode": {
-        "format": "<span style=\"normal\">{}</span>"
+        "format": "{}",
+        "tooltip": false
     },
     "sway/scratchpad": {
         "format": "{icon} {count}",
@@ -93,9 +93,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%A %d}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%a %H:%M}", // 24-hour
-        // "format": "{:%a %I:%M%p}", // 12-hour
-        "format-alt": "{:%a %d %b %Y}" // 24-hour
+        "format": "{:%a %d %b %H:%M}", // 24-hour
+        // "format": "{:%a %b %d %I:%M%p}", // 12-hour
     },
     "backlight": {
         // "device": "acpi_video1",

@@ -151,38 +151,6 @@ title_align left # left|right|center
 # without title
 # for_window [class=".*"] title_format ""
 
-# Disable titlebar for certain windows
-for_window {
-    [app_id="^vpn$"] border pixel $border_width
-    [app_id="^editor$"] border pixel $border_width
-    [app_id="^org$"] border pixel $border_width
-    [app_id="browser"] border pixel $border_width
-    [app_id="firefox"] border pixel $border_width
-    [app_id="zen"] border pixel $border_width
-    [app_id="librewolf"] border pixel $border_width
-    [app_id="floorp"] border pixel $border_width
-    [class="Chromium"] border pixel $border_width
-    [app_id="Chromium"] border pixel $border_width
-    [app_id="chromium"] border pixel $border_width
-    [class="Brave-browser"] border pixel $border_width
-    [app_id="org.mozilla.Thunderbird"] border pixel $border_width
-    [app_id="thunderbird"] border pixel $border_width
-    [app_id="lollypop"] border pixel $border_width
-    [class="Spotify"] border pixel $border_width
-    [app_id="org.qutebrowser.qutebrowser"] border pixel $border_width
-    [title=".* is sharing your screen."] border pixel $border_width
-    [app_id="firefox" title="Firefox — Sharing Indicator"] border pixel $border_width
-    [app_id="gimp-2.99" title="GIMP Startup"] border pixel $border_width 
-    [title="GNU Image Manipulation Program"] border pixel $border_width
-    [class="^battle.net.exe$"] border pixel $border_width
-    [class="^steam$"] border pixel $border_width
-    [class="^leagueclient.exe$"] border pixel $border_width
-    [class="^leagueclientux.exe$"] border pixel $border_width
-    [app_id="^chrome$"] border pixel $border_width
-    [app_id="imv"] border pixel $border_width
-    [class="fl64.exe"] border pixel $border_width
-}
-
 # Xwayland rename
 for_window [shell="xwayland"] title_format "<X11> %title"
 
