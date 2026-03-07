@@ -20,9 +20,6 @@ exec {
     $(whereis -b xdg-desktop-portal | awk '{print $2}') -r &
     $(whereis -b xdg-desktop-portal-wlr | awk '{print $2}') -r &
 
-    # Status bar
-    waybar
-
     # Notification
     mako
 
