@@ -27,6 +27,9 @@ set {
     # Window switcher
     $window-switcher rofi -show window
 
+    # Clipboard manager
+    $clipboard-man ~/.local/bin/clipboard-man
+
     # Volume
     $cmd_volume_up wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+ -l 1.53
     $cmd_volume_down wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01- -l 1.53

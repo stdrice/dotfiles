@@ -4,6 +4,7 @@
 apps="Apps"
 powermenu="Power"
 nightlight="Night Light"
+clip="Clipboard"
 close="Close"
 
 rofi_cmd() {
@@ -11,12 +12,13 @@ rofi_cmd() {
 }
 
 run_rofi() {
-    echo -e "$apps\n$powermenu\n$nightlight\n$close" | rofi_cmd
+    echo -e "$apps\n$powermenu\n$clip\n$nightlight\n$close" | rofi_cmd
 }
 
 chosen="$(run_rofi)"
 case "$chosen" in
     "$apps") rofi -show drun & ;;
     "$powermenu") ~/.local/bin/power & ;;
+    "$clip") ~/.local/bin/clipboard-man & ;;
     "$nightlight") ~/.local/bin/night-light & ;;
 esac

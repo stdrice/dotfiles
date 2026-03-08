@@ -36,7 +36,7 @@ bindsym --to-code {
     $mod+Shift+b exec killall -SIGUSR1 waybar
 
     # Clipboard manager
-    $mod+Shift+v exec rofi -modi clipboard:~/.local/bin/cliphist-rofi-img -show clipboard -show-icons
+    $mod+Shift+v exec $clipboard-man
 
     # Menu
     $mod+x exec $menu
