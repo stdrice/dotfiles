@@ -26,7 +26,7 @@ exec gsettings set org.gnome.desktop.wm.preferences button-layout ""
 # Example configuration:
 #
 exec swayidle -w \
-           before-sleep 'playerctl --all-players pause; ~/.local/bin/lockscreen &' \
+           before-sleep 'playerctl --all-players pause; $lockscreen' \
            timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
 # This will turn off your displays after 600 seconds, and turn your screens

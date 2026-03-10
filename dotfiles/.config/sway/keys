@@ -23,8 +23,9 @@ bindsym --to-code {
     $mod+Space exec $launcher
     XF86Search exec $launcher
 
-    # Start powermenu
-    $mod+Shift+e exec $powermenu
+    # Exit sway
+    $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -B 'Yes, exit sway' 'swaymsg exit'
+
 
     # Window switcher
     $mod+Tab exec $window-switcher
@@ -37,9 +38,6 @@ bindsym --to-code {
 
     # Clipboard manager
     $mod+Shift+v exec $clipboard-man
-
-    # Menu
-    $mod+x exec $menu
 
     # Lockscreen
     $mod+Ctrl+q exec $lockscreen

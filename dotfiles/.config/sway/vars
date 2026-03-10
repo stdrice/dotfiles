@@ -19,12 +19,6 @@ set {
     $launcher rofi -show drun
     $dmenu rofi -dmenu
 
-    # Powermenu
-    $powermenu ~/.local/bin/power
-
-    # Menu
-    $menu ~/.local/bin/menu
-
     # Window switcher
     $window-switcher rofi -show window
 
