@@ -2,7 +2,7 @@ include=~/.config/mako/colors
 
 sort=-time
 layer=overlay
-width=300
+width=400
 height=120
 anchor=top-right
 text-alignment=left
