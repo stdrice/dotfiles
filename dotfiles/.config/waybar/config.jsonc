@@ -127,7 +127,7 @@
         "format-icons": ["#--", "##-", "###"],
 	    "tooltip-format": "Battery: {capacity}%\n{power}W\n{timeTo}\nHealth: {health}%",
         "interval": 60,
-        "on-click": "~/.local/bin/power"
+        // "on-click": "~/.local/bin/power"
     },
 
     "wireplumber": {
