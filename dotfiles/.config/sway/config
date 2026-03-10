@@ -17,5 +17,3 @@ include ~/.config/sway/appearance
 include ~/.config/sway/misc
 
 include @sysconfdir@/sway/config.d/*
-
-# vim:set ft=conf:

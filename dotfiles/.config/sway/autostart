@@ -42,5 +42,3 @@ exec {
     # XDG autostart
     dex --autostart
 }
-
-# vim:set ft=conf:

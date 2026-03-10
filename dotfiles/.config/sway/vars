@@ -12,11 +12,12 @@ set {
     $up k
     $right l
 
-    # Your preferred terminal emulator
+    # Terminal emulator
     $term foot
 
-    # Your preferred application launcher
+    # Application launcher
     $launcher rofi -show drun
+    $dmenu rofi -dmenu
 
     # Powermenu
     $powermenu ~/.local/bin/power
@@ -26,6 +27,9 @@ set {
 
     # Window switcher
     $window-switcher rofi -show window
+
+    # Lockscreen
+    $lockscreen swaylock
 
     # Clipboard manager
     $clipboard-man ~/.local/bin/clipboard-man
@@ -40,5 +44,3 @@ set {
     $cmd_brightness_up brightnessctl set 1%+
     $cmd_brightness_down brightnessctl set 1%-
 }
-
-# vim:set ft=conf:

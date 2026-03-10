@@ -156,5 +156,3 @@ for_window [shell="xwayland"] title_format "<X11> %title"
 
 # Other
 show_marks yes
-
-# vim:set ft=conf:

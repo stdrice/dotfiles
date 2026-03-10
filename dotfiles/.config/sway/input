@@ -43,5 +43,3 @@ input type:keyboard {
 input "HHKB*" {
     xkb_options ""
 }
-
-# vim:set ft=conf:

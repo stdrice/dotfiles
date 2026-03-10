@@ -194,5 +194,3 @@ bindsym --locked {
     $mod+F4 exec $cmd_brightness_down
     $mod+F5 exec $cmd_brightness_up
 }
-
-# vim:set ft=conf:

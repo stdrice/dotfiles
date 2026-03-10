@@ -70,7 +70,7 @@ chosen="$(run_rofi)"
 case "$chosen" in
     "$shutdown") option_poweroff ;;
     "$reboot") option_reboot ;;
-    "$lock") "$HOME"/.local/bin/lockscreen ;;
+    "$lock") swaylock ;;
     "$suspend") option_suspend ;;
     "$logout") pkill -SIGKILL -u $(whoami) ;;
 esac

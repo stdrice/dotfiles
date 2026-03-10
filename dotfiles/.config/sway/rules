@@ -43,5 +43,3 @@ for_window [class=".*"] inhibit_idle fullscreen
 # Mouse rules
 focus_follows_mouse no
 focus_on_window_activation focus
-
-# vim:set ft=conf:
