@@ -2,8 +2,8 @@ include=~/.config/mako/colors
 
 sort=-time
 layer=overlay
-width=400
-height=120
+width=380
+height=130
 anchor=top-right
 text-alignment=left
 
@@ -15,7 +15,7 @@ max-icon-size=38
 default-timeout=5000
 ignore-timeout=1
 font=sans 10
-format=<b>%s</b>\n\n%b
+format=<b>%s</b>\n%b
 
 on-button-left=invoke-default-action
 on-button-middle=exec makoctl menu -n $id rofi -dmenu -p 'Select action: '
