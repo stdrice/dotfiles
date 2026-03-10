@@ -137,10 +137,12 @@
         "format-source": "MIC {volume}",
         "format-source-muted": "MIC-",
         "format-icons": ["+--", "++-", "+++"],
-      	"tooltip-format": "Volume: {volume}%\n{desc}",
+        "tooltip": true,
+      	"tooltip-format": "Volume: {volume}%\n{node_name}",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click-right": "pavucontrol"
     },
+
     "custom/media": {
 	    "format": "{}",
 	    "return-type": "json",
