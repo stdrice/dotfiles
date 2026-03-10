@@ -1,24 +1,28 @@
 include=~/.config/mako/colors
+
 sort=-time
 layer=overlay
 width=300
 height=120
+anchor=top-right
+text-alignment=left
+
 border-size=0
 border-radius=0
-margin=12,12
+margin=18,0
 padding=20,20
-icons=0
-max-icon-size=64
+max-icon-size=38
 default-timeout=5000
 ignore-timeout=1
 font=sans 10
+format=<b>%s</b>\n\n%b
 
-[app-name=lol]
-layer=overlay
-history=0
+on-button-left=invoke-default-action
+on-button-middle=exec makoctl menu -n $id rofi -dmenu -p 'Select action: '
+on-button-right=dismiss
 
 [mode=do-not-disturb]
 invisible=1
 
-[mode=do-not-disturb app-name=lol]
+[mode=do-not-disturb]
 invisible=0
