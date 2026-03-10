@@ -6,6 +6,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     "reload_style_on_change": true,
+
     "modules-left": [
         // "custom/menu",
         "sway/workspaces",
@@ -29,24 +30,6 @@
     ],
 
     // Modules configuration
-    "custom/chevron_left": {
-        "format": "-"
-    },
-
-    "custom/sep": {
-        "format": "|"
-    },
-
-    "group/stuffs":
-    {
-        "orientation": "horizontal",
-        "drawer": {},
-        "modules": [
-            "custom/chevron_left",
-            "tray"
-        ]
-    },
-
     "sway/workspaces": {
         "disable-scroll": false,
         "all-outputs": true,
@@ -73,26 +56,6 @@
         "max-length": 48,
         "all-outputs": true,
         "tooltip": true
-    },
-
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "icon-size": 14,
-        "tooltip-format": "{title}",
-        "on-click": "activate",
-        "on-click-middle": "close",
-        "all-outputs": false
-    },
-
-    "mpd": {
-        "format": "{artist} - {title}",
-        "format-disconnected": "",
-        "format-stopped": "",
-        "title-len": 38,
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "tooltip-format": "{artist} - {title}\nAlbum: {album}\nVolume: {volume}",
-        "tooltip-format-disconnected": ""
     },
 
     "tray": {
