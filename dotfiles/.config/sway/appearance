@@ -67,34 +67,35 @@ set {
 }
 
 set {
-  $dark        #040606
-  $black       #241B2F
-  $dim         #293030
-  $dim2        #6b7c7c
-  $red         #f53fa1
-  $green       #72F1B8
-  $yellow      #FFCC00
-  $blue        #2b196e
-  $magenta     #FF7EDB
-  $cyan        #61E2FF
-  $white       #F8F8F8
-  $bright      #ffffff
-  $transparent #FF000000
+    $dark        #040606
+    $black       #241B2F
+    $dim         #293030
+    $dim2        #6b7c7c
+    $red         #f53fa1
+    $green       #72F1B8
+    $yellow      #FFCC00
+    $blue        #2b196e
+    $magenta     #FF7EDB
+    $cyan        #61E2FF
+    $white       #F8F8F8
+    $bright      #ffffff
+    $transparent #00000000
 }
 
 set {
-  $fcdBd #536161
-  $fcdBg #536161
-  $fcdTxt #F8F8F8
-  $fcdInd #FFCC00
-  $fcdChd #536161
+    $fcdBd #536161
+    $fcdBg #536161
+    $fcdTxt #F8F8F8
+    $fcdInd #FFCC00
+    $fcdChd $waveBlue2
+    $ufChd $sumiInk1
 }
 
 #                         border bgrnd  text    indic   chld
 client.focused            $fcdBd $fcdBg $fcdTxt $fcdInd $fcdChd
-client.unfocused          $dark  $dark  $dim2   $dark   $sumiInk1
-client.focused_inactive   $dark  $dark  $white  $dark   $sumiInk1
-client.focused_tab_title  $dim   $dim   $dark   $dim    $sumiInk1
+client.unfocused          $dark  $dark  $dim2   $dark   $ufChd
+client.focused_inactive   $dark  $dark  $white  $dark   $ufChd
+client.focused_tab_title  $dim   $dim   $dark   $dim    $ufChd
 client.urgent             $red   $red   $white  $red    $red
 client.placeholder        $dark  $dark  $white  $white  $prefer-dark
 
