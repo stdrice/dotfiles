@@ -1,14 +1,14 @@
 show-failed-attempts
 color=000000
 font='sans'
-font-size=30
+font-size=42
 indicator-radius=130
 indicator-thickness=7
 
 inside-color=00000000
 
 line-color=00000000
-ring-color=84a0c6
+ring-color=808080
 text-color=84a0c6
 
 key-hl-color=FFFFFF
