@@ -3,33 +3,33 @@
 # - ----- -
 
 # Sticky windows
-for_window [app_id = "^dragon$"] sticky enable
+for_window [app_id="^dragon$"] sticky enable
 
 # Floating windows
 for_window {
-    [app_id = "floating"] floating enable
-    [app_id = "floating_update"] floating enable
-    [window_role = "pop-up"] floating enable
-    [window_role = "dialog"] floating enable
-    [window_type = "dialog"] floating enable
+    [app_id="floating"] floating enable
+    [app_id="floating_update"] floating enable
+    [window_role="pop-up"] floating enable
+    [window_role="dialog"] floating enable
+    [window_type="dialog"] floating enable
 
-    [app_id = "zenity"] floating enable
-    [app_id = "yad"] floating enable
-    [app_id = "galculator"] floating enable
-    [app_id = "pavucontrol"] floating enable
-    [app_id = "blueberry"] floating enable
-    [app_id = "blueman-manager"] floating enable
-    [app_id = "virt-manager"] floating enable
-    [app_id = "hyprland-share-picker"] floating enable
+    [app_id="zenity"] floating enable
+    [app_id="yad"] floating enable
+    [app_id="galculator"] floating enable
+    [app_id="pavucontrol"] floating enable
+    [app_id="blueberry"] floating enable
+    [app_id="blueman-manager"] floating enable
+    [app_id="virt-manager"] floating enable
+    [app_id="hyprland-share-picker"] floating enable
 
-    [app_id = "firefox" title="Picture-in-Picture"] floating enable
-    [title = ".* is sharing your screen."] floating enable
-    [app_id = "firefox" title="Firefox — Sharing Indicator"] floating enable
-    [class = "steam" title="Friends List"] floating enable
-    [title = "^Bitwarden$"] floating enable
-    [app_id = "chrome-*"] floating enable
-    [title = "^Open File$"] floating enable
-    [title = "^Extension: .*"] floating enable
+    [app_id="firefox" title="Picture-in-Picture"] floating enable
+    [title=".* is sharing your screen."] floating enable
+    [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable
+    [class="steam" title="Friends List"] floating enable
+    [title="^Bitwarden$"] floating enable
+    [app_id="chrome-*"] floating enable
+    [title="^Open File$"] floating enable
+    [title="^Extension: .*"] floating enable
 }
 
 # Inhibit screensaver
