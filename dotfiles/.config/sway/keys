@@ -26,7 +26,6 @@ bindsym --to-code {
     # Exit sway
     $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -B 'Yes, exit sway' 'swaymsg exit'
 
-
     # Window switcher
     $mod+Tab exec $window-switcher
 
@@ -44,9 +43,10 @@ bindsym --to-code {
 
     # Screenshot
     Print exec ~/.local/bin/screenshot --now
-    $mod+Delete exec ~/.local/bin/screenshot --now
     Shift+Print exec ~/.local/bin/screenshot --area
-    $mod+Shift+Delete exec ~/.local/bin/screenshot --area
+    # fallback screenshot keys
+    $mod+Shift+f exec ~/.local/bin/screenshot --now
+    $mod+Shift+s exec ~/.local/bin/screenshot --area
 
     # Moving around:
     # Move your focus around
@@ -123,7 +123,7 @@ bindsym --to-code {
     # Scratchpad:
     # Sway has a "scratchpad", which is a bag of holding for windows.
     # You can send windows there and get them back later.
-
+    
     # Move the currently focused window to the scratchpad
     $mod+Shift+minus move scratchpad
 
