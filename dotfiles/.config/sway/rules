@@ -7,12 +7,15 @@ for_window [app_id="^dragon$"] sticky enable
 
 # Floating windows
 for_window {
+    # dialog/pop-up
     [app_id="floating"] floating enable
     [app_id="floating_update"] floating enable
     [window_role="pop-up"] floating enable
     [window_role="dialog"] floating enable
     [window_type="dialog"] floating enable
+    [window_type="utility"] floating enable
 
+    # apps
     [app_id="zenity"] floating enable
     [app_id="yad"] floating enable
     [app_id="galculator"] floating enable
@@ -22,10 +25,11 @@ for_window {
     [app_id="virt-manager"] floating enable
     [app_id="hyprland-share-picker"] floating enable
 
-    [app_id="firefox" title="Picture-in-Picture"] floating enable
+    # other
+    [title="Picture-in-Picture"] floating enable
     [title=".* is sharing your screen."] floating enable
     [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable
-    [class="steam" title="Friends List"] floating enable
+    [app_id="steam" title="Friends List"] floating enable
     [title="^Bitwarden$"] floating enable
     [app_id="chrome-*"] floating enable
     [title="^Open File$"] floating enable
