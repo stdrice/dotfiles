@@ -26,6 +26,7 @@ for_window {
     [app_id="hyprland-share-picker"] floating enable
 
     # other
+    [title=".* wants to open"] floating enable
     [title="Picture-in-Picture"] floating enable
     [title=".* is sharing your screen."] floating enable
     [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable
