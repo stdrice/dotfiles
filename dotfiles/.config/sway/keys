@@ -17,7 +17,7 @@ bindsym --to-code {
 
     # Kill focused window
     $mod+q kill
-    Alt+F4 kill
+    Mod1+F4 kill
 
     # Start your launcher
     $mod+Space exec $launcher
@@ -30,7 +30,7 @@ bindsym --to-code {
     $mod+Tab exec $window-switcher
 
     # Reload the configuration file
-    $mod+Shift+c reload
+    $mod+Shift+r reload
 
     # Toggle bar
     $mod+Shift+b exec killall -SIGUSR1 waybar
