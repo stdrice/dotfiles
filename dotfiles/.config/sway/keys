@@ -98,6 +98,31 @@ bindsym --to-code {
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 
+    # Focus between monitors
+    # Move keyboard focus to the monitor in the given direction
+    # Useful when using multiple displays
+    $mod+Ctrl+$left focus output left
+    $mod+Ctrl+$right focus output right
+    $mod+Ctrl+$up focus output up
+    $mod+Ctrl+$down focus output down
+
+    $mod+Ctrl+Left focus output left
+    $mod+Ctrl+Right focus output right
+    $mod+Ctrl+Up focus output up
+    $mod+Ctrl+Down focus output down
+
+    # Move window to another monitor
+    # Sends the currently focused container to the monitor in that direction
+    $mod+Ctrl+Shift+$left move container to output left
+    $mod+Ctrl+Shift+$right move container to output right
+    $mod+Ctrl+Shift+$up move container to output up
+    $mod+Ctrl+Shift+$down move container to output down
+
+    $mod+Ctrl+Shift+Left move container to output left
+    $mod+Ctrl+Shift+Right move container to output right
+    $mod+Ctrl+Shift+Up move container to output up
+    $mod+Ctrl+Shift+Down move container to output down
+
     # Layout stuff:
     # You can "split" the current object of your focus with $mod+b or $mod+v, for horizontal and vertical splits respectively.
     $mod+b splith
