@@ -120,7 +120,7 @@ seat seat0 xcursor_theme $cursor_theme $cursor_size
 
 # GTK Theme
 # https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland#setting-values-in-gsettings
-exec_always {
+exec {
     gsettings set org.gtk.Settings.FileChooser window-size '(1200, 700)'
     gsettings set org.gnome.desktop.interface gtk-theme 'dark'
     gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
