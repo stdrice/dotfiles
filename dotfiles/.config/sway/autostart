@@ -14,7 +14,7 @@ exec {
 
     # Dbus
     hash dbus-update-activation-environment 2>/dev/null && \
-         dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_SESSION_TYPE SWAYSOCK XDG_CURRENT_DESKTOP=sway
+         dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_SESSION_TYPE SWAYSOCK XDG_CURRENT_DESKTOP=sway DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
     # Desktop portal
     $(whereis -b xdg-desktop-portal | awk '{print $2}') -r &
