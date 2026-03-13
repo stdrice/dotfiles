@@ -58,7 +58,7 @@ PROMPT='%{%B%}%{%F{1}%}%n%{%f%}@%m %{%F{2}%}%~%{%f%} ${vcs_info_msg_0_}$%{%b%} '
 # - --------- -
 export TERMINAL="foot"
 export BROWSER="xdg-open"
-export EDITOR="vim"
+export EDITOR="nvim"
 export VISUAL="${EDITOR}"
 
 # - ------- -
