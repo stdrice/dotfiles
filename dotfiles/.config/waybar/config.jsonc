@@ -51,7 +51,7 @@
 
     "sway/window": {
         "format": "{title}",
-        "icon": true,
+        "icon": false,
         "icon-size": 14,
         "max-length": 48,
         "all-outputs": true,
