@@ -8,6 +8,26 @@ output * {
     max_render_time off
 }
 
+for_window {
+    [class=".*"] max_render_time off
+    [app_id=".*"] max_render_time off
+}
+
+for_window {
+    [app_id="^alacritty$"] max_render_time 2
+    [app_id="^scratchpad$"] max_render_time 2
+    [app_id="^floating$"] max_render_time 2
+    [app_id="^emacs$"] max_render_time 2
+    [app_id="^email$"] max_render_time 2
+    [app_id="^scratchpad_input$"] max_render_time 2
+    [app_id="^kitty$"] max_render_time 2
+    [app_id="^foot$"] max_render_time 2
+    [app_id="^editor$"] max_render_time 2
+    [app_id="^org$"] max_render_time 2
+    [app_id="^codium$"] max_render_time 2
+    [app_id="^Rofi$"] max_render_time 2
+}
+
 # Fix Java apps
 exec export _JAVA_AWT_WM_NONREPARENTING=1
 
