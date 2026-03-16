@@ -153,7 +153,7 @@
 
     "cpu": {
         "interval": 30,
-        "format": "CPU <b>{usage}</b>%"
+        "format": "<b>{usage}</b>%"
     },
 
     "group/resources": {
@@ -163,11 +163,11 @@
     },
     "memory": {
         "interval": 45,
-        "format": "MEM <b>{used:0.1f}</b>/<span color='#aaaaaa'>{total:0.1f}</span>"
+        "format": "<b>{used:0.1f}</b>/<span color='#aaaaaa'>{total:0.1f}</span>"
     },
     "disk#root": {
         "interval": 360,
-        "format": "HDD <b>{used}</b>/<span color='#aaaaaa'>{total}</span>",
+        "format": "<b>{used}</b>/<span color='#aaaaaa'>{total}</span>",
         "path": "/"
     },
 
@@ -192,11 +192,11 @@
 
     "network": {
         "format": "{ifname}",
-        "format-wifi": "<b>WiFi</b> <span color='#aaaaaa'>{essid}</span>",
+        "format-wifi": "<b>{essid}</b> <span color='#aaaaaa'>{signalStrength}</span>",
         "format-ethernet": "<b>ETH</b> {ipaddr}/<span color='#aaaaaa'>{cidr}</span>",
         "format-disconnected": "DC'D",
         "tooltip-format": "{ifname} via {gwaddr}",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-wifi": "WiFi: {essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname}",
         "tooltip-format-disconnected": "Disconnected",
         "on-click": "networkmanager_dmenu"
