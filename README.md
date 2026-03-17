@@ -27,14 +27,14 @@ and so on!
 ```
 bash brightnessctl btop calcurse cava cliphist \
 cmus dex fastfetch foot gammastep git gnome-keyring \
-grim imagemagick imv inter-font lazygit libnotify \
-mako mpv nemo neovim networkmanager-dmenu \
-newsboat noto-fonts noto-fonts-cjk noto-fonts-emoji \
-papirus-icon-theme pavucontrol pipewire pipewire-pulse \
-playerctl polkit-gnome ranger rofi sed slurp sway \
-swaybg swayidle swaylock tmux ttf-fira-code \
-ttf-nerd-fonts-symbols udiskie waybar wireplumber \
-wl-clipboard xdg-desktop-portal-wlr xorg-xwayland zsh
+grim imagemagick imv lazygit libnotify mako \
+mpv nemo neovim networkmanager-dmenu newsboat \ 
+noto-fonts-cjk noto-fonts-emoji papirus-icon-theme \
+pavucontrol pipewire pipewire-pulse playerctl \
+polkit-gnome ranger rofi sed slurp sway \
+swaybg swayidle swaylock tmux ttf-ibm-plex \
+udiskie waybar wireplumber wl-clipboard \
+xdg-desktop-portal-wlr xorg-xwayland zsh
 ```
 2. Clone this repo
 ```
