@@ -147,7 +147,7 @@ default_floating_border none
 smart_borders on
 
 # Window Titlebar
-titlebar_padding 8 5
+titlebar_padding 6 4
 title_align left # left|right|center
 # without title
 # for_window [class=".*"] title_format ""
