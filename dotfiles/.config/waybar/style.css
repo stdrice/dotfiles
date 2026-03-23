@@ -22,7 +22,7 @@
 
 window#waybar {
     border-radius: 0px;
-    background: alpha(@background, 0.8);
+    background: alpha(@background, 0);
     color: @foreground;
 }
 
@@ -35,8 +35,8 @@ window#waybar.hidden {
 }
 
 .modules-left, .modules-right {
-    margin-left: 5px;
-    margin-right: 5px;
+    padding: 0 5px;
+    background: alpha(@background, 0.8);
 }
 
 label#window {
