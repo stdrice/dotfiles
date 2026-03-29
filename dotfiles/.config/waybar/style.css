@@ -22,7 +22,7 @@
 
 window#waybar {
     border-radius: 0px;
-    background: alpha(@background, 0.7);
+    background: alpha(@background, 0.5);
     color: @foreground;
 }
 
