@@ -9,7 +9,7 @@
 
 window {
   location: center;
-  width: 380;
+  width: 360;
   spacing: 0;
   background-color: @background;
   text-color: @foreground;

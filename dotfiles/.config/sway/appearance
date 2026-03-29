@@ -87,7 +87,7 @@ set {
     $fcdBg #536161
     $fcdTxt #F8F8F8
     $fcdInd #FFCC00
-    $fcdChd $autumnRed
+    $fcdChd $sumiInk4
     $ufChd $sumiInk1
 }
 
