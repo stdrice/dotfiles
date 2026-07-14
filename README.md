@@ -1,6 +1,6 @@
 # stdrice's Linux dotfiles
 
-<img src="https://files.catbox.moe/nitxw0.png" align="right" width="400px">
+![img](https://files.catbox.moe/nitxw0.png)
 
 # Table of Contents
 - [Installation](#installation)
