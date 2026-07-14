@@ -1,41 +1,31 @@
 # stdrice's Linux dotfiles
 
+<img src="https://files.catbox.moe/nitxw0.png" align="right" width="400px">
+
 # Table of Contents
-- [Starring](#starring)
 - [Installation](#installation)
 - [Gallery](#gallery)
 - [Keybindings](#keybindings)
 - [Firefox/Librewolf config](#firefox-librewolf-config)
 
-# Starring
-<img src="https://files.catbox.moe/nitxw0.png" align="right" width="400px">
-
-- **[Sway ⚽](https://swaywm.org)**: Window Manager/Compositor
-- **[Foot ❤️](https://codeberg.org/dnkl/foot)**: Terminal
-- **[LibreWolf 🦊](https://librewolf.net)**: Browser
-- **[Neovim 📓](https://neovim.io/)**: Text Editor
-- **[Ranger](https://ranger.github.io) and [Nemo](https://github.com/linuxmint/nemo)**: File Manager
-- **[cmus](https://cmus.github.io)**: Music Player
-- **[calcurse](https://www.calcurse.org)**: Calendar
-- **[btop](https://github.com/aristocratos/btop)**: System monitor
-- **[Newsboat](https://newsboat.org/)**: RSS reader
-
-and so on!
-
 # Installation
 1. Install all dependencies
-```
-bash brightnessctl btop calcurse cava cliphist \
-cmus dex fastfetch foot gammastep git gnome-keyring \
-grim imagemagick imv inter-font lazygit libnotify \
-mako mpv nemo neovim networkmanager-dmenu newsboat \ 
-noto-fonts noto-fonts-cjk noto-fonts-emoji \
-papirus-icon-theme pavucontrol pipewire \
-pipewire-pulse playerctl polkit-gnome ranger \
-rofi sed slurp sway swaybg swayidle swaylock \
-tmux ttf-fira-code udiskie waybar wireplumber \
-wl-clipboard xdg-desktop-portal-wlr xorg-xwayland zsh
-```
+
+| Package | Details |
+| :------ | :------ |
+| `sway` / `swayfx` | Window manager / compositor |
+| `rofi`, `waybar`, `mako`, `swaybg`, `swayidle`, `swaylock` | Desktop components |
+| [FiraCode](https://github.com/tonsky/FiraCode), [Inter](https://github.com/rsms/inter), [NerdFonts](https://nerdfonts.com/) | Font |
+| `foot`, `zsh`, `bash` | Terminal |
+| `papirus-icon-theme` | Icons |
+| `brightnessctl`, `wireplumber`, `playerctl`, `gammastep`, `libnotify` | Helper |
+| `dex` / `dex-autostart` | Autostart |
+| `cliphist`, `udiskie`, `gnome-keyring`, `polkit-gnome`, `xdg-desktop-portal-wlr`, `xorg-xwayland` | Daemon |
+| `grim`, `slurp` | Screenshot |
+| `neovim`, `ranger`, `tmux`, `btop`, `cmus`, `calcurse`, `newsboat`, `lazygit` | Terminal software |
+| `nemo`, `mpv`, `imv`, `pavucontrol`, `network-manager-applet`, `blueman` | Desktop software |
+| `cava`, `fastfetch`, `imagemagick` | Terminal cosmetic |
+
 2. Clone this repo
 ```
 git clone https://github.com/stdrice/dotfiles
@@ -48,7 +38,7 @@ cp -rfT dotfiles/dotfiles $HOME/
 5. Other setup
 ```
 chsh -s /usr/bin/zsh
-systemctl --user enable pipewire pipewire-pulse wireplumber
+systemctl --user enable wireplumber pipewire
 ```
 
 # Gallery
