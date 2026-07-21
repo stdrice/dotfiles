@@ -5,7 +5,7 @@
 
 // spawn-at-startup "~/.local/bin/start-pipewire"
 spawn-sh-at-startup "$(whereis -b xdg-desktop-portal | awk '{print $2}') -r &"
-spawn-sh-at-startup "$(whereis -b xdg-desktop-portal-wlr | awk '{print $2}') -r &"
+spawn-sh-at-startup "$(whereis -b xdg-desktop-portal-gnome | awk '{print $2}') -r &"
 spawn-sh-at-startup "$(whereis -b xdg-desktop-portal-gtk | awk '{print $2}') -r &"
 spawn-sh-at-startup "swaybg -i ~/.config/niri/walls/wall.png -m fill"
 spawn-at-startup "waybar"
