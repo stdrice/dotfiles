@@ -13,14 +13,14 @@
 
 | Package | Details |
 | :------ | :------ |
-| `sway` / `swayfx` | Window manager / compositor |
+| `niri` | Window manager / compositor |
 | `rofi`, `waybar`, `mako`, `swaybg`, `swayidle`, `swaylock` | Desktop components |
 | [FiraCode](https://github.com/tonsky/FiraCode), [Inter](https://github.com/rsms/inter), [NerdFonts](https://nerdfonts.com/) | Font |
 | `foot`, `zsh`, `bash` | Terminal |
 | `papirus-icon-theme` | Icons |
 | `brightnessctl`, `wireplumber`, `playerctl`, `gammastep`, `libnotify` | Helper |
 | `dex` / `dex-autostart` | Autostart |
-| `cliphist`, `udiskie`, `gnome-keyring`, `polkit-gnome`, `xdg-desktop-portal-wlr`, `xorg-xwayland` | Daemon |
+| `cliphist`, `udiskie`, `gnome-keyring`, `polkit-gnome`, `xdg-desktop-portal-gtk` `xdg-desktop-portal-wlr` | Daemon |
 | `grim`, `slurp` | Screenshot |
 | `neovim`, `ranger`, `tmux`, `btop`, `cmus`, `calcurse`, `newsboat`, `lazygit` | Terminal software |
 | `nemo`, `mpv`, `imv`, `pavucontrol`, `network-manager-applet`, `blueman` | Desktop software |
@@ -47,26 +47,6 @@ systemctl --user enable wireplumber pipewire
 | ![busy](https://files.catbox.moe/nitxw0.png) | ![tiling](https://files.catbox.moe/pbr68u.png) |
 | Browser                                      | Lockscreen                                     |
 | ![lmao](https://files.catbox.moe/nmjt0e.png) | ![lock](https://files.catbox.moe/0jl31k.png)   |
-
-# Keybindings
-These are the basic keybinds. Read through the `sway/general/keybindings.conf` file for more keybinds.
-> Note: Mod = Windows key
-
-| Keys                                              | Function                          |
-| :------------------------------------------------ | :-------------------------------- |
-| `Mod + Enter`                                     | Launch terminal (foot)            |
-| `Mod + Q`                                         | Close window                      |
-| `Mod + Shift + C`                                 | Reload config files               |
-| `Mod + Space`                                     | Open launcher (rofi)              |
-| `Mod + Shift + C`                                 | Open powermenu                    |
-| `Mod + Delete`                                    | Screenshot menu                   |
-| `Mod + S/W/E`                                     | Stacking/Tabbed/Tile              |
-| `Mod + F`                                         | Toggle Fullscreen                 |
-| `Mod + B/V`                                       | Split Horizontal/Vertical         |
-| `Mod + R`                                         | Resize mode                       |
-| `Mod + Z`                                         | Toggle Floating                   |
-| `Mod + H/J/K/L or Left/Down/Up/Right`             | Change Focus                      |
-| `Mod + Shift + H/J/K/L or Left/Down/Up/Right`     | Move window                       |
 
 # Firefox/Librewolf config
 See [firefox.md](firefox.md)

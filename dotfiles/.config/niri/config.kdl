@@ -1,0 +1,11 @@
+// Check the wiki for a full description of the configuration:
+// https://niri-wm.github.io/niri/Configuration:-Introduction
+
+include "input.kdl"
+include "output.kdl"
+include "appearance.kdl"
+include "autostart.kdl"
+include "keys.kdl"
+include "rules.kdl"
+include "vars.kdl"
+include "misc.kdl"

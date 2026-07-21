@@ -1,6 +1,6 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "top", // Waybar at top layer
+    "layer": "bottom", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
@@ -9,16 +9,14 @@
 
     "modules-left": [
         // "custom/menu",
-        "sway/workspaces",
-        "sway/scratchpad",
-        "sway/mode",
+        "niri/workspaces",
         "cpu",
         "group/resources",
         "tray",
         "privacy"
     ],
     "modules-center": [
-        "sway/window"
+        "niri/window"
     ],
     "modules-right": [
         // "custom/media",
@@ -30,26 +28,10 @@
     ],
 
     // Modules configuration
-    "sway/workspaces": {
-        "disable-scroll": false,
-        "all-outputs": true,
-        "format": "{name}"
+    "niri/workspaces": {
      },
 
-    "sway/mode": {
-        "format": "{}",
-        "tooltip": false
-    },
-
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", "[-]:"],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-
-    "sway/window": {
+    "niri/window": {
         "format": "{title}",
         "icon": false,
         "icon-size": 14,

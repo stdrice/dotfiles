@@ -1,0 +1,125 @@
+// Window rules let you adjust behavior for individual windows.
+// https://niri-wm.github.io/niri/Configuration:-Window-Rules
+
+// Work around WezTerm's initial configure bug
+// by setting an empty default-column-width.
+window-rule {
+    // This regular expression is intentionally made as specific as possible,
+    // since this is the default config, and we want no false positives.
+    // You can get away with just app-id="wezterm" if you want.
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Floating
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+    match app-id="pavucontrol"
+    open-floating true
+}
+
+window-rule {
+    match app-id="blueman-manager"
+    open-floating true
+}
+
+window-rule {
+    match app-id="virt-manager"
+    open-floating true
+}
+
+window-rule {
+    match title="Picture-in-Picture"
+    open-floating true
+}
+
+window-rule {
+    match title="^Bitwarden$"
+    open-floating true
+}
+
+window-rule {
+    match title=r#".*(Open|Save|Select).*"#
+    open-floating true
+    default-column-width { proportion 0.0; }
+    max-width 800
+    max-height 1000
+}
+
+window-rule {
+    match title=r#".*File.*"#
+    open-floating true
+    default-column-width { proportion 0.0; }
+    max-width 800
+    max-height 1000
+}
+
+window-rule {
+    match app-id=r#"org\.gtk\.FileChooserDialog"#
+    open-floating true
+    default-column-width { proportion 0.0; }
+    max-width 800
+    max-height 1000
+}
+
+window-rule {
+    match title=r#".*(Dialog|Properties|Preferences|Settings|Rename).*"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"zenity"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"org\.kde\.polkit-kde-authentication-agent-1"#
+    open-floating true
+}
+
+window-rule {
+    match title=r#".*Authentication.*"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"org\.keepassxc\.KeePassXC"# title=r#".*Auto-Type.*"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"Bitwarden"# title=r#".*unlock.*"#
+    open-floating true
+}
+
+// Notification and system utilities
+window-rule {
+    match app-id=r#"nm-connection-editor"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"steam"# title=r#".*(Friends|Settings|Properties).*"#
+    open-floating true
+}
+
+// Block out two password managers from screen capture.
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    block-out-from "screen-capture"
+
+    // block-out-from "screencast"
+}
+
+// Example: enable rounded corners for all windows.
+// (This example rule is commented out with a "/-" in front.)
+/-window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}

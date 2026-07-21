@@ -1,0 +1,69 @@
+// GTK
+spawn-sh-at-startup "gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'"
+spawn-sh-at-startup "gsettings set org.gnome.desktop.interface font-name 'Sans 10'"
+environment {
+    GTK_THEME "Adwaita:dark"
+}
+
+cursor {
+    xcursor-theme "Adwaita"
+    xcursor-size 24
+}
+
+// Settings that influence how windows are positioned and sized.
+// https://niri-wm.github.io/niri/Configuration:-Layout
+layout {
+    gaps 4
+    center-focused-column "never"
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+    preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+        proportion 1.0
+    }
+    default-column-width { proportion 0.5; }
+    focus-ring {
+        // off
+        width 2
+        active-color "#54546D"
+        inactive-color "#040606"
+    }
+    border {
+        off
+        width 2
+        active-color "#54546D"
+        inactive-color "#040606"
+        urgent-color "#9b0000"
+    }
+    shadow {
+        // on
+        // draw-behind-window true
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+    struts {
+        // left 64
+        // right 64
+        // top 64
+        // bottom 64
+    }
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+prefer-no-csd
+
+// Animation settings.
+// https://niri-wm.github.io/niri/Configuration:-Animations
+animations {
+    // off
+    slowdown 0.7
+}

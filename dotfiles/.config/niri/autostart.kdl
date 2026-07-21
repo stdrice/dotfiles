@@ -1,0 +1,18 @@
+// This line starts waybar, a commonly used bar for Wayland compositors.
+// spawn-at-startup "waybar"
+// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
+// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+
+// spawn-at-startup "~/.local/bin/start-pipewire"
+spawn-sh-at-startup "$(whereis -b xdg-desktop-portal | awk '{print $2}') -r &"
+spawn-sh-at-startup "$(whereis -b xdg-desktop-portal-wlr | awk '{print $2}') -r &"
+spawn-sh-at-startup "$(whereis -b xdg-desktop-portal-gtk | awk '{print $2}') -r &"
+spawn-sh-at-startup "swaybg -i ~/.config/niri/walls/wall.png -m fill"
+spawn-at-startup "waybar"
+spawn-at-startup "mako"
+spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
+spawn-sh-at-startup "gnome-keyring-daemon --start --components=pkcs11,secrets,ssh"
+spawn-at-startup "udiskie"
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+spawn-at-startup "swayidle -w before-sleep 'playerctl --all-players pause; swaylock' timeout 600 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors'"
