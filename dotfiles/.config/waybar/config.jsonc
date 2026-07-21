@@ -10,7 +10,7 @@
     "modules-left": [
         // "custom/menu",
         "niri/workspaces",
-        "cpu",
+        "group/cpu",
         "group/resources",
         "tray",
         "privacy"
@@ -133,9 +133,22 @@
         "on-click": "playerctl play-pause"
     },
 
+    "group/cpu": {
+        "orientation": "horizontal",
+        "modules": [ "cpu", "temperature" ],
+        "drawer": {}
+    },
+
     "cpu": {
         "interval": 30,
         "format": "<b>{usage}</b>%"
+    },
+
+     "temperature": {
+	// "thermal-zone": 2,
+	// "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+    "interval": 30,
+	"format": "<b>{temperatureC}</b>°C"
     },
 
     "group/resources": {
