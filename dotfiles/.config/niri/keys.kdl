@@ -21,11 +21,11 @@ binds {
     Mod+Ctrl+P { power-off-monitors; }
 
     // Screenshot
-    Ctrl+Print { screenshot; }
-    Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
-    Mod+Shift+S { screenshot; }
-    Mod+Shift+F { screenshot-screen; }
+    Ctrl+Print { screenshot show-pointer=false; }
+    Print { screenshot-screen show-pointer=false; }
+    Alt+Print { screenshot-window show-pointer=false; }
+    Mod+Shift+S { screenshot show-pointer=false; }
+    Mod+Shift+F { screenshot-screen show-pointer=false; }
 
     // Clipboard
     Mod+Shift+V { spawn-sh "~/.local/bin/clipboard-man"; }
