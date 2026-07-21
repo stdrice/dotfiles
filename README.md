@@ -1,6 +1,6 @@
 # stdrice's Linux dotfiles
 
-![img](https://files.catbox.moe/nitxw0.png)
+![img](screenshot.png)
 
 # Table of Contents
 - [Installation](#installation)
@@ -40,13 +40,6 @@ cp -rfT dotfiles/dotfiles $HOME/
 chsh -s /usr/bin/zsh
 systemctl --user enable wireplumber pipewire
 ```
-
-# Gallery
-| Floating                                     | Tiling                                         |
-| :------------------------------------------- | :--------------------------------------------- |
-| ![busy](https://files.catbox.moe/nitxw0.png) | ![tiling](https://files.catbox.moe/pbr68u.png) |
-| Browser                                      | Lockscreen                                     |
-| ![lmao](https://files.catbox.moe/nmjt0e.png) | ![lock](https://files.catbox.moe/0jl31k.png)   |
 
 # Firefox/Librewolf config
 See [firefox.md](firefox.md)
