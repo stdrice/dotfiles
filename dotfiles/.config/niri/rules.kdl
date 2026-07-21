@@ -43,19 +43,8 @@ window-rule {
 }
 
 window-rule {
-    match title=r#".*(Open|Save|Select).*"#
+    match title=".* wants to open"
     open-floating true
-    default-column-width { proportion 0.0; }
-    max-width 800
-    max-height 1000
-}
-
-window-rule {
-    match title=r#".*File.*"#
-    open-floating true
-    default-column-width { proportion 0.0; }
-    max-width 800
-    max-height 1000
 }
 
 window-rule {
@@ -64,11 +53,6 @@ window-rule {
     default-column-width { proportion 0.0; }
     max-width 800
     max-height 1000
-}
-
-window-rule {
-    match title=r#".*(Dialog|Properties|Preferences|Settings|Rename).*"#
-    open-floating true
 }
 
 window-rule {
