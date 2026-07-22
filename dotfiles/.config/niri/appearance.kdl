@@ -77,3 +77,10 @@ recent-windows {
         max-scale 0.4
     }
 }
+
+// Overview
+overview {
+    workspace-shadow { off; }
+    backdrop-color "#121212"
+    zoom 0.6
+}
