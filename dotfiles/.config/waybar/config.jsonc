@@ -54,8 +54,8 @@
     },
     "clock#time": {
         "interval": 60,
-        "format": "{:%H:%M <span color='#aaaaaa'>(%Z)</span>}", // 24h
-        // "format": "{:%I:%M %p <span color='#aaaaaa'>(%Z)</span>}" // 12h
+        "format": "{:%H:%M <span color='#aaaaaa'>%Z</span>}", // 24h
+        // "format": "{:%I:%M %p <span color='#aaaaaa'>%Z</span>}" // 12h
         "tooltip-format": "{tz_list}",
         "timezones" : [
             "",
