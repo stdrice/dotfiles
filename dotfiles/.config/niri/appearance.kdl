@@ -29,7 +29,7 @@ layout {
     focus-ring {
         // off
         width 1
-        active-color "#54546D"
+        active-color "#545460"
         inactive-color "#00000000"
     }
     border {
@@ -66,6 +66,13 @@ prefer-no-csd
 animations {
     // off
     slowdown 0.67
+}
+
+
+// Rounded corners
+window-rule {
+    geometry-corner-radius 4
+    clip-to-geometry true
 }
 
 // Recent windows
