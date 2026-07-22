@@ -64,7 +64,7 @@ prefer-no-csd
 // Animation settings.
 // https://niri-wm.github.io/niri/Configuration:-Animations
 animations {
-    // off
+    off
     slowdown 0.7
 }
 
