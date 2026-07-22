@@ -67,3 +67,13 @@ animations {
     // off
     slowdown 0.7
 }
+
+// Recent windows
+recent-windows {
+    open-delay-ms 0
+    debounce-ms 0
+    previews {
+        max-height 300
+        max-scale 0.4
+    }
+}
