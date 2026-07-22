@@ -13,7 +13,7 @@ cursor {
 // Layout
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
-    gaps 6
+    gaps 2
     center-focused-column "never"
     preset-column-widths {
         proportion 0.33333
@@ -28,7 +28,7 @@ layout {
     default-column-width { proportion 0.5; }
     focus-ring {
         // off
-        width 2
+        width 1
         active-color "#54546D"
         inactive-color "#00000000"
     }
