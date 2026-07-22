@@ -2,12 +2,6 @@
 
 ![img](screenshot.png)
 
-# Table of Contents
-- [Installation](#installation)
-- [Gallery](#gallery)
-- [Keybindings](#keybindings)
-- [Firefox/Librewolf config](#firefox-librewolf-config)
-
 # Installation
 1. Install all dependencies
 
@@ -39,6 +33,3 @@ cp -rfT dotfiles/dotfiles $HOME/
 chsh -s /usr/bin/zsh
 systemctl --user enable wireplumber pipewire
 ```
-
-# Firefox/Librewolf config
-See [firefox.md](firefox.md)
