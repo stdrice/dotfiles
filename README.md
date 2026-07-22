@@ -14,7 +14,7 @@
 | `papirus-icon-theme` | Icons |
 | `brightnessctl`, `wireplumber`, `playerctl`, `gammastep`, `libnotify` | Helper |
 | `dex` / `dex-autostart` | Autostart |
-| `cliphist`, `udiskie`, `gnome-keyring`, `polkit-gnome`, `xdg-desktop-portal-gtk` `xdg-desktop-portal-wlr` | Daemon |
+| `cliphist`, `udiskie`, `gnome-keyring`, `mate-polkit`, `xdg-desktop-portal-gtk` `xdg-desktop-portal-wlr` | Daemon |
 | `neovim`, `ranger`, `tmux`, `btop`, `cmus`, `calcurse`, `newsboat`, `lazygit` | Terminal software |
 | `nemo`, `mpv`, `imv`, `pavucontrol`, `network-manager-applet`, `blueman` | Desktop software |
 | `cava`, `fastfetch`, `imagemagick` | Terminal cosmetic |
