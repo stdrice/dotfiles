@@ -12,7 +12,7 @@
 | [Adwaita Fonts](https://gitlab.gnome.org/GNOME/adwaita-fonts), [NerdFonts](https://nerdfonts.com/) | Font |
 | `foot`, `zsh`, `bash` | Terminal |
 | `papirus-icon-theme` | Icons |
-| `brightnessctl`, `wireplumber`, `playerctl`, `gammastep`, `libnotify` | Helper |
+| `brightnessctl`, `wireplumber`, `playerctl`, `gammastep` | Helper |
 | `dex` / `dex-autostart` | Autostart |
 | `cliphist`, `udiskie`, `gnome-keyring`, `mate-polkit`, `xdg-desktop-portal-gtk` `xdg-desktop-portal-wlr` | Daemon |
 | `neovim`, `ranger`, `tmux`, `btop`, `cmus`, `calcurse`, `newsboat`, `lazygit` | Terminal software |
