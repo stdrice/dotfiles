@@ -2,7 +2,7 @@
 {
     "layer": "bottom", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 32, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     "reload_style_on_change": true,
@@ -12,11 +12,12 @@
         "niri/workspaces",
         "group/cpu",
         "group/resources",
-        "tray",
         "privacy"
     ],
     "modules-center": [
-        "niri/window"
+        // "niri/window"
+        "clock#date",
+        "clock#time"
     ],
     "modules-right": [
         // "custom/media",
@@ -24,7 +25,7 @@
         "wireplumber",
 	    "backlight",
         "battery",
-        "group/clock"
+        "tray"
     ],
 
     // Modules configuration
@@ -55,7 +56,7 @@
     "clock#time": {
         "interval": 60,
         "format": "{:%H:%M}", // 24h
-        // "format": "{:%I:%M %p <span color='#aaaaaa'>%Z</span>}" // 12h
+        // "format": "{:%I:%M %p}" // 12h
         "tooltip-format": "{tz_list}",
         "timezone-tooltip-format": "{:%H:%M %Z}",
         "timezones" : [
