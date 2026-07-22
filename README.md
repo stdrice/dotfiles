@@ -1,6 +1,8 @@
 # stdrice's Linux dotfiles
 
-![img](screenshot.png)
+![1](screenshot.png)
+![2](screenshot2.png)
+![3](screenshot3.png)
 
 # Installation
 1. Install all dependencies
