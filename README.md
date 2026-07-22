@@ -15,7 +15,7 @@
 | :------ | :------ |
 | `niri` | Window manager / compositor |
 | `rofi`, `waybar`, `mako`, `swaybg`, `swayidle`, `swaylock` | Desktop components |
-| [PragmataPro](https://fsd.it/shop/fonts/pragmatapro)/[FiraCode](https://github.com/tonsky/FiraCode), [Inter](https://github.com/rsms/inter), [NerdFonts](https://nerdfonts.com/) | Font |
+| [Adwaita Fonts](https://gitlab.gnome.org/GNOME/adwaita-fonts), [NerdFonts](https://nerdfonts.com/) | Font |
 | `foot`, `zsh`, `bash` | Terminal |
 | `papirus-icon-theme` | Icons |
 | `brightnessctl`, `wireplumber`, `playerctl`, `gammastep`, `libnotify` | Helper |
