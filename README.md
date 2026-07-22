@@ -7,7 +7,7 @@
 
 | Package | Details |
 | :------ | :------ |
-| `niri` | Window manager / compositor |
+| `niri` | WM / compositor |
 | `rofi`, `waybar`, `mako`, `swaybg`, `swayidle`, `swaylock` | Desktop components |
 | [Adwaita Fonts](https://gitlab.gnome.org/GNOME/adwaita-fonts), [NerdFonts](https://nerdfonts.com/) | Font |
 | `foot`, `zsh`, `bash` | Terminal |
