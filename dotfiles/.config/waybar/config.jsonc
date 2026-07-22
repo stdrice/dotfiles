@@ -54,9 +54,10 @@
     },
     "clock#time": {
         "interval": 60,
-        "format": "{:%H:%M <span color='#aaaaaa'>%Z</span>}", // 24h
+        "format": "{:%H:%M}", // 24h
         // "format": "{:%I:%M %p <span color='#aaaaaa'>%Z</span>}" // 12h
         "tooltip-format": "{tz_list}",
+        "timezone-tooltip-format": "{:%H:%M %Z}",
         "timezones" : [
             "",
             "UTC",
@@ -66,11 +67,7 @@
             "Asia/Shanghai",
             "America/New_York",
             "America/Los_Angeles"
-        ],
-        "actions": {
-            "on-scroll-up": "tz_up",
-            "on-scroll-down": "tz_down"
-        }
+        ]
     },
     "clock#date": {
         // "timezone": "America/New_York",
@@ -83,7 +80,7 @@
             "on-scroll"     : 1,
             "format": {
                 "months":     "<span color='#633aff'><b>{}</b></span>",
-                "weeks":      "<span color='#61E2FF'><b>W{}</b></span>",
+                "weeks":      "<span color='#61E2FF'><b>{}</b></span>",
                 "today":      "<span color='#f53fa1'><b><u>{}</u></b></span>"
             }
         }
