@@ -51,7 +51,7 @@ precmd() {
     vcs_info
     print -Pn "\e]0;%n@%m: %~ ${vcs_info_msg_0_}\a"
 }
-PROMPT='%{%B%}%{%F{1}%}%n%{%f%}@%m %{%F{2}%}%~%{%f%} ${vcs_info_msg_0_}$%{%b%} '
+PROMPT='%{%B%}%{%F{1}%}%n%{%f%}@%m %{%F{2}%}%~%{%f%} ${vcs_info_msg_0_}>%{%b%} '
 
 # - --------- -
 # - Variables -
