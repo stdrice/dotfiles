@@ -30,7 +30,7 @@ layout {
         // off
         width 1
         active-color "#545460"
-        inactive-color "#00000000"
+        inactive-color "#101010"
     }
     border {
         off
@@ -52,6 +52,9 @@ layout {
         // right 64
         // top 64
         // bottom 64
+    }
+    tab-indicator {
+        gap 0
     }
 }
 
