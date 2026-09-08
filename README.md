@@ -13,7 +13,6 @@
 | `noctalia` | Desktop shell |
 | [Adwaita Fonts](https://gitlab.gnome.org/GNOME/adwaita-fonts), [NerdFonts](https://nerdfonts.com/) | Font |
 | `foot`, `zsh`, `bash` | Terminal |
-| `papirus-icon-theme` | Icons |
 | `dex` / `dex-autostart` | Autostart |
 | `gnome-keyring`, `mate-polkit`, `xdg-desktop-portal-gtk` `xdg-desktop-portal-wlr`, `wireplumber`, `playerctl` | Daemon / Helper |
 | `neovim`, `ranger`, `tmux`, `btop`, `cmus`, `calcurse`, `newsboat`, `lazygit` | Terminal software |
