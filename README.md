@@ -9,7 +9,7 @@
 
 | Package | Details |
 | :------ | :------ |
-| `niri` | WM / compositor |
+| `niri` | Compositor |
 | `noctalia` | Desktop shell |
 | [Adwaita Fonts](https://gitlab.gnome.org/GNOME/adwaita-fonts), [NerdFonts](https://nerdfonts.com/) | Font |
 | `foot`, `zsh`, `bash` | Terminal |
