@@ -18,7 +18,7 @@ export ZSH="$HOME/.config/zsh"
 [[ $- != *i* ]] && return
 
 # - -------------- -
-# - Autostart Sway -
+# - Autostart Niri -
 # - -------------- -
 if [ -z "$WAYLAND_DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ] ; then
     exec niri

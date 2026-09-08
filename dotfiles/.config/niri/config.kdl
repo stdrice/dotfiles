@@ -9,3 +9,5 @@ include "keys.kdl"
 include "rules.kdl"
 include "vars.kdl"
 include "misc.kdl"
+
+include "noctalia.kdl"

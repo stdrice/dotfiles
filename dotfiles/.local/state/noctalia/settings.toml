@@ -1,0 +1,168 @@
+config_version = 14
+
+[audio]
+enable_overdrive = true
+
+[bar.default]
+center = [ "clock", "media" ]
+end = [
+    "tray",
+    "notifications",
+    "clipboard",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "control-center",
+    "session"
+]
+font_weight = 700
+margin_ends = 0
+radius = 0
+shadow = false
+start = [ "launcher", "workspaces", "cpu", "ram" ]
+thickness = 30
+widget_spacing = 12
+
+[battery]
+warning_threshold = 15
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-widget-0000000000000001" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 70.0
+    box_width = 416.0
+    cx = 720.0
+    cy = 693.0
+    output = "eDP-1"
+    placement_height = 900.0
+    placement_width = 1440.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 144.0
+    box_width = 304.0
+    cx = 720.0
+    cy = 226.0
+    output = "eDP-1"
+    placement_height = 900.0
+    placement_width = 1440.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        clock_style = "digital"
+        format = "{:%H:%M}"
+        shadow = true
+
+[nightlight]
+temperature_night = 4500
+
+[notification]
+border = false
+offset_x = 0
+offset_y = 22
+
+[osd]
+border = false
+position = "bottom_center"
+position_vertical = "center_left"
+
+[shell]
+button_borders = false
+corner_radius_scale = 0.0
+screen_time_enabled = true
+
+    [shell.animation]
+    enabled = false
+
+    [shell.panel]
+    open_near_click_control_center = true
+
+[theme]
+builtin = "Rosé Pine"
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "foot", "gtk3", "gtk4", "kcolorscheme", "niri", "qt" ]
+
+[wallpaper]
+transition = []
+transition_duration = 100
+
+    [wallpaper.default]
+    path = "/home/stdrice/Pictures/walls/wall.png"
+
+    [wallpaper.last]
+    path = "/home/stdrice/Pictures/walls/wall.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/stdrice/Pictures/walls/wall.png"
+
+[widget.brightness]
+enabled = false
+
+[widget.clipboard]
+enabled = false
+
+[widget.clock]
+format = "{:%a %b %d %H:%M}"
+
+[widget.cpu]
+visualization = "none"
+
+[widget.launcher]
+enabled = false
+
+[widget.media]
+enabled = false
+hide_when_no_media = true
+
+[widget.notifications]
+hide_when_no_unread = true
+
+[widget.ram]
+visualization = "none"
+
+[widget.session]
+enabled = false
+
+[widget.tray]
+drawer = true
+
+[widget.workspaces]
+active_pill_size = 2.0
+style = "minimal"

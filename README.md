@@ -10,15 +10,14 @@
 | Package | Details |
 | :------ | :------ |
 | `niri` | WM / compositor |
-| `rofi`, `waybar`, `mako`, `swaybg`, `swayidle`, `swaylock` | Desktop components |
+| `noctalia` | Desktop shell |
 | [Adwaita Fonts](https://gitlab.gnome.org/GNOME/adwaita-fonts), [NerdFonts](https://nerdfonts.com/) | Font |
 | `foot`, `zsh`, `bash` | Terminal |
 | `papirus-icon-theme` | Icons |
-| `brightnessctl`, `wireplumber`, `playerctl`, `gammastep` | Helper |
 | `dex` / `dex-autostart` | Autostart |
-| `cliphist`, `udiskie`, `gnome-keyring`, `mate-polkit`, `xdg-desktop-portal-gtk` `xdg-desktop-portal-wlr` | Daemon |
+| `gnome-keyring`, `mate-polkit`, `xdg-desktop-portal-gtk` `xdg-desktop-portal-wlr`, `wireplumber`, `playerctl` | Daemon / Helper |
 | `neovim`, `ranger`, `tmux`, `btop`, `cmus`, `calcurse`, `newsboat`, `lazygit` | Terminal software |
-| `nemo`, `mpv`, `imv`, `pavucontrol`, `network-manager-applet`, `blueman` | Desktop software |
+| `nemo`, `mpv`, `imv` | Desktop software |
 | `cava`, `fastfetch`, `imagemagick` | Terminal cosmetic |
 
 2. Clone this repo

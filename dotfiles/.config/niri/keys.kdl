@@ -4,8 +4,8 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal" { spawn "foot"; }
-    Mod+D hotkey-overlay-title="Run an Application" { spawn-sh "rofi -show drun"; }
-    Super+Backspace hotkey-overlay-title="Lock the Screen" { spawn "swaylock"; }
+    Mod+D hotkey-overlay-title="Run an Application" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Super+Backspace hotkey-overlay-title="Lock the Screen" { spawn-sh "noctalia msg session lock"; }
 
     // Overview
     Mod+A repeat=false { toggle-overview; }
@@ -13,9 +13,9 @@ binds {
     // Close Window
     Mod+Q repeat=false { close-window; }
 
-    // Quit Niri
-    Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete { quit; }
+    // Power menu
+    Mod+Shift+E { spawn-sh "noctalia msg panel-toggle session"; }
+    Ctrl+Alt+Delete { spawn-sh "noctalia msg panel-toggle session"; }
 
     // Power off the monitors
     Mod+Ctrl+P { power-off-monitors; }
@@ -28,20 +28,17 @@ binds {
     Mod+Shift+F { screenshot-screen show-pointer=false; }
 
     // Clipboard
-    Mod+Shift+V { spawn-sh "~/.local/bin/clipboard-man"; }
-
-    // Toggle Waybar
-    Mod+Shift+B { spawn-sh "killall -SIGUSR1 waybar"; }
+    Mod+Shift+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
 
     // Volume
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.5"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
-    Mod+F1 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
-    Mod+F2 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.5"; }
-    Mod+F3 allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    Mod+F1 allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
+    Mod+F2 allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
+    Mod+F3 allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
 
     // Media
     XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
@@ -50,11 +47,11 @@ binds {
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
     
     // Brightness
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
 
-    Mod+F4 allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
-    Mod+F5 allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
+    Mod+F4 allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
+    Mod+F5 allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
