@@ -98,6 +98,9 @@ border = false
 position = "bottom_center"
 position_vertical = "center_left"
 
+    [osd.kinds]
+    media = false
+
 [shell]
 button_borders = false
 corner_radius_scale = 0.0
@@ -124,13 +127,13 @@ transition = []
 transition_duration = 100
 
     [wallpaper.default]
-    path = "/home/stdrice/Pictures/walls/wall.png"
+    path = "/home/stdrice/Pictures/wall.png"
 
     [wallpaper.last]
-    path = "/home/stdrice/Pictures/walls/wall.png"
+    path = "/home/stdrice/Pictures/wall.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/stdrice/Pictures/walls/wall.png"
+    path = "/home/stdrice/Pictures/wall.png"
 
 [widget.brightness]
 enabled = false
