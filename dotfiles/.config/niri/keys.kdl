@@ -34,17 +34,17 @@ binds {
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
 
     Mod+F1 allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
     Mod+F2 allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
     Mod+F3 allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
 
     // Media
-    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
-    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
-    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86AudioPlay        allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
+    XF86AudioStop        allow-when-locked=true { spawn-sh "noctalia msg media stop"; }
+    XF86AudioPrev        allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
+    XF86AudioNext        allow-when-locked=true { spawn-sh "noctalia msg media next"; }
     
     // Brightness
     XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
