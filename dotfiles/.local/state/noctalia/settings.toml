@@ -127,13 +127,13 @@ transition = []
 transition_duration = 100
 
     [wallpaper.default]
-    path = "/home/stdrice/Pictures/wall.png"
+    path = "/home/stdrice/Pictures/walls/wall.png"
 
     [wallpaper.last]
-    path = "/home/stdrice/Pictures/wall.png"
+    path = "/home/stdrice/Pictures/walls/wall.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/stdrice/Pictures/wall.png"
+    path = "/home/stdrice/Pictures/walls/wall.png"
 
 [widget.brightness]
 enabled = false
