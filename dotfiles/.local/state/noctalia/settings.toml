@@ -130,7 +130,7 @@ transition_duration = 100
     path = "/home/stdrice/Pictures/walls/wall.png"
 
 [widget.active_window]
-max_length = 300
+max_length = 400
 
 [widget.brightness]
 enabled = false
