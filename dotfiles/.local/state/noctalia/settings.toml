@@ -91,7 +91,7 @@ temperature_night = 4500
 [notification]
 border = false
 offset_x = 0
-offset_y = 22
+offset_y = 24
 
 [osd]
 border = false
