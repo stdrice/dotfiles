@@ -5,7 +5,8 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal" { spawn "foot"; }
     Mod+D hotkey-overlay-title="Run an Application" { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Super+Backspace hotkey-overlay-title="Lock the Screen" { spawn-sh "noctalia msg session lock"; }
+    Mod+Backspace hotkey-overlay-title="Lock the Screen" { spawn-sh "noctalia msg session lock"; }
+    Mod+S hotkey-overlay-title="Control Center" { spawn-sh "noctalia msg panel-toggle control-center"; }
 
     // Overview
     Mod+A repeat=false { toggle-overview; }
