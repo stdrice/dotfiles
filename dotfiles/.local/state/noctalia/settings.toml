@@ -17,12 +17,12 @@ end = [
     "control-center",
     "session"
 ]
-font_weight = 700
+font_weight = 400
 margin_ends = 0
 radius = 0
 shadow = false
 start = [ "launcher", "workspaces", "cpu", "ram" ]
-thickness = 30
+thickness = 28
 widget_spacing = 12
 
 [battery]
