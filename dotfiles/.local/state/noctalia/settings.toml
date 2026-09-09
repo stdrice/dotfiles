@@ -4,7 +4,7 @@ config_version = 14
 enable_overdrive = true
 
 [bar.default]
-center = [ "media" ]
+center = [ "active_window", "media" ]
 end = [
     "tray",
     "notifications",
@@ -129,6 +129,9 @@ transition_duration = 100
     [wallpaper.default]
     path = "/home/stdrice/Pictures/walls/wall.png"
 
+[widget.active_window]
+max_length = 300
+
 [widget.brightness]
 enabled = false
 
@@ -162,4 +165,5 @@ drawer = true
 
 [widget.workspaces]
 active_pill_size = 2.0
-style = "minimal"
+pill_scale = 0.75
+show_labels = false
